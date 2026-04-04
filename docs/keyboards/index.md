@@ -1,8 +1,7 @@
 ---
-title: 键盘类型
+title: 键盘
 nav_order: 2
 ---
-
 # QMK键盘
 
 -  DS17有线数字键盘
