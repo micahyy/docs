@@ -8,3 +8,10 @@ aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
 
 nav_enabled: true
+# 在 _config.yml 末尾添加
+defaults:
+  - scope:
+      path: "docs/faq"  # 针对 FAQ 目录
+    values:
+      nav_exclude: false  # 不排除导航
+      parent: null        # 不强制限定父级
