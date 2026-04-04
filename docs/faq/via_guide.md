@@ -1,7 +1,7 @@
 ---
 title: VIA使用教程
 parent: 常见问题
-nav_order: 1
+nav_order: 6
 ---
 
 # VIA 使用教程
