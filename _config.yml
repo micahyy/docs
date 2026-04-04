@@ -7,11 +7,9 @@ url: https://just-the-docs.github.io
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
 
-nav_enabled: true
-# 在 _config.yml 末尾添加
+# 强制所有页面启用完整导航栏
 defaults:
   - scope:
-      path: "docs/faq"  # 针对 FAQ 目录
+      path: ""          # 适用于所有页面
     values:
-      nav_exclude: false  # 不排除导航
-      parent: null        # 不强制限定父级
+      nav_enabled: true # 强制显示导航栏
