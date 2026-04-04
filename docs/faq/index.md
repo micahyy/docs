@@ -1,7 +1,6 @@
 ---
 title: 常见问题
 nav_order: 5
-has_children: true
 ---
 
 # 常见问题
