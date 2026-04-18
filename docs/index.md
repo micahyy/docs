@@ -1,17 +1,22 @@
-# Welcome to MkDocs
+# 菜籽猫的文档站
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+欢迎来到菜籽猫的文档网站！
 
-## Commands
+## 关于本站
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+这是一个使用 MkDocs 和 Material 主题构建的文档网站。
 
-## Project layout
+## 快速开始
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+你可以在这里写任何内容：
+
+- 支持 Markdown 语法
+- 代码高亮
+- 提示框
+- 等等...
+
+## 代码示例
+
+```python
+def hello():
+    print("Hello, 菜籽猫!")
