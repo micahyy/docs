@@ -1,19 +1,70 @@
-site_name: 菜籽猫
-site_url: https://micahyy.github.io/docs/
+# 网站基本信息
+site_name: 菜籽猫-客制化键盘 # 请替换为你自己的名称，例如：菜籽猫的文档
+site_url: https://micahyy.github.io/docs/ # 你的网站地址
+site_description: 这是你的网站描述
+site_author: 菜籽猫
+
+# 主题设置 - 这是与 QMK 保持一致的关键
 theme:
   name: material
+  # QMK 文档使用了这些特性
   features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.top
-    - toc.integrate
+    - navigation.tabs        # 顶级导航显示为标签页
+    - navigation.sections    # 侧边栏显示为章节
+    - navigation.top         # 显示回到顶部按钮
+    - toc.integrate          # 将右侧的目录树集成到左侧导航栏（QMK 特色）
+    - search.suggest         # 搜索框显示关键词建议
+    - search.highlight       # 搜索时高亮关键词
+  # QMK 文档的颜色方案
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-  language: zh
+    - scheme: default        # 使用默认的亮色主题
+      primary: indigo        # 主色为靛蓝色
+      accent: indigo         # 强调色为靛蓝色
+  # 字体设置 (可选，QMK 使用的是默认字体)
+  font:
+    text: Roboto
+    code: Roboto Mono
+  language: zh               # 界面语言设置为中文
+  # 图标设置
+  icon:
+    repo: fontawesome/brands/github
+  # 显示最后更新时间
+  features:
+    - header.autohide
+    - navigation.expand
+    - navigation.indexes
+    - navigation.instant
+    - navigation.tracking
 
+# 扩展 Markdown 语法，以支持 QMK 文档中的丰富样式
 markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
+  - admonition               # 支持提示框 (!!! note)
+  - pymdownx.details         # 支持可折叠的提示框
+  - pymdownx.superfences     # 支持代码块嵌套
+  - pymdownx.tabbed:         # 支持标签页
+      alternate_style: true
+  - attr_list                # 支持在 Markdown 中给元素添加属性
+  - pymdownx.emoji:          # 支持 Emoji 图标
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:      # 代码高亮
+      anchor_linenums: true
+  - pymdownx.inlinehilite    # 行内代码高亮
+  - pymdownx.snippets        # 代码片段
+  - toc:
+      permalink: true        # 为标题生成永久链接
+
+# 插件配置 (QMK 文档可能使用了这些插件来增强功能)
+plugins:
+  - search:                  # 内置搜索插件
+      lang: zh               # 搜索语言设为中文
+  - minify:                  # 优化：压缩生成的HTML文件（需要安装 mkdocs-minify-plugin）
+      minify_html: true
+  - git-revision-date-localized: # 显示页面最后更新时间（需要安装 mkdocs-git-revision-date-localized-plugin）
+      type: date
+      enable_creation_date: false
+
+# 可选：设置仓库地址，会在每个页面右上角显示"Edit this page"链接
+repo_url: https://github.com/micahyy/docs
+repo_name: micahyy/docs
+edit_uri: edit/main/docs/
