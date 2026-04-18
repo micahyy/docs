@@ -1,56 +1,19 @@
-# 网站基本信息
 site_name: 菜籽猫
 site_url: https://micahyy.github.io/docs/
-site_description: 菜籽猫的文档站
-site_author: 菜籽猫
-
-# 主题设置
 theme:
   name: material
   features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.top
-    - toc.integrate
-    - search.suggest
-    - search.highlight
-    - navigation.instant
-    - navigation.tracking
+    - toc.integrate  # 这个特征是 QMK 风格的标志
   palette:
     - scheme: default
       primary: indigo
       accent: indigo
-  font:
-    text: Roboto
-    code: Roboto Mono
   language: zh
-  icon:
-    repo: fontawesome/brands/github
 
-# Markdown 扩展（修复了 emoji 的过时语法）
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-  - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - toc:
-      permalink: true
 
-# 插件配置（移除了需要额外安装的 minify 插件）
 plugins:
-  - search:
-      lang: zh
-
-# 仓库信息
-repo_url: https://github.com/micahyy/docs
-repo_name: micahyy/docs
-edit_uri: edit/main/docs/
+  - search
