@@ -23,3 +23,32 @@
     margin-top: 0;
     padding-top: 0;
 }
+
+/* 一级目录（顶层菜单）- 深色加粗 */
+.md-nav__item--nested > .md-nav__link {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* 二级目录 - 浅色正常 */
+.md-nav__item .md-nav__item .md-nav__link {
+    font-weight: 400;
+    color: #5a6c7e;
+}
+
+/* 三级及以下 - 更浅 */
+.md-nav__item .md-nav__item .md-nav__item .md-nav__link {
+    font-weight: 400;
+    color: #7f8c8d;
+}
+
+/* 鼠标悬停效果 */
+.md-nav__link:hover {
+    color: #4051b5 !important;
+}
+
+/* 当前激活的菜单项 */
+.md-nav__link--active {
+    color: #4051b5 !important;
+    font-weight: 600;
+}
