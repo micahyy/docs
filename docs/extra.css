@@ -1,12 +1,6 @@
-/* 隐藏顶部的蓝色背景条 */
+/* 完全隐藏顶部导航栏（蓝色背景条） */
 .md-header {
-    background-color: transparent;
-    box-shadow: none;
-}
-
-/* 完全隐藏顶部导航栏 */
-.md-header--shadow {
-    box-shadow: none;
+    display: none;
 }
 
 /* 让左侧菜单栏顶到最上面 */
@@ -14,12 +8,18 @@
     top: 0;
 }
 
-/* 调整主内容区域，移除顶部留白 */
+/* 让主内容区域顶到最上面，移除顶部留白 */
 .md-main {
     padding-top: 0;
 }
 
-/* 左侧菜单栏上方不留白 */
+/* 调整左侧菜单栏的滚动区域 */
 .md-sidebar__scrollwrap {
     margin-top: 0;
+}
+
+/* 如果左侧菜单栏上方还有空白，一并移除 */
+.md-sidebar__inner {
+    margin-top: 0;
+    padding-top: 0;
 }
