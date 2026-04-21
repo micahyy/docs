@@ -2,6 +2,7 @@ site_name: 菜籽猫
 site_url: https://micahyy.github.io/docs/
 theme:
   name: material
+  logo: images/logo.png
   features:
     - navigation.sections
     - navigation.top
