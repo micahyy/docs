@@ -3,7 +3,16 @@ site_url: https://micahyy.github.io/docs/
 theme:
   name: material
   features:
-    - toc.integrate  # 这个特征是 QMK 风格的标志
+    # --- 核心配置（实现你要的布局）---
+    - navigation.tabs       # 顶部标签页导航
+    - navigation.sections   # 左侧边栏按组分类
+    - toc.integrate         # 将页面目录（TOC）集成到右侧边栏
+
+    # --- 可选增强功能（提升体验）---
+    - navigation.expand     # 默认展开所有侧边栏菜单
+    - navigation.top        # 显示回到顶部按钮
+    - search.suggest        # 搜索框显示关键词建议
+    - search.highlight      # 搜索时高亮关键词
   palette:
     - scheme: default
       primary: indigo
