@@ -21,4 +21,4 @@ jobs:
           key: ${{ secrets.KEY }}
           source: "./"
           target: "/www/wwwroot/docs.micah.vip"
-          rm: true
+          
