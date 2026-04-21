@@ -28,7 +28,4 @@ plugins:
 extra_css:
   - extra.css
 
-# 导航栏配置（关键！）
-nav:
-  - 首页: index.md
-  - 使用教程: 使用教程/index.md
+# 注意：没有 nav 配置！
