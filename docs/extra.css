@@ -1,0 +1,21 @@
+/* 移除最大宽度限制，让内容完全靠左 */
+.md-grid {
+    max-width: 100%;
+}
+
+.md-main__inner {
+    margin: 0;
+}
+
+.md-sidebar--primary {
+    margin-left: 0;
+}
+
+.md-content {
+    margin-right: 0;
+}
+
+/* 让左侧菜单贴边 */
+.md-sidebar--primary .md-sidebar__scrollwrap {
+    padding-left: 0;
+}
