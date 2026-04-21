@@ -1,4 +1,4 @@
-/* 移除最大宽度限制，让内容完全靠左 */
+/* 移除最大宽度限制，让内容完全靠左和靠右 */
 .md-grid {
     max-width: 100%;
 }
@@ -11,6 +11,10 @@
     margin-left: 0;
 }
 
+.md-sidebar--secondary {
+    margin-right: 0;
+}
+
 .md-content {
     margin-right: 0;
 }
@@ -18,4 +22,9 @@
 /* 让左侧菜单贴边 */
 .md-sidebar--primary .md-sidebar__scrollwrap {
     padding-left: 0;
+}
+
+/* 让右侧目录贴边 */
+.md-sidebar--secondary .md-sidebar__scrollwrap {
+    padding-right: 0;
 }
