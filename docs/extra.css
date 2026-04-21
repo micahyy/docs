@@ -1,54 +1,67 @@
-/* 完全隐藏顶部导航栏（蓝色背景条） */
-.md-header {
-    display: none;
+/* 移除最大宽度限制 */
+.md-grid {
+    max-width: 100%;
 }
 
-/* 让左侧菜单栏顶到最上面 */
-.md-sidebar--primary {
+.md-main__inner {
+    margin: 0;
+}
+
+/* 修复左侧和右侧侧边栏高度一致 */
+.md-sidebar {
+    height: 100vh;
+    position: sticky;
     top: 0;
 }
 
-/* 让主内容区域顶到最上面，移除顶部留白 */
-.md-main {
-    padding-top: 0;
+.md-sidebar--primary {
+    margin-left: 0;
 }
 
-/* 调整左侧菜单栏的滚动区域 */
+.md-sidebar--secondary {
+    margin-right: 0;
+}
+
+.md-content {
+    margin-right: 0;
+}
+
+/* 让侧边栏滚动区域填满整个高度 */
 .md-sidebar__scrollwrap {
-    margin-top: 0;
+    height: 100vh;
+    overflow-y: auto;
 }
 
-/* 如果左侧菜单栏上方还有空白，一并移除 */
+/* 移除底部多余的内边距 */
 .md-sidebar__inner {
-    margin-top: 0;
-    padding-top: 0;
+    padding-bottom: 0;
 }
 
-/* 一级目录（顶层菜单）- 深色加粗 */
-.md-nav__item--nested > .md-nav__link {
-    font-weight: 700;
-    color: #2c3e50;
+/* 确保主内容区域高度正确 */
+.md-main {
+    min-height: 100vh;
 }
 
-/* 二级目录 - 浅色正常 */
-.md-nav__item .md-nav__item .md-nav__link {
-    font-weight: 400;
-    color: #5a6c7e;
+/* 让左右侧边栏的滚动条样式一致 */
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+    width: 4px;
 }
 
-/* 三级及以下 - 更浅 */
-.md-nav__item .md-nav__item .md-nav__item .md-nav__link {
-    font-weight: 400;
-    color: #7f8c8d;
+.md-sidebar__scrollwrap::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
 
-/* 鼠标悬停效果 */
-.md-nav__link:hover {
-    color: #4051b5 !important;
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
 }
 
-/* 当前激活的菜单项 */
-.md-nav__link--active {
-    color: #4051b5 !important;
-    font-weight: 600;
+/* 左侧菜单贴边 */
+.md-sidebar--primary .md-sidebar__scrollwrap {
+    padding-left: 0;
+}
+
+/* 右侧目录贴边 */
+.md-sidebar--secondary .md-sidebar__scrollwrap {
+    padding-right: 0;
 }
