@@ -6,7 +6,6 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.top
-    # - toc.integrate   ← 把这行删除或注释掉！
     - navigation.expand
     - search.suggest
     - search.highlight
@@ -28,3 +27,8 @@ plugins:
 
 extra_css:
   - extra.css
+
+# 导航栏配置（关键！）
+nav:
+  - 首页: index.md
+  - 使用教程: 使用教程/index.md
