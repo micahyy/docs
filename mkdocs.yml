@@ -3,7 +3,6 @@ site_url: https://micahyy.github.io/docs/
 theme:
   name: material
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.top
     - navigation.expand
@@ -27,5 +26,3 @@ plugins:
 
 extra_css:
   - extra.css
-
-# 注意：没有 nav 配置！
