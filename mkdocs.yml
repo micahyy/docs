@@ -2,16 +2,7 @@ site_name: 菜籽猫
 site_url: https://micahyy.github.io/docs/
 
 # ===== 在这里添加 nav 配置 =====
-nav:
-  - 首页: index.md
-  - 📁PCB:
-    - G80-3000: PCB/g80_3000.md
-    - 配置: usage/config.md
-    - 常见问题: usage/faq.md
-  - 有线单模:
-    - DS17有线单模: 2.有线单模键盘/ds17.md
-    - API 参考: dev/api.md
-  - 关于: about.md
+
   
 theme:
   name: material
