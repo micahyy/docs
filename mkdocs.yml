@@ -20,6 +20,16 @@ theme:
       primary: indigo
       accent: indigo
   language: zh
+  nav:
+  - 首页: index.md
+  - PCB:
+    - G80-3000: pcb/g80_3000.md
+    - 配置: usage/config.md
+    - 常见问题: usage/faq.md
+  - 开发指南:
+    - 概述: dev/overview.md
+    - API 参考: dev/api.md
+  - 关于: about.md
 
 extra:
   social:
