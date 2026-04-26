@@ -1,3 +1,103 @@
+/* ========== 全宽布局 ========== */
+
+/* 移除最大宽度限制 */
+.md-grid {
+    max-width: 100%;
+}
+
+.md-main__inner {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* 修复左侧和右侧侧边栏高度一致（仅桌面端） */
+@media screen and (min-width: 76.25em) {
+    .md-sidebar {
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    /* 左侧菜单靠左 */
+    .md-sidebar--primary {
+        margin-left: 0;
+        left: 0;
+    }
+
+    /* 右侧菜单靠右 */
+    .md-sidebar--secondary {
+        margin-right: 0;
+        right: 0;
+    }
+
+    /* 让侧边栏滚动区域填满整个高度 */
+    .md-sidebar__scrollwrap {
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+    /* 左侧菜单贴边 */
+    .md-sidebar--primary .md-sidebar__scrollwrap {
+        padding-left: 0;
+    }
+
+    /* 右侧目录贴边 */
+    .md-sidebar--secondary .md-sidebar__scrollwrap {
+        padding-right: 0;
+    }
+}
+
+/* 移动端：恢复默认行为，让菜单正常显示 */
+@media screen and (max-width: 76.1875em) {
+    .md-sidebar {
+        height: auto;
+        position: fixed;
+    }
+    
+    .md-sidebar__scrollwrap {
+        height: auto;
+        overflow-y: visible;
+    }
+    
+    .md-main {
+        min-height: auto;
+    }
+}
+
+/* 移除底部多余的内边距 */
+.md-sidebar__inner {
+    padding-bottom: 0;
+}
+
+/* 确保主内容区域高度正确（桌面端） */
+@media screen and (min-width: 76.25em) {
+    .md-main {
+        min-height: 100vh;
+    }
+}
+
+/* 让左右侧边栏的滚动条样式一致 */
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+    width: 4px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+/* 中间内容区域优化 */
+.md-content__inner {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
 /* ========== 图片点击放大功能 - 响应式大小 ========== */
 
 /* 默认：移动端小图 */
