@@ -5,7 +5,7 @@ site_url: https://micahyy.github.io/docs/
 nav:
   - 首页: index.md
   - 📁PCB:
-    - G80-3000: pcb/g80_3000.md
+    - G80-3000: PCB/g80_3000.md
     - 配置: usage/config.md
     - 常见问题: usage/faq.md
   - 开发指南:
