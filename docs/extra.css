@@ -7,29 +7,58 @@
     margin: 0;
 }
 
-/* 修复左侧和右侧侧边栏高度一致 */
-.md-sidebar {
-    height: 100vh;
-    position: sticky;
-    top: 0;
+/* 修复左侧和右侧侧边栏高度一致（仅桌面端） */
+@media screen and (min-width: 76.25em) {
+    .md-sidebar {
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .md-sidebar--primary {
+        margin-left: 0;
+    }
+
+    .md-sidebar--secondary {
+        margin-right: 0;
+    }
+
+    .md-content {
+        margin-right: 0;
+    }
+
+    /* 让侧边栏滚动区域填满整个高度 */
+    .md-sidebar__scrollwrap {
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+    /* 左侧菜单贴边 */
+    .md-sidebar--primary .md-sidebar__scrollwrap {
+        padding-left: 0;
+    }
+
+    /* 右侧目录贴边 */
+    .md-sidebar--secondary .md-sidebar__scrollwrap {
+        padding-right: 0;
+    }
 }
 
-.md-sidebar--primary {
-    margin-left: 0;
-}
-
-.md-sidebar--secondary {
-    margin-right: 0;
-}
-
-.md-content {
-    margin-right: 0;
-}
-
-/* 让侧边栏滚动区域填满整个高度 */
-.md-sidebar__scrollwrap {
-    height: 100vh;
-    overflow-y: auto;
+/* 移动端：恢复默认行为，让菜单正常显示 */
+@media screen and (max-width: 76.1875em) {
+    .md-sidebar {
+        height: auto;
+        position: fixed;
+    }
+    
+    .md-sidebar__scrollwrap {
+        height: auto;
+        overflow-y: visible;
+    }
+    
+    .md-main {
+        min-height: auto;
+    }
 }
 
 /* 移除底部多余的内边距 */
@@ -37,9 +66,11 @@
     padding-bottom: 0;
 }
 
-/* 确保主内容区域高度正确 */
-.md-main {
-    min-height: 100vh;
+/* 确保主内容区域高度正确（桌面端） */
+@media screen and (min-width: 76.25em) {
+    .md-main {
+        min-height: 100vh;
+    }
 }
 
 /* 让左右侧边栏的滚动条样式一致 */
@@ -54,14 +85,4 @@
 .md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
     background: #c1c1c1;
     border-radius: 4px;
-}
-
-/* 左侧菜单贴边 */
-.md-sidebar--primary .md-sidebar__scrollwrap {
-    padding-left: 0;
-}
-
-/* 右侧目录贴边 */
-.md-sidebar--secondary .md-sidebar__scrollwrap {
-    padding-right: 0;
 }
