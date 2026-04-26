@@ -1,5 +1,11 @@
 site_name: 菜籽猫
 site_url: https://micahyy.github.io/docs/
+
+# ===== 在这里添加 nav 配置 =====
+nav:
+  - 首页: index.md
+  # - 其他页面: other.md
+
 theme:
   name: material
   logo: images/logo.png
@@ -18,7 +24,7 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: "https://github.com/micahyy"  # ← 加引号
+      link: "https://github.com/micahyy"
 
 markdown_extensions:
   - admonition
@@ -31,7 +37,8 @@ plugins:
   - search
 
 extra_css:
-  - "extra.css"  # ← 加引号
+  - "extra.css"
 
 extra_javascript:
-  - "javascripts/zoom.js"  # ← 加引号
+  - "javascripts/zoom.js"
+# ===== 文件结束，后面不要有任何多余内容 =====
