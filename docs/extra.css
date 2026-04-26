@@ -1,203 +1,100 @@
-/* 移除最大宽度限制 */
-.md-grid {
-    max-width: 100%;
-}
-
-.md-main__inner {
-    margin: 0;
-}
-
-/* 修复左侧和右侧侧边栏高度一致（仅桌面端） */
-@media screen and (min-width: 76.25em) {
-    .md-sidebar {
-        height: 100vh;
-        position: sticky;
-        top: 0;
-    }
-
-    .md-sidebar--primary {
-        margin-left: 0;
-    }
-
-    .md-sidebar--secondary {
-        margin-right: 0;
-    }
-
-    .md-content {
-        margin-right: 0;
-    }
-
-    /* 让侧边栏滚动区域填满整个高度 */
-    .md-sidebar__scrollwrap {
-        height: 100vh;
-        overflow-y: auto;
-    }
-
-    /* 左侧菜单贴边 */
-    .md-sidebar--primary .md-sidebar__scrollwrap {
-        padding-left: 0;
-    }
-
-    /* 右侧目录贴边 */
-    .md-sidebar--secondary .md-sidebar__scrollwrap {
-        padding-right: 0;
-    }
-}
-
-/* 移动端：恢复默认行为，让菜单正常显示 */
-@media screen and (max-width: 76.1875em) {
-    .md-sidebar {
-        height: auto;
-        position: fixed;
+// 图片点击放大功能 - 修复版
+(function() {
+    'use strict';
+    
+    // 关闭放大视图
+    function closeZoom(overlay) {
+        if (!overlay) return;
+        overlay.classList.remove('active');
+        setTimeout(() => {
+            if (overlay.parentNode) {
+                overlay.parentNode.removeChild(overlay);
+            }
+        }, 250);
     }
     
-    .md-sidebar__scrollwrap {
-        height: auto;
-        overflow-y: visible;
-    }
-    
-    .md-main {
-        min-height: auto;
-    }
-}
-
-/* 移除底部多余的内边距 */
-.md-sidebar__inner {
-    padding-bottom: 0;
-}
-
-/* 确保主内容区域高度正确（桌面端） */
-@media screen and (min-width: 76.25em) {
-    .md-main {
-        min-height: 100vh;
-    }
-}
-
-/* 让左右侧边栏的滚动条样式一致 */
-.md-sidebar__scrollwrap::-webkit-scrollbar {
-    width: 4px;
-}
-
-.md-sidebar__scrollwrap::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
-    background: #c1c1c1;
-    border-radius: 4px;
-}
-
-
-/* ========== 图片点击放大功能 ========== */
-
-/* 图片基础样式 */
-.md-typeset img {
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    cursor: zoom-in;
-    max-width: 100%;
-    height: auto;
-}
-
-/* 图片悬停效果 */
-.md-typeset img:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-    transform: scale(1.02);
-}
-
-/* 确保图片居中显示 */
-.md-typeset img:not([align]) {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* 图表、代码块中的图片不移中和缩放 */
-.md-typeset .mermaid img,
-.md-typeset .highlight img {
-    transform: none;
-    cursor: default;
-}
-
-/* 遮罩层动画优化 */
-.image-zoom-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.92);
-    z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.25s ease;
-    backdrop-filter: blur(4px);
-}
-
-/* 放大后的图片 */
-.image-zoom-overlay img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.image-zoom-overlay img:hover {
-    transform: scale(1.02);
-}
-
-/* 关闭提示 */
-.zoom-close-hint {
-    position: absolute;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: rgba(255,255,255,0.8);
-    background: rgba(0,0,0,0.6);
-    padding: 8px 20px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
-    pointer-events: none;
-    backdrop-filter: blur(8px);
-    letter-spacing: 0.5px;
-}
-
-/* 移动端适配 */
-@media screen and (max-width: 76.1875em) {
-    .image-zoom-overlay img {
-        max-width: 95%;
-        max-height: 85%;
-    }
-    
-    .zoom-close-hint {
-        bottom: 16px;
-        font-size: 12px;
-        padding: 6px 16px;
-    }
-    
-    .md-typeset img:hover {
-        transform: scale(1.01);
-    }
-}
-
-/* 暗色主题下的图片边框优化 */
-[data-md-color-scheme="slate"] .md-typeset img {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-[data-md-color-scheme="slate"] .image-zoom-overlay {
-    background: rgba(0,0,0,0.95);
-}
-
-/* 遮罩层激活状态（用于触发淡入动画） */
-.image-zoom-overlay.active {
-    opacity: 1;
-}
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('article img, .md-content img');
+        
+        images.forEach(img => {
+            // 跳过已经是链接的图片
+            if (img.closest('a')) return;
+            
+            img.style.cursor = 'zoom-in';
+            img.style.transition = 'transform 0.2s';
+            
+            img.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.02)';
+            });
+            img.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+            
+            img.addEventListener('click', function(e) {
+                e.stopPropagation();
+                
+                // 如果已有打开的遮罩，先关闭
+                const existingOverlay = document.querySelector('.image-zoom-overlay');
+                if (existingOverlay) {
+                    closeZoom(existingOverlay);
+                    return;
+                }
+                
+                const originalSrc = this.getAttribute('data-original') || this.src;
+                
+                // 创建遮罩层
+                const overlay = document.createElement('div');
+                overlay.className = 'image-zoom-overlay';
+                
+                // 创建大图
+                const largeImg = document.createElement('img');
+                largeImg.src = originalSrc;
+                largeImg.alt = this.alt || '';
+                
+                // 创建关闭提示
+                const closeHint = document.createElement('div');
+                closeHint.className = 'zoom-close-hint';
+                closeHint.textContent = '✕ 点击任意位置关闭';
+                
+                overlay.appendChild(largeImg);
+                overlay.appendChild(closeHint);
+                document.body.appendChild(overlay);
+                
+                // 强制重绘后添加 active 类
+                setTimeout(() => {
+                    overlay.classList.add('active');
+                }, 10);
+                
+                // 点击遮罩关闭
+                overlay.addEventListener('click', function(e) {
+                    // 只有点击遮罩背景（不是图片）时才关闭
+                    if (e.target === overlay) {
+                        closeZoom(overlay);
+                    }
+                });
+                
+                // ESC 键关闭
+                const escHandler = function(e) {
+                    if (e.key === 'Escape') {
+                        const activeOverlay = document.querySelector('.image-zoom-overlay.active');
+                        if (activeOverlay) {
+                            closeZoom(activeOverlay);
+                        }
+                        document.removeEventListener('keydown', escHandler);
+                    }
+                };
+                document.addEventListener('keydown', escHandler);
+            });
+        });
+        
+        // 全局 ESC 监听（即使没有点击图片，也能关闭）
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const activeOverlay = document.querySelector('.image-zoom-overlay.active');
+                if (activeOverlay) {
+                    closeZoom(activeOverlay);
+                }
+            }
+        });
+    });
+})();
