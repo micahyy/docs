@@ -8,8 +8,8 @@ nav:
     - G80-3000: PCB/g80_3000.md
     - 配置: usage/config.md
     - 常见问题: usage/faq.md
-  - 开发指南:
-    - 概述: dev/overview.md
+  - 有线单模:
+    - DS17有线单模: 2.有线单模键盘/ds17.md
     - API 参考: dev/api.md
   - 关于: about.md
   
