@@ -1,4 +1,4 @@
-// 图片点击放大功能
+// 图片点击放大功能（配合 extra.css 样式）
 (function() {
     'use strict';
     
@@ -10,11 +10,11 @@
     }
     
     function initZoom() {
-        // 获取所有图片（排除图表情景下的图片）
+        // 获取所有图片（排除图表、代码块中的图片）
         const images = document.querySelectorAll('.md-typeset img:not(.mermaid img):not(.highlight img)');
         
         images.forEach(img => {
-            // 如果图片已经在链接内，跳过（避免冲突）
+            // 跳过已经是链接的图片（避免冲突）
             if (img.closest('a')) return;
             
             // 添加点击事件
@@ -23,23 +23,13 @@
                 openZoomImage(this);
             });
         });
-        
-        // 添加 ESC 键关闭功能
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                const overlay = document.querySelector('.image-zoom-overlay');
-                if (overlay) {
-                    closeZoomOverlay(overlay);
-                }
-            }
-        });
     }
     
     function openZoomImage(img) {
-        // 获取原图地址（优先使用 data-original，否则使用 src）
+        // 获取原图地址（优先使用 data-original 属性，否则用 src）
         const originalSrc = img.getAttribute('data-original') || img.src;
         
-        // 创建遮罩层
+        // 创建遮罩层（类名与 CSS 匹配）
         const overlay = document.createElement('div');
         overlay.className = 'image-zoom-overlay';
         
@@ -48,7 +38,7 @@
         largeImg.src = originalSrc;
         largeImg.alt = img.alt || '';
         
-        // 添加关闭提示
+        // 创建关闭提示
         const closeHint = document.createElement('div');
         closeHint.className = 'zoom-close-hint';
         closeHint.textContent = '✕ 点击任意位置关闭';
@@ -57,24 +47,38 @@
         overlay.appendChild(closeHint);
         document.body.appendChild(overlay);
         
-        // 强制重绘后添加透明度过渡
+        // 强制重绘后添加 active 类触发动画
         setTimeout(() => {
-            overlay.style.opacity = '1';
+            overlay.classList.add('active');
         }, 10);
         
-        // 点击关闭
-        overlay.addEventListener('click', function() {
-            closeZoomOverlay(overlay);
+        // 点击遮罩层关闭（点击背景关闭）
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) {
+                closeZoom(overlay);
+            }
         });
         
-        // 阻止图片点击事件冒泡
+        // 点击大图不关闭（让用户可以点击大图本身）
         largeImg.addEventListener('click', function(e) {
             e.stopPropagation();
         });
+        
+        // ESC 键关闭
+        const escHandler = function(e) {
+            if (e.key === 'Escape') {
+                const activeOverlay = document.querySelector('.image-zoom-overlay.active');
+                if (activeOverlay) {
+                    closeZoom(activeOverlay);
+                }
+                document.removeEventListener('keydown', escHandler);
+            }
+        };
+        document.addEventListener('keydown', escHandler);
     }
     
-    function closeZoomOverlay(overlay) {
-        overlay.style.opacity = '0';
+    function closeZoom(overlay) {
+        overlay.classList.remove('active');
         setTimeout(() => {
             if (overlay.parentNode) {
                 overlay.parentNode.removeChild(overlay);

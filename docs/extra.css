@@ -196,3 +196,8 @@
 [data-md-color-scheme="slate"] .image-zoom-overlay {
     background: rgba(0,0,0,0.95);
 }
+
+/* 遮罩层激活状态（用于触发淡入动画） */
+.image-zoom-overlay.active {
+    opacity: 1;
+}
