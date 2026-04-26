@@ -23,6 +23,25 @@ jobs:
       - name: Build site
         run: mkdocs build
 
+      # ========== 新增：处理链接，在新窗口打开 ==========
+      - name: Add target="_blank" to external links
+        run: |
+          # 进入构建输出目录
+          cd site
+          
+          # 查找所有 HTML 文件
+          find . -name "*.html" -type f | while read file; do
+            # 使用 sed 为所有 <a> 标签添加 target="_blank"
+            # 只处理包含 http:// 或 https:// 的外部链接
+            sed -i 's/<a href="http/<a target="_blank" href="http/g' "$file"
+            
+            # 处理相对路径的链接（可选：如果你想所有链接都在新窗口打开，取消下面的注释）
+            # sed -i 's/<a href="\//<a target="_blank" href="\//g' "$file"
+          done
+          
+          echo "✅ 已为所有外部链接添加 target=\"_blank\""
+      # ================================================
+
       - name: Deploy via SCP
         uses: appleboy/scp-action@v1
         with:
