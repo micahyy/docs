@@ -1,141 +1,105 @@
-// 图片点击放大功能
+// 统一处理链接和图片
 (function() {
     'use strict';
     
-    // 定义关闭函数（全局唯一）
-    function closeZoom(overlayElement) {
-        overlayElement.style.opacity = '0';
+    // 关闭放大视图
+    function closeZoom(overlay) {
+        if (!overlay) return;
+        overlay.classList.remove('active');
         setTimeout(() => {
-            if (overlayElement.parentNode) {
-                overlayElement.parentNode.removeChild(overlayElement);
+            if (overlay.parentNode) {
+                overlay.parentNode.removeChild(overlay);
             }
         }, 250);
     }
     
-    document.addEventListener('DOMContentLoaded', function() {
-        // 为所有图片添加点击事件（包括 article 和 .md-content 中的图片）
-        const images = document.querySelectorAll('article img, .md-content img');
+    // 打开图片放大
+    function openZoom(img) {
+        const existingOverlay = document.querySelector('.image-zoom-overlay');
+        if (existingOverlay) {
+            closeZoom(existingOverlay);
+            return;
+        }
         
-        images.forEach(img => {
-            // 跳过已经是链接的图片（避免冲突）
-            if (img.closest('a')) return;
+        // 获取原图（优先使用链接的 href）
+        const parentLink = img.closest('a');
+        const originalSrc = parentLink ? parentLink.href : (img.getAttribute('data-original') || img.src);
+        
+        const overlay = document.createElement('div');
+        overlay.className = 'image-zoom-overlay';
+        
+        const largeImg = document.createElement('img');
+        largeImg.src = originalSrc;
+        largeImg.alt = img.alt || '';
+        
+        const closeHint = document.createElement('div');
+        closeHint.className = 'zoom-close-hint';
+        closeHint.textContent = '✕ 点击任意位置关闭';
+        
+        overlay.appendChild(largeImg);
+        overlay.appendChild(closeHint);
+        document.body.appendChild(overlay);
+        
+        setTimeout(() => {
+            overlay.classList.add('active');
+        }, 10);
+        
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) {
+                closeZoom(overlay);
+            }
+        });
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        // 1. 处理所有链接：外部链接在新窗口打开，内部链接和图片链接在当前页处理
+        const allLinks = document.querySelectorAll('a');
+        
+        allLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (!href) return;
             
-            img.style.cursor = 'zoom-in';
-            img.style.transition = 'transform 0.2s';
+            // 检查是否是图片链接（href 以图片格式结尾）
+            const isImageLink = /\.(jpg|jpeg|png|gif|webp|svg|bmp)(\?.*)?$/i.test(href);
             
-            // 鼠标悬停效果
-            img.addEventListener('mouseenter', function() {
-                this.style.transform = 'scale(1.02)';
-            });
-            img.addEventListener('mouseleave', function() {
-                this.style.transform = 'scale(1)';
-            });
+            // 检查是否是外部链接
+            const isExternal = href.startsWith('http') && !href.includes(window.location.hostname);
             
-            // 点击放大
-            img.addEventListener('click', function(e) {
-                e.stopPropagation();
-                
-                // 获取原图地址（优先使用 data-original 属性，否则用 src）
-                const originalSrc = this.getAttribute('data-original') || this.src;
-                
-                // 如果已经有打开的遮罩层，先关闭
-                const existingOverlay = document.querySelector('.image-zoom-overlay');
-                if (existingOverlay) {
-                    closeZoom(existingOverlay);
-                    return;
-                }
-                
-                // 创建遮罩层
-                const overlay = document.createElement('div');
-                overlay.className = 'image-zoom-overlay';
-                overlay.style.cssText = `
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(0,0,0,0.92);
-                    z-index: 10000;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
-                    opacity: 0;
-                    transition: opacity 0.25s ease;
-                    backdrop-filter: blur(4px);
-                `;
-                
-                // 创建大图
-                const largeImg = document.createElement('img');
-                largeImg.src = originalSrc;
-                largeImg.alt = this.alt || '';
-                largeImg.style.cssText = `
-                    max-width: 90%;
-                    max-height: 90%;
-                    object-fit: contain;
-                    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-                    border-radius: 8px;
-                    transition: transform 0.2s;
-                `;
-                
-                // 大图悬停效果
-                largeImg.addEventListener('mouseenter', function() {
-                    this.style.transform = 'scale(1.02)';
-                });
-                largeImg.addEventListener('mouseleave', function() {
-                    this.style.transform = 'scale(1)';
-                });
-                
-                // 添加关闭按钮提示
-                const closeHint = document.createElement('div');
-                closeHint.textContent = '✕ 点击任意位置关闭';
-                closeHint.style.cssText = `
-                    position: absolute;
-                    bottom: 24px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    color: rgba(255,255,255,0.9);
-                    background: rgba(0,0,0,0.6);
-                    padding: 8px 20px;
-                    border-radius: 30px;
-                    font-size: 14px;
-                    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
-                    pointer-events: none;
-                    backdrop-filter: blur(8px);
-                    letter-spacing: 0.5px;
-                `;
-                
-                overlay.appendChild(largeImg);
-                overlay.appendChild(closeHint);
-                document.body.appendChild(overlay);
-                
-                // 淡入效果
-                setTimeout(() => { overlay.style.opacity = '1'; }, 10);
-                
-                // 点击关闭（防止点击大图时关闭）
-                overlay.addEventListener('click', function(e) {
-                    if (e.target === overlay) {
-                        closeZoom(overlay);
-                    }
-                });
-                
-                // 大图点击不关闭（让用户可以点击大图本身）
-                largeImg.addEventListener('click', function(e) {
+            if (isImageLink) {
+                // 图片链接：阻止跳转，改为放大功能
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
                     e.stopPropagation();
-                });
-                
-                // ESC 键关闭
-                const escHandler = function(e) {
-                    if (e.key === 'Escape') {
-                        const activeOverlay = document.querySelector('.image-zoom-overlay');
-                        if (activeOverlay) {
-                            closeZoom(activeOverlay);
-                        }
-                        document.removeEventListener('keydown', escHandler);
+                    const img = this.querySelector('img');
+                    if (img) {
+                        openZoom(img);
                     }
-                };
-                document.addEventListener('keydown', escHandler);
+                });
+            } else if (isExternal) {
+                // 外部链接：新窗口打开，增加安全性
+                link.setAttribute('target', '_blank');
+                link.setAttribute('rel', 'noopener noreferrer');
+            }
+            // 内部链接：保持默认行为（当前页打开）
+        });
+        
+        // 2. 处理没有链接包裹的普通图片
+        const standaloneImages = document.querySelectorAll('article img:not(a img), .md-content img:not(a img)');
+        standaloneImages.forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function() {
+                openZoom(this);
             });
         });
+        
+        // 3. ESC 全局关闭
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const activeOverlay = document.querySelector('.image-zoom-overlay.active');
+                if (activeOverlay) {
+                    closeZoom(activeOverlay);
+                }
+            }
+        });
     });
-})(); 
+})();
