@@ -7,7 +7,7 @@ site_url: https://micahyy.github.io/docs/
 theme:
   name: material
   custom_dir: overrides  # 👈 添加这一行
-  logo: images/logo.png
+  logo: images/logo.jpg
   features:
     - navigation.sections
     - navigation.top
