@@ -291,3 +291,32 @@
         display: none;
     }
 }
+
+
+/* 表格隔行变色 - 斑马纹效果 */
+.md-typeset table:not([class]) tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.05);  /* 奇数行浅灰色背景 */
+}
+
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.02);  /* 偶数行更浅的背景（可选） */
+}
+
+/* 鼠标悬停行高亮效果（增强体验） */
+.md-typeset table:not([class]) tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    transition: background-color 0.2s ease;
+}
+
+/* 暗色主题适配 */
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
