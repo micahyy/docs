@@ -320,3 +320,36 @@
 [data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:hover {
     background-color: rgba(255, 255, 255, 0.08);
 }
+
+/* 移动端：表格容器水平滚动 */
+.md-typeset__scrollwrap {
+    overflow-x: auto;
+    margin: 1em 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.md-typeset__table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* 优化滚动条样式（可选） */
+.md-typeset__scrollwrap::-webkit-scrollbar {
+    height: 6px;
+}
+
+.md-typeset__scrollwrap::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.md-typeset__scrollwrap::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.md-typeset__scrollwrap::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
