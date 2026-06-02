@@ -1,4 +1,4 @@
-# 5_2 Swagkeys EAVE
+Swagkeys EAVE
 
 <!-- Google 广告 -->
 <ins class="adsbygoogle"
@@ -61,6 +61,21 @@
 
 | 快捷键|键值  | 说明|备注|
 |-----|-----|-----|-|
+|FN+Alt|MO(2)|触发层2按键||
+|FN+ESC|GRV|~||
+|FN+1||F1|FN+1~= 触发F1~F12|
+|FN+Z|RGB_TOG|背灯开关||
+|FN+X|RGB_MOD|灯效切换||
+|FN+WIN|GU_TOGG|锁定/解锁win||
+|FN+P|MPLY|播放/暂停||
+|FN+UP|KC_VOLU|音量+||
+|FN+DOWN|KC_VOLD|音量－||
+|FN+LEFT|KC_MPRV|上一曲||
+|FN+DOWN|KC_MNXT|下一曲|||
+|FN+RALT+ESC|EE_CLR|恢复出厂设置||
+|FN+RALT+0|QK_BOOT|进入刷机模式||
+|FN+RALT+CLRL|AG_TOGG|切换win和alt|MAC模式，如果切换回来需要按下FN+ALT+win位置按键|
+
 
 
 ## 4.JSON 文件
@@ -79,8 +94,11 @@
 
 
 
-## 5.固件下载
+## 5.资料下载
 
+[Github](https://github.com/micahyy/czmao/tree/main/Swagkeys)
+
+包含固件，JSON，定位板图纸
 
 ## 6.配件
 
