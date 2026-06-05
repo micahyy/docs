@@ -190,7 +190,7 @@ Grave Escape解决了这个问题：**同一个键按不同方式触发不同功
 
 | Key | Aliases | Description | 功能说明 |
 | --- | ------- | --- | --- |
-| `QK_GRAVE_ESCAPE` | `QK_GESC` | Escape when pressed, ` when Shift or GUI are held|单独按时输出ESC；按住Shift或GUI时输出反引号(\`)或波浪号(~) |
+| `QK_GRAVE_ESCAPE` | `QK_GESC` | Escape when pressed, (`) when Shift or GUI are held | 单独按时输出ESC；按住Shift或GUI时输出反引号(\`)或波浪号(~) |
 
 ## Joystick
 
