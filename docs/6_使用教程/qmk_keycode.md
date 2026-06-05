@@ -188,3 +188,55 @@ Grave Escape解决了这个问题：**同一个键按不同方式触发不同功
 | Key | Aliases | Description | 功能说明 |
 | --- | ------- | --- | --- |
 | `QK_GRAVE_ESCAPE` | `QK_GESC` | Escape when pressed, ` when Shift or GUI are held | 单独按时输出ESC；按住Shift或GUI时输出反引号(\`)或波浪号(~) |
+
+## Joystick
+
+**功能说明**
+
+Joystick（摇杆）是QMK中用于**控制虚拟游戏摇杆或手柄按键**的功能。
+
+通过启用QMK的摇杆功能，你可以将键盘上的按键映射为游戏手柄的摇杆方向或按钮，从而让键盘模拟一个游戏手柄。
+
+**典型应用场景：**
+- 在没有手柄的情况下，用键盘游玩支持手柄的游戏
+- 自定义摇杆轴方向和按钮映射
+- 配合其他按键实现复杂的游戏控制
+
+**按键范围：**
+- 摇杆按钮0-31：共32个可编程的虚拟摇杆按钮
+- 摇杆轴方向：通常包括X轴、Y轴（以及可能的RX、RY、Z轴等），需要另外配置
+
+| Key | Aliases | Description | 功能说明 |
+| --- | ------- | --- | --- |
+| `QK_JOYSTICK_BUTTON_0` | `JS_0` | Button 0 | 虚拟摇杆按钮0 |
+| `QK_JOYSTICK_BUTTON_1` | `JS_1` | Button 1 | 虚拟摇杆按钮1 |
+| `QK_JOYSTICK_BUTTON_2` | `JS_2` | Button 2 | 虚拟摇杆按钮2 |
+| `QK_JOYSTICK_BUTTON_3` | `JS_3` | Button 3 | 虚拟摇杆按钮3 |
+| `QK_JOYSTICK_BUTTON_4` | `JS_4` | Button 4 | 虚拟摇杆按钮4 |
+| `QK_JOYSTICK_BUTTON_5` | `JS_5` | Button 5 | 虚拟摇杆按钮5 |
+| `QK_JOYSTICK_BUTTON_6` | `JS_6` | Button 6 | 虚拟摇杆按钮6 |
+| `QK_JOYSTICK_BUTTON_7` | `JS_7` | Button 7 | 虚拟摇杆按钮7 |
+| `QK_JOYSTICK_BUTTON_8` | `JS_8` | Button 8 | 虚拟摇杆按钮8 |
+| `QK_JOYSTICK_BUTTON_9` | `JS_9` | Button 9 | 虚拟摇杆按钮9 |
+| `QK_JOYSTICK_BUTTON_10` | `JS_10` | Button 10 | 虚拟摇杆按钮10 |
+| `QK_JOYSTICK_BUTTON_11` | `JS_11` | Button 11 | 虚拟摇杆按钮11 |
+| `QK_JOYSTICK_BUTTON_12` | `JS_12` | Button 12 | 虚拟摇杆按钮12 |
+| `QK_JOYSTICK_BUTTON_13` | `JS_13` | Button 13 | 虚拟摇杆按钮13 |
+| `QK_JOYSTICK_BUTTON_14` | `JS_14` | Button 14 | 虚拟摇杆按钮14 |
+| `QK_JOYSTICK_BUTTON_15` | `JS_15` | Button 15 | 虚拟摇杆按钮15 |
+| `QK_JOYSTICK_BUTTON_16` | `JS_16` | Button 16 | 虚拟摇杆按钮16 |
+| `QK_JOYSTICK_BUTTON_17` | `JS_17` | Button 17 | 虚拟摇杆按钮17 |
+| `QK_JOYSTICK_BUTTON_18` | `JS_18` | Button 18 | 虚拟摇杆按钮18 |
+| `QK_JOYSTICK_BUTTON_19` | `JS_19` | Button 19 | 虚拟摇杆按钮19 |
+| `QK_JOYSTICK_BUTTON_20` | `JS_20` | Button 20 | 虚拟摇杆按钮20 |
+| `QK_JOYSTICK_BUTTON_21` | `JS_21` | Button 21 | 虚拟摇杆按钮21 |
+| `QK_JOYSTICK_BUTTON_22` | `JS_22` | Button 22 | 虚拟摇杆按钮22 |
+| `QK_JOYSTICK_BUTTON_23` | `JS_23` | Button 23 | 虚拟摇杆按钮23 |
+| `QK_JOYSTICK_BUTTON_24` | `JS_24` | Button 24 | 虚拟摇杆按钮24 |
+| `QK_JOYSTICK_BUTTON_25` | `JS_25` | Button 25 | 虚拟摇杆按钮25 |
+| `QK_JOYSTICK_BUTTON_26` | `JS_26` | Button 26 | 虚拟摇杆按钮26 |
+| `QK_JOYSTICK_BUTTON_27` | `JS_27` | Button 27 | 虚拟摇杆按钮27 |
+| `QK_JOYSTICK_BUTTON_28` | `JS_28` | Button 28 | 虚拟摇杆按钮28 |
+| `QK_JOYSTICK_BUTTON_29` | `JS_29` | Button 29 | 虚拟摇杆按钮29 |
+| `QK_JOYSTICK_BUTTON_30` | `JS_30` | Button 30 | 虚拟摇杆按钮30 |
+| `QK_JOYSTICK_BUTTON_31` | `JS_31` | Button 31 | 虚拟摇杆按钮31 |
