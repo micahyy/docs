@@ -1,0 +1,2510 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://micahyy.github.io/docs/6_%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/qmk_keycode/">
+      
+      
+        <link rel="prev" href="../6.2%20QA/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>QMK键值 - 菜籽猫</title>
+      
+    
+    
+  
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1219216787967331"
+    crossorigin="anonymous"></script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#qmk" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="菜籽猫" class="md-header__button md-logo" aria-label="菜籽猫" data-md-component="logo">
+      
+  <img src="../../images/logo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            菜籽猫
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              QMK键值
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="菜籽猫" class="md-nav__button md-logo" aria-label="菜籽猫" data-md-component="logo">
+      
+  <img src="../../images/logo.jpg" alt="logo">
+
+    </a>
+    菜籽猫
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    菜籽猫的文档站
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 PCB
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1 PCB
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1_PCB/Ow_vento%208K/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ow_Vento_8K_PCB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1_PCB/g80_3000/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 Cherry G80_3000 改装PCB
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 有线单模
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2 有线单模
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2_%E6%9C%89%E7%BA%BF%E5%8D%95%E6%A8%A1/DS17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DS17
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2_%E6%9C%89%E7%BA%BF%E5%8D%95%E6%A8%A1/DS22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DS22
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2_%E6%9C%89%E7%BA%BF%E5%8D%95%E6%A8%A1/gamer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gamer 单手有线键盘
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2_%E6%9C%89%E7%BA%BF%E5%8D%95%E6%A8%A1/gh60_8K/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GH60 8K有线单模
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 三模
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4 三模
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4_%E4%B8%89%E6%A8%A1/4.1%20dm17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.1 DM17 VIA三模（on the way)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 Swagkeys
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5 Swagkeys
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5_Swagkeys/Eave/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eave
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5_Swagkeys/TransitionLite87/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SW Transition lite 87
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 使用教程
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6 使用教程
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.1_VIA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6.1 VIA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6.2%20QA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Q&amp;A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QMK键值
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QMK键值
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quantum-keycodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantum Keycodes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audio Keys
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-shift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto Shift
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autocorrect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autocorrect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backlighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backlighting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wirelessbluetooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wireless/Bluetooth
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caps-word" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caps Word
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic Macros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grave-escape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grave Escape（重音符转义）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joystick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Joystick
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Lock
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer Lock（层锁定）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer Switching（层切换）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leader-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leader Key（引导键）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#led-matrixled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LED Matrix（LED矩阵）
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quantum-keycodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantum Keycodes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#audio-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audio Keys
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-shift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto Shift
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autocorrect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autocorrect
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backlighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backlighting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wirelessbluetooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wireless/Bluetooth
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caps-word" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Caps Word
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-macros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic Macros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grave-escape" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grave Escape（重音符转义）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joystick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Joystick
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Lock
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer Lock（层锁定）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layer-switching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer Switching（层切换）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leader-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leader Key（引导键）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#led-matrixled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LED Matrix（LED矩阵）
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="qmk">QMK键值<a class="headerlink" href="#qmk" title="Permanent link">&para;</a></h1>
+<p>整理一些VIA改建常用的键值</p>
+<h2 id="quantum-keycodes">Quantum Keycodes<a class="headerlink" href="#quantum-keycodes" title="Permanent link">&para;</a></h2>
+<p>功能按键</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Aliases</th>
+<th>Description</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QK_BOOTLOADER</code></td>
+<td><code>QK_BOOT</code></td>
+<td>Put the keyboard into bootloader mode for flashing</td>
+<td>进入bootloader/刷机模式</td>
+</tr>
+<tr>
+<td><code>QK_DEBUG_TOGGLE</code></td>
+<td><code>DB_TOGG</code></td>
+<td>Toggle debug mode</td>
+<td></td>
+</tr>
+<tr>
+<td><code>QK_CLEAR_EEPROM</code></td>
+<td><code>EE_CLR</code></td>
+<td>Reinitializes the keyboard's EEPROM (persistent memory)</td>
+<td>清除缓存=恢复出厂设置</td>
+</tr>
+<tr>
+<td><code>QK_MAKE</code></td>
+<td></td>
+<td>Sends <code>qmk compile -kb (keyboard) -km (keymap)</code>, or <code>qmk flash</code> if shift is held. Puts keyboard into bootloader mode if shift &amp; control are held</td>
+<td></td>
+</tr>
+<tr>
+<td><code>QK_REBOOT</code></td>
+<td><code>QK_RBT</code></td>
+<td>Resets the keyboard. Does not load the bootloader</td>
+<td>重启键盘，不进入boot</td>
+</tr>
+</tbody>
+</table>
+<h2 id="audio-keys">Audio Keys<a class="headerlink" href="#audio-keys" title="Permanent link">&para;</a></h2>
+<p>控制蜂鸣器</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Aliases</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QK_AUDIO_ON</code></td>
+<td><code>AU_ON</code></td>
+<td>Turns on Audio Feature</td>
+</tr>
+<tr>
+<td><code>QK_AUDIO_OFF</code></td>
+<td><code>AU_OFF</code></td>
+<td>Turns off Audio Feature</td>
+</tr>
+<tr>
+<td><code>QK_AUDIO_TOGGLE</code></td>
+<td><code>AU_TOGG</code></td>
+<td>Toggles Audio state</td>
+</tr>
+<tr>
+<td><code>QK_AUDIO_CLICKY_TOGGLE</code></td>
+<td><code>CK_TOGG</code></td>
+<td>Toggles Audio clicky mode</td>
+</tr>
+<tr>
+<td><code>QK_AUDIO_CLICKY_ON</code></td>
+<td><code>CK_ON</code></td>
+<td>Turns on Audio clicky mode</td>
+</tr>
+<tr>
+<td><code>QK_AUDIO_CLICKY_OFF</code></td>
+<td><code>CK_OFF</code></td>
+<td>Turns on Audio clicky mode</td>
+</tr>
+<tr>
+<td><code>QK_AUDIO_CLICKY_UP</code></td>
+<td><code>CK_UP</code></td>
+<td>Increases frequency of the clicks</td>
+</tr>
+<tr>
+<td><code>QK_AUDIO_CLICKY_DOWN</code></td>
+<td><code>CK_DOWN</code></td>
+<td>Decreases frequency of the clicks</td>
+</tr>
+<tr>
+<td><code>QK_AUDIO_CLICKY_RESET</code></td>
+<td><code>CK_RST</code></td>
+<td>Resets frequency to default</td>
+</tr>
+<tr>
+<td><code>QK_MUSIC_ON</code></td>
+<td><code>MU_ON</code></td>
+<td>Turns on Music Mode</td>
+</tr>
+<tr>
+<td><code>QK_MUSIC_OFF</code></td>
+<td><code>MU_OFF</code></td>
+<td>Turns off Music Mode</td>
+</tr>
+<tr>
+<td><code>QK_MUSIC_TOGGLE</code></td>
+<td><code>MU_TOGG</code></td>
+<td>Toggles Music Mode</td>
+</tr>
+<tr>
+<td><code>QK_MUSIC_MODE_NEXT</code></td>
+<td><code>MU_NEXT</code></td>
+<td>Cycles through the music modes</td>
+</tr>
+<tr>
+<td><code>QK_AUDIO_VOICE_NEXT</code></td>
+<td><code>AU_NEXT</code></td>
+<td>Cycles through the audio voices</td>
+</tr>
+<tr>
+<td><code>QK_AUDIO_VOICE_PREVIOUS</code></td>
+<td><code>AU_PREV</code></td>
+<td>Cycles through the audio voices in reverse</td>
+</tr>
+</tbody>
+</table>
+<h2 id="auto-shift">Auto Shift<a class="headerlink" href="#auto-shift" title="Permanent link">&para;</a></h2>
+<p>长按自动输出大写功能</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Aliases</th>
+<th>Description</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QK_AUTO_SHIFT_DOWN</code></td>
+<td><code>AS_DOWN</code></td>
+<td>Lower the Auto Shift timeout variable (down)</td>
+<td>降低长按判定时间阈值（更快触发大写）</td>
+</tr>
+<tr>
+<td><code>QK_AUTO_SHIFT_UP</code></td>
+<td><code>AS_UP</code></td>
+<td>Raise the Auto Shift timeout variable (up)</td>
+<td>提高长按判定时间阈值（需要按更久才能出大写）</td>
+</tr>
+<tr>
+<td><code>QK_AUTO_SHIFT_REPORT</code></td>
+<td><code>AS_RPT</code></td>
+<td>Report your current Auto Shift timeout value</td>
+<td>报告当前设定的阈值时间（单位：毫秒）</td>
+</tr>
+<tr>
+<td><code>QK_AUTO_SHIFT_ON</code></td>
+<td><code>AS_ON</code></td>
+<td>Turns on the Auto Shift Function</td>
+<td>开启 Auto Shift 功能</td>
+</tr>
+<tr>
+<td><code>QK_AUTO_SHIFT_OFF</code></td>
+<td><code>AS_OFF</code></td>
+<td>Turns off the Auto Shift Function</td>
+<td>关闭 Auto Shift 功能</td>
+</tr>
+<tr>
+<td><code>QK_AUTO_SHIFT_TOGGLE</code></td>
+<td><code>AS_TOGG</code></td>
+<td>Toggles the state of the Auto Shift feature</td>
+<td>一键切换 Auto Shift 功能的开/关状态</td>
+</tr>
+</tbody>
+</table>
+<h2 id="autocorrect">Autocorrect<a class="headerlink" href="#autocorrect" title="Permanent link">&para;</a></h2>
+<p><strong>功能说明</strong></p>
+<p>Autocorrect（自动更正）是QMK的一项功能，用于<strong>自动纠正常见的拼写错误</strong>。</p>
+<p>例如，如果你经常把 <code>teh</code> 误打成 <code>the</code>，可以配置自动更正规则。当你输入 <code>teh</code> 时，键盘会自动将其替换为 <code>the</code>，无需手动修改。</p>
+<p>表格中的三个按键用于动态控制这个功能的开关状态，而不需要重新编译固件。</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Aliases</th>
+<th>Description</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QK_AUTOCORRECT_ON</code></td>
+<td><code>AC_ON</code></td>
+<td>Turns on the Autocorrect feature.</td>
+<td>开启自动更正功能</td>
+</tr>
+<tr>
+<td><code>QK_AUTOCORRECT_OFF</code></td>
+<td><code>AC_OFF</code></td>
+<td>Turns off the Autocorrect feature.</td>
+<td>关闭自动更正功能</td>
+</tr>
+<tr>
+<td><code>QK_AUTOCORRECT_TOGGLE</code></td>
+<td><code>AC_TOGG</code></td>
+<td>Toggles the status of the Autocorrect feature.</td>
+<td>一键切换自动更正功能的开/关状态</td>
+</tr>
+</tbody>
+</table>
+<h2 id="backlighting">Backlighting<a class="headerlink" href="#backlighting" title="Permanent link">&para;</a></h2>
+<p><strong>功能说明</strong></p>
+<p>Backlighting（背光）是QMK中用于控制键盘<strong>按键背光照明</strong>的功能。</p>
+<p>背光通常指的是键盘按键下方的单色（通常是白色或其他固定颜色）LED照明。与RGB灯效不同，背光通常只有一种颜色，主要控制亮度和呼吸效果。</p>
+<p>表格中的按键用于动态调节背光的开关、亮度级别和呼吸模式，无需重新编译固件。</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Aliases</th>
+<th>Description</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QK_BACKLIGHT_TOGGLE</code></td>
+<td><code>BL_TOGG</code></td>
+<td>Turn the backlight on or off</td>
+<td>打开或关闭背光</td>
+</tr>
+<tr>
+<td><code>QK_BACKLIGHT_STEP</code></td>
+<td><code>BL_STEP</code></td>
+<td>Cycle through backlight levels</td>
+<td>循环切换背光亮度级别</td>
+</tr>
+<tr>
+<td><code>QK_BACKLIGHT_ON</code></td>
+<td><code>BL_ON</code></td>
+<td>Set the backlight to max brightness</td>
+<td>将背光设置为最大亮度</td>
+</tr>
+<tr>
+<td><code>QK_BACKLIGHT_OFF</code></td>
+<td><code>BL_OFF</code></td>
+<td>Turn the backlight off</td>
+<td>关闭背光</td>
+</tr>
+<tr>
+<td><code>QK_BACKLIGHT_UP</code></td>
+<td><code>BL_UP</code></td>
+<td>Increase the backlight level</td>
+<td>增加背光亮度</td>
+</tr>
+<tr>
+<td><code>QK_BACKLIGHT_DOWN</code></td>
+<td><code>BL_DOWN</code></td>
+<td>Decrease the backlight level</td>
+<td>降低背光亮度</td>
+</tr>
+<tr>
+<td><code>QK_BACKLIGHT_TOGGLE_BREATHING</code></td>
+<td><code>BL_BRTG</code></td>
+<td>Toggle backlight breathing</td>
+<td>切换背光呼吸效果（亮度渐变循环）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wirelessbluetooth">Wireless/Bluetooth<a class="headerlink" href="#wirelessbluetooth" title="Permanent link">&para;</a></h2>
+<p><strong>功能说明</strong></p>
+<p>Wireless/Bluetooth（无线/蓝牙）是QMK中用于控制键盘<strong>无线输出模式切换</strong>的功能。</p>
+<p>这些按键可以让键盘在USB有线连接、蓝牙连接、2.4GHz无线连接之间切换，或者让键盘自动选择可用的连接方式。适用于支持多模连接的键盘。</p>
+<p><strong>注意</strong>：表格中标记为"not yet implemented"的功能尚未在QMK中完全实现，请以实际固件版本为准。</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Aliases</th>
+<th>Description</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QK_OUTPUT_AUTO</code></td>
+<td><code>OU_AUTO</code></td>
+<td>Automatically switch to USB when plugged in, otherwise use wireless</td>
+<td>自动切换：插入USB时使用有线，否则使用无线</td>
+</tr>
+<tr>
+<td><code>QK_OUTPUT_NEXT</code></td>
+<td><code>OU_NEXT</code></td>
+<td>Cycle forwards through USB, Bluetooth, and 2.4GHz (when available) (not yet implemented)</td>
+<td>正向循环切换：USB → 蓝牙 → 2.4GHz（未完全实现）</td>
+</tr>
+<tr>
+<td><code>QK_OUTPUT_PREV</code></td>
+<td><code>OU_PREV</code></td>
+<td>Cycle backwards through USB, Bluetooth, and 2.4GHz (when available) (not yet implemented)</td>
+<td>反向循环切换：2.4GHz → 蓝牙 → USB（未完全实现）</td>
+</tr>
+<tr>
+<td><code>QK_OUTPUT_NONE</code></td>
+<td><code>OU_NONE</code></td>
+<td>Disable all output (not yet implemented)</td>
+<td>禁用所有输出（未完全实现）</td>
+</tr>
+<tr>
+<td><code>QK_OUTPUT_USB</code></td>
+<td><code>OU_USB</code></td>
+<td>Output to USB only</td>
+<td>仅使用USB有线输出</td>
+</tr>
+<tr>
+<td><code>QK_OUTPUT_2P4GHZ</code></td>
+<td><code>OU_2P4G</code></td>
+<td>Output to 2.4GHz only (not yet implemented)</td>
+<td>仅使用2.4GHz无线输出（未完全实现）</td>
+</tr>
+<tr>
+<td><code>QK_OUTPUT_BLUETOOTH</code></td>
+<td><code>OU_BT</code></td>
+<td>Output to Bluetooth only</td>
+<td>仅使用蓝牙输出</td>
+</tr>
+<tr>
+<td><code>QK_BLUETOOTH_PROFILE_NEXT</code></td>
+<td><code>BT_NEXT</code></td>
+<td>Move to the next Bluetooth profile (not yet implemented)</td>
+<td>切换到下一个蓝牙配置文件（未完全实现）</td>
+</tr>
+<tr>
+<td><code>QK_BLUETOOTH_PROFILE_PREV</code></td>
+<td><code>BT_PREV</code></td>
+<td>Move to the previous Bluetooth profile (not yet implemented)</td>
+<td>切换到上一个蓝牙配置文件（未完全实现）</td>
+</tr>
+<tr>
+<td><code>QK_BLUETOOTH_UNPAIR</code></td>
+<td><code>BT_UNPR</code></td>
+<td>Un-pair the current Bluetooth profile (not yet implemented)</td>
+<td>取消当前蓝牙配置文件的配对（未完全实现）</td>
+</tr>
+<tr>
+<td><code>QK_BLUETOOTH_PROFILE1</code></td>
+<td><code>BT_PRF1</code></td>
+<td>Swap to Bluetooth profile #1 (not yet implemented)</td>
+<td>切换到蓝牙配置文件 #1（未完全实现）</td>
+</tr>
+<tr>
+<td><code>QK_BLUETOOTH_PROFILE2</code></td>
+<td><code>BT_PRF2</code></td>
+<td>Swap to Bluetooth profile #2 (not yet implemented)</td>
+<td>切换到蓝牙配置文件 #2（未完全实现）</td>
+</tr>
+<tr>
+<td><code>QK_BLUETOOTH_PROFILE3</code></td>
+<td><code>BT_PRF3</code></td>
+<td>Swap to Bluetooth profile #3 (not yet implemented)</td>
+<td>切换到蓝牙配置文件 #3（未完全实现）</td>
+</tr>
+<tr>
+<td><code>QK_BLUETOOTH_PROFILE4</code></td>
+<td><code>BT_PRF4</code></td>
+<td>Swap to Bluetooth profile #4 (not yet implemented)</td>
+<td>切换到蓝牙配置文件 #4（未完全实现）</td>
+</tr>
+<tr>
+<td><code>QK_BLUETOOTH_PROFILE5</code></td>
+<td><code>BT_PRF5</code></td>
+<td>Swap to Bluetooth profile #5 (not yet implemented)</td>
+<td>切换到蓝牙配置文件 #5（未完全实现）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="caps-word">Caps Word<a class="headerlink" href="#caps-word" title="Permanent link">&para;</a></h2>
+<p><strong>功能说明</strong></p>
+<p>Caps Word（大写单词）是QMK中一项用于<strong>临时启用大写锁定</strong>的功能，与传统的Caps Lock不同。</p>
+<p>传统Caps Lock开启后，所有字母都变成大写，直到手动关闭。而Caps Word的特点是：
+- <strong>自动结束</strong>：当你输入空格、回车、标点符号或任何非字母字符时，Caps Word会自动关闭。
+- <strong>适用场景</strong>：非常适合输入连续的大写单词或缩写（如 <code>QWERTY</code>、<code>USB</code>、<code>QMK</code>），输入完成后无需手动关闭大写。
+- <strong>与Caps Lock的区别</strong>：Caps Word是临时的、自动结束的；Caps Lock是持久的、需要手动关闭的。</p>
+<p>表格中的按键用于一键切换Caps Word功能的开/关状态。</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Aliases</th>
+<th>Description</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QK_CAPS_WORD_TOGGLE</code></td>
+<td><code>CW_TOGG</code></td>
+<td>Toggles Caps Word</td>
+<td>一键切换Caps Word功能的开/关状态</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dynamic-macros">Dynamic Macros<a class="headerlink" href="#dynamic-macros" title="Permanent link">&para;</a></h2>
+<p><strong>功能说明</strong></p>
+<p>Dynamic Macros（动态宏）是QMK中一项<strong>无需重新编译固件即可录制和回放宏</strong>的功能。</p>
+<p>传统宏需要在固件中预先编写好代码，然后重新刷写才能使用。而动态宏允许你在键盘上直接录制按键序列，然后随时回放，类似于某些游戏键盘或宏键盘的实时录制功能。</p>
+<p><strong>使用方法：</strong>
+1. <strong>开始录制</strong>：按下 <code>DM_REC1</code> 或 <code>DM_REC2</code>，开始录制宏
+2. <strong>执行操作</strong>：按下你想要录制的按键序列
+3. <strong>停止录制</strong>：按下 <code>DM_RSTP</code> 停止录制
+4. <strong>回放宏</strong>：按下 <code>DM_PLY1</code> 或 <code>DM_PLY2</code> 回放之前录制的宏</p>
+<p><strong>特点：</strong>
+- 支持同时录制两个独立的宏（宏1和宏2）
+- 宏内容存储在键盘的内存中，断电后可能丢失（取决于具体实现）
+- 无需重新编译或刷写固件即可更改宏内容</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Aliases</th>
+<th>Description</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QK_DYNAMIC_MACRO_RECORD_START_1</code></td>
+<td><code>DM_REC1</code></td>
+<td>Start recording Macro 1</td>
+<td>开始录制宏1</td>
+</tr>
+<tr>
+<td><code>QK_DYNAMIC_MACRO_RECORD_START_2</code></td>
+<td><code>DM_REC2</code></td>
+<td>Start recording Macro 2</td>
+<td>开始录制宏2</td>
+</tr>
+<tr>
+<td><code>QK_DYNAMIC_MACRO_PLAY_1</code></td>
+<td><code>DM_PLY1</code></td>
+<td>Replay Macro 1</td>
+<td>回放宏1</td>
+</tr>
+<tr>
+<td><code>QK_DYNAMIC_MACRO_PLAY_2</code></td>
+<td><code>DM_PLY2</code></td>
+<td>Replay Macro 2</td>
+<td>回放宏2</td>
+</tr>
+<tr>
+<td><code>QK_DYNAMIC_MACRO_RECORD_STOP</code></td>
+<td><code>DM_RSTP</code></td>
+<td>Finish the macro that is currently being recorded.</td>
+<td>停止当前正在录制的宏</td>
+</tr>
+</tbody>
+</table>
+<h2 id="grave-escape">Grave Escape（重音符转义）<a class="headerlink" href="#grave-escape" title="Permanent link">&para;</a></h2>
+<p><strong>功能说明</strong></p>
+<p>Grave Escape（重音符转义）是QMK中一项<strong>将单个按键同时用作重音符(`)和Escape(ESC)</strong> 的功能。</p>
+<p>在标准键盘布局中，左上角的按键通常是反引号/波浪号（` 和 ~）。但在许多键盘（特别是60%或更小的布局）中，Escape键的位置往往被其他键取代，导致ESC需要挪到其他地方。</p>
+<p>Grave Escape解决了这个问题：<strong>同一个键按不同方式触发不同功能</strong>。</p>
+<p><strong>工作原理：</strong></p>
+<ul>
+<li>按下时：如果同时按住了Shift或GUI（Windows/Command键），则输出反引号（`）或波浪号（~）</li>
+<li>按下时：如果没有按住任何修饰键，则输出Escape（ESC）</li>
+</ul>
+<p><strong>实际效果：</strong></p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>单独按一下</td>
+<td>Escape（ESC）</td>
+</tr>
+<tr>
+<td>Shift + 按一下</td>
+<td>~（波浪号）</td>
+</tr>
+<tr>
+<td>GUI/Win + 按一下</td>
+<td>`（反引号）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>适用场景：</strong></p>
+<ul>
+<li>小尺寸键盘（如60%、40%）没有独立ESC键位置时</li>
+<li>需要保留ESC功能，又不想放弃`~键的用户</li>
+<li>HHKB布局风格的用户（原本就在那个位置放ESC）</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Aliases</th>
+<th>Description</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QK_GRAVE_ESCAPE</code></td>
+<td><code>QK_GESC</code></td>
+<td></td>
+<td>单独按时输出ESC；按住Shift或GUI时输出反引号(`)或波浪号(~)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="joystick">Joystick<a class="headerlink" href="#joystick" title="Permanent link">&para;</a></h2>
+<p><strong>功能说明</strong></p>
+<p>Joystick（摇杆）是QMK中用于<strong>控制虚拟游戏摇杆或手柄按键</strong>的功能。</p>
+<p>通过启用QMK的摇杆功能，你可以将键盘上的按键映射为游戏手柄的摇杆方向或按钮，从而让键盘模拟一个游戏手柄。</p>
+<p><strong>典型应用场景：</strong>
+- 在没有手柄的情况下，用键盘游玩支持手柄的游戏
+- 自定义摇杆轴方向和按钮映射
+- 配合其他按键实现复杂的游戏控制</p>
+<p><strong>按键范围：</strong>
+- 摇杆按钮0-31：共32个可编程的虚拟摇杆按钮
+- 摇杆轴方向：通常包括X轴、Y轴（以及可能的RX、RY、Z轴等），需要另外配置</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Aliases</th>
+<th>Description</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_0</code></td>
+<td><code>JS_0</code></td>
+<td>Button 0</td>
+<td>虚拟摇杆按钮0</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_1</code></td>
+<td><code>JS_1</code></td>
+<td>Button 1</td>
+<td>虚拟摇杆按钮1</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_2</code></td>
+<td><code>JS_2</code></td>
+<td>Button 2</td>
+<td>虚拟摇杆按钮2</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_3</code></td>
+<td><code>JS_3</code></td>
+<td>Button 3</td>
+<td>虚拟摇杆按钮3</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_4</code></td>
+<td><code>JS_4</code></td>
+<td>Button 4</td>
+<td>虚拟摇杆按钮4</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_5</code></td>
+<td><code>JS_5</code></td>
+<td>Button 5</td>
+<td>虚拟摇杆按钮5</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_6</code></td>
+<td><code>JS_6</code></td>
+<td>Button 6</td>
+<td>虚拟摇杆按钮6</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_7</code></td>
+<td><code>JS_7</code></td>
+<td>Button 7</td>
+<td>虚拟摇杆按钮7</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_8</code></td>
+<td><code>JS_8</code></td>
+<td>Button 8</td>
+<td>虚拟摇杆按钮8</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_9</code></td>
+<td><code>JS_9</code></td>
+<td>Button 9</td>
+<td>虚拟摇杆按钮9</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_10</code></td>
+<td><code>JS_10</code></td>
+<td>Button 10</td>
+<td>虚拟摇杆按钮10</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_11</code></td>
+<td><code>JS_11</code></td>
+<td>Button 11</td>
+<td>虚拟摇杆按钮11</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_12</code></td>
+<td><code>JS_12</code></td>
+<td>Button 12</td>
+<td>虚拟摇杆按钮12</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_13</code></td>
+<td><code>JS_13</code></td>
+<td>Button 13</td>
+<td>虚拟摇杆按钮13</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_14</code></td>
+<td><code>JS_14</code></td>
+<td>Button 14</td>
+<td>虚拟摇杆按钮14</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_15</code></td>
+<td><code>JS_15</code></td>
+<td>Button 15</td>
+<td>虚拟摇杆按钮15</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_16</code></td>
+<td><code>JS_16</code></td>
+<td>Button 16</td>
+<td>虚拟摇杆按钮16</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_17</code></td>
+<td><code>JS_17</code></td>
+<td>Button 17</td>
+<td>虚拟摇杆按钮17</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_18</code></td>
+<td><code>JS_18</code></td>
+<td>Button 18</td>
+<td>虚拟摇杆按钮18</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_19</code></td>
+<td><code>JS_19</code></td>
+<td>Button 19</td>
+<td>虚拟摇杆按钮19</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_20</code></td>
+<td><code>JS_20</code></td>
+<td>Button 20</td>
+<td>虚拟摇杆按钮20</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_21</code></td>
+<td><code>JS_21</code></td>
+<td>Button 21</td>
+<td>虚拟摇杆按钮21</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_22</code></td>
+<td><code>JS_22</code></td>
+<td>Button 22</td>
+<td>虚拟摇杆按钮22</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_23</code></td>
+<td><code>JS_23</code></td>
+<td>Button 23</td>
+<td>虚拟摇杆按钮23</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_24</code></td>
+<td><code>JS_24</code></td>
+<td>Button 24</td>
+<td>虚拟摇杆按钮24</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_25</code></td>
+<td><code>JS_25</code></td>
+<td>Button 25</td>
+<td>虚拟摇杆按钮25</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_26</code></td>
+<td><code>JS_26</code></td>
+<td>Button 26</td>
+<td>虚拟摇杆按钮26</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_27</code></td>
+<td><code>JS_27</code></td>
+<td>Button 27</td>
+<td>虚拟摇杆按钮27</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_28</code></td>
+<td><code>JS_28</code></td>
+<td>Button 28</td>
+<td>虚拟摇杆按钮28</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_29</code></td>
+<td><code>JS_29</code></td>
+<td>Button 29</td>
+<td>虚拟摇杆按钮29</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_30</code></td>
+<td><code>JS_30</code></td>
+<td>Button 30</td>
+<td>虚拟摇杆按钮30</td>
+</tr>
+<tr>
+<td><code>QK_JOYSTICK_BUTTON_31</code></td>
+<td><code>JS_31</code></td>
+<td>Button 31</td>
+<td>虚拟摇杆按钮31</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-lock">Key Lock<a class="headerlink" href="#key-lock" title="Permanent link">&para;</a></h2>
+<p><strong>功能说明</strong></p>
+<p>Key Lock（按键锁定）是QMK中一项<strong>将下一个按下的键锁定为持续按住状态</strong>的功能。</p>
+<p><strong>工作原理：</strong>
+1. 按下 <code>QK_LOCK</code> 键
+2. 然后按下你想要锁定的目标键（比如 <code>KC_A</code>）
+3. 目标键会被锁定，<strong>如同一直按住该键不松手</strong>
+4. 再次按下同一个被锁定的键，即可解除锁定</p>
+<p><strong>典型应用场景：</strong>
+- <strong>游戏中的持续移动</strong>：锁定 <code>W</code> 键让人物持续前进，无需一直按着
+- <strong>演示或展示</strong>：锁定某个修饰键（如Shift）来演示大写输入效果
+- <strong>辅助输入</strong>：锁定 <code>Ctrl</code> 或 <code>Alt</code> 键，然后单手操作鼠标进行多选等操作
+- <strong>减少手指疲劳</strong>：需要长时间按住某个键时，用锁定代替持续按压</p>
+<p><strong>注意事项：</strong>
+- 一次只能锁定一个键
+- 锁定状态下按其他键不受影响
+- 再次按下被锁定的键即可解锁
+- 切换层或重置键盘也会清除锁定状态</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QK_LOCK</code></td>
+<td>Hold down the next key pressed, until the key is pressed again</td>
+<td>锁定下一个按下的键，使其保持按住状态，直到再次按下该键解锁</td>
+</tr>
+</tbody>
+</table>
+<h2 id="layer-lock">Layer Lock（层锁定）<a class="headerlink" href="#layer-lock" title="Permanent link">&para;</a></h2>
+<p><strong>功能说明</strong></p>
+<p>Layer Lock（层锁定）是QMK中一项<strong>将当前最高活动层锁定，使其保持激活状态</strong>的功能。</p>
+<p><strong>与普通层切换的区别：</strong></p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>行为</th>
+<th>典型按键</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MO(layer)</code></td>
+<td>按住时临时切换层，松开即恢复</td>
+<td>类似Shift键</td>
+</tr>
+<tr>
+<td><code>TG(layer)</code></td>
+<td>点击一次切换层，再点击一次切回</td>
+<td>类似Caps Lock</td>
+</tr>
+<tr>
+<td><code>Layer Lock</code></td>
+<td>锁定当前最高活动层，直到按下同一键或切换层</td>
+<td>更精确的层锁定</td>
+</tr>
+</tbody>
+</table>
+<p><strong>工作原理：</strong>
+1. 当某个层处于激活状态（例如通过 <code>MO</code> 或 <code>TG</code> 切换到的层）
+2. 按下 <code>QK_LAYER_LOCK</code>（或 <code>QK_LLCK</code>）
+3. 当前最高活动层被<strong>锁定</strong>，即使松开原本切换层的按键，该层仍然保持激活
+4. 再次按下 <code>QK_LAYER_LOCK</code>，或主动切换到其他层，即可解锁</p>
+<p><strong>典型应用场景：</strong>
+- <strong>临时层的持久化</strong>：原本需要一直按住 <code>FN</code> 键才能使用的功能层，用Layer Lock锁定后就可以松开手指，持续使用该层的功能
+- <strong>多任务操作</strong>：锁定数字层或符号层，连续输入数字或符号，无需反复按切换键
+- <strong>游戏场景</strong>：锁定游戏功能层，使一组游戏专用键持续生效
+- <strong>辅助功能</strong>：为残障用户提供无需持续按压的层切换方案</p>
+<p><strong>优势：</strong>
+- 比 <code>TG(layer)</code> 更灵活：不固定锁定特定层，而是锁定当前正在使用的层
+- 与临时层切换键（如 <code>MO</code>、<code>LT</code>）配合使用效果最佳
+- 按一下锁定，再按一下解锁，操作简单直观</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Aliases</th>
+<th>Description</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QK_LAYER_LOCK</code></td>
+<td><code>QK_LLCK</code></td>
+<td>Locks or unlocks the highest layer</td>
+<td>锁定或解锁当前最高活动层</td>
+</tr>
+</tbody>
+</table>
+<h2 id="layer-switching">Layer Switching（层切换）<a class="headerlink" href="#layer-switching" title="Permanent link">&para;</a></h2>
+<p><strong>功能说明</strong></p>
+<p>Layer Switching（层切换）是QMK中用于<strong>在不同功能层之间进行切换</strong>的核心功能。</p>
+<p>QMK的层（Layer）类似于键盘的"功能页"，每个层可以定义不同的按键映射。通过层切换键，你可以在不同层之间跳转，实现单键多功能，大大扩展小尺寸键盘的输入能力。</p>
+<p><strong>常用层切换键对比：</strong></p>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>行为</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MO(layer)</code></td>
+<td>按住时临时切换，松开即恢复</td>
+<td>临时使用某个层（类似Shift）</td>
+</tr>
+<tr>
+<td><code>LT(layer, kc)</code></td>
+<td>按住时切换层，轻按时输出普通按键</td>
+<td>空格键兼任层切换</td>
+</tr>
+<tr>
+<td><code>TG(layer)</code></td>
+<td>点击一次切换，再点击一次切回</td>
+<td>锁定某个层（类似Caps Lock）</td>
+</tr>
+<tr>
+<td><code>TO(layer)</code></td>
+<td>直接切换到指定层，关闭其他所有非默认层</td>
+<td>单层专用模式</td>
+</tr>
+<tr>
+<td><code>TT(layer)</code></td>
+<td>类似MO，但快速多次点击可切换锁定状态</td>
+<td>灵活切换/临时两用</td>
+</tr>
+<tr>
+<td><code>DF(layer)</code></td>
+<td>更改默认层（临时，断电后恢复）</td>
+<td>临时改变键盘基础布局</td>
+</tr>
+<tr>
+<td><code>PDF(layer)</code></td>
+<td>更改默认层（保存到EEPROM，断电不丢失）</td>
+<td>永久改变键盘基础布局</td>
+</tr>
+<tr>
+<td><code>LM(layer, mod)</code></td>
+<td>切换层的同时按住指定修饰键</td>
+<td>层切换+Shift/Ctrl等组合</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DF(layer)</code></td>
+<td>Set the base (default) layer until the keyboard loses power</td>
+<td>设置默认层，断电后恢复原设置（临时）</td>
+</tr>
+<tr>
+<td><code>PDF(layer)</code></td>
+<td>Set the base (default) layer in EEPROM</td>
+<td>设置默认层并保存到EEPROM（永久）</td>
+</tr>
+<tr>
+<td><code>MO(layer)</code></td>
+<td>Momentarily turn on layer when pressed (requires KC_TRNS on destination layer)</td>
+<td>按住时临时切换层，松开即恢复</td>
+</tr>
+<tr>
+<td><code>LM(layer, mod)</code></td>
+<td>Momentarily turn on layer (like MO) with mod active as well</td>
+<td>按住时切换层，同时激活指定修饰键</td>
+</tr>
+<tr>
+<td><code>LT(layer, kc)</code></td>
+<td>Turn on layer when held, kc when tapped</td>
+<td>按住时切换层，轻按时输出普通按键kc</td>
+</tr>
+<tr>
+<td><code>TG(layer)</code></td>
+<td>Toggle layer on or off</td>
+<td>点击一次切换层，再点击一次切回</td>
+</tr>
+<tr>
+<td><code>TO(layer)</code></td>
+<td>Turns on layer and turns off all other layers, except the default layer</td>
+<td>切换到指定层，关闭其他所有非默认层</td>
+</tr>
+<tr>
+<td><code>TT(layer)</code></td>
+<td>Normally acts like MO unless it's tapped multiple times, which toggles layer on</td>
+<td>行为类似MO，但快速多次点击可切换锁定状态</td>
+</tr>
+</tbody>
+</table>
+<h2 id="leader-key">Leader Key（引导键）<a class="headerlink" href="#leader-key" title="Permanent link">&para;</a></h2>
+<p><strong>功能说明</strong></p>
+<p>Leader Key（引导键）是QMK中一项<strong>通过按键序列触发复杂功能</strong>的机制，类似于键盘上的"快捷键宏"。</p>
+<p><strong>工作原理：</strong></p>
+<ol>
+<li>按下 <code>QK_LEAD</code> 键（引导键）</li>
+<li>在设定时间内依次按下几个按键（称为引导序列）</li>
+<li>如果该序列已被定义，则触发对应的功能</li>
+</ol>
+<p><strong>与传统快捷键的区别：</strong></p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>按键方式</th>
+<th>灵活性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通快捷键</td>
+<td>同时按住多个键（如 <code>Ctrl+C</code>）</td>
+<td>受限于修饰键组合</td>
+</tr>
+<tr>
+<td>Leader Key</td>
+<td>依次按下多个键（如 <code>LEAD</code> → <code>A</code> → <code>B</code> → <code>C</code>）</td>
+<td>序列可任意长，自由度极高</td>
+</tr>
+</tbody>
+</table>
+<p><strong>典型应用场景：</strong></p>
+<ul>
+<li><strong>输入常用代码片段</strong>：<code>LEAD</code> → <code>f</code> → <code>o</code> → <code>r</code> 自动输入一个for循环模板</li>
+<li><strong>快速打开网站</strong>：<code>LEAD</code> → <code>g</code> → <code>i</code> → <code>t</code> 打开GitHub</li>
+<li><strong>执行组合操作</strong>：<code>LEAD</code> → <code>s</code> → <code>a</code> → <code>v</code> 执行保存全部并关闭的宏</li>
+<li><strong>Vim风格快捷键</strong>：模仿Vim的按键序列习惯</li>
+</ul>
+<p><strong>配置方式：</strong></p>
+<p>需要在固件中定义引导序列及其对应的功能。例如：
+<div class="highlight"><pre><span></span><code><span class="n">LEADER_EXTERNS</span><span class="p">();</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">matrix_scan_user</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">LEADER_DICTIONARY</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">leading</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">        </span><span class="n">leader_end</span><span class="p">();</span>
+<span class="w">        </span><span class="n">SEQ_ONE_KEY</span><span class="p">(</span><span class="n">KC_F</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// LEAD + F</span>
+<span class="w">            </span><span class="n">SEND_STRING</span><span class="p">(</span><span class="s">&quot;QMK Firmware&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">SEQ_TWO_KEYS</span><span class="p">(</span><span class="n">KC_A</span><span class="p">,</span><span class="w"> </span><span class="n">KC_B</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// LEAD + A + B</span>
+<span class="w">            </span><span class="n">tap_code</span><span class="p">(</span><span class="n">KC_F13</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h2 id="led-matrixled">LED Matrix（LED矩阵）<a class="headerlink" href="#led-matrixled" title="Permanent link">&para;</a></h2>
+<p><strong>功能说明</strong></p>
+<p>LED Matrix（LED矩阵）是QMK中用于<strong>控制键盘上每个独立LED灯珠</strong>的功能，通常用于带有RGB或单色LED灯珠矩阵的键盘。</p>
+<p>与Backlighting（背光）不同，LED Matrix可以<strong>单独控制每个按键下方的LED灯珠</strong>，实现复杂的灯光动画效果，如波浪、呼吸、彩虹、按键涟漪等。</p>
+<p><strong>与RGB Lighting的区别：</strong></p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>控制方式</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Backlighting</td>
+<td>统一控制所有背光LED（通常单色）</td>
+<td>简单的亮度调节</td>
+</tr>
+<tr>
+<td>RGB Lighting</td>
+<td>统一控制RGB灯带或底灯</td>
+<td>底部氛围灯、灯带效果</td>
+</tr>
+<tr>
+<td>LED Matrix</td>
+<td>独立控制每个按键的LED</td>
+<td>每个按键独立灯效（Per-key RGB）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>LED Matrix控制按键：</strong></p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Aliases</th>
+<th>Description</th>
+<th>功能说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QK_LED_MATRIX_ON</code></td>
+<td><code>LM_ON</code></td>
+<td>Turn on LED Matrix</td>
+<td>开启LED矩阵灯效</td>
+</tr>
+<tr>
+<td><code>QK_LED_MATRIX_OFF</code></td>
+<td><code>LM_OFF</code></td>
+<td>Turn off LED Matrix</td>
+<td>关闭LED矩阵灯效</td>
+</tr>
+<tr>
+<td><code>QK_LED_MATRIX_TOGGLE</code></td>
+<td><code>LM_TOGG</code></td>
+<td>Toggle LED Matrix on or off</td>
+<td>一键切换LED矩阵灯效的开关状态</td>
+</tr>
+<tr>
+<td><code>QK_LED_MATRIX_MODE_NEXT</code></td>
+<td><code>LM_NEXT</code></td>
+<td>Cycle through animations</td>
+<td>切换到下一个动画模式</td>
+</tr>
+<tr>
+<td><code>QK_LED_MATRIX_MODE_PREVIOUS</code></td>
+<td><code>LM_PREV</code></td>
+<td>Cycle through animations in reverse</td>
+<td>切换到上一个动画模式</td>
+</tr>
+<tr>
+<td><code>QK_LED_MATRIX_BRIGHTNESS_UP</code></td>
+<td><code>LM_BRIU</code></td>
+<td>Increase the brightness level</td>
+<td>增加亮度</td>
+</tr>
+<tr>
+<td><code>QK_LED_MATRIX_BRIGHTNESS_DOWN</code></td>
+<td><code>LM_BRID</code></td>
+<td>Decrease the brightness level</td>
+<td>降低亮度</td>
+</tr>
+<tr>
+<td><code>QK_LED_MATRIX_SPEED_UP</code></td>
+<td><code>LM_SPDU</code></td>
+<td>Increase the animation speed</td>
+<td>增加动画速度</td>
+</tr>
+<tr>
+<td><code>QK_LED_MATRIX_SPEED_DOWN</code></td>
+<td><code>LM_SPDD</code></td>
+<td>Decrease the animation speed</td>
+<td>降低动画速度</td>
+</tr>
+<tr>
+<td><code>QK_LED_MATRIX_FLAG_NEXT</code></td>
+<td><code>LM_FLGN</code></td>
+<td>Cycle through flags</td>
+<td>切换到下一个效果标志</td>
+</tr>
+<tr>
+<td><code>QK_LED_MATRIX_FLAG_PREVIOUS</code></td>
+<td><code>LM_FLGP</code></td>
+<td>Cycle through flags in reverse</td>
+<td>切换到上一个效果标志</td>
+</tr>
+</tbody>
+</table>
+<p><strong>典型应用场景：</strong></p>
+<ul>
+<li><strong>Per-key RGB键盘</strong>：如RGB-60%、Drop CTRL等键盘的每个按键独立灯效</li>
+<li><strong>动态按键反馈</strong>：按下某键时该键亮起特定颜色或产生涟漪效果</li>
+<li><strong>层指示</strong>：不同层切换时改变灯光颜色或模式</li>
+<li><strong>状态提示</strong>：Caps Lock、Num Lock等状态通过特定按键颜色提示</li>
+</ul>
+<p><strong>配置前提：</strong></p>
+<ul>
+<li>键盘硬件需要支持每个按键独立LED（Per-key LED）</li>
+<li>需要在<code>rules.mk</code>中启用<code>LED_MATRIX_ENABLE = yes</code></li>
+<li>需要配置LED矩阵的引脚和灯珠数量</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/micahyy" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.expand", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+  
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/zoom.js"></script>
+      
+    
+
+  </body>
+</html>

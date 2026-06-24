@@ -1,0 +1,353 @@
+/* ========== 全宽布局 ========== */
+
+/* 移除最大宽度限制 */
+.md-grid {
+    max-width: 100%;
+}
+
+.md-main__inner {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* 修复左侧和右侧侧边栏高度一致（仅桌面端） */
+@media screen and (min-width: 76.25em) {
+    .md-sidebar {
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    /* 左侧菜单靠左 */
+    .md-sidebar--primary {
+        margin-left: 0;
+        left: 0;
+    }
+
+    /* 右侧菜单靠右 */
+    .md-sidebar--secondary {
+        margin-right: 0;
+        right: 0;
+    }
+
+    /* 让侧边栏滚动区域填满整个高度 */
+    .md-sidebar__scrollwrap {
+        height: 100vh;
+        overflow-y: auto;
+    }
+
+    /* 左侧菜单贴边 */
+    .md-sidebar--primary .md-sidebar__scrollwrap {
+        padding-left: 0;
+    }
+
+    /* 右侧目录贴边 */
+    .md-sidebar--secondary .md-sidebar__scrollwrap {
+        padding-right: 0;
+    }
+}
+
+/* 移动端：恢复默认行为，让菜单正常显示 */
+@media screen and (max-width: 76.1875em) {
+    .md-sidebar {
+        height: auto;
+        position: fixed;
+    }
+    
+    .md-sidebar__scrollwrap {
+        height: auto;
+        overflow-y: visible;
+    }
+    
+    .md-main {
+        min-height: auto;
+    }
+}
+
+/* 移除底部多余的内边距 */
+.md-sidebar__inner {
+    padding-bottom: 0;
+}
+
+/* 确保主内容区域高度正确（桌面端） */
+@media screen and (min-width: 76.25em) {
+    .md-main {
+        min-height: 100vh;
+    }
+}
+
+/* 让左右侧边栏的滚动条样式一致 */
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+    width: 4px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+/* 中间内容区域优化 */
+.md-content__inner {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+/* ========== 图片点击放大功能 - 响应式大小 ========== */
+
+/* 默认：移动端小图 */
+.md-typeset img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: zoom-in;
+    max-width: 280px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 平板：稍大 */
+@media screen and (min-width: 768px) {
+    .md-typeset img {
+        max-width: 400px;
+        max-height: 300px;
+    }
+}
+
+/* 桌面：正常大小 */
+@media screen and (min-width: 1220px) {
+    .md-typeset img {
+        max-width: 500px;
+        max-height: 400px;
+    }
+}
+
+/* 大屏幕：更大一些 */
+@media screen and (min-width: 1600px) {
+    .md-typeset img {
+        max-width: 600px;
+        max-height: 480px;
+    }
+}
+
+/* 图片悬停效果 */
+.md-typeset img:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transform: scale(1.02);
+}
+
+/* 确保图片居中显示 */
+.md-typeset img:not([align]) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 图表、代码块中的图片不缩放 */
+.md-typeset .mermaid img,
+.md-typeset .highlight img {
+    max-width: none;
+    max-height: none;
+    transform: none;
+    cursor: default;
+}
+
+/* 可选：特殊图片（如Logo）保持原始大小 */
+.md-typeset img.logo,
+.md-typeset img.icon {
+    max-width: none;
+    max-height: none;
+    width: auto;
+    height: auto;
+}
+
+/* 遮罩层动画优化 */
+.image-zoom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.92);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    backdrop-filter: blur(4px);
+}
+
+/* 遮罩层激活状态 */
+.image-zoom-overlay.active {
+    opacity: 1;
+}
+
+/* 放大后的图片 */
+.image-zoom-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.image-zoom-overlay img:hover {
+    transform: scale(1.02);
+}
+
+/* 关闭提示 */
+.zoom-close-hint {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.8);
+    background: rgba(0,0,0,0.6);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    pointer-events: none;
+    backdrop-filter: blur(8px);
+    letter-spacing: 0.5px;
+}
+
+/* 移动端适配 */
+@media screen and (max-width: 767px) {
+    .image-zoom-overlay img {
+        max-width: 95%;
+        max-height: 85%;
+    }
+    
+    .zoom-close-hint {
+        bottom: 16px;
+        font-size: 12px;
+        padding: 6px 16px;
+    }
+    
+    .md-typeset img:hover {
+        transform: scale(1.01);
+    }
+}
+
+/* 暗色主题下的图片边框优化 */
+[data-md-color-scheme="slate"] .md-typeset img {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+[data-md-color-scheme="slate"] .image-zoom-overlay {
+    background: rgba(0,0,0,0.95);
+}
+
+/* ========== 移动端底部导航 ========== */
+
+@media screen and (max-width: 76.1875em) {
+    /* 固定底部导航栏 */
+    .mobile-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: var(--md-default-bg-color);
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+        justify-content: space-around;
+        padding: 8px 0;
+        backdrop-filter: blur(10px);
+    }
+    
+    .mobile-nav-item {
+        flex: 1;
+        text-align: center;
+        padding: 8px;
+        color: var(--md-default-fg-color--light);
+        text-decoration: none;
+        font-size: 12px;
+    }
+    
+    .mobile-nav-item:hover {
+        color: var(--md-primary-fg-color);
+    }
+    
+    /* 为底部导航留出空间 */
+    .md-content {
+        margin-bottom: 60px;
+    }
+    
+    /* 隐藏原有的侧边栏触发方式 */
+
+}
+
+
+/* 表格隔行变色 - 斑马纹效果 */
+.md-typeset table:not([class]) tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.05);  /* 奇数行浅灰色背景 */
+}
+
+.md-typeset table:not([class]) tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.02);  /* 偶数行更浅的背景（可选） */
+}
+
+/* 鼠标悬停行高亮效果（增强体验） */
+.md-typeset table:not([class]) tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    transition: background-color 0.2s ease;
+}
+
+/* 暗色主题适配 */
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* 移动端：表格容器水平滚动 */
+.md-typeset__scrollwrap {
+    overflow-x: auto;
+    margin: 1em 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.md-typeset__table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* 优化滚动条样式（可选） */
+.md-typeset__scrollwrap::-webkit-scrollbar {
+    height: 6px;
+}
+
+.md-typeset__scrollwrap::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.md-typeset__scrollwrap::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.md-typeset__scrollwrap::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
