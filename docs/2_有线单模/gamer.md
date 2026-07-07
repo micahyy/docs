@@ -31,21 +31,21 @@
 
 ## 3.快捷键
 
-| 快捷键            | 名称                                    | 备注               |
-| -------------- | ------------------------------------- | ---------------- |
-| FN+Alt+Lshift  | 打开/关闭轴灯                               |                  |
-| FN+Alt+Z       | 切换灯效                                  |                  |
-| FN+Alt+S       | 饱和度+                                  |                  |
-| FN+Alt+X       | 饱和度-                                  |                  |
-| FN+Alt+D       | 颜色+                                   |                  |
-| FN+Alt+C       | 颜色-                                   |                  |
-| FN+Alt+F       | 亮度+<br>Increase the brightness level  |                  |
-| FN+Alt+V       | 亮度-<br>Decrease the brightness level  |                  |
-| FN+Alt+G       | 灯效速度+<br>Increase the animation speed |                  |
-| FN+Alt+B       | 灯效速度-<br>                             |                  |
-| FN+Alt+Tab     | 打开/关闭全键无冲                             | 出厂默认开启全键无冲       |
-| FN+Alt+ESC     | 恢复出厂设置                                |                  |
-| FN+Alt+Mute/F5 | 进入Bootloader                          | 标配Mute旋钮按下,套餐一F5 |
+| 快捷键            | 名称                                                                 | 备注                       |
+| -------------- | ------------------------------------------------------------------ | ------------------------ |
+| FN+Alt+Lshift  | 打开/关闭轴灯<br>Toggle RGB Matrix on or off                             |                          |
+| FN+Alt+Z       | 切换灯效<br>Cycle through animations                                   |                          |
+| FN+Alt+S       | 饱和度+<br>Increase the saturation                                    |                          |
+| FN+Alt+X       | 饱和度-<br>Decrease the saturation                                    |                          |
+| FN+Alt+D       | 颜色+<br>Cycle through hue                                           |                          |
+| FN+Alt+C       | 颜色-<br>Cycle through hue in reverse                                |                          |
+| FN+Alt+F       | 亮度+<br>Increase the brightness level                               |                          |
+| FN+Alt+V       | 亮度-<br>Decrease the brightness level                               |                          |
+| FN+Alt+G       | 灯效速度+<br>Increase the animation speed                              |                          |
+| FN+Alt+B       | 灯效速度-<br>Decrease the animation speed                              |                          |
+| FN+Alt+Tab     | 打开/关闭全键无冲<br>Toggle N-key rollover                                 | 出厂默认开启全键无冲<br>default on |
+| FN+Alt+ESC     | 恢复出厂设置<br>Reinitializes the keyboard's EEPROM (persistent memory)  |                          |
+| FN+Alt+Mute/F5 | 进入Bootloader<br>Put the keyboard into bootloader mode for flashing | 标配Mute旋钮按下,套餐一F5         |
 
 # JSON 文件
 
