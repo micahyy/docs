@@ -31,21 +31,21 @@
 
 ## 3.快捷键
 
-| 快捷键           | 名称           | 备注         |
-| ------------- | ------------ | ---------- |
-| FN+Alt+Lshift | 打开/关闭轴灯      |            |
-| FN+Alt+Z      | 切换灯效         |            |
-| FN+Alt+S      | 饱和度+         |            |
-| FN+Alt+X      | 饱和度-         |            |
-| FN+Alt+D      | 颜色+          |            |
-| FN+Alt+C      | 颜色-          |            |
-| FN+Alt+F      | 亮度+          |            |
-| FN+Alt+V      | 亮度-          |            |
-| FN+Alt+G      | 灯效速度+        |            |
-| FN+Alt+B      | 灯效速递-        |            |
-| FN+Alt+Tab    | 打开/关闭全键无冲    | 出厂默认开启全键无冲 |
-| FN+Alt+ESC    | 恢复出厂设置       |            |
-| FN+Alt+Mute   | 进入Bootloader | Mute为旋钮按下  |
+| 快捷键            | 名称           | 备注               |
+| -------------- | ------------ | ---------------- |
+| FN+Alt+Lshift  | 打开/关闭轴灯      |                  |
+| FN+Alt+Z       | 切换灯效         |                  |
+| FN+Alt+S       | 饱和度+         |                  |
+| FN+Alt+X       | 饱和度-         |                  |
+| FN+Alt+D       | 颜色+          |                  |
+| FN+Alt+C       | 颜色-          |                  |
+| FN+Alt+F       | 亮度+          |                  |
+| FN+Alt+V       | 亮度-          |                  |
+| FN+Alt+G       | 灯效速度+        |                  |
+| FN+Alt+B       | 灯效速递-        |                  |
+| FN+Alt+Tab     | 打开/关闭全键无冲    | 出厂默认开启全键无冲       |
+| FN+Alt+ESC     | 恢复出厂设置       |                  |
+| FN+Alt+Mute/F5 | 进入Bootloader | 标配Mute旋钮按下,套餐一F5 |
 
 # JSON 文件
 
