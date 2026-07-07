@@ -42,7 +42,7 @@
 | FN+Alt+F       | 亮度+          |                  |
 | FN+Alt+V       | 亮度-          |                  |
 | FN+Alt+G       | 灯效速度+        |                  |
-| FN+Alt+B       | 灯效速递-        |                  |
+| FN+Alt+B       | 灯效速度-        |                  |
 | FN+Alt+Tab     | 打开/关闭全键无冲    | 出厂默认开启全键无冲       |
 | FN+Alt+ESC     | 恢复出厂设置       |                  |
 | FN+Alt+Mute/F5 | 进入Bootloader | 标配Mute旋钮按下,套餐一F5 |
