@@ -14,29 +14,29 @@
 
 
 
-| 规格           | 参数            |     | 规格               | 参数                       |     |     |
-| ------------ | ------------- | --- | ---------------- | ------------------------ | --- | --- |
-| 套件不含键帽尺寸<br> | 15 *14 *4.5cm |     | PCB 尺寸           |                          |     |     |
-| 套件重量         |               |     | PCB厚度            |                          |     |     |
-| 成品重量         | 316g          |     | 支持轴体             |                          |     |     |
-| 前高           |               |     | 轴体安装方式           | 轴座热插拔<br>hot swap socket |     |     |
-| 后高           |               |     | 灯光               | RGB 下灯位<br>RGB bottom    |     |     |
-| 角度           | 8°            |     |                  |                          |     |     |
-| 连接模式         | 有线单模<br>wired |     | 固件平替<br>firmware | QMK                      |     |     |
-| 按键层数         | 8             |     | 驱动<br>driver     | VIA                      |     |     |
-| 按键数量         | 34            |     | 全键自定义            | 支持                       |     |     |
-|              |               |     | 全键无冲             | 支持                       |     |     |
-|              |               |     | 扫描率              |                          |     |     |
-|              |               |     | 回报率              |                          |     |     |
-|              |               |     | 延迟               |                          |     |     |
-| 轴体安装方式       | 轴座热插拔         |     | DEBOUNCE_TYPE    |                          |     |     |
-| 轴体支持         | 机械轴，三脚/五脚     |     |                  |                          |     |     |
-| 外壳材质         | 3D打印PETG      |     |                  |                          |     |     |
-| 键盘接口         | Typec         |     |                  |                          |     |     |
-| 全键可自定义       | 是             |     |                  |                          |     |     |
-| 连接模式         | 有线单模          |     |                  |                          |     |     |
-|              |               |     |                  |                          |     |     |
-|              |               |     |                  |                          |     |     |
+| 规格           | 参数              |     | 规格               | 参数                       |     |     |
+| ------------ | --------------- | --- | ---------------- | ------------------------ | --- | --- |
+| 套件不含键帽尺寸<br> | 15 * 14 * 4.5cm |     | PCB 尺寸           |                          |     |     |
+| 套件重量         |                 |     | PCB厚度            |                          |     |     |
+| 成品重量         | 316g            |     | 支持轴体             |                          |     |     |
+| 前高           |                 |     | 轴体安装方式           | 轴座热插拔<br>hot swap socket |     |     |
+| 后高           |                 |     | 灯光               | RGB 下灯位<br>RGB bottom    |     |     |
+| 角度           | 8°              |     |                  |                          |     |     |
+| 连接模式         | 有线单模<br>wired   |     | 固件平替<br>firmware | QMK                      |     |     |
+| 按键层数         | 8               |     | 驱动<br>driver     | VIA                      |     |     |
+| 按键数量         | 34              |     | 全键自定义            | 支持                       |     |     |
+|              |                 |     | 全键无冲             | 支持                       |     |     |
+|              |                 |     | 扫描率              |                          |     |     |
+|              |                 |     | 回报率              |                          |     |     |
+|              |                 |     | 延迟               |                          |     |     |
+|              |                 |     | DEBOUNCE_TYPE    |                          |     |     |
+|              |                 |     |                  |                          |     |     |
+| 外壳材质         | 3D打印PETG        |     |                  |                          |     |     |
+| 键盘接口         | Typec           |     |                  |                          |     |     |
+| 全键可自定义       | 是               |     |                  |                          |     |     |
+| 连接模式         | 有线单模            |     |                  |                          |     |     |
+|              |                 |     |                  |                          |     |     |
+|              |                 |     |                  |                          |     |     |
 
 ## 3.快捷键
 
@@ -52,7 +52,7 @@
 | FN+Alt+V       | 亮度-<br>Decrease the brightness level                               |                          |
 | FN+Alt+G       | 灯效速度+<br>Increase the animation speed                              |                          |
 | FN+Alt+B       | 灯效速度-<br>Decrease the animation speed                              |                          |
-| FN+Alt+Tab     | 打开/关闭全键无冲<br>Toggle N-key rollover                                 | 出厂默认开启全键无冲<br>default on |
+| FN+Alt+Tab     | 打开/关闭全键无冲（默认开启）<br>Toggle N-key rollover (default on)              | 出厂默认开启全键无冲<br>default on |
 | FN+Alt+ESC     | 恢复出厂设置<br>Reinitializes the keyboard's EEPROM (persistent memory)  |                          |
 | FN+Alt+Mute/F5 | 进入Bootloader<br>Put the keyboard into bootloader mode for flashing | 标配Mute旋钮按下,套餐一F5         |
 
