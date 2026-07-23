@@ -1,0 +1,103 @@
+/* ========== 全宽布局（完整恢复版） ========== */
+
+/* 1. 移除所有宽度限制 */
+.md-grid {
+    max-width: 100% !important;
+    padding: 0 !important;
+}
+
+.md-main__inner {
+    max-width: 100% !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+.md-content__inner {
+    max-width: 100% !important;
+    padding: 0 1rem !important;
+}
+
+/* 2. 桌面端：侧边栏靠边，中间自适应 */
+@media screen and (min-width: 76.25em) {
+    .md-main__inner {
+        display: flex !important;
+        justify-content: space-between !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    /* 左侧菜单靠左 */
+    .md-sidebar--primary {
+        margin-left: 0 !important;
+        left: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* 右侧菜单靠右 */
+    .md-sidebar--secondary {
+        margin-right: 0 !important;
+        right: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* 中间内容自适应 */
+    .md-content {
+        flex: 1 !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        margin: 0 1rem !important;
+    }
+
+    /* 侧边栏高度固定 */
+    .md-sidebar {
+        height: 100vh !important;
+        position: sticky !important;
+        top: 0 !important;
+    }
+
+    .md-sidebar__scrollwrap {
+        height: 100vh !important;
+        overflow-y: auto !important;
+    }
+
+    /* 侧边栏贴边 */
+    .md-sidebar--primary .md-sidebar__scrollwrap {
+        padding-left: 0 !important;
+    }
+
+    .md-sidebar--secondary .md-sidebar__scrollwrap {
+        padding-right: 0 !important;
+    }
+}
+
+/* 3. 移动端保持原样 */
+@media screen and (max-width: 76.1875em) {
+    .md-sidebar {
+        height: auto !important;
+        position: fixed !important;
+    }
+    
+    .md-sidebar__scrollwrap {
+        height: auto !important;
+        overflow-y: visible !important;
+    }
+    
+    .md-main {
+        min-height: auto !important;
+    }
+}
+
+/* 4. 滚动条样式 */
+.md-sidebar__scrollwrap::-webkit-scrollbar {
+    width: 4px;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
