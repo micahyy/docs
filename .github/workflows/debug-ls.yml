@@ -1,0 +1,31 @@
+name: Debug server root listing
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ls:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install SSH key and list server directories
+        env:
+          HOST: ${{ secrets.HOST }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PORT: ${{ secrets.PORT }}
+          KEY: ${{ secrets.KEY }}
+        run: |
+          set -e
+          mkdir -p ~/.ssh
+          echo "$KEY" > ~/.ssh/key.pem
+          chmod 600 ~/.ssh/key.pem
+          export SSHCMD="ssh -o StrictHostKeyChecking=no -i ~/.ssh/key.pem -p $PORT $USERNAME@$HOST"
+          echo "==== /www/wwwroot/docs.micah.vip ===="
+          $SSHCMD "ls -la /www/wwwroot/docs.micah.vip" 2>&1 | head -n 80
+          echo "==== depth 2 tree (dirs + html) ===="
+          $SSHCMD "find /www/wwwroot/docs.micah.vip -maxdepth 3 -type d -o -name '*.html' -maxdepth 3" 2>&1 | sort | head -n 120
+          echo "==== index.html meta ===="
+          $SSHCMD "head -c 4000 /www/wwwroot/docs.micah.vip/index.html 2>/dev/null"
+          echo "==== subdir 'dist' if exists ===="
+          $SSHCMD "ls -la /www/wwwroot/docs.micah.vip/dist 2>/dev/null || echo NO_DIST_DIR"
+          echo "==== subdir docs/ if exists ===="
+          $SSHCMD "ls -la /www/wwwroot/docs.micah.vip/docs 2>/dev/null || echo NO_DOCS_DIR"
