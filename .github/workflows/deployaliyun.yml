@@ -1,4 +1,4 @@
-name: Deploy to Server
+﻿name: Deploy to docs.micah.vip
 
 on:
   push:
@@ -9,46 +9,42 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      # ---- Node (VitePress) ----
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.11'
+          node-version: 20
+          cache: npm
 
-      - name: Install MkDocs
-        run: pip install mkdocs mkdocs-material
+      - name: Install dependencies
+        run: npm ci || npm install
 
-      - name: Build site
-        run: mkdocs build
+      - name: Build VitePress site
+        run: npm run docs:build
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
 
-      # ========== 新增：处理链接，在新窗口打开 ==========
+      # ---- External links -> target="_blank" (preserves the previous behaviour) ----
       - name: Add target="_blank" to external links
         run: |
-          # 进入构建输出目录
-          cd site
-          
-          # 查找所有 HTML 文件
-          find . -name "*.html" -type f | while read file; do
-            # 使用 sed 为所有 <a> 标签添加 target="_blank"
-            # 只处理包含 http:// 或 https:// 的外部链接
-            sed -i 's/<a href="http/<a target="_blank" href="http/g' "$file"
-            
-            # 处理相对路径的链接（可选：如果你想所有链接都在新窗口打开，取消下面的注释）
-            # sed -i 's/<a href="\//<a target="_blank" href="\//g' "$file"
+          cd docs/.vitepress/dist
+          find . -name "*.html" -type f | while read -r file; do
+            # Avoid double-adding target=_blank by matching only <a href="http without existing target
+            perl -i -pe 's/<a(?![^>]*\starget=)(\s[^>]*?\shref="http)/<a target="_blank"$1/g' "$file"
           done
-          
-          echo "✅ 已为所有外部链接添加 target=\"_blank\""
-      # ================================================
+          echo "鉁?宸蹭负鎵€鏈夊閮ㄩ摼鎺ユ坊鍔?target=\"_blank\""
 
+      # ---- SCP to server (same secrets as before, just source changed) ----
       - name: Deploy via SCP
         uses: appleboy/scp-action@v1
         with:
-          host: ${{ secrets.HOST }}
+          host:     ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          port: ${{ secrets.PORT }}
-          key: ${{ secrets.KEY }}
-          source: "./site/*"
-          target: "/www/wwwroot/docs.micah.vip"
-          strip_components: 1
+          port:     ${{ secrets.PORT }}
+          key:      ${{ secrets.KEY }}
+          source:   "./docs/.vitepress/dist/*"
+          target:   "/www/wwwroot/docs.micah.vip"
+          strip_components: 3

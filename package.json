@@ -1,0 +1,14 @@
+{
+  "name": "micahyy-docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "docs.micah.vip - VitePress site (QMK docs style UI)",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}

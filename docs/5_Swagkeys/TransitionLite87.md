@@ -9,8 +9,23 @@
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
 
-<script>
+<ClientOnly>
+  <template #default>
+    <div ref="el"></div>
+  </template>
+</ClientOnly>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+const el = ref(null);
+onMounted(() => {
+  if (!el.value) return;
+  const s = document.createElement('script');
+  s.text = `
      (adsbygoogle = window.adsbygoogle || []).push({});
+`;
+  el.value.appendChild(s);
+});
 </script>
 
 ## 1.购买链接
