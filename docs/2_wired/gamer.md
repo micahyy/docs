@@ -11,39 +11,38 @@
 
 ## 2. 基本参数 <br> Basic specs
 
-| 规格 <br>Spec | 平底（Flat base） | 8°斜面（8° Slope） | 备注 <br>Notes |
-| :----------- | :--------------- | :---------------- | :------------- |
-| 按键层数 <br>Layers | 8 | 8 | |
-| 按键数量 <br>Keys | 34 | 34 | |
-| DEBOUNCE_TYPE |  |  | 留空 <br>Fill later |
-| 套件尺寸 <br>Kit size |  |  |  |
-| 套件重量 <br>Kit weight |  |  |  |
-| 成品尺寸 <br>Assembled size | 15 × 14 × 4.5cm | 15 × 14 × 4.5cm |  |
-| 成品重量 <br>Assembled weight | 316g | 316g |  |
-| 前高 <br>Front height |  |  |  |
-| 后高 <br>Rear height |  |  |  |
-| 角度 <br>Typing angle | 0° | 8° |  |
-| 连接模式 <br>Connection | 有线单模 <br>Wired only | 有线单模 <br>Wired only |  |
-| 接口 <br>Port | Type-c | Type-c |  |
-| C2C | 支持 <br>Supported | 支持 <br>Supported |  |
-| 外壳材质 <br>Case material | 3D打印PETG | 3D打印PETG |  |
-|  |  |  |  |
-| PCB尺寸 <br>PCB size |  |  |  |
-| PCB厚度 <br>PCB thickness | 1.6mm | 1.6mm |  |
-| 轴体支持 <br>Switch support | 机械轴/三脚/五脚 <br>Cherry MX / 3-pin / 5-pin | 机械轴/三脚/五脚 <br>Cherry MX / 3-pin / 5-pin |  |
-| 轴体安装方式 <br>Mounting | 轴座热插拔 <br>Hot swap socket | 轴座热插拔 <br>Hot swap socket |  |
-| 灯光 <br>Lighting | RGB 下灯位 <br>RGB bottom backlight | RGB 下灯位 <br>RGB bottom backlight |  |
-| 固件平台 <br>Firmware platform | QMK | QMK |  |
-| 改键驱动 <br>Remap tool | VIA | VIA |  |
-| 源代码开源 <br>Source code open | 是 <br>Yes | 是 <br>Yes |  |
-| 外壳图纸开源 <br>Case files open | 是 <br>Yes | 是 <br>Yes |  |
-| PCB图纸开源 <br>PCB files open | 是 <br>Yes | 是 <br>Yes | gitee-菜籽猫<br>github-micahyy |
-| 全键自定义 <br>Full keys customizable | 支持 <br>Supported | 支持 <br>Supported |  |
-| 全键无冲 <br>N-Key rollover | 支持 <br>Supported | 支持 <br>Supported |  |
-| 扫描率 <br>Scan rate | 1KHz | 1KHz |  |
-| 回报率 <br>Polling rate | 1KHz | 1KHz |  |
-| 延迟 <br>Latency | 1ms | 1ms | 理论值 ~实际约2ms <br>Theoretical, ~2ms real |
-| 配件 <br>Accessories | Type-c数据线 1米<br>防滑脚贴 <br>USB-C cable 1m, anti-slip feet | Type-c数据线 1米<br>防滑脚贴 <br>USB-C cable 1m, anti-slip feet |  |
+| 规格 <br>Spec | 参数 <br>Value | 备注 <br>Notes |
+| :----------- | :--------------- | :------------- |
+| 按键层数 <br>Layers | 8 | |
+| 按键数量 <br>Keys | 34 | |
+| DEBOUNCE_TYPE | | 留空 <br>Fill later |
+| 套件尺寸 <br>Kit size | | |
+| 套件重量 <br>Kit weight | | |
+| 成品尺寸 <br>Assembled size | 15 × 14 × 4.5cm | |
+| 成品重量 <br>Assembled weight | 316g | |
+| 前高 <br>Front height | | |
+| 后高 <br>Rear height | | |
+| 角度 <br>Typing angle | 8° | |
+| 连接模式 <br>Connection | 有线单模 <br>Wired only | |
+| 接口 <br>Port | Type-c | |
+| C2C | 支持 <br>Supported | |
+| 外壳材质 <br>Case material | 3D打印PETG | |
+| PCB尺寸 <br>PCB size | | |
+| PCB厚度 <br>PCB thickness | 1.6mm | |
+| 轴体支持 <br>Switch support | 机械轴/三脚/五脚 <br>Cherry MX / 3-pin / 5-pin | |
+| 轴体安装方式 <br>Mounting | 轴座热插拔 <br>Hot swap socket | |
+| 灯光 <br>Lighting | RGB 下灯位 <br>RGB bottom backlight | |
+| 固件平台 <br>Firmware platform | QMK | |
+| 改键驱动 <br>Remap tool | VIA | |
+| 源代码开源 <br>Source code open | 是 <br>Yes | |
+| 外壳图纸开源 <br>Case files open | 是 <br>Yes | |
+| PCB图纸开源 <br>PCB files open | 是 <br>Yes | gitee-菜籽猫<br>github-micahyy |
+| 全键自定义 <br>Full keys customizable | 支持 <br>Supported | |
+| 全键无冲 <br>N-Key rollover | 支持 <br>Supported | |
+| 扫描率 <br>Scan rate | 1KHz | |
+| 回报率 <br>Polling rate | 1KHz | |
+| 延迟 <br>Latency | 1ms | 理论值 ~实际约2ms <br>Theoretical, ~2ms real |
+| 配件 <br>Accessories | Type-c数据线 1米<br>防滑脚贴 <br>USB-C cable 1m, anti-slip feet | |
 
 ## 3. 快捷键 <br> Shortcuts / Combo keys
 | 快捷键            | 名称                                                                 | 备注                       |
