@@ -34,6 +34,7 @@ export default defineConfig({
       { text: 'PCB',     link: '/1_PCB/g80_3000' },
       { text: '有线',    link: '/2_wired/DS17' },
       { text: '多模',    link: '/4_Tri-mode/4.1 dm17' },
+      { text: 'DZ系列',  link: '/3_DZ/DZ17' },
       { text: 'Swagkeys',link: '/5_Swagkeys/Eave' },
       { text: '使用指南',link: '/6_guide/6.1_VIA' }
     ],
@@ -99,6 +100,13 @@ export default defineConfig({
           { text: 'DS22',     link: '/2_wired/DS22' },
           { text: 'Gamer', link: '/2_wired/gamer' },
           { text: 'GH60 8K',  link: '/2_wired/gh60_8K' }
+        ]
+      },
+      {
+        text: 'DZ 系列',
+        collapsed: false,
+        items: [
+          { text: 'DZ17', link: '/3_DZ/DZ17' }
         ]
       },
       {
