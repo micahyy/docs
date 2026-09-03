@@ -1,34 +1,45 @@
 <script setup lang="ts">
 import { ref, watch, onMounted, nextTick } from 'vue'
-import { useData, useRoute } from 'vitepress'
+import { useRoute } from 'vitepress'
+import { init, update } from '@waline/client'
+import '@waline/client/waline.css'
 
-const { isDark } = useData()
 const route = useRoute()
 const container = ref<HTMLElement>()
 
-// Giscus = GitHub Discussions backed comments.
-// Configured once here: https://github.com/micahyy/docs
-function loadComments() {
+// Waline comments (nickname + email, no account required).
+// Server endpoint: self-hosted Waline on https://comments.micah.vip
+const SERVER_URL = 'https://comments.micah.vip'
+
+let walineInstance: ReturnType<typeof init> | null = null
+
+function renderComments() {
   const el = container.value
   if (!el) return
-  el.innerHTML = ''
-  const s = document.createElement('script')
-  s.src = 'https://giscus.app/client.js'
-  s.setAttribute('data-repo', 'micahyy/docs')
-  s.setAttribute('data-repo-id', 'R_kgDOSGE9mw')
-  s.setAttribute('data-category', 'Announcements')
-  s.setAttribute('data-category-id', 'DIC_kwDOSGE9m84DEyu-')
-  s.setAttribute('data-mapping', 'pathname')
-  s.setAttribute('data-strict', '1')
-  s.setAttribute('data-reactions-enabled', '1')
-  s.setAttribute('data-emit-metadata', '0')
-  s.setAttribute('data-input-position', 'top')
-  s.setAttribute('data-theme', isDark.value ? 'dark' : 'light')
-  s.setAttribute('data-lang', 'zh-CN')
-  s.setAttribute('data-loading', 'lazy')
-  s.crossOrigin = 'anonymous'
-  s.async = true
-  el.appendChild(s)
+  if (!walineInstance) {
+    walineInstance = init({
+      el,
+      serverURL: SERVER_URL,
+      lang: 'zh-CN',
+      path: route.path,
+      // VitePress adds the .dark class on <html>; Waline watches this
+      // selector and follows the site theme automatically.
+      dark: 'html.dark',
+      // login 'disable' = no accounts at all: visitors post with a
+      // nickname (required) and optional email.
+      login: 'disable',
+      meta: ['nick', 'mail'],
+      requiredMeta: ['nick'],
+      wordLimit: 1000,
+      pageSize: 20,
+      imageUploader: false,
+      search: false,
+      reaction: false,
+      texRenderer: false
+    })
+  } else {
+    update({ path: route.path })
+  }
 }
 
 watch(
@@ -36,21 +47,12 @@ watch(
   async (p) => {
     if (p === '/') return // 首页不显示评论
     await nextTick()
-    loadComments()
+    renderComments()
   }
 )
 
 onMounted(() => {
-  if (route.path !== '/') loadComments()
-})
-
-// Follow VitePress dark/light mode
-watch(isDark, (dark) => {
-  const frame = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame')
-  frame?.contentWindow?.postMessage(
-    { giscus: { setConfig: { theme: dark ? 'dark' : 'light' } } },
-    'https://giscus.app'
-  )
+  if (route.path !== '/') renderComments()
 })
 </script>
 
@@ -58,9 +60,9 @@ watch(isDark, (dark) => {
   <div v-if="route.path !== '/'" class="comments-wrap">
     <h3 class="comments-title">
       评论 / 提问
-      <span class="comments-hint">（用 GitHub 账号登录即可留言，也欢迎提交产品问题）</span>
+      <span class="comments-hint">（填个昵称就能留言，无需注册；邮箱选填，填了能收到回复通知）</span>
     </h3>
-    <div ref="container" class="giscus-container" />
+    <div ref="container" class="waline-container" />
   </div>
 </template>
 

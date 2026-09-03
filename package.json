@@ -8,6 +8,9 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
+  "dependencies": {
+    "@waline/client": "^3.4.0"
+  },
   "devDependencies": {
     "vitepress": "^1.6.4"
   }
