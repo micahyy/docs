@@ -98,6 +98,7 @@ export default defineConfig({
           { text: 'DS17',     link: '/2_wired/DS17' },
           { text: 'DS21',     link: '/2_wired/ds21' },
           { text: 'DS22',     link: '/2_wired/DS22' },
+          { text: 'EC87 静电容', link: '/2_wired/EC87' },
           { text: 'Gamer', link: '/2_wired/gamer' },
           { text: 'GH60 8K',  link: '/2_wired/gh60_8K' }
         ]
