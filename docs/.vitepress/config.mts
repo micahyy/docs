@@ -35,6 +35,7 @@ export default defineConfig({
       { text: '有线',    link: '/2_wired/DS17' },
       { text: '多模',    link: '/4_Tri-mode/4.1 dm17' },
       { text: 'DZ系列',  link: '/3_DZ/DZ17' },
+      { text: 'EC系列',  link: '/7_EC/EC87' },
       { text: 'Swagkeys',link: '/5_Swagkeys/Eave' },
       { text: '使用指南',link: '/6_guide/6.1_VIA' }
     ],
@@ -98,9 +99,15 @@ export default defineConfig({
           { text: 'DS17',     link: '/2_wired/DS17' },
           { text: 'DS21',     link: '/2_wired/ds21' },
           { text: 'DS22',     link: '/2_wired/DS22' },
-          { text: 'EC87 静电容', link: '/2_wired/EC87' },
           { text: 'Gamer', link: '/2_wired/gamer' },
           { text: 'GH60 8K',  link: '/2_wired/gh60_8K' }
+        ]
+      },
+      {
+        text: 'EC 系列（静电容）',
+        collapsed: false,
+        items: [
+          { text: 'EC87 静电容', link: '/7_EC/EC87' }
         ]
       },
       {
