@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import Comments from './Comments.vue'
 import { h } from 'vue'
+import './download.css'
 
 export default {
   extends: DefaultTheme,
