@@ -20,6 +20,8 @@ czmao is an open-source community focused on custom mechanical keyboards, coveri
 
 [DZ17 双模数字小键盘](https://docs.micah.vip/3_DZ/DZ17.html) — 17 键 USB + 蓝牙 5.0 双模，ZMK 固件。
 
+[DZ87 双模机械键盘](https://docs.micah.vip/3_DZ/DZ87.html) — 87 键（TKL）USB + 蓝牙 5.0 双模，ZMK 固件。
+
 [DM17 三模](https://docs.micah.vip/4_Tri-mode/4.1%20dm17.html) — 三模/双模机械键盘。
 
 [EAVE](https://docs.micah.vip/5_Swagkeys/Eave.html) — Swagkeys 合作款。
