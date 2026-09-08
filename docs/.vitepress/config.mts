@@ -114,7 +114,8 @@ export default defineConfig({
         text: 'DZ 系列',
         collapsed: false,
         items: [
-          { text: 'DZ17', link: '/3_DZ/DZ17' }
+          { text: 'DZ17', link: '/3_DZ/DZ17' },
+          { text: 'DZ87', link: '/3_DZ/DZ87' }
         ]
       },
       {
