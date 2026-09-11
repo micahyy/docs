@@ -49,9 +49,9 @@ jobs:
           # 先清空临时目录，避免上一次的残留被带进来
           rm: true
 
-      # ---- 2) 校验产物，再替换线上目录 ----
+      # ---- 2) 校验产物，再同步线上目录 ----
       # .well-known（SSL 证书验证）与 .user.ini（宝塔面板配置）必须保留。
-      - name: Swap in new build
+      - name: Sync build to live directory
         uses: appleboy/ssh-action@v1
         with:
           host:     ${{ secrets.HOST }}
@@ -63,26 +63,40 @@ jobs:
             set -eu
             TARGET=/www/wwwroot/docs.micah.vip
             STAGE=/tmp/docs_staging
-            KEEP=/tmp/docs_keep
 
-            # 校验：临时目录必须是一个完整的构建产物，否则中止，线上不受影响
+            # 校验：临时目录必须是完整构建产物，否则中止，线上不受影响
             test -f "$STAGE/index.html" || { echo "ERROR: staging 缺少 index.html，中止部署"; exit 1; }
             test -d "$STAGE/assets"     || { echo "ERROR: staging 缺少 assets/，中止部署";     exit 1; }
 
-            # 备份需要保留的文件
-            rm -rf "$KEEP"
-            mkdir -p "$KEEP"
-            if [ -d "$TARGET/.well-known" ]; then cp -a "$TARGET/.well-known" "$KEEP"/; fi
-            if [ -f "$TARGET/.user.ini" ];  then cp -a "$TARGET/.user.ini"  "$KEEP"/; fi
-
-            # 清空线上目录后整体替换
-            find "$TARGET" -mindepth 1 -maxdepth 1 -exec rm -rf {} +
+            # 1) 先覆盖拷入，再删除多余文件。
+            #    顺序是刻意的：先拷后删，站点全程不会出现空目录。
+            #    2026-09-11 曾用「先清空、再拷入」，而 .user.ini 被宝塔设为 immutable
+            #    （lsattr 显示 ----i----），rm -rf 删不掉它 → 返回非 0 → set -e 中止在
+            #    「目录已清空、新文件还没拷进来」的中间状态，站点直接 404。
             cp -a "$STAGE"/. "$TARGET"/
-            if [ -n "$(ls -A "$KEEP")" ]; then cp -a "$KEEP"/. "$TARGET"/; fi
 
-            rm -rf "$KEEP" "$STAGE"
-            echo "SWAP_OK"
-            ls -1 "$TARGET"
+            # 2) 删除新构建中已不存在的文件（scp 只覆盖、不删除，这一步才是真正的镜像）
+            #    失败只记警告，不停机：此时新构建已经在位，残留几个文件远比站点挂掉轻。
+            find "$TARGET" -mindepth 1 -type f -printf '%P\n' | while IFS= read -r rel; do
+              case "$rel" in .user.ini|.well-known/*) continue;; esac
+              if [ ! -e "$STAGE/$rel" ]; then
+                rm -f "$TARGET/$rel" || echo "WARN: 无法删除 $rel"
+              fi
+            done
+
+            # 3) 清掉因此变空的目录
+            find "$TARGET" -mindepth 1 -depth -type d -empty -printf '%P\n' | while IFS= read -r rel; do
+              case "$rel" in .well-known|.well-known/*) continue;; esac
+              rmdir "$TARGET/$rel" 2>/dev/null || true
+            done
+
+            # 4) 同步之后必须可访问，否则报错
+            test -f "$TARGET/index.html" || { echo "ERROR: 同步后 index.html 缺失"; exit 1; }
+            test -d "$TARGET/assets"     || { echo "ERROR: 同步后 assets/ 缺失";     exit 1; }
+
+            rm -rf "$STAGE"
+            echo "SYNC_OK"
+            ls -1A "$TARGET"
 
       # ---- 3) 线上验证 ----
       - name: Verify live site
