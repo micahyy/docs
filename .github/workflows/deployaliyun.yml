@@ -19,26 +19,24 @@ jobs:
           node-version: 20
           cache: npm
 
+      # 用 npm ci 而不是 npm install：锁文件与 package.json 不一致时会立即失败，
+      # 而不是静默装出一套与锁定版本不同的依赖（此前 waline 的依赖就是被这样漏掉的）。
       - name: Install dependencies
-        run: npm ci || npm install
+        run: npm ci
 
       - name: Build VitePress site
         run: npm run docs:build
         env:
           NODE_OPTIONS: --max-old-space-size=4096
 
-      # ---- External links -> target="_blank" (preserves the previous behaviour) ----
-      - name: Add target="_blank" to external links
-        run: |
-          cd docs/.vitepress/dist
-          find . -name "*.html" -type f | while read -r file; do
-            # Avoid double-adding target=_blank by matching only <a href="http without existing target
-            perl -i -pe 's/<a(?![^>]*\starget=)(\s[^>]*?\shref="http)/<a target="_blank"$1/g' "$file"
-          done
-          echo "鉁?宸蹭负鎵€鏈夊閮ㄩ摼鎺ユ坊鍔?target=\"_blank\""
+      # 说明：外链 target="_blank" 已改为在 docs/.vitepress/config.mts 的 markdown-it
+      # 渲染阶段处理，不再需要在此用 perl 正则改写构建好的 HTML。
 
-      # ---- SCP to server (same secrets as before, just source changed) ----
-      - name: Deploy via SCP
+      # ---- 1) 先上传到临时目录，不碰线上 ----
+      # SCP 只覆盖同名文件、不删除多余文件。此前每调整一次目录命名
+      # （2.有线单模 → 2_有线单模 → 2_wired …）旧目录都会永久残留，
+      # 累积了 4 代共 30 个无用条目。这里改为「先传临时目录、校验后再原子替换」。
+      - name: Upload build to staging directory
         uses: appleboy/scp-action@v1
         with:
           host:     ${{ secrets.HOST }}
@@ -46,5 +44,52 @@ jobs:
           port:     ${{ secrets.PORT }}
           key:      ${{ secrets.KEY }}
           source:   "./docs/.vitepress/dist/*"
-          target:   "/www/wwwroot/docs.micah.vip"
+          target:   "/tmp/docs_staging"
           strip_components: 3
+          # 先清空临时目录，避免上一次的残留被带进来
+          rm: true
+
+      # ---- 2) 校验产物，再替换线上目录 ----
+      # .well-known（SSL 证书验证）与 .user.ini（宝塔面板配置）必须保留。
+      - name: Swap in new build
+        uses: appleboy/ssh-action@v1
+        with:
+          host:     ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port:     ${{ secrets.PORT }}
+          key:      ${{ secrets.KEY }}
+          script_stop: true
+          script: |
+            set -eu
+            TARGET=/www/wwwroot/docs.micah.vip
+            STAGE=/tmp/docs_staging
+            KEEP=/tmp/docs_keep
+
+            # 校验：临时目录必须是一个完整的构建产物，否则中止，线上不受影响
+            test -f "$STAGE/index.html" || { echo "ERROR: staging 缺少 index.html，中止部署"; exit 1; }
+            test -d "$STAGE/assets"     || { echo "ERROR: staging 缺少 assets/，中止部署";     exit 1; }
+
+            # 备份需要保留的文件
+            rm -rf "$KEEP"
+            mkdir -p "$KEEP"
+            if [ -d "$TARGET/.well-known" ]; then cp -a "$TARGET/.well-known" "$KEEP"/; fi
+            if [ -f "$TARGET/.user.ini" ];  then cp -a "$TARGET/.user.ini"  "$KEEP"/; fi
+
+            # 清空线上目录后整体替换
+            find "$TARGET" -mindepth 1 -maxdepth 1 -exec rm -rf {} +
+            cp -a "$STAGE"/. "$TARGET"/
+            if [ -n "$(ls -A "$KEEP")" ]; then cp -a "$KEEP"/. "$TARGET"/; fi
+
+            rm -rf "$KEEP" "$STAGE"
+            echo "SWAP_OK"
+            ls -1 "$TARGET"
+
+      # ---- 3) 线上验证 ----
+      - name: Verify live site
+        run: |
+          set -eu
+          for path in / /index.html /hashmap.json /images/logo.png /404.html; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' -m 20 "https://docs.micah.vip$path")
+            echo "$path -> $code"
+            if [ "$code" != "200" ]; then echo "ERROR: $path 返回 $code"; exit 1; fi
+          done

@@ -11,21 +11,24 @@ export default defineConfig({
   base: '/',
   cleanUrls: false,
 
+  // 自动生成 sitemap.xml（此前服务器上那份是 MkDocs 时代的残留，域名和路径全是错的）
+  sitemap: { hostname: 'https://docs.micah.vip' },
+
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/images/logo192108.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/images/logo.png' }],
     ['meta', { name: 'theme-color', content: '#7c6fef' }],
     ['meta', { name: 'author', content: 'Micah' }],
     ['meta', { property: 'og:title', content: '菜籽猫文档' }],
     ['meta', { property: 'og:description', content: '菜籽猫的键盘说明书汇总' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:url', content: 'https://docs.micah.vip' }],
-    ['meta', { property: 'og:image', content: 'https://docs.micah.vip/images/logo192108.png' }]
+    ['meta', { property: 'og:image', content: 'https://docs.micah.vip/images/logo.png' }]
   ],
 
   themeConfig: {
     logo: {
-      light: '/images/logo192108.png',
-      dark:  '/images/logo192108.png'
+      light: '/images/logo.png',
+      dark:  '/images/logo.png'
     },
     siteTitle: '菜籽猫',
 
@@ -33,7 +36,7 @@ export default defineConfig({
       { text: '首页',    link: '/' },
       { text: 'PCB',     link: '/1_PCB/g80_3000' },
       { text: '有线',    link: '/2_wired/DS17' },
-      { text: '多模',    link: '/4_Tri-mode/4.1 dm17' },
+      { text: '多模',    link: '/4_Tri-mode/4.1_dm17' },
       { text: 'DZ系列',  link: '/3_DZ/DZ17' },
       { text: 'EC系列',  link: '/7_EC/EC87' },
       { text: 'Swagkeys',link: '/5_Swagkeys/Eave' },
@@ -89,7 +92,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'G80-3000',    link: '/1_PCB/g80_3000' },
-          { text: 'Ow_vento 8K', link: '/1_PCB/Ow_vento 8K' }
+          { text: 'Ow_vento 8K', link: '/1_PCB/Ow_vento_8K' }
         ]
       },
       {
@@ -122,7 +125,7 @@ export default defineConfig({
         text: '多模键盘',
         collapsed: false,
         items: [
-          { text: 'DM17', link: '/4_Tri-mode/4.1 dm17' }
+          { text: 'DM17', link: '/4_Tri-mode/4.1_dm17' }
         ]
       },
       {
@@ -138,7 +141,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'VIA 的使用',   link: '/6_guide/6.1_VIA' },
-          { text: '常见问题 QA',  link: '/6_guide/6.2 QA' },
+          { text: '常见问题 QA',  link: '/6_guide/6.2_QA' },
           { text: 'QMK 键码速查', link: '/6_guide/qmk_keycode' }
         ]
       }
@@ -160,6 +163,30 @@ export default defineConfig({
 
   markdown: {
     lineNumbers: true,
-    anchor: {}
+
+    // 外链统一在新标签页打开。
+    // 此前这一步是靠部署脚本里的 perl 正则改写构建好的 HTML 实现的，很脆弱，
+    // 现改为在 markdown-it 渲染阶段处理，并补上 rel="noopener noreferrer"。
+    config: (md: any) => {
+      const defaultLinkOpen =
+        md.renderer.rules.link_open ||
+        ((tokens: any[], idx: number, options: any, _env: any, self: any) =>
+          self.renderToken(tokens, idx, options))
+
+      md.renderer.rules.link_open = (
+        tokens: any[],
+        idx: number,
+        options: any,
+        env: any,
+        self: any
+      ) => {
+        const href: string = tokens[idx].attrGet('href') || ''
+        if (/^https?:\/\//i.test(href) && !href.includes('docs.micah.vip')) {
+          tokens[idx].attrSet('target', '_blank')
+          tokens[idx].attrSet('rel', 'noopener noreferrer')
+        }
+        return defaultLinkOpen(tokens, idx, options, env, self)
+      }
+    }
   }
 })

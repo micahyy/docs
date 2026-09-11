@@ -22,7 +22,7 @@ czmao is an open-source community focused on custom mechanical keyboards, coveri
 
 [DZ87 双模机械键盘](https://docs.micah.vip/3_DZ/DZ87.html) — 87 键（TKL）USB + 蓝牙 5.0 双模，ZMK 固件。
 
-[DM17 三模](https://docs.micah.vip/4_Tri-mode/4.1%20dm17.html) — 三模/双模机械键盘。
+[DM17 三模](https://docs.micah.vip/4_Tri-mode/4.1_dm17.html) — 三模/双模机械键盘。
 
 [EAVE](https://docs.micah.vip/5_Swagkeys/Eave.html) — Swagkeys 合作款。
 
@@ -42,7 +42,7 @@ czmao is an open-source community focused on custom mechanical keyboards, coveri
 ## 需要帮助？ <br> Need help?
 
 - [VIA 使用教程](https://docs.micah.vip/6_guide/6.1_VIA.html)
-- [常见问题 FAQ](https://docs.micah.vip/6_guide/6.2%20QA.html)
+- [常见问题 FAQ](https://docs.micah.vip/6_guide/6.2_QA.html)
 - QQ 交流群: `677654482`
 
 ## 联系方式 <br> Contact
