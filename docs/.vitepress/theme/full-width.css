@@ -1,0 +1,35 @@
+/**
+ * 全屏自适应宽度 / Full-width adaptive layout
+ *
+ * VitePress 默认主题有两层宽度上限：
+ *   1. --vp-layout-max-width(1440px)：视口宽于 1440px 时整站内容被居中收窄，
+ *      左右各留出 (100vw - 1440px) / 2 的空白；
+ *   2. .VPDoc.has-aside .content-container(688px)：带右侧目录的文档页，
+ *      正文列被固定压到 688px，屏幕再宽也不变。
+ *
+ * 合起来的效果是：1920px 显示器上正文只占中间一条，两侧大片空白。
+ * 下面把这两层上限都放开，让内容随视口宽度自适应铺满。
+ *
+ * 说明：超宽屏上行会变长。若之后觉得难读，可给正文列加回一个较宽松的上限，
+ * 例如改 .VPDoc.has-aside .content-container 的 max-width 为 1400px。
+ */
+
+:root {
+  /* 1440px → 100%：VPContent / VPLocalNav / VPNavBar / VPSidebar / VPFooter
+     在 ≥1440px 都用它计算左右留白。改成 100% 后留白归零，
+     同时各处之间的相对对齐关系（导航分割线与正文左边缘等）保持不变。 */
+  --vp-layout-max-width: 100%;
+}
+
+/* 正文列：解除 688px 固定上限（带右侧目录的文档页） */
+.VPDoc .content-container,
+.VPDoc.has-aside .content-container {
+  max-width: 100% !important;
+}
+
+/* 无侧边栏的文档页：解除 992px / 1104px / 752px / 784px 上限。
+   当前站点每页都有侧边栏，这两条作为兜底保留。 */
+.VPDoc:not(.has-sidebar) .container,
+.VPDoc:not(.has-sidebar) .content {
+  max-width: 100% !important;
+}

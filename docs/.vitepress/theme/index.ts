@@ -2,6 +2,7 @@ import DefaultTheme from 'vitepress/theme'
 import Comments from './Comments.vue'
 import { h } from 'vue'
 import './download.css'
+import './full-width.css'
 
 export default {
   extends: DefaultTheme,
