@@ -125,7 +125,8 @@ export default defineConfig({
         text: '多模键盘',
         collapsed: false,
         items: [
-          { text: 'DM17', link: '/4_Tri-mode/4.1_dm17' }
+          { text: 'DM17', link: '/4_Tri-mode/4.1_dm17' },
+          { text: 'DC22（开发中）', link: '/4_Tri-mode/4.2_dc22' }
         ]
       },
       {

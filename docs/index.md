@@ -24,6 +24,8 @@ czmao is an open-source community focused on custom mechanical keyboards, coveri
 
 [DM17 三模](https://docs.micah.vip/4_Tri-mode/4.1_dm17.html) — 三模/双模机械键盘。
 
+[DC22 三模](https://docs.micah.vip/4_Tri-mode/4.2_dc22.html) — 22 键三模数字小键盘（开发中）。
+
 [EAVE](https://docs.micah.vip/5_Swagkeys/Eave.html) — Swagkeys 合作款。
 
 ### 在线工具 <br> Online Tools
