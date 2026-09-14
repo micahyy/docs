@@ -56,7 +56,8 @@ for (const entry of entries) {
   moved++
 }
 
-// Step 2 -- rewrite /en/... to /... in every HTML file under dist/
+// Step 2 -- rewrite /docs/en/... to /docs/... in every HTML file under dist/.
+// (docs:build:en passes --base /docs/, so VitePress emits /docs/en/... URLs.)
 function* walk(dir) {
   for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, item.name)
@@ -70,14 +71,30 @@ function* walk(dir) {
 // escaped JSON patterns are fragile to anchor in one pattern.
 const REWRITES = [
   // a) HTML attribute form
-  { from: 'href="/en/',  to: 'href="/' },
+  { from: 'href="/docs/en/',  to: 'href="/docs/' },
   // b) HTML attribute form for src
-  { from: 'src="/en/',   to: 'src="/' },
-  // c) JSON-escaped link form: "link":"/en/X" inside <script> blocks
-  { from: '"link":"/en/', to: '"link":"/' },
-  // d) Any other escaped /en/ occurrence (catches residual cases).
+  { from: 'src="/docs/en/',   to: 'src="/docs/' },
+  // c) JSON-escaped link form: "link":"/docs/en/X" inside <script> blocks
+  { from: '"link":"/docs/en/', to: '"link":"/docs/' },
+  // d) Any other escaped /docs/en/ occurrence (catches residual cases).
   //    Use a wide single pattern after the targeted ones above.
-  { from: '\\"/en/',     to: '\\"/' },
+  { from: '\\"/docs/en/',     to: '\\"/docs/' },
+  // e) Root-absolute public-asset refs that bypass the base prefix (the
+  //    hardcoded favicon in config.mts head, any <img src="/images/...">):
+  //    re-anchor them under /docs/ so they resolve on the project page.
+  { from: 'href="/images/',   to: 'href="/docs/images/' },
+  { from: 'src="/images/',    to: 'src="/docs/images/' },
+  { from: 'href="/downloads/',to: 'href="/docs/downloads/' },
+  { from: 'src="/downloads/', to: 'src="/docs/downloads/' },
+  // f) RAW (un-based) /en/ refs inside the serialized app-config JSON in
+  //    inline <script> blocks. VitePress applies --base at RENDER time, so
+  //    these serialized values stay raw; the client router re-bases them on
+  //    hydration. After we fold dist/en/* away they must point at the root
+  //    paths or every client-side nav click 404s.
+  { from: '"link":"/en/',     to: '"link":"/' },
+  { from: '\\"/en/',          to: '\\"/' },
+  { from: 'href="/en/',       to: 'href="/' },
+  { from: 'src="/en/',        to: 'src="/' },
 ]
 
 let fixed = 0
