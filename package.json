@@ -2,14 +2,16 @@
   "name": "micahyy-docs",
   "version": "1.0.0",
   "private": true,
-  "description": "docs.micah.vip - VitePress site (QMK docs style UI)",
+  "description": "docs.micah.vip (zh-CN) + micahyy.github.io/docs (en) - VitePress site",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
+    "docs:build:en": "vitepress build docs && node scripts/postbuild-en.cjs",
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "@waline/client": "^3.4.0"
+    "@waline/client": "^3.4.0",
+    "shiki": "^4.4.3"
   },
   "devDependencies": {
     "vitepress": "^1.6.4"
