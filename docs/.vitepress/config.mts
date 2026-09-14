@@ -337,14 +337,8 @@ export default defineConfig({
         siteTitle: 'CZMao',
 
         nav: [
-          { text: 'Home',    link: '/en/' },
-          { text: 'PCB',     link: '/en/1_PCB/g80_3000' },
-          { text: 'Wired',   link: '/en/2_wired/DS17' },
-          { text: 'Multi',   link: '/en/4_Tri-mode/4.1_dm17' },
-          { text: 'DZ',      link: '/en/3_DZ/DZ17' },
-          { text: 'EC',      link: '/en/7_EC/EC87' },
-          { text: 'Swagkeys',link: '/en/5_Swagkeys/Eave' },
-          { text: 'Guides',  link: '/en/6_guide/6.1_VIA' }
+          { text: 'Home', link: '/en/' },
+          { text: 'EC',  link: '/en/7_EC/EC87' }
         ],
 
         socialLinks: [
@@ -389,70 +383,19 @@ export default defineConfig({
           copyright: 'Copyright \u00A9 2024-present CZMao / Micah'
         },
 
-        // Sidebar mirrors Chinese site but links to /en/* paths.
-        // Only EC87 currently has an English page; others will 404 — they will be
-        // translated one at a time. Items stay visible so users see the full catalog.
-        sidebar: [
-          {
-            text: 'PCB Design',
-            collapsed: false,
-            items: [
-              { text: 'G80-3000',    link: '/en/1_PCB/g80_3000' },
-              { text: 'Ow_vento 8K', link: '/en/1_PCB/Ow_vento_8K' }
-            ]
-          },
-          {
-            text: 'Wired Keyboards',
-            collapsed: false,
-            items: [
-              { text: 'DS17',     link: '/en/2_wired/DS17' },
-              { text: 'DS21',     link: '/en/2_wired/ds21' },
-              { text: 'DS22',     link: '/en/2_wired/DS22' },
-              { text: 'Gamer', link: '/en/2_wired/gamer' },
-              { text: 'GH60 8K',  link: '/en/2_wired/gh60_8K' }
-            ]
-          },
-          {
-            text: 'EC Series (Electrostatic Capacitive)',
-            collapsed: false,
-            items: [
-              { text: 'EC87 (Electrostatic Capacitive)', link: '/en/7_EC/EC87' }
-            ]
-          },
-          {
-            text: 'DZ Series',
-            collapsed: false,
-            items: [
-              { text: 'DZ17', link: '/en/3_DZ/DZ17' },
-              { text: 'DZ87', link: '/en/3_DZ/DZ87' }
-            ]
-          },
-          {
-            text: 'Multi-mode Keyboards',
-                         collapsed: false,
-                         items: [
-                           { text: 'DM17', link: '/en/4_Tri-mode/4.1_dm17' },
-                           { text: 'DC22 (under development)', link: '/en/4_Tri-mode/4.2_dc22' }
-                         ]
-                       },
-          {
-            text: 'Swagkeys',
-            collapsed: false,
-            items: [
-              { text: 'EAVE',               link: '/en/5_Swagkeys/Eave' },
-              { text: 'Transition Lite 87', link: '/en/5_Swagkeys/TransitionLite87' }
-            ]
-          },
-          {
-            text: 'Guides',
-            collapsed: false,
-            items: [
-              { text: 'Using VIA',         link: '/en/6_guide/6.1_VIA' },
-              { text: 'FAQ',               link: '/en/6_guide/6.2_QA' },
-              { text: 'QMK Keycode Cheatsheet', link: '/en/6_guide/qmk_keycode' }
-            ]
-          }
-        ],
+        // EN sidebar only lists products that have an English manual on disk.
+                // Anything not yet translated is omitted (would 404); it'll be re-added
+                // when its en/X/Y.md mirror lands. The Chinese site (docs.micah.vip) has
+                // the full catalog in the meantime.
+                sidebar: [
+                  {
+                    text: 'Keyboards',
+                    collapsed: false,
+                    items: [
+                      { text: 'EC87 (Electrostatic Capacitive)', link: '/en/7_EC/EC87' }
+                    ]
+                  }
+                ],
 
         outline: { label: 'On this page', level: [2, 4] },
 

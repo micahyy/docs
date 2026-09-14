@@ -1,4 +1,4 @@
-// postbuild-en.cjs — collapses dist/en/* into dist/ root for English-only deploy,
+// postbuild-en.cjs -- collapses dist/en/* into dist/ root for English-only deploy,
 // and rewrites internal URL references so sidebar/nav still work.
 //
 // Why: VitePress builds all locales into one dist/ tree. The /en/ locale lives at
@@ -9,13 +9,17 @@
 // What it does:
 //   1. For every top-level entry under dist/en/, move it to dist/ (overwriting any
 //      same-named Chinese files at root).
-//   2. Walk dist/ and rewrite every `href="/en/..."` / `src="/en/..."` to the
-//      root path so internal links resolve.
+//   2. Walk dist/ and rewrite every "/en/..." reference to the root path so
+//      internal links resolve. Handles four shapes found in VitePress output:
+//        a) href="/en/X"     (HTML attribute)
+//        b) src="/en/X"      (HTML attribute)
+//        c) "link":"/en/X"   (JSON-escaped in inline <script> app data)
+//        d) \"/en/X          (any escaped JSON / URL context)
 //   3. Drop the now-empty dist/en/ directory.
 //
 // Side effects:
 //   - dist/<product>/EC87.html etc. is now the English version (Chinese version is
-//     overwritten and lost in this dist — keep the bilingual dist if you also want
+//     overwritten and lost in this dist -- keep the bilingual dist if you also want
 //     to deploy to Aliyun; run a separate build for that).
 //   - Shared assets/ and images/ at dist/ root stay untouched.
 //
@@ -37,7 +41,7 @@ if (!exists(enDir)) {
   process.exit(1)
 }
 
-// Step 1 — move dist/en/* into dist/ root
+// Step 1 -- move dist/en/* into dist/ root
 const entries = fs.readdirSync(enDir, { withFileTypes: true })
 let moved = 0
 let overwritten = 0
@@ -52,7 +56,7 @@ for (const entry of entries) {
   moved++
 }
 
-// Step 2 — rewrite /en/... to /... in every HTML file under dist/
+// Step 2 -- rewrite /en/... to /... in every HTML file under dist/
 function* walk(dir) {
   for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
     const full = path.join(dir, item.name)
@@ -61,23 +65,36 @@ function* walk(dir) {
   }
 }
 
-const HREF_RE = /href="\/en\//g
-const SRC_RE  = /src="\/en\//g
+// Four rewrite passes cover every shape VitePress emits. Each is an exact
+// replacement; we don't try to be clever with a single regex because the
+// escaped JSON patterns are fragile to anchor in one pattern.
+const REWRITES = [
+  // a) HTML attribute form
+  { from: 'href="/en/',  to: 'href="/' },
+  // b) HTML attribute form for src
+  { from: 'src="/en/',   to: 'src="/' },
+  // c) JSON-escaped link form: "link":"/en/X" inside <script> blocks
+  { from: '"link":"/en/', to: '"link":"/' },
+  // d) Any other escaped /en/ occurrence (catches residual cases).
+  //    Use a wide single pattern after the targeted ones above.
+  { from: '\\"/en/',     to: '\\"/' },
+]
+
 let fixed = 0
 for (const file of walk(dist)) {
   if (!file.endsWith('.html')) continue
   let content = fs.readFileSync(file, 'utf-8')
   const before = content
-  content = content
-    .replace(HREF_RE, 'href="/')
-    .replace(SRC_RE,  'src="/')
+  for (const r of REWRITES) {
+    content = content.split(r.from).join(r.to)
+  }
   if (content !== before) {
     fs.writeFileSync(file, content)
     fixed++
   }
 }
 
-// Step 3 — drop empty dist/en
+// Step 3 -- drop empty dist/en
 try { fs.rmdirSync(enDir) } catch (_) { /* not empty (nested dirs survived) */ }
 
-console.log(`[postbuild-en] moved ${moved} entries (${overwritten} overwritten); rewrote /en/ → / in ${fixed} HTML files`)
+console.log(`[postbuild-en] moved ${moved} entries (${overwritten} overwritten); rewrote /en/ -> / in ${fixed} HTML files`)
