@@ -14,7 +14,7 @@ CZMao (czmao) is an open-source community focused on custom mechanical keyboards
 
 ### Manuals
 
-[EC87 Electrostatic-Capacitive](/7_EC/EC87) — 87-key TKL electrostatic-capacitive keyboard with web-based actuation calibration. *(only product with full English manual)*
+[EC87 Electrostatic-Capacitive](/en/7_EC/EC87) — 87-key TKL electrostatic-capacitive keyboard with web-based actuation calibration. *(only product with full English manual)*
 
 For manuals of other products, see the [Chinese documentation site](https://docs.micah.vip) (currently the canonical source for the rest of the lineup).
 

@@ -5,10 +5,10 @@ import { defineConfig } from 'vitepress'
 // Site (en):   https://micahyy.github.io/docs
 // Repo: https://github.com/micahyy/docs
 //
-// Bilingual structure:
-//   - zh-CN (default, root path) — Chinese content for docs.micah.vip
-//   - en (under /en/)            — English content for GitHub Pages
-//   - File layout: docs/<path>.md = zh-CN, docs/en/<path>.md = en
+// Bilingual structure (since 2026-09-15 — subdirectory-parallel):
+//   - /zh/  — Chinese content under docs/zh/<path>.md
+//   - /en/  — English content under docs/en/<path>.md
+//   - /     — minimal landing page (docs/index.md) that redirects to /zh/
 
 const sharedHead = [
   ['link', { rel: 'icon', type: 'image/png', href: '/images/logo.png' }],
@@ -38,19 +38,10 @@ export default defineConfig({
   ],
 
   themeConfig: {
+    // Common theme settings shared across locales.
+    // nav/sidebar live under each locale so paths can carry the right prefix.
     logo: sharedLogo,
     siteTitle: '菜籽猫',
-
-    nav: [
-      { text: '首页',    link: '/' },
-      { text: 'PCB',     link: '/1_PCB/g80_3000' },
-      { text: '有线',    link: '/2_wired/DS17' },
-      { text: '多模',    link: '/4_Tri-mode/4.1_dm17' },
-      { text: 'DZ系列',  link: '/3_DZ/DZ17' },
-      { text: 'EC系列',  link: '/7_EC/EC87' },
-      { text: 'Swagkeys',link: '/5_Swagkeys/Eave' },
-      { text: '使用指南',link: '/6_guide/6.1_VIA' }
-    ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/micahyy/docs' }
@@ -82,79 +73,12 @@ export default defineConfig({
       }
     },
 
-    editLink: {
-      pattern: 'https://github.com/micahyy/docs/edit/main/docs/:path',
-      text: '在 GitHub 上编辑此页'
-    },
-
     docFooter: { prev: '上一篇', next: '下一篇' },
 
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright \u00A9 2024-present 菜籽猫 / Micah'
     },
-
-    sidebar: [
-      {
-        text: 'PCB 设计',
-        collapsed: false,
-        items: [
-          { text: 'G80-3000',    link: '/1_PCB/g80_3000' },
-          { text: 'Ow_vento 8K', link: '/1_PCB/Ow_vento_8K' }
-        ]
-      },
-      {
-        text: '有线键盘',
-        collapsed: false,
-        items: [
-          { text: 'DS17',     link: '/2_wired/DS17' },
-          { text: 'DS21',     link: '/2_wired/ds21' },
-          { text: 'DS22',     link: '/2_wired/DS22' },
-          { text: 'Gamer', link: '/2_wired/gamer' },
-          { text: 'GH60 8K',  link: '/2_wired/gh60_8K' }
-        ]
-      },
-      {
-        text: 'EC 系列（静电容）',
-        collapsed: false,
-        items: [
-          { text: 'EC87 静电容', link: '/7_EC/EC87' }
-        ]
-      },
-      {
-        text: 'DZ 系列',
-        collapsed: false,
-        items: [
-          { text: 'DZ17', link: '/3_DZ/DZ17' },
-          { text: 'DZ87', link: '/3_DZ/DZ87' }
-        ]
-      },
-      {
-        text: '多模键盘',
-        collapsed: false,
-        items: [
-          { text: 'DM17', link: '/4_Tri-mode/4.1_dm17' },
-          { text: 'DC22（开发中）', link: '/4_Tri-mode/4.2_dc22' }
-        ]
-      },
-      {
-        text: 'Swagkeys',
-        collapsed: false,
-        items: [
-          { text: 'EAVE',         link: '/5_Swagkeys/Eave' },
-          { text: 'Transition Lite 87',link: '/5_Swagkeys/TransitionLite87' }
-        ]
-      },
-      {
-        text: '使用指南',
-        collapsed: false,
-        items: [
-          { text: 'VIA 的使用',   link: '/6_guide/6.1_VIA' },
-          { text: '常见问题 QA',  link: '/6_guide/6.2_QA' },
-          { text: 'QMK 键码速查', link: '/6_guide/qmk_keycode' }
-        ]
-      }
-    ],
 
     outline: { label: '本页目录', level: [2, 4] },
 
@@ -168,10 +92,38 @@ export default defineConfig({
     aside: 'deep'
   },
 
-  // Locales: zh-CN is the default (root), English lives under /en/.
-  // VitePress routes files at docs/en/<path>.md → URL /en/<path>.
+  // Legacy URL rewrites (post-2026-09-15 A-migration):
+  //   Old Chinese URLs at root (e.g. /2_wired/DS17) → new /zh/...
+  //   VitePress serves these so old bookmarks keep working.
+  rewrites: {
+    '2_wired/DS17':               '/zh/2_wired/DS17',
+    '2_wired/ds21':               '/zh/2_wired/ds21',
+    '2_wired/DS22':               '/zh/2_wired/DS22',
+    '2_wired/gamer':              '/zh/2_wired/gamer',
+    '2_wired/gh60_8K':            '/zh/2_wired/gh60_8K',
+    '1_PCB/g80_3000':             '/zh/1_PCB/g80_3000',
+    '1_PCB/Ow_vento_8K':          '/zh/1_PCB/Ow_vento_8K',
+    '3_DZ/DZ17':                  '/zh/3_DZ/DZ17',
+    '3_DZ/DZ87':                  '/zh/3_DZ/DZ87',
+    '4_Tri-mode/4.1_dm17':        '/zh/4_Tri-mode/4.1_dm17',
+    '4_Tri-mode/4.2_dc22':        '/zh/4_Tri-mode/4.2_dc22',
+    '5_Swagkeys/Eave':            '/zh/5_Swagkeys/Eave',
+    '5_Swagkeys/TransitionLite87':'/zh/5_Swagkeys/TransitionLite87',
+    '6_guide/6.1_VIA':            '/zh/6_guide/6.1_VIA',
+    '6_guide/6.2_QA':             '/zh/6_guide/6.2_QA',
+    '6_guide/qmk_keycode':        '/zh/6_guide/qmk_keycode',
+    '7_EC/EC87':                  '/zh/7_EC/EC87'
+  },
+
   locales: {
+    // Root (/) — minimal; docs/index.md is a redirect page to /zh/.
     root: {
+      lang: 'zh-CN',
+      label: '简体中文'
+    },
+
+    // Chinese content — served at /zh/<path>
+    zh: {
       lang: 'zh-CN',
       label: '简体中文',
       title: '菜籽猫文档',
@@ -191,56 +143,19 @@ export default defineConfig({
         siteTitle: '菜籽猫',
 
         nav: [
-          { text: '首页',    link: '/' },
-          { text: 'PCB',     link: '/1_PCB/g80_3000' },
-          { text: '有线',    link: '/2_wired/DS17' },
-          { text: '多模',    link: '/4_Tri-mode/4.1_dm17' },
-          { text: 'DZ系列',  link: '/3_DZ/DZ17' },
-          { text: 'EC系列',  link: '/7_EC/EC87' },
-          { text: 'Swagkeys',link: '/5_Swagkeys/Eave' },
-          { text: '使用指南',link: '/6_guide/6.1_VIA' }
+          { text: '首页',     link: '/zh/' },
+          { text: 'PCB',      link: '/zh/1_PCB/g80_3000' },
+          { text: '有线',     link: '/zh/2_wired/DS17' },
+          { text: '多模',     link: '/zh/4_Tri-mode/4.1_dm17' },
+          { text: 'DZ系列',   link: '/zh/3_DZ/DZ17' },
+          { text: 'EC系列',   link: '/zh/7_EC/EC87' },
+          { text: 'Swagkeys', link: '/zh/5_Swagkeys/Eave' },
+          { text: '使用指南', link: '/zh/6_guide/6.1_VIA' }
         ],
-
-        socialLinks: [
-          { icon: 'github', link: 'https://github.com/micahyy/docs' }
-        ],
-
-        search: {
-          provider: 'local',
-          options: {
-            placeholder: '搜索文档...',
-            translations: {
-              button: { buttonText: '搜索', buttonAriaLabel: '搜索文档' },
-              modal: {
-                displayDetails: '显示详情',
-                resetButtonTitle: '清空',
-                backButtonTitle: '关闭',
-                noResultsText: '无匹配结果',
-                footer: {
-                  selectText: '选择',
-                  selectKeyAriaLabel: 'Enter',
-                  navigateText: '切换',
-                  navigateUpKeyAriaLabel: '上',
-                  navigateDownKeyAriaLabel: '下',
-                  closeText: '关闭',
-                  closeKeyAriaLabel: 'Esc'
-                }
-              }
-            },
-            detailedView: true
-          }
-        },
 
         editLink: {
-          pattern: 'https://github.com/micahyy/docs/edit/main/docs/:path',
+          pattern: 'https://github.com/micahyy/docs/edit/main/docs/zh/:path',
           text: '在 GitHub 上编辑此页'
-        },
-
-        docFooter: { prev: '上一篇', next: '下一篇' },
-
-        footer: {
-          message: 'Released under the MIT License.',
-          copyright: 'Copyright \u00A9 2024-present 菜籽猫 / Micah'
         },
 
         sidebar: [
@@ -248,75 +163,66 @@ export default defineConfig({
             text: 'PCB 设计',
             collapsed: false,
             items: [
-              { text: 'G80-3000',    link: '/1_PCB/g80_3000' },
-              { text: 'Ow_vento 8K', link: '/1_PCB/Ow_vento_8K' }
+              { text: 'G80-3000',    link: '/zh/1_PCB/g80_3000' },
+              { text: 'Ow_vento 8K', link: '/zh/1_PCB/Ow_vento_8K' }
             ]
           },
           {
             text: '有线键盘',
             collapsed: false,
             items: [
-              { text: 'DS17',     link: '/2_wired/DS17' },
-              { text: 'DS21',     link: '/2_wired/ds21' },
-              { text: 'DS22',     link: '/2_wired/DS22' },
-              { text: 'Gamer', link: '/2_wired/gamer' },
-              { text: 'GH60 8K',  link: '/2_wired/gh60_8K' }
+              { text: 'DS17',     link: '/zh/2_wired/DS17' },
+              { text: 'DS21',     link: '/zh/2_wired/ds21' },
+              { text: 'DS22',     link: '/zh/2_wired/DS22' },
+              { text: 'Gamer',    link: '/zh/2_wired/gamer' },
+              { text: 'GH60 8K',  link: '/zh/2_wired/gh60_8K' }
             ]
           },
           {
             text: 'EC 系列（静电容）',
             collapsed: false,
             items: [
-              { text: 'EC87 静电容', link: '/7_EC/EC87' }
+              { text: 'EC87 静电容', link: '/zh/7_EC/EC87' }
             ]
           },
           {
             text: 'DZ 系列',
             collapsed: false,
             items: [
-              { text: 'DZ17', link: '/3_DZ/DZ17' },
-              { text: 'DZ87', link: '/3_DZ/DZ87' }
+              { text: 'DZ17', link: '/zh/3_DZ/DZ17' },
+              { text: 'DZ87', link: '/zh/3_DZ/DZ87' }
             ]
           },
           {
             text: '多模键盘',
             collapsed: false,
             items: [
-              { text: 'DM17', link: '/4_Tri-mode/4.1_dm17' }
+              { text: 'DM17',            link: '/zh/4_Tri-mode/4.1_dm17' },
+              { text: 'DC22（开发中）',   link: '/zh/4_Tri-mode/4.2_dc22' }
             ]
           },
           {
             text: 'Swagkeys',
             collapsed: false,
             items: [
-              { text: 'EAVE',         link: '/5_Swagkeys/Eave' },
-              { text: 'Transition Lite 87',link: '/5_Swagkeys/TransitionLite87' }
+              { text: 'EAVE',                link: '/zh/5_Swagkeys/Eave' },
+              { text: 'Transition Lite 87',  link: '/zh/5_Swagkeys/TransitionLite87' }
             ]
           },
           {
             text: '使用指南',
             collapsed: false,
             items: [
-              { text: 'VIA 的使用',   link: '/6_guide/6.1_VIA' },
-              { text: '常见问题 QA',  link: '/6_guide/6.2_QA' },
-              { text: 'QMK 键码速查', link: '/6_guide/qmk_keycode' }
+              { text: 'VIA 的使用',   link: '/zh/6_guide/6.1_VIA' },
+              { text: '常见问题 QA',  link: '/zh/6_guide/6.2_QA' },
+              { text: 'QMK 键码速查', link: '/zh/6_guide/qmk_keycode' }
             ]
           }
-        ],
-
-        outline: { label: '本页目录', level: [2, 4] },
-
-        darkModeSwitchLabel: '主题',
-        lightModeSwitchTitle: '切换到浅色模式',
-        darkModeSwitchTitle: '切换到深色模式',
-
-        sidebarMenuLabel: '菜单',
-        returnToTopLabel: '回到顶部',
-        langMenuLabel: '语言',
-        aside: 'deep'
+        ]
       }
     },
 
+    // English content — served at /en/<path>
     en: {
       lang: 'en-US',
       label: 'English',
@@ -338,38 +244,8 @@ export default defineConfig({
 
         nav: [
           { text: 'Home', link: '/en/' },
-          { text: 'EC',  link: '/en/7_EC/EC87' }
+          { text: 'EC',   link: '/en/7_EC/EC87' }
         ],
-
-        socialLinks: [
-          { icon: 'github', link: 'https://github.com/micahyy/docs' }
-        ],
-
-        search: {
-          provider: 'local',
-          options: {
-            placeholder: 'Search docs...',
-            translations: {
-              button: { buttonText: 'Search', buttonAriaLabel: 'Search docs' },
-              modal: {
-                displayDetails: 'Show details',
-                resetButtonTitle: 'Reset',
-                backButtonTitle: 'Close',
-                noResultsText: 'No results',
-                footer: {
-                  selectText: 'Select',
-                  selectKeyAriaLabel: 'Enter',
-                  navigateText: 'Navigate',
-                  navigateUpKeyAriaLabel: 'Up',
-                  navigateDownKeyAriaLabel: 'Down',
-                  closeText: 'Close',
-                  closeKeyAriaLabel: 'Esc'
-                }
-              }
-            },
-            detailedView: true
-          }
-        },
 
         editLink: {
           pattern: 'https://github.com/micahyy/docs/edit/main/docs/en/:path',
@@ -384,18 +260,18 @@ export default defineConfig({
         },
 
         // EN sidebar only lists products that have an English manual on disk.
-                // Anything not yet translated is omitted (would 404); it'll be re-added
-                // when its en/X/Y.md mirror lands. The Chinese site (docs.micah.vip) has
-                // the full catalog in the meantime.
-                sidebar: [
-                  {
-                    text: 'Keyboards',
-                    collapsed: false,
-                    items: [
-                      { text: 'EC87 (Electrostatic Capacitive)', link: '/en/7_EC/EC87' }
-                    ]
-                  }
-                ],
+        // Anything not yet translated is omitted (would 404); it'll be re-added
+        // when its en/X/Y.md mirror lands. The Chinese site (docs.micah.vip) has
+        // the full catalog at /zh/ in the meantime.
+        sidebar: [
+          {
+            text: 'Keyboards',
+            collapsed: false,
+            items: [
+              { text: 'EC87 (Electrostatic Capacitive)', link: '/en/7_EC/EC87' }
+            ]
+          }
+        ],
 
         outline: { label: 'On this page', level: [2, 4] },
 
