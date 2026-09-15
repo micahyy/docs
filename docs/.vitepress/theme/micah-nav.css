@@ -1,0 +1,15 @@
+/*! 与全站统一导航（micah-nav，高 64px，固定在视口最顶）协调  v1 (2026-09-15)
+ *
+ * 问题：VitePress 自己的 .VPNav 也是 position:fixed; top:0 —— 被统一导航
+ * 整个盖住 ⇒ 顶部菜单、语言切换（EN 按钮）全都看不见、点不到。
+ * （VIA 站是反过来的同款问题：它自己的绝对定位海报层盖住了顶栏。）
+ *
+ * 做法：统一导航挂载后 nav.js 会给 body 打 .micah-has-nav，此时把 .VPNav
+ * 整体下移 64px，正好落在统一导航下面（正文因 body padding-top:64px 本来
+ * 就从 128px 起，刚好接上）。本地 preview / 无注入环境没有这个类，不受影响。
+ * 必须用单独一条规则写 :has() 兜底（:has 与普通选择器不能混在一个列表里，
+ * 否则不支持的浏览器会丢整条规则）。
+ */
+
+body.micah-has-nav .VPNav { top: 64px !important; }
+body:has(#micah-nav-popover) .VPNav { top: 64px !important; }

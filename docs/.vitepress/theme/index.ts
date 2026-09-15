@@ -3,6 +3,8 @@ import Comments from './Comments.vue'
 import { h } from 'vue'
 import './download.css'
 import './full-width.css'
+import './lang-switch.css'
+import './micah-nav.css'
 
 export default {
   extends: DefaultTheme,

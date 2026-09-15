@@ -1,0 +1,45 @@
+/*! 语言切换可见性修正  v1  (2026-09-15)
+ *
+ * 问题：VitePress 默认主题的「语言」按钮（地球图标）有两个毛病：
+ *   1) 只有窗口宽度 ≥1280px 才显示（见 VPNavBarTranslations.vue 的 scoped 样式），
+ *      窗口在 1100~1279px 时英文版入口直接消失；
+ *   2) 即使在 ≥1280px 显示出来，它也只是个没有文字的地球小图标，认不出来是"切语言"。
+ * 做法：≥1100px 一律显示，并在图标后加文字标签 —— 中文页显示 EN，英文页显示 中文。
+ *
+ * ⚠ 断点为什么是 1100px：实测（240 组宽度逐点量）——
+ *   不显示这个按钮时导航栏内容本来就至少需要 ~1004px（搜索框 165 + 菜单 523 + ⋯ 44 + 标题 272），
+ *   加上这个按钮后需要 ~1084px；低于此值按钮和右边的「⋯」会被挤出视口右边（画面外的元素，
+ *   比不显示更糟）。所以 1100px 起步，恰好留 16px 余量。
+ *   <1100px 的空间留给主题自带的右侧「⋯」菜单，语言项就在里面（768~1279px 一直是这个设计）。
+ * ⚠ 这几条都在覆盖主题的 scoped 样式，必须用 !important，别删。
+ */
+
+@media (min-width: 1100px) {
+  .VPNavBarTranslations {
+    display: flex !important;
+  }
+
+  /* 文字标签挂按钮上（地球图标是遮罩元素，往里面塞文字会被裁掉） */
+  .VPNavBarTranslations .button::after {
+    margin-left: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  /* 标签显示的是「切过去是哪个语言」 */
+  html[lang^='zh'] .VPNavBarTranslations .button::after {
+    content: 'EN';
+  }
+
+  html[lang^='en'] .VPNavBarTranslations .button::after {
+    content: '中文';
+  }
+}
+
+/* 1100~1279px 刚好放下，去掉展开小箭头省 18px（悬停/点击照样展开） */
+@media (min-width: 1100px) and (max-width: 1279px) {
+  .VPNavBarTranslations .button .text-icon {
+    display: none;
+  }
+}
