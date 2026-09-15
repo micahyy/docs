@@ -13,3 +13,11 @@
 
 body.micah-has-nav .VPNav { top: 64px !important; }
 body:has(#micah-nav-popover) .VPNav { top: 64px !important; }
+
+/* v2: 左侧栏 .VPSidebar 与右侧 .aside-container（本文目录）也是
+ * fixed; top:0 —— 左侧第一个菜单项被 VPNav 盖住、右侧目录标题被切。
+ * top 改 64px（VPSidebar 自带 padding-top:64px，内容正好从 128px 起）。 */
+body.micah-has-nav .VPSidebar,
+body.micah-has-nav .VPDoc .aside-container { top: 64px !important; }
+body:has(#micah-nav-popover) .VPSidebar,
+body:has(#micah-nav-popover) .VPDoc .aside-container { top: 64px !important; }
