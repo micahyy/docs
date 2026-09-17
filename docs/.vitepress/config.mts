@@ -150,7 +150,8 @@ export default defineConfig({
           { text: 'DZ系列',   link: '/zh/3_DZ/DZ17' },
           { text: 'EC系列',   link: '/zh/7_EC/EC87' },
           { text: 'Swagkeys', link: '/zh/5_Swagkeys/Eave' },
-          { text: '使用指南', link: '/zh/6_guide/6.1_VIA' }
+          { text: '使用指南', link: '/zh/6_guide/6.1_VIA' },
+          { text: 'ZMK',     link: 'https://key.micah.vip', target: '_blank', rel: 'noopener' }
         ],
 
         editLink: {
@@ -245,7 +246,8 @@ export default defineConfig({
         nav: [
           { text: 'Home', link: '/en/' },
           { text: 'EC',   link: '/en/7_EC/EC87' },
-          { text: 'DZ',   link: '/en/3_DZ/DZ17' }
+          { text: 'DZ',   link: '/en/3_DZ/DZ17' },
+          { text: 'ZMK',  link: 'https://key.micah.vip', target: '_blank', rel: 'noopener' }
         ],
 
         editLink: {
