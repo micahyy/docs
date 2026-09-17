@@ -244,7 +244,8 @@ export default defineConfig({
 
         nav: [
           { text: 'Home', link: '/en/' },
-          { text: 'EC',   link: '/en/7_EC/EC87' }
+          { text: 'EC',   link: '/en/7_EC/EC87' },
+          { text: 'DZ',   link: '/en/3_DZ/DZ17' }
         ],
 
         editLink: {
@@ -269,6 +270,13 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'EC87 (Electrostatic Capacitive)', link: '/en/7_EC/EC87' }
+            ]
+          },
+          {
+            text: 'DZ Series (Wireless)',
+            collapsed: false,
+            items: [
+              { text: 'DZ17', link: '/en/3_DZ/DZ17' }
             ]
           }
         ],
