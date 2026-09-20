@@ -244,8 +244,9 @@ export default defineConfig({
         siteTitle: 'CZMao',
 
         nav: [
-          { text: 'Home', link: '/en/' },
-          { text: 'EC',   link: '/en/7_EC/EC87' },
+          { text: 'Home',    link: '/en/' },
+          { text: 'Wired',   link: '/en/2_wired/DS17' },
+          { text: 'EC',      link: '/en/7_EC/EC87' },
           { text: 'DZ',   link: '/en/3_DZ/DZ17' },
           { text: 'ZMK',  link: 'https://key.micah.vip', target: '_blank', rel: 'noopener' }
         ],
@@ -267,6 +268,13 @@ export default defineConfig({
         // when its en/X/Y.md mirror lands. The Chinese site (docs.micah.vip) has
         // the full catalog at /zh/ in the meantime.
         sidebar: [
+          {
+            text: 'Wired keyboards',
+            collapsed: false,
+            items: [
+              { text: 'DS17', link: '/en/2_wired/DS17' }
+            ]
+          },
           {
             text: 'Keyboards',
             collapsed: false,
