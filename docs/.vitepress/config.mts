@@ -151,6 +151,7 @@ export default defineConfig({
           { text: 'EC系列',   link: '/zh/7_EC/EC87' },
           { text: 'Swagkeys', link: '/zh/5_Swagkeys/Eave' },
           { text: '使用指南', link: '/zh/6_guide/6.1_VIA' },
+          { text: '下载',     link: '/zh/8_download/' },
           { text: 'ZMK',     link: 'https://key.micah.vip', target: '_blank', rel: 'noopener' }
         ],
 
@@ -217,6 +218,13 @@ export default defineConfig({
               { text: 'VIA 的使用',   link: '/zh/6_guide/6.1_VIA' },
               { text: '常见问题 QA',  link: '/zh/6_guide/6.2_QA' },
               { text: 'QMK 键码速查', link: '/zh/6_guide/qmk_keycode' }
+            ]
+          },
+          {
+            text: '资料下载',
+            collapsed: false,
+            items: [
+              { text: '全部文件', link: '/zh/8_download/' }
             ]
           }
         ]
