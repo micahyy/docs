@@ -152,7 +152,7 @@ export default defineConfig({
           { text: 'EC系列',   link: '/zh/7_EC/EC87' },
           { text: 'Swagkeys', link: '/zh/5_Swagkeys/Eave' },
           { text: '使用指南', link: '/zh/6_guide/6.1_VIA' },
-          { text: '下载',     link: '/zh/8_download/' }
+          { text: '下载中心', link: '/zh/8_download/' }
         ],
 
         editLink: {
@@ -221,7 +221,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '资料下载',
+            text: '下载中心',
             collapsed: false,
             items: [
               { text: '全部文件', link: '/zh/8_download/' }
@@ -252,11 +252,42 @@ export default defineConfig({
         siteTitle: 'CZMao',
 
         nav: [
-          { text: 'Home',    link: '/en/' },
-          { text: 'Wired',   link: '/en/2_wired/DS17' },
-          { text: 'EC',      link: '/en/7_EC/EC87' },
-          { text: 'DZ',   link: '/en/3_DZ/DZ17' }
+          { text: 'Home',      link: '/en/' },
+          { text: 'PCB',       link: '/en/1_PCB/g80_3000' },
+          { text: 'Wired',     link: '/en/2_wired/DS17' },
+          { text: 'Tri-mode',  link: '/en/4_Tri-mode/4.1_dm17' },
+          { text: 'DZ',        link: '/en/3_DZ/DZ17' },
+          { text: 'EC',        link: '/en/7_EC/EC87' },
+          { text: 'Swagkeys',  link: '/en/5_Swagkeys/Eave' },
+          { text: 'Guides',    link: '/en/6_guide/6.1_VIA' },
+          { text: 'Downloads', link: '/en/8_download/' }
         ],
+
+        search: {
+          provider: 'local',
+          options: {
+            placeholder: 'Search docs...',
+            translations: {
+              button: { buttonText: 'Search', buttonAriaLabel: 'Search docs' },
+              modal: {
+                displayDetails: 'Display details',
+                resetButtonTitle: 'Reset',
+                backButtonTitle: 'Close',
+                noResultsText: 'No results found',
+                footer: {
+                  selectText: 'Select',
+                  selectKeyAriaLabel: 'Enter',
+                  navigateText: 'Navigate',
+                  navigateUpKeyAriaLabel: 'Up',
+                  navigateDownKeyAriaLabel: 'Down',
+                  closeText: 'Close',
+                  closeKeyAriaLabel: 'Esc'
+                }
+              }
+            },
+            detailedView: true
+          }
+        },
 
         editLink: {
           pattern: 'https://github.com/micahyy/docs/edit/main/docs/en/:path',
@@ -270,30 +301,74 @@ export default defineConfig({
           copyright: 'Copyright \u00A9 2024-present CZMao / Micah'
         },
 
-        // EN sidebar only lists products that have an English manual on disk.
-        // Anything not yet translated is omitted (would 404); it'll be re-added
-        // when its en/X/Y.md mirror lands. The Chinese site (docs.micah.vip) has
-        // the full catalog at /zh/ in the meantime.
+        // EN sidebar lists every product that has an English manual on disk
+        // (mirrors the Chinese catalog at /zh/). Anything not yet translated is
+        // omitted so it never 404s.
         sidebar: [
+          {
+            text: 'PCB designs',
+            collapsed: false,
+            items: [
+              { text: 'G80-3000', link: '/en/1_PCB/g80_3000' },
+              { text: 'Ow_vento 8K', link: '/en/1_PCB/Ow_vento_8K' }
+            ]
+          },
           {
             text: 'Wired keyboards',
             collapsed: false,
             items: [
-              { text: 'DS17', link: '/en/2_wired/DS17' }
+              { text: 'DS17', link: '/en/2_wired/DS17' },
+              { text: 'DS21', link: '/en/2_wired/ds21' },
+              { text: 'DS22', link: '/en/2_wired/DS22' },
+              { text: 'Gamer', link: '/en/2_wired/gamer' },
+              { text: 'GH60 8K', link: '/en/2_wired/gh60_8K' }
             ]
           },
           {
-            text: 'Keyboards',
+            text: 'EC Series (Electrostatic Capacitive)',
             collapsed: false,
             items: [
-              { text: 'EC87 (Electrostatic Capacitive)', link: '/en/7_EC/EC87' }
+              { text: 'EC87', link: '/en/7_EC/EC87' }
             ]
           },
           {
             text: 'DZ Series (Wireless)',
             collapsed: false,
             items: [
-              { text: 'DZ17', link: '/en/3_DZ/DZ17' }
+              { text: 'DZ17', link: '/en/3_DZ/DZ17' },
+              { text: 'DZ87', link: '/en/3_DZ/DZ87' }
+            ]
+          },
+          {
+            text: 'Tri-mode keyboards',
+            collapsed: false,
+            items: [
+              { text: 'DM17', link: '/en/4_Tri-mode/4.1_dm17' },
+              { text: 'DC22 (work in progress)', link: '/en/4_Tri-mode/4.2_dc22' }
+            ]
+          },
+          {
+            text: 'Swagkeys',
+            collapsed: false,
+            items: [
+              { text: 'EAVE', link: '/en/5_Swagkeys/Eave' },
+              { text: 'Transition Lite 87', link: '/en/5_Swagkeys/TransitionLite87' }
+            ]
+          },
+          {
+            text: 'Guides',
+            collapsed: false,
+            items: [
+              { text: 'Using VIA', link: '/en/6_guide/6.1_VIA' },
+              { text: 'FAQ', link: '/en/6_guide/6.2_QA' },
+              { text: 'QMK Keycodes', link: '/en/6_guide/qmk_keycode' }
+            ]
+          },
+          {
+            text: 'Download Center',
+            collapsed: false,
+            items: [
+              { text: 'All files', link: '/en/8_download/' }
             ]
           }
         ],

@@ -1,7 +1,7 @@
 ---
 title: CZMao Documentation
 status: stable
-updated: 2026-09-14
+updated: 2026-09-23
 ---
 
 # CZMao Documentation
@@ -14,9 +14,19 @@ CZMao (czmao) is an open-source community focused on custom mechanical keyboards
 
 ### Manuals
 
-[EC87 Electrostatic-Capacitive](/en/7_EC/EC87) — 87-key TKL electrostatic-capacitive keyboard with web-based actuation calibration. *(only product with full English manual)*
-
-For manuals of other products, see the [Chinese documentation site](https://docs.micah.vip) (currently the canonical source for the rest of the lineup).
+- [DS17](/en/2_wired/DS17) — Wired numeric keypad with an 8 kHz polling rate.
+- [DS22](/en/2_wired/DS22) — 22-key wired numeric keypad.
+- [DS21](/en/2_wired/ds21) — 17-key + 4-rotary numeric keypad.
+- [Gamer](/en/2_wired/gamer) — 34-key gaming keypad.
+- [GH60 8K](/en/2_wired/gh60_8K) — Wired keyboard with an 8 kHz polling rate.
+- [DZ17](/en/3_DZ/DZ17) — 17-key dual-mode numpad (USB wired + Bluetooth 5.0), ZMK firmware.
+- [DZ87](/en/3_DZ/DZ87) — 87-key (TKL) dual-mode mechanical keyboard (USB wired + Bluetooth 5.0), ZMK firmware.
+- [EC87](/en/7_EC/EC87) — 87-key (TKL) electrostatic-capacitive keyboard with web-based actuation calibration.
+- [DM17](/en/4_Tri-mode/4.1_dm17) — Tri-mode / dual-mode mechanical keyboard.
+- [DC22](/en/4_Tri-mode/4.2_dc22) — 22-key tri-mode numeric keypad (work in progress).
+- [EAVE](/en/5_Swagkeys/Eave) — Collaboration model with Swagkeys.
+- [SW Transition Lite 87](/en/5_Swagkeys/TransitionLite87) — 87-key Swagkeys keyboard.
+- [Download Center](/en/8_download/) — Firmware, keymap definitions, drawings, documents.
 
 ### Online Tools
 
@@ -32,8 +42,9 @@ All PCB source files, firmware and JSON definitions live on GitHub and Gitee —
 
 ## Need help?
 
-- [VIA usage guide](https://docs.micah.vip/6_guide/6.1_VIA.html)
-- [FAQ](https://docs.micah.vip/6_guide/6.2_QA.html)
+- [VIA usage guide](/en/6_guide/6.1_VIA)
+- [FAQ](/en/6_guide/6.2_QA)
+- [QMK keycode reference](/en/6_guide/qmk_keycode)
 - QQ group: `677654482`
 
 ## Contact
