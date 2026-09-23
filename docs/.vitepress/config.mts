@@ -152,8 +152,7 @@ export default defineConfig({
           { text: 'EC系列',   link: '/zh/7_EC/EC87' },
           { text: 'Swagkeys', link: '/zh/5_Swagkeys/Eave' },
           { text: '使用指南', link: '/zh/6_guide/6.1_VIA' },
-          { text: '下载',     link: '/zh/8_download/' },
-          { text: 'ZMK',     link: 'https://key.micah.vip', target: '_blank', rel: 'noopener' }
+          { text: '下载',     link: '/zh/8_download/' }
         ],
 
         editLink: {
@@ -256,8 +255,7 @@ export default defineConfig({
           { text: 'Home',    link: '/en/' },
           { text: 'Wired',   link: '/en/2_wired/DS17' },
           { text: 'EC',      link: '/en/7_EC/EC87' },
-          { text: 'DZ',   link: '/en/3_DZ/DZ17' },
-          { text: 'ZMK',  link: 'https://key.micah.vip', target: '_blank', rel: 'noopener' }
+          { text: 'DZ',   link: '/en/3_DZ/DZ17' }
         ],
 
         editLink: {
