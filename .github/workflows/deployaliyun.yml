@@ -102,8 +102,9 @@ jobs:
       - name: Verify live site
         run: |
           set -eu
-          for path in / /index.html /hashmap.json /images/logo.png /404.html; do
-            code=$(curl -s -o /dev/null -w '%{http_code}' -m 20 "https://docs.micah.vip$path")
+          for path in / /index.html /label/ /label/EC87.html /hashmap.json /images/logo.png /404.html; do
+            # -L 跟随重定向：根路径有时会 302 到 /zh 或 index.html，属正常
+            code=$(curl -sL -o /dev/null -w '%{http_code}' -m 20 "https://docs.micah.vip$path")
             echo "$path -> $code"
             if [ "$code" != "200" ]; then echo "ERROR: $path 返回 $code"; exit 1; fi
           done
