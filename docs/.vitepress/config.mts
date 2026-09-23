@@ -116,11 +116,12 @@ export default defineConfig({
   },
 
   locales: {
-    // Root (/) — minimal; docs/index.md is a redirect page to /zh/.
-    root: {
-      lang: 'zh-CN',
-      label: '简体中文'
-    },
+    // Root (/) is intentionally NOT declared as a `root` locale: docs/index.md
+    // is only a 0-second meta-refresh redirect to /zh/. Declaring it with the
+    // label "简体中文" made the language menu show TWO Chinese entries
+    // ("简体中文" -> / and "简体中文" -> /zh/), and picking the root one from an
+    // /en/ page produced prefix-less URLs that mostly 404. Omitting it leaves
+    // the menu with exactly two items: 简体中文 (/zh/) and English (/en/).
 
     // Chinese content — served at /zh/<path>
     zh: {
