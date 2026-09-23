@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>EC87 快捷键说明书</title>
+<style>
+  @page { size:A5; margin:0; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#e9e9ec; font-family:"PingFang SC","Microsoft YaHei",-apple-system,sans-serif; color:#1a1a1a; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page { width:148mm; min-height:210mm; margin:8mm auto; background:#fff; padding:9mm 9mm 8mm; display:flex; flex-direction:column; }
+  .brand { display:flex; align-items:baseline; justify-content:space-between; border-bottom:2px solid #111; padding-bottom:2mm;}
+  .brand .logo { font-size:13pt; font-weight:800; letter-spacing:2px;}
+  .brand .en { font-size:6pt; color:#888; letter-spacing:1px;}
+  h1 { font-size:14pt; margin:2.2mm 0 0.5mm; font-weight:800; letter-spacing:1px;}
+  .sub { font-size:6.5pt; color:#888; letter-spacing:3px; margin-bottom:2mm;}
+  .layout { display:block; width:90%; height:auto; margin:0 auto 2.4mm; border:0.4mm solid #ddd; border-radius:1.5mm;}
+  .layers { display:flex; gap:5mm; margin-top:1mm;}
+  .layer { flex:1; min-width:0;}
+  h3 { font-size:8.5pt; font-weight:800; margin:2mm 0 1.4mm; padding-left:2mm; border-left:3px solid #111; white-space:nowrap;}
+  h3 small { display:block; font-weight:600; color:#999; font-size:6pt; border:0; padding:0; margin-top:0.4mm; white-space:normal; line-height:1.3;}
+  h2 { font-size:9pt; font-weight:800; margin:2.6mm 0 1.2mm; padding-left:2.2mm; border-left:3px solid #111; display:flex; justify-content:space-between;}
+  h2 small { font-weight:600; color:#999; font-size:6.5pt; letter-spacing:0;}
+  table { width:100%; border-collapse:collapse;}
+  td { font-size:7.2pt; padding:0.9mm 1.4mm; border-bottom:1px solid #eee; vertical-align:middle;}
+  .layer td.key { width:auto; white-space:nowrap; }
+  .layer td.fn { color:#555; line-height:1.35;}
+  kbd { display:inline-block; min-width:4.2mm; padding:0.3mm 1.4mm; border:1px solid #bbb; border-bottom-width:2px; border-radius:1mm; font-size:6.8pt; font-family:inherit; text-align:center; background:#fafafa;}
+  .boot { background:#f5f5f6; border-radius:1.5mm; padding:1.8mm 3mm; font-size:7.2pt; line-height:1.6; margin-top:1.2mm;}
+  .boot b{font-size:7.6pt;}
+  .bootbig{font-size:10pt!important; font-weight:800; color:#111;}
+  .fn2alert { background:#111; border-radius:1.8mm; padding:2mm 3mm; margin:0.3mm 0 1.4mm; display:flex; align-items:baseline; justify-content:space-between;}
+  .fn2alert .big { font-size:10.5pt; font-weight:800; color:#fff; letter-spacing:0.5px;}
+  .fn2alert .how { font-size:6.4pt; color:#bbb;}
+  .qrs { margin-top:auto; padding-top:2.6mm; display:flex; justify-content:center; gap:12mm; border-top:1px solid #eee;}
+  .qr { text-align:center;}
+  .qr img { width:20mm; height:20mm; display:block; margin:0 auto 1mm;}
+  .qr .t { font-size:6.8pt; font-weight:700;}
+  .qr .u { font-size:5.8pt; color:#999; margin-top:0.4mm;}
+  @media print { .printbtn { display:none; } }
+  .printbtn { position:fixed; top:12px; right:12px; z-index:99; border:0; background:#111; color:#fff; font-size:13px; font-weight:700; padding:10px 18px; border-radius:8px; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,.2);}
+  .printbtn:hover { background:#333; }
+</style>
+</head>
+<body>
+  <button class="printbtn" onclick="window.print()">🖨 打印 / 保存PDF</button>
+  <div class="page">
+    <div class="brand">
+      <div class="logo">CZMAO</div>
+      <div class="en">菜籽猫客制化</div>
+    </div>
+    <h1>EC87 快捷键说明书</h1>
+    <div class="sub">87 KEYS · MECHANICAL KEYBOARD</div>
+
+    <img class="layout" src="tkl-iso.png" alt="EC87 TKL ISO 配列图">
+
+    <div class="fn2alert">
+      <span class="big">Fn2 = Fn + 右 Alt</span><span class="how">先按住 Fn 不松手，再按右 Alt</span>
+    </div>
+
+    <div class="layers">
+      <div class="layer">
+        <h3>Fn 功能层<small>按住底行 Fn（右 Ctrl 左侧）</small></h3>
+        <table>
+          <tr><td class="key"><kbd>Fn</kbd> + <kbd>P</kbd></td><td class="fn">媒体播放器</td></tr>
+          <tr><td class="key"><kbd>Fn</kbd> + <kbd>空格</kbd></td><td class="fn">播放 / 暂停</td></tr>
+          <tr><td class="key"><kbd>Fn</kbd> + <kbd>←</kbd> / <kbd>→</kbd></td><td class="fn">上一曲 / 下一曲</td></tr>
+          <tr><td class="key"><kbd>Fn</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd></td><td class="fn">音量 + / -</td></tr>
+          <tr><td class="key"><kbd>Fn</kbd> + <kbd>Backspace</kbd></td><td class="fn">Delete</td></tr>
+          <tr><td class="key"><kbd>Fn</kbd> + <kbd>Esc</kbd></td><td class="fn">` 反引号</td></tr>
+          <tr><td class="key"><kbd>Fn</kbd> + <kbd>右Alt</kbd></td><td class="fn">进入 Fn2 层</td></tr>
+        </table>
+      </div>
+      <div class="layer">
+        <h3>Fn2 灯效层<small>先按住 Fn + 右 Alt 进入 Fn2</small></h3>
+        <table>
+          <tr><td class="key"><kbd>Fn2</kbd> + <kbd>左Ctrl</kbd></td><td class="fn"><b>进刷机模式</b></td></tr>
+          <tr><td class="key"><kbd>Fn2</kbd> + <kbd>Esc</kbd></td><td class="fn">恢复出厂设置</td></tr>
+          <tr><td class="key"><kbd>Fn2</kbd> + <kbd>左Shift</kbd></td><td class="fn">底灯开关</td></tr>
+          <tr><td class="key"><kbd>Fn2</kbd> + <kbd>Z</kbd> / <kbd>X</kbd></td><td class="fn">亮度 - / +</td></tr>
+          <tr><td class="key"><kbd>Fn2</kbd> + <kbd>C</kbd> / <kbd>V</kbd></td><td class="fn">色相 - / +</td></tr>
+          <tr><td class="key"><kbd>Fn2</kbd> + <kbd>B</kbd> / <kbd>N</kbd></td><td class="fn">饱和度 - / +</td></tr>
+          <tr><td class="key"><kbd>Fn2</kbd> + <kbd>M</kbd> / <kbd>,</kbd></td><td class="fn">速度 - / +</td></tr>
+          <tr><td class="key"><kbd>Fn2</kbd> + <kbd>.</kbd> / <kbd>/</kbd></td><td class="fn">切换灯效</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <h2>进入刷机模式</h2>
+    <div class="boot">
+      <b class="bootbig"><kbd>Fn2</kbd> + <kbd>左Ctrl</kbd></b>　<span style="color:#555;">先按住 Fn + 右 Alt，再按左 Ctrl。</span><br>
+      <span style="color:#777;">进入后电脑出现名为 UF2BOOT 的 U 盘，将 .uf2 固件拖入即可；刷错可重复操作，不会变砖。</span>
+    </div>
+
+    <div class="qrs">
+      <div class="qr">
+        <img src="qr_docs.png">
+        <div class="t">在线说明书 / 改键</div>
+        <div class="u">docs.micah.vip</div>
+      </div>
+      <div class="qr">
+        <img src="qr_taobao.png">
+        <div class="t">菜籽猫淘宝店铺</div>
+        <div class="u">maiku.taobao.com</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
