@@ -166,7 +166,12 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'G80-3000',    link: '/zh/1_PCB/g80_3000' },
-              { text: 'Ow_vento 8K', link: '/zh/1_PCB/Ow_vento_8K' }
+              { text: 'Ow_vento 8K', link: '/zh/1_PCB/Ow_vento_8K' },
+              { text: 'DS21 四旋钮（b70）', link: '/zh/1_PCB/b70_ds21_encoder' },
+              { text: 'DS34 v2（b23）',     link: '/zh/1_PCB/b23_ds34_v2' },
+              { text: 'DS34 v2 Light（c23）', link: '/zh/1_PCB/c23_ds34_v2_light' },
+              { text: 'USB_EN 控制器（b43）', link: '/zh/1_PCB/b43_huben' },
+              { text: '左手游戏键盘（08gamerst）', link: '/zh/1_PCB/08gamerst' }
             ]
           },
           {
@@ -310,7 +315,12 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'G80-3000', link: '/en/1_PCB/g80_3000' },
-              { text: 'Ow_vento 8K', link: '/en/1_PCB/Ow_vento_8K' }
+              { text: 'Ow_vento 8K', link: '/en/1_PCB/Ow_vento_8K' },
+              { text: 'DS21 4-Knob (b70)', link: '/en/1_PCB/b70_ds21_encoder' },
+              { text: 'DS34 v2 (b23)', link: '/en/1_PCB/b23_ds34_v2' },
+              { text: 'DS34 v2 Light (c23)', link: '/en/1_PCB/c23_ds34_v2_light' },
+              { text: 'USB_EN Controller (b43)', link: '/en/1_PCB/b43_huben' },
+              { text: 'Left-Handed Keypad (08gamerst)', link: '/en/1_PCB/08gamerst' }
             ]
           },
           {

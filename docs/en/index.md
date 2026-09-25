@@ -28,6 +28,14 @@ CZMao (czmao) is an open-source community focused on custom mechanical keyboards
 - [SW Transition Lite 87](/en/5_Swagkeys/TransitionLite87) — 87-key Swagkeys keyboard.
 - [Download Center](/en/8_download/) — Firmware, keymap definitions, drawings, documents.
 
+### PCB designs
+
+- [DS21 4-Knob (b70_ds21_encoder)](/en/1_PCB/b70_ds21_encoder) — 17 keys + 4 knobs, QMK + VIA open-source PCB.
+- [DS34 v2 (b23_ds34_v2)](/en/1_PCB/b23_ds34_v2) — 34-key + 1-knob numpad, QMK + VIA open-source PCB.
+- [DS34 v2 Light (c23_ds34_v2_light)](/en/1_PCB/c23_ds34_v2_light) — Same hardware as DS34 v2 plus a Ctrl+F1~F12 layer.
+- [USB_EN Controller (b43_huben)](/en/1_PCB/b43_huben) — 5-key + 1-knob desktop controller.
+- [Left-Handed Keypad (08gamerst)](/en/1_PCB/08gamerst) — 35-key left-hand gaming keypad, optional USB HUB version.
+
 ### Online Tools
 
 - [VIA Online Remap](https://via.micah.vip/) — China-hosted, real-time remap.
