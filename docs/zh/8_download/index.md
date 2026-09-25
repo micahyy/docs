@@ -23,7 +23,7 @@ outline: [2, 3]
 | [czm_dz17_v1.0_260916.uf2](https://docs.micah.vip/files/czm_dz17_v1.0_260916.uf2) | 固件 | 2026-09-16 | 408.0 KB |
 | [czmao_ec87_via_260922.uf2](https://docs.micah.vip/files/Transition%20Lite/czmao_ec87_via_260922.uf2) | 固件 | 2026-09-22 | 82.5 KB |
 | [dz17_nice_nano_v2.uf2](https://docs.micah.vip/downloads/dz17/dz17_nice_nano_v2.uf2) | 固件 | 2026-09-22 | 408.5 KB |
-| [dz_87_nice_nano_v2.uf2](https://docs.micah.vip/downloads/dz87/dz_87_nice_nano_v2.uf2) | 固件 | 2026-09-22 | 429.0 KB |
+| [czm_dz87_tri_260924.uf2](https://docs.micah.vip/files/zmk/czm_dz87_tri_260924.uf2) | 固件 | 2026-09-24 | 428.0 KB |
 | [a07_ds21_encoder.json](https://via.micah.vip/czm/definitions/a07_ds21_encoder.json) | 键盘定义文件 | 2026-09-22 | 4.4 KB |
 | [a14_ds17_R2_via.json](https://via.micah.vip/czm/definitions/ds17/a14_ds17_R2_via.json) | VIA 键位定义 | 2026-09-22 | 5.5 KB |
 | [a15_ds17r3_lefthand_via .json](https://via.micah.vip/czm/definitions/ds17/a15_ds17r3_lefthand_via%20.json) | VIA 键位定义 | 2026-09-22 | 4.1 KB |
