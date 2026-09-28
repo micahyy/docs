@@ -100,9 +100,7 @@ export default defineConfig({
     '2_wired/ds21':               '/zh/2_wired/ds21',
     '2_wired/DS22':               '/zh/2_wired/DS22',
     '2_wired/gamer':              '/zh/2_wired/gamer',
-    '2_wired/gh60_8K':            '/zh/2_wired/gh60_8K',
     '1_PCB/g80_3000':             '/zh/1_PCB/g80_3000',
-    '1_PCB/Ow_vento_8K':          '/zh/1_PCB/Ow_vento_8K',
     '3_DZ/DZ17':                  '/zh/3_DZ/DZ17',
     '3_DZ/DZ87':                  '/zh/3_DZ/DZ87',
     '4_Tri-mode/4.1_dm17':        '/zh/4_Tri-mode/4.1_dm17',
@@ -111,8 +109,7 @@ export default defineConfig({
     '5_Swagkeys/TransitionLite87':'/zh/5_Swagkeys/TransitionLite87',
     '6_guide/6.1_VIA':            '/zh/6_guide/6.1_VIA',
     '6_guide/6.2_QA':             '/zh/6_guide/6.2_QA',
-    '6_guide/qmk_keycode':        '/zh/6_guide/qmk_keycode',
-    '7_EC/EC87':                  '/zh/7_EC/EC87'
+    '6_guide/qmk_keycode':        '/zh/6_guide/qmk_keycode'
   },
 
   locales: {
@@ -149,7 +146,6 @@ export default defineConfig({
           { text: '有线',     link: '/zh/2_wired/DS17' },
           { text: '多模',     link: '/zh/4_Tri-mode/4.1_dm17' },
           { text: 'DZ系列',   link: '/zh/3_DZ/DZ17' },
-          { text: 'EC系列',   link: '/zh/7_EC/EC87' },
           { text: 'Swagkeys', link: '/zh/5_Swagkeys/Eave' },
           { text: '使用指南', link: '/zh/6_guide/6.1_VIA' },
           { text: '下载中心', link: '/zh/8_download/' }
@@ -166,7 +162,6 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'G80-3000',    link: '/zh/1_PCB/g80_3000' },
-              { text: 'Ow_vento 8K', link: '/zh/1_PCB/Ow_vento_8K' },
               { text: 'DS21 四旋钮（b70）', link: '/zh/1_PCB/b70_ds21_encoder' },
               { text: 'DS34 v2（b23）',     link: '/zh/1_PCB/b23_ds34_v2' },
               { text: 'DS34 v2 Light（c23）', link: '/zh/1_PCB/c23_ds34_v2_light' },
@@ -181,15 +176,7 @@ export default defineConfig({
               { text: 'DS17',     link: '/zh/2_wired/DS17' },
               { text: 'DS21',     link: '/zh/2_wired/ds21' },
               { text: 'DS22',     link: '/zh/2_wired/DS22' },
-              { text: 'Gamer',    link: '/zh/2_wired/gamer' },
-              { text: 'GH60 8K',  link: '/zh/2_wired/gh60_8K' }
-            ]
-          },
-          {
-            text: 'EC 系列（静电容）',
-            collapsed: false,
-            items: [
-              { text: 'EC87 静电容', link: '/zh/7_EC/EC87' }
+              { text: 'Gamer',    link: '/zh/2_wired/gamer' }
             ]
           },
           {
@@ -262,7 +249,6 @@ export default defineConfig({
           { text: 'Wired',     link: '/en/2_wired/DS17' },
           { text: 'Tri-mode',  link: '/en/4_Tri-mode/4.1_dm17' },
           { text: 'DZ',        link: '/en/3_DZ/DZ17' },
-          { text: 'EC',        link: '/en/7_EC/EC87' },
           { text: 'Swagkeys',  link: '/en/5_Swagkeys/Eave' },
           { text: 'Guides',    link: '/en/6_guide/6.1_VIA' },
           { text: 'Downloads', link: '/en/8_download/' }
@@ -315,7 +301,6 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'G80-3000', link: '/en/1_PCB/g80_3000' },
-              { text: 'Ow_vento 8K', link: '/en/1_PCB/Ow_vento_8K' },
               { text: 'DS21 4-Knob (b70)', link: '/en/1_PCB/b70_ds21_encoder' },
               { text: 'DS34 v2 (b23)', link: '/en/1_PCB/b23_ds34_v2' },
               { text: 'DS34 v2 Light (c23)', link: '/en/1_PCB/c23_ds34_v2_light' },
@@ -330,15 +315,7 @@ export default defineConfig({
               { text: 'DS17', link: '/en/2_wired/DS17' },
               { text: 'DS21', link: '/en/2_wired/ds21' },
               { text: 'DS22', link: '/en/2_wired/DS22' },
-              { text: 'Gamer', link: '/en/2_wired/gamer' },
-              { text: 'GH60 8K', link: '/en/2_wired/gh60_8K' }
-            ]
-          },
-          {
-            text: 'EC Series (Electrostatic Capacitive)',
-            collapsed: false,
-            items: [
-              { text: 'EC87', link: '/en/7_EC/EC87' }
+              { text: 'Gamer', link: '/en/2_wired/gamer' }
             ]
           },
           {
