@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EC87 · 合格证+保修卡（A5）</title>
+<style>
+  :root{
+    --paper:#d8c098;
+    --paper-deep:#cdb386;
+    --ink:#3a2a1c;
+    --ink-soft:#5d4630;
+    --line:#7a5c3a;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:#eee;
+    color:var(--ink);
+    font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+    line-height:1.5;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  .toolbar{text-align:center;padding:14px;}
+  .toolbar button{
+    font-family:inherit;font-size:14px;padding:8px 22px;
+    background:#e8dcc2;color:#3a2a1c;border:1px solid #2c2117;border-radius:4px;cursor:pointer;
+  }
+  .sheet{
+    width:148mm;min-height:210mm;
+    margin:0 auto 10mm;
+    padding:8mm 8mm 7mm;
+    position:relative;
+    background:none;
+    box-shadow:0 4px 18px rgba(0,0,0,.25);
+  }
+  .page-head{
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-bottom:1.6px solid var(--ink);
+    padding-bottom:4px;margin-bottom:7px;
+  }
+  .page-head .kind{font-size:15pt;font-weight:700;letter-spacing:4px;}
+  .page-head .brand{font-size:8pt;letter-spacing:1.5px;color:var(--ink-soft);}
+  h2{font-size:9.5pt;margin:8px 0 3px;letter-spacing:2px;
+     border-left:3px solid var(--ink);padding-left:6px;}
+  p{margin:4px 0;font-size:8.8pt;}
+  table{width:100%;border-collapse:collapse;font-size:8.3pt;margin:3px 0;}
+  th,td{border:0.8px solid var(--line);padding:2.4px 5px;text-align:left;vertical-align:middle;}
+  th{background:transparent;font-weight:700;white-space:nowrap;}
+  .muted{color:var(--ink-soft);font-size:7.8pt;}
+
+  /* 正面：合格证信息表 */
+  .cert-table th{width:22mm;}
+  .cert-table td{font-size:8.6pt;}
+
+  .divider{
+    border:none;border-top:1.4px dashed var(--line);margin:8px 0 2px;
+  }
+  .divider-label{text-align:center;font-size:7.8pt;color:var(--line);letter-spacing:3px;margin:1px 0 4px;}
+
+  .terms li{font-size:8pt;line-height:1.4;}
+  .terms li.warn,.terms .warn{font-size:9.5pt;font-weight:800;color:#000;}
+  .records th,.records td{height:17px;text-align:center;font-size:8pt;}
+  .records td:first-child{width:18mm;}
+
+  .page-foot{margin-top:6px;font-size:7.8pt;color:var(--ink-soft);text-align:center;letter-spacing:.5px;}
+
+  .sr-only{
+    position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;
+    clip:rect(0 0 0 0);white-space:nowrap;border:0;
+  }
+  @page{size:148mm 210mm;margin:0;}
+  @media print{
+    body{background:#fff;}
+    .toolbar{display:none;}
+    .sheet{margin:0;box-shadow:none;page-break-after:auto;break-after:auto;
+           width:148mm;min-height:210mm;}
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <button type="button" onclick="window.print()">打印 / 另存为 PDF（A5）</button>
+</div>
+
+<main>
+<h1 class="sr-only">EC87 机械键盘：合格证与保修卡</h1>
+
+<!-- ========== 正面：合格证 + 保修卡 ========== -->
+<section class="sheet" aria-label="合格证与保修卡">
+  <div class="page-head">
+    <span class="kind">合格证 · 保修卡</span>
+    <span class="brand">CZMAO · 菜籽猫客制化键盘</span>
+  </div>
+
+  <h2>产品合格证</h2>
+  <table class="cert-table">
+    <tr><th>产品名称</th><td>静电容键盘PCB</td></tr>
+    <tr><th>品牌</th><td>菜籽猫</td></tr>
+    <tr><th>产品型号</th><td>TL_EC_v1.1（EC87，87 键 TKL）</td></tr>
+    <tr><th>公司名称</th><td>深圳市菜籽猫科技有限公司</td></tr>
+    <tr><th>生产地址</th><td>广东省惠州市惠阳区星河丹堤G4区1801</td></tr>
+    <tr><th>检验结论</th><td><strong>合格，准予出厂</strong></td></tr>
+    <tr><th>生产日期</th><td></td></tr>
+  </table>
+
+  <hr class="divider">
+  <div class="divider-label">保 修 卡</div>
+
+  <table>
+    <tr><th style="width:16mm">购买人</th><td></td><th style="width:16mm">联系方式</th><td></td></tr>
+    <tr><th>订单号</th><td></td><th>购买日期</th><td></td></tr>
+    <tr><th>购买店铺</th><td colspan="3">菜籽猫客制化键盘（maiku.taobao.com）</td></tr>
+  </table>
+
+  <h2>保修条款</h2>
+  <ol class="terms">
+    <li>自签收之日起 <strong>7 日内</strong>出现非人为性能故障，凭本卡及购买凭证可退货或换货。</li>
+    <li>签收后 <strong>15 日内</strong>出现非人为性能故障，可免费更换同型号产品。</li>
+    <li>自签收之日起 <strong>一年内</strong>，非人为原因造成的性能故障提供免费维修。</li>
+    <li><span class="warn">签收检查轴座，连接器等易损件</span>，轴座及连接器脱落属于人为损坏，不在免费保修范围，可提供收费维修。</li>
+    <li>进水、进液、摔落挤压、火烧等外力损坏，自行拆修改装，正常磨损及外观件损耗，无法提供本卡或购买凭证，不在免费保修范围。</li>
+    <li>保修往返运费按双方实际责任分担，以店铺沟通确认为准。</li>
+  </ol>
+
+  <h2>维修记录</h2>
+  <table class="records">
+    <tr><th>日期</th><th>故障描述</th><th>维修内容</th><th>经办人</th></tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td></tr>
+  </table>
+
+  <div class="page-foot">
+    品牌方：深圳市菜籽猫科技有限公司&nbsp;｜&nbsp;淘宝店：maiku.taobao.com&nbsp;｜&nbsp;主站：micah.vip<br>
+    请将本卡与购买凭证一并妥善保管，作为保修依据。
+  </div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  try{
+    var btn=document.querySelector('.toolbar button');
+    if(btn){btn.addEventListener('click',function(){window.print();});}
+  }catch(e){/* 静默降级，打印按钮不影响文档本身 */}
+})();
+</script>
+</body>
+</html>
