@@ -201,8 +201,8 @@ Uncategorized models, drawings and image assets.
 
 | File | Description | Updated | Size |
 | --- | --- | --- | --- |
-| [TL???_EC_625Uand7U.dxf](https://docs.micah.vip/files/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf) | Plate / structural drawing | 2026-09-21 | 6.7 MB |
-| [?????logo4.png](https://docs.micah.vip/files/%E8%8F%9C%E7%B1%BD%E7%8C%AB%E6%B3%A8%E5%86%8Clogo4.png) | Image | 2026-09-15 | 21.0 KB |
+| [TL定位板_EC_625Uand7U.dxf](https://docs.micah.vip/files/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf) | Plate / structural drawing | 2026-09-21 | 6.7 MB |
+| [菜籽猫注册logo4.png](https://docs.micah.vip/files/%E8%8F%9C%E7%B1%BD%E7%8C%AB%E6%B3%A8%E5%86%8Clogo4.png) | Image | 2026-09-15 | 21.0 KB |
 
 ## Changelog
 
