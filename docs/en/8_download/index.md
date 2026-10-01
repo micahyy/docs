@@ -5,7 +5,7 @@ outline: [2, 3]
 
 # Download Center
 
-Firmware, VIA keymap definitions, drawings and documents - **63** files, **8.3 MB** in total. Listed by category first, then by model.
+Firmware, VIA keymap definitions, drawings and documents - **63** files, **8.3 MB** in total. Listed by the categories used in the sidebar, then by model.
 
 ## Before you download
 
@@ -16,16 +16,95 @@ Firmware, VIA keymap definitions, drawings and documents - **63** files, **8.3 M
 5. File names carry the model (e.g. `a14_ds17_R2_via.json` belongs to the DS17); if you can't find yours, double-check the keyboard version first.
 6. If a file is missing or a link is dead, please report it in QQ group **677654482**.
 
-## Numpads
+## PCB
 
-DZ / DS series numpads, including wireless versions.
+PCB designs such as G80-3000, Ow_vento 8K, DS34 and the USB_EN controller, plus structural drawings and custom models that have no section of their own.
 
-### DZ17 Wireless Numpad
+### DS34 v2 / v2 Light (b23 / c23)
 
 | File | Description | Updated | Size |
 | --- | --- | --- | --- |
-| [czm_dz17_v1.0_260916.uf2](https://docs.micah.vip/files/czm_dz17_v1.0_260916.uf2) | Firmware | 2026-09-16 | 408.0 KB |
-| [dz17_nice_nano_v2.uf2](https://docs.micah.vip/downloads/dz17/dz17_nice_nano_v2.uf2) | Firmware | 2026-09-22 | 408.5 KB |
+| [c23_ds34_v2.0.json](https://via.micah.vip/czm/definitions/c23_ds34_v2.0.json) | Keyboard definition | 2026-09-22 | 4.7 KB |
+| [e34_ds34_v1.json](https://via.micah.vip/czm/definitions/e34_ds34_v1.json) | Keyboard definition | 2026-09-22 | 7.6 KB |
+
+### DS40
+
+| File | Description | Updated | Size |
+| --- | --- | --- | --- |
+| [a40_ds40.json](https://via.micah.vip/czm/definitions/a40_ds40.json) | Keyboard definition | 2026-09-22 | 4.5 KB |
+
+### 3000 (G80-3000)
+
+| File | Description | Updated | Size |
+| --- | --- | --- | --- |
+| [a36_3000.json](https://via.micah.vip/czm/definitions/a36_3000.json) | Keyboard definition | 2026-09-22 | 6.0 KB |
+
+### 108 Layout
+
+| File | Description | Updated | Size |
+| --- | --- | --- | --- |
+| [a38_108.json](https://via.micah.vip/czm/definitions/a38_108.json) | Keyboard definition | 2026-09-22 | 6.1 KB |
+| [e38_108.json](https://via.micah.vip/czm/definitions/e38_108.json) | Keyboard definition | 2026-09-22 | 6.1 KB |
+
+### OW Lab
+
+| File | Description | Updated | Size |
+| --- | --- | --- | --- |
+| [ow_60_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_60_via_12.json) | VIA keymap definition | 2026-09-22 | 14.8 KB |
+| [ow_vento_wkl_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_vento_wkl_via_12.json) | VIA keymap definition (WKL) | 2026-09-22 | 18.3 KB |
+
+### DELLA
+
+| File | Description | Updated | Size |
+| --- | --- | --- | --- |
+| [della.json](https://via.micah.vip/czm/definitions/della/7u/keymaps/via/della.json) | Keyboard definition (7U) | 2026-09-22 | 2.5 KB |
+| [keyboard.json (7U)](https://via.micah.vip/czm/definitions/della/7u/keyboard.json) | Keyboard definition (7U) | 2026-09-22 | 8.6 KB |
+| [readme.md](https://via.micah.vip/czm/definitions/della/7u/readme.md) | Document | 2026-09-22 | 314 B |
+| [della625.json](https://via.micah.vip/czm/definitions/della/625u/keymaps/via/della625.json) | Keyboard definition (6.25U) | 2026-09-22 | 2.6 KB |
+| [keyboard.json (6.25U)](https://via.micah.vip/czm/definitions/della/625u/keyboard.json) | Keyboard definition (6.25U) | 2026-09-22 | 8.6 KB |
+
+### MMD / KM Series
+
+| File | Description | Updated | Size |
+| --- | --- | --- | --- |
+| [a79_km17.json](https://via.micah.vip/czm/definitions/mmd/a79_km17.json) | Keyboard definition | 2026-09-22 | 4.1 KB |
+| [a88_km21.json](https://via.micah.vip/czm/definitions/mmd/a88_km21.json) | Keyboard definition | 2026-09-22 | 4.1 KB |
+| [b89_mmd_KM21pro.json](https://via.micah.vip/czm/definitions/mmd/b89_mmd_KM21pro.json) | Keyboard definition | 2026-09-22 | 4.4 KB |
+| [b99_mmd_KM21pro.json](https://via.micah.vip/czm/definitions/mmd/b99_mmd_KM21pro.json) | Keyboard definition | 2026-09-22 | 4.4 KB |
+| [JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json](https://via.micah.vip/czm/definitions/mmd/JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json) | Keyboard definition (KM16 Pro tri-mode) | 2026-09-22 | 4.8 KB |
+| [JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json](https://via.micah.vip/czm/definitions/mmd/JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json) | Keyboard definition (KM16 single-mode RGB) | 2026-09-22 | 5.4 KB |
+
+### JoJo
+
+| File | Description | Updated | Size |
+| --- | --- | --- | --- |
+| [jojo_m98_plus_via_12.json](https://via.micah.vip/czm/definitions/jojo/jojo_m98_plus_via_12.json) | VIA keymap definition | 2026-09-22 | 15.7 KB |
+
+### PTG
+
+| File | Description | Updated | Size |
+| --- | --- | --- | --- |
+| [ptg64a.json](https://via.micah.vip/czm/definitions/ptg/ptg64a.json) | Keyboard definition | 2026-09-22 | 5.1 KB |
+
+### Others / Generic
+
+| File | Description | Updated | Size |
+| --- | --- | --- | --- |
+| [a28_gushen.json](https://via.micah.vip/czm/definitions/a28_gushen.json) | Keyboard definition | 2026-09-22 | 697 B |
+| [b43_huben.json](https://via.micah.vip/czm/definitions/b43_huben.json) | Keyboard definition | 2026-09-22 | 4.0 KB |
+| [b98_onlyrgb.json](https://via.micah.vip/czm/definitions/others/b98_onlyrgb.json) | Keyboard definition | 2026-09-22 | 3.7 KB |
+| [e89_ding1.json](https://via.micah.vip/czm/definitions/others/e89_ding1.json) | Keyboard definition | 2026-09-22 | 4.1 KB |
+
+### Drawings & Assets
+
+| File | Description | Updated | Size |
+| --- | --- | --- | --- |
+| [TL定位板_EC_625Uand7U.dxf](https://docs.micah.vip/files/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf) | Plate / structural drawing | 2026-09-21 | 6.7 MB |
+| [菜籽猫注册logo4.png](https://docs.micah.vip/files/%E8%8F%9C%E7%B1%BD%E7%8C%AB%E6%B3%A8%E5%86%8Clogo4.png) | Image | 2026-09-15 | 21.0 KB |
+
+## Wired Keyboards
+
+VIA keymap definitions for DS / GH60 and other wired keyboards.
 
 ### DS17 Numpad
 
@@ -60,30 +139,15 @@ DZ / DS series numpads, including wireless versions.
 | [a34_ds22R4_via.json](https://via.micah.vip/czm/definitions/ds22/a34_ds22R4_via.json) | VIA keymap definition | 2026-09-22 | 4.2 KB |
 | [e23f23_ds22R2_via.json](https://via.micah.vip/czm/definitions/ds22/e23f23_ds22R2_via.json) | VIA keymap definition | 2026-09-22 | 4.2 KB |
 
-### DS34
+### GAMER
 
 | File | Description | Updated | Size |
 | --- | --- | --- | --- |
-| [c23_ds34_v2.0.json](https://via.micah.vip/czm/definitions/c23_ds34_v2.0.json) | Keyboard definition | 2026-09-22 | 4.7 KB |
-| [e34_ds34_v1.json](https://via.micah.vip/czm/definitions/e34_ds34_v1.json) | Keyboard definition | 2026-09-22 | 7.6 KB |
+| [e08_gamer_v1.json](https://via.micah.vip/czm/definitions/gamer/e08_gamer_v1.json) | Keyboard definition | 2026-09-22 | 4.5 KB |
+| [e09_gamer_ds.json](https://via.micah.vip/czm/definitions/gamer/e09_gamer_ds.json) | Keyboard definition | 2026-09-22 | 976 B |
+| [gamev3.json](https://via.micah.vip/czm/definitions/gamer/gamev3.json) | Keyboard definition | 2026-09-22 | 4.7 KB |
 
-### DS40
-
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [a40_ds40.json](https://via.micah.vip/czm/definitions/a40_ds40.json) | Keyboard definition | 2026-09-22 | 4.5 KB |
-
-## Main Keyboards
-
-60% / 80% / full-size and other main keyboards.
-
-### DZ87
-
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [czm_dz87_tri_260924.uf2](https://docs.micah.vip/files/zmk/czm_dz87_tri_260924.uf2) | Firmware (tri-mode) | 2026-09-24 | 428.0 KB |
-
-### 60% Series (A24-60 / DS60 / Left64 / MQ64)
+### GH60 8K / 60% Series
 
 | File | Description | Updated | Size |
 | --- | --- | --- | --- |
@@ -94,22 +158,9 @@ DZ / DS series numpads, including wireless versions.
 | [a44_ds60_251022.json](https://via.micah.vip/czm/definitions/mao_gh60/a44_ds60_251022.json) | Keyboard definition | 2026-09-22 | 5.1 KB |
 | [a60_ds60_ansi.json](https://via.micah.vip/czm/definitions/mao_gh60/a60_ds60_ansi.json) | Keyboard definition (ANSI) | 2026-09-22 | 5.1 KB |
 
-### 3000
+## EC Series
 
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [a36_3000.json](https://via.micah.vip/czm/definitions/a36_3000.json) | Keyboard definition | 2026-09-22 | 6.0 KB |
-
-### 108 Layout
-
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [a38_108.json](https://via.micah.vip/czm/definitions/a38_108.json) | Keyboard definition | 2026-09-22 | 6.1 KB |
-| [e38_108.json](https://via.micah.vip/czm/definitions/e38_108.json) | Keyboard definition | 2026-09-22 | 6.1 KB |
-
-## Electrostatic Capacitive
-
-EC keyboards - flashing firmware does not clear calibration data.
+Electrostatic-capacitive keyboards - flashing firmware does not clear calibration data.
 
 ### EC87 Electrostatic-Capacitive
 
@@ -119,9 +170,30 @@ EC keyboards - flashing firmware does not clear calibration data.
 | [czmao_ec87_via.json](https://via.micah.vip/czm/definitions/ec87/czmao_ec87_via.json) | VIA keymap definition | 2026-09-22 | 8.5 KB |
 | [ec87_via.json](https://docs.micah.vip/files/Transition%20Lite/ec87_via.json) | VIA keymap definition | 2026-09-22 | 17.3 KB |
 
-## Partner Brands & Customs
+## DZ Series (Wireless / Bluetooth)
 
-Keyboard and VIA definitions for partner brands and custom projects.
+DZ series wireless keyboards, including tri-mode versions.
+
+### DZ17 Wireless Numpad
+
+| File | Description | Updated | Size |
+| --- | --- | --- | --- |
+| [czm_dz17_v1.0_260916.uf2](https://docs.micah.vip/files/czm_dz17_v1.0_260916.uf2) | Firmware | 2026-09-16 | 408.0 KB |
+| [dz17_nice_nano_v2.uf2](https://docs.micah.vip/downloads/dz17/dz17_nice_nano_v2.uf2) | Firmware | 2026-09-22 | 408.5 KB |
+
+### DZ87
+
+| File | Description | Updated | Size |
+| --- | --- | --- | --- |
+| [czm_dz87_tri_260924.uf2](https://docs.micah.vip/files/zmk/czm_dz87_tri_260924.uf2) | Firmware (tri-mode) | 2026-09-24 | 428.0 KB |
+
+## WCH Tri-mode
+
+Work in progress - no files available yet. Firmware and keymap definitions for DM17 / DC22 will be published here.
+
+## Swagkeys
+
+Keyboard and VIA keymap definitions for Swagkeys collaboration models.
 
 ### Swagkeys
 
@@ -136,78 +208,11 @@ Keyboard and VIA definitions for partner brands and custom projects.
 | [swagkeys_transition_lite8k_via_12.json](https://via.micah.vip/czm/definitions/swagkeys/swagkeys_transition_lite8k_via_12.json) | VIA keymap definition (8K) | 2026-09-22 | 13.0 KB |
 | [swagkeys_transition_lite_1k_via_12.json](https://via.micah.vip/czm/definitions/swagkeys/swagkeys_transition_lite_1k_via_12.json) | VIA keymap definition (1K) | 2026-09-22 | 11.9 KB |
 
-### DELLA
-
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [della.json](https://via.micah.vip/czm/definitions/della/7u/keymaps/via/della.json) | Keyboard definition (7U) | 2026-09-22 | 2.5 KB |
-| [keyboard.json (7U)](https://via.micah.vip/czm/definitions/della/7u/keyboard.json) | Keyboard definition (7U) | 2026-09-22 | 8.6 KB |
-| [readme.md](https://via.micah.vip/czm/definitions/della/7u/readme.md) | Document | 2026-09-22 | 314 B |
-| [della625.json](https://via.micah.vip/czm/definitions/della/625u/keymaps/via/della625.json) | Keyboard definition (6.25U) | 2026-09-22 | 2.6 KB |
-| [keyboard.json (6.25U)](https://via.micah.vip/czm/definitions/della/625u/keyboard.json) | Keyboard definition (6.25U) | 2026-09-22 | 8.6 KB |
-
-### GAMER
-
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [e08_gamer_v1.json](https://via.micah.vip/czm/definitions/gamer/e08_gamer_v1.json) | Keyboard definition | 2026-09-22 | 4.5 KB |
-| [e09_gamer_ds.json](https://via.micah.vip/czm/definitions/gamer/e09_gamer_ds.json) | Keyboard definition | 2026-09-22 | 976 B |
-| [gamev3.json](https://via.micah.vip/czm/definitions/gamer/gamev3.json) | Keyboard definition | 2026-09-22 | 4.7 KB |
-
-### MMD / KM Series
-
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [a79_km17.json](https://via.micah.vip/czm/definitions/mmd/a79_km17.json) | Keyboard definition | 2026-09-22 | 4.1 KB |
-| [a88_km21.json](https://via.micah.vip/czm/definitions/mmd/a88_km21.json) | Keyboard definition | 2026-09-22 | 4.1 KB |
-| [b89_mmd_KM21pro.json](https://via.micah.vip/czm/definitions/mmd/b89_mmd_KM21pro.json) | Keyboard definition | 2026-09-22 | 4.4 KB |
-| [b99_mmd_KM21pro.json](https://via.micah.vip/czm/definitions/mmd/b99_mmd_KM21pro.json) | Keyboard definition | 2026-09-22 | 4.4 KB |
-| [JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json](https://via.micah.vip/czm/definitions/mmd/JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json) | Keyboard definition (KM16 Pro tri-mode) | 2026-09-22 | 4.8 KB |
-| [JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json](https://via.micah.vip/czm/definitions/mmd/JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json) | Keyboard definition (KM16 single-mode RGB) | 2026-09-22 | 5.4 KB |
-
-### OW Lab
-
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [ow_60_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_60_via_12.json) | VIA keymap definition | 2026-09-22 | 14.8 KB |
-| [ow_vento_wkl_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_vento_wkl_via_12.json) | VIA keymap definition (WKL) | 2026-09-22 | 18.3 KB |
-
-### JoJo
-
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [jojo_m98_plus_via_12.json](https://via.micah.vip/czm/definitions/jojo/jojo_m98_plus_via_12.json) | VIA keymap definition | 2026-09-22 | 15.7 KB |
-
-### PTG
-
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [ptg64a.json](https://via.micah.vip/czm/definitions/ptg/ptg64a.json) | Keyboard definition | 2026-09-22 | 5.1 KB |
-
-## General & Assets
-
-Uncategorized models, drawings and image assets.
-
-### Others / Generic
-
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [a28_gushen.json](https://via.micah.vip/czm/definitions/a28_gushen.json) | Keyboard definition | 2026-09-22 | 697 B |
-| [b43_huben.json](https://via.micah.vip/czm/definitions/b43_huben.json) | Keyboard definition | 2026-09-22 | 4.0 KB |
-| [b98_onlyrgb.json](https://via.micah.vip/czm/definitions/others/b98_onlyrgb.json) | Keyboard definition | 2026-09-22 | 3.7 KB |
-| [e89_ding1.json](https://via.micah.vip/czm/definitions/others/e89_ding1.json) | Keyboard definition | 2026-09-22 | 4.1 KB |
-
-### Drawings & Assets
-
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [TL定位板_EC_625Uand7U.dxf](https://docs.micah.vip/files/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf) | Plate / structural drawing | 2026-09-21 | 6.7 MB |
-| [菜籽猫注册logo4.png](https://docs.micah.vip/files/%E8%8F%9C%E7%B1%BD%E7%8C%AB%E6%B3%A8%E5%86%8Clogo4.png) | Image | 2026-09-15 | 21.0 KB |
-
 ## Changelog
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.3 | 2026-10-01 | Regrouped to match the sidebar categories (PCB / wired keyboards / EC series / DZ wireless / WCH tri-mode / Swagkeys) |
 | 1.2 | 2026-10-01 | Regrouped into top-level categories (numpads / main keyboards / electrostatic-capacitive / partner brands / general) |
 | 1.1 | 2026-10-01 | Regrouped by product with level-2 headings; DZ87 firmware synced to czm_dz87_tri_260924.uf2 |
 | 1.0 | 2026-09-22 | First release, consolidated file list |

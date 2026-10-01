@@ -5,7 +5,7 @@ outline: [2, 3]
 
 # 下载中心
 
-固件、VIA 键位定义、图纸与文档汇总，共 **63** 个文件，合计 **8.3 MB**。先按大类划分，大类下再按型号分组。
+固件、VIA 键位定义、图纸与文档汇总，共 **63** 个文件，合计 **8.3 MB**。按左侧菜单的分类划分，大类下再按型号分组。
 
 ## 下载前请读
 
@@ -16,16 +16,95 @@ outline: [2, 3]
 5. 文件名含型号信息（如 `a14_ds17_R2_via.json` 对应 DS17），找不到请先确认键盘版本。
 6. 缺少文件或链接失效，请在 QQ 群 **677654482** 反馈。
 
-## 数字小键盘
+## PCB
 
-DZ / DS 系列数字小键盘，含无线版本。
+G80-3000、Ow_vento 8K、DS34、USB_EN 控制器等 PCB 设计，以及结构图纸与未单列的定制型号。
 
-### DZ17 无线数字小键盘
+### DS34 v2 / v2 Light（b23 / c23）
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [czm_dz17_v1.0_260916.uf2](https://docs.micah.vip/files/czm_dz17_v1.0_260916.uf2) | 固件 | 2026-09-16 | 408.0 KB |
-| [dz17_nice_nano_v2.uf2](https://docs.micah.vip/downloads/dz17/dz17_nice_nano_v2.uf2) | 固件 | 2026-09-22 | 408.5 KB |
+| [c23_ds34_v2.0.json](https://via.micah.vip/czm/definitions/c23_ds34_v2.0.json) | 键盘定义文件 | 2026-09-22 | 4.7 KB |
+| [e34_ds34_v1.json](https://via.micah.vip/czm/definitions/e34_ds34_v1.json) | 键盘定义文件 | 2026-09-22 | 7.6 KB |
+
+### DS40
+
+| 文件 | 说明 | 更新日期 | 大小 |
+| --- | --- | --- | --- |
+| [a40_ds40.json](https://via.micah.vip/czm/definitions/a40_ds40.json) | 键盘定义文件 | 2026-09-22 | 4.5 KB |
+
+### 3000（G80-3000）
+
+| 文件 | 说明 | 更新日期 | 大小 |
+| --- | --- | --- | --- |
+| [a36_3000.json](https://via.micah.vip/czm/definitions/a36_3000.json) | 键盘定义文件 | 2026-09-22 | 6.0 KB |
+
+### 108 配列
+
+| 文件 | 说明 | 更新日期 | 大小 |
+| --- | --- | --- | --- |
+| [a38_108.json](https://via.micah.vip/czm/definitions/a38_108.json) | 键盘定义文件 | 2026-09-22 | 6.1 KB |
+| [e38_108.json](https://via.micah.vip/czm/definitions/e38_108.json) | 键盘定义文件 | 2026-09-22 | 6.1 KB |
+
+### OW Lab
+
+| 文件 | 说明 | 更新日期 | 大小 |
+| --- | --- | --- | --- |
+| [ow_60_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_60_via_12.json) | VIA 键位定义 | 2026-09-22 | 14.8 KB |
+| [ow_vento_wkl_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_vento_wkl_via_12.json) | VIA 键位定义（WKL） | 2026-09-22 | 18.3 KB |
+
+### DELLA
+
+| 文件 | 说明 | 更新日期 | 大小 |
+| --- | --- | --- | --- |
+| [della.json](https://via.micah.vip/czm/definitions/della/7u/keymaps/via/della.json) | 键盘定义文件（7U） | 2026-09-22 | 2.5 KB |
+| [keyboard.json（7U）](https://via.micah.vip/czm/definitions/della/7u/keyboard.json) | 键盘定义文件（7U） | 2026-09-22 | 8.6 KB |
+| [readme.md](https://via.micah.vip/czm/definitions/della/7u/readme.md) | 说明文档 | 2026-09-22 | 314 B |
+| [della625.json](https://via.micah.vip/czm/definitions/della/625u/keymaps/via/della625.json) | 键盘定义文件（6.25U） | 2026-09-22 | 2.6 KB |
+| [keyboard.json（6.25U）](https://via.micah.vip/czm/definitions/della/625u/keyboard.json) | 键盘定义文件（6.25U） | 2026-09-22 | 8.6 KB |
+
+### MMD / KM 系列
+
+| 文件 | 说明 | 更新日期 | 大小 |
+| --- | --- | --- | --- |
+| [a79_km17.json](https://via.micah.vip/czm/definitions/mmd/a79_km17.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
+| [a88_km21.json](https://via.micah.vip/czm/definitions/mmd/a88_km21.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
+| [b89_mmd_KM21pro.json](https://via.micah.vip/czm/definitions/mmd/b89_mmd_KM21pro.json) | 键盘定义文件 | 2026-09-22 | 4.4 KB |
+| [b99_mmd_KM21pro.json](https://via.micah.vip/czm/definitions/mmd/b99_mmd_KM21pro.json) | 键盘定义文件 | 2026-09-22 | 4.4 KB |
+| [JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json](https://via.micah.vip/czm/definitions/mmd/JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json) | 键盘定义文件（KM16 Pro 三模） | 2026-09-22 | 4.8 KB |
+| [JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json](https://via.micah.vip/czm/definitions/mmd/JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json) | 键盘定义文件（KM16 单模 RGB） | 2026-09-22 | 5.4 KB |
+
+### JoJo
+
+| 文件 | 说明 | 更新日期 | 大小 |
+| --- | --- | --- | --- |
+| [jojo_m98_plus_via_12.json](https://via.micah.vip/czm/definitions/jojo/jojo_m98_plus_via_12.json) | VIA 键位定义 | 2026-09-22 | 15.7 KB |
+
+### PTG
+
+| 文件 | 说明 | 更新日期 | 大小 |
+| --- | --- | --- | --- |
+| [ptg64a.json](https://via.micah.vip/czm/definitions/ptg/ptg64a.json) | 键盘定义文件 | 2026-09-22 | 5.1 KB |
+
+### 其它 / 通用
+
+| 文件 | 说明 | 更新日期 | 大小 |
+| --- | --- | --- | --- |
+| [a28_gushen.json](https://via.micah.vip/czm/definitions/a28_gushen.json) | 键盘定义文件 | 2026-09-22 | 697 B |
+| [b43_huben.json](https://via.micah.vip/czm/definitions/b43_huben.json) | 键盘定义文件 | 2026-09-22 | 4.0 KB |
+| [b98_onlyrgb.json](https://via.micah.vip/czm/definitions/others/b98_onlyrgb.json) | 键盘定义文件 | 2026-09-22 | 3.7 KB |
+| [e89_ding1.json](https://via.micah.vip/czm/definitions/others/e89_ding1.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
+
+### 图纸与素材
+
+| 文件 | 说明 | 更新日期 | 大小 |
+| --- | --- | --- | --- |
+| [TL定位板_EC_625Uand7U.dxf](https://docs.micah.vip/files/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf) | 定位板 / 结构图纸 | 2026-09-21 | 6.7 MB |
+| [菜籽猫注册logo4.png](https://docs.micah.vip/files/%E8%8F%9C%E7%B1%BD%E7%8C%AB%E6%B3%A8%E5%86%8Clogo4.png) | 图片 | 2026-09-15 | 21.0 KB |
+
+## 有线键盘
+
+DS / GH60 等有线键盘的 VIA 键位定义。
 
 ### DS17 数字小键盘
 
@@ -60,30 +139,15 @@ DZ / DS 系列数字小键盘，含无线版本。
 | [a34_ds22R4_via.json](https://via.micah.vip/czm/definitions/ds22/a34_ds22R4_via.json) | VIA 键位定义 | 2026-09-22 | 4.2 KB |
 | [e23f23_ds22R2_via.json](https://via.micah.vip/czm/definitions/ds22/e23f23_ds22R2_via.json) | VIA 键位定义 | 2026-09-22 | 4.2 KB |
 
-### DS34
+### GAMER
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [c23_ds34_v2.0.json](https://via.micah.vip/czm/definitions/c23_ds34_v2.0.json) | 键盘定义文件 | 2026-09-22 | 4.7 KB |
-| [e34_ds34_v1.json](https://via.micah.vip/czm/definitions/e34_ds34_v1.json) | 键盘定义文件 | 2026-09-22 | 7.6 KB |
+| [e08_gamer_v1.json](https://via.micah.vip/czm/definitions/gamer/e08_gamer_v1.json) | 键盘定义文件 | 2026-09-22 | 4.5 KB |
+| [e09_gamer_ds.json](https://via.micah.vip/czm/definitions/gamer/e09_gamer_ds.json) | 键盘定义文件 | 2026-09-22 | 976 B |
+| [gamev3.json](https://via.micah.vip/czm/definitions/gamer/gamev3.json) | 键盘定义文件 | 2026-09-22 | 4.7 KB |
 
-### DS40
-
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [a40_ds40.json](https://via.micah.vip/czm/definitions/a40_ds40.json) | 键盘定义文件 | 2026-09-22 | 4.5 KB |
-
-## 主键盘
-
-60% / 80% / 全尺寸等主键盘。
-
-### DZ87
-
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [czm_dz87_tri_260924.uf2](https://docs.micah.vip/files/zmk/czm_dz87_tri_260924.uf2) | 固件（三模） | 2026-09-24 | 428.0 KB |
-
-### 60% 系列（A24-60 / DS60 / Left64 / MQ64）
+### GH60 8K / 60% 系列
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
@@ -94,22 +158,9 @@ DZ / DS 系列数字小键盘，含无线版本。
 | [a44_ds60_251022.json](https://via.micah.vip/czm/definitions/mao_gh60/a44_ds60_251022.json) | 键盘定义文件 | 2026-09-22 | 5.1 KB |
 | [a60_ds60_ansi.json](https://via.micah.vip/czm/definitions/mao_gh60/a60_ds60_ansi.json) | 键盘定义文件（ANSI） | 2026-09-22 | 5.1 KB |
 
-### 3000
+## EC 系列
 
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [a36_3000.json](https://via.micah.vip/czm/definitions/a36_3000.json) | 键盘定义文件 | 2026-09-22 | 6.0 KB |
-
-### 108 配列
-
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [a38_108.json](https://via.micah.vip/czm/definitions/a38_108.json) | 键盘定义文件 | 2026-09-22 | 6.1 KB |
-| [e38_108.json](https://via.micah.vip/czm/definitions/e38_108.json) | 键盘定义文件 | 2026-09-22 | 6.1 KB |
-
-## 静电容
-
-EC 静电容键盘，刷固件不会清除校准数据。
+静电容键盘，刷固件不会清除校准数据。
 
 ### EC87 静电容
 
@@ -119,9 +170,30 @@ EC 静电容键盘，刷固件不会清除校准数据。
 | [czmao_ec87_via.json](https://via.micah.vip/czm/definitions/ec87/czmao_ec87_via.json) | VIA 键位定义 | 2026-09-22 | 8.5 KB |
 | [ec87_via.json](https://docs.micah.vip/files/Transition%20Lite/ec87_via.json) | VIA 键位定义 | 2026-09-22 | 17.3 KB |
 
-## 合作品牌与定制
+## DZ 系列无线蓝牙
 
-为其它品牌与定制项目提供的键盘定义 / VIA 键位定义。
+DZ 系列无线蓝牙键盘，含三模版本。
+
+### DZ17 无线数字小键盘
+
+| 文件 | 说明 | 更新日期 | 大小 |
+| --- | --- | --- | --- |
+| [czm_dz17_v1.0_260916.uf2](https://docs.micah.vip/files/czm_dz17_v1.0_260916.uf2) | 固件 | 2026-09-16 | 408.0 KB |
+| [dz17_nice_nano_v2.uf2](https://docs.micah.vip/downloads/dz17/dz17_nice_nano_v2.uf2) | 固件 | 2026-09-22 | 408.5 KB |
+
+### DZ87
+
+| 文件 | 说明 | 更新日期 | 大小 |
+| --- | --- | --- | --- |
+| [czm_dz87_tri_260924.uf2](https://docs.micah.vip/files/zmk/czm_dz87_tri_260924.uf2) | 固件（三模） | 2026-09-24 | 428.0 KB |
+
+## WCH三模
+
+开发中，暂无可下载文件。DM17 / DC22 的固件与键位定义会在这里放出。
+
+## Swagkeys
+
+Swagkeys 合作型号的键盘定义与 VIA 键位定义。
 
 ### Swagkeys
 
@@ -136,78 +208,11 @@ EC 静电容键盘，刷固件不会清除校准数据。
 | [swagkeys_transition_lite8k_via_12.json](https://via.micah.vip/czm/definitions/swagkeys/swagkeys_transition_lite8k_via_12.json) | VIA 键位定义（8K） | 2026-09-22 | 13.0 KB |
 | [swagkeys_transition_lite_1k_via_12.json](https://via.micah.vip/czm/definitions/swagkeys/swagkeys_transition_lite_1k_via_12.json) | VIA 键位定义（1K） | 2026-09-22 | 11.9 KB |
 
-### DELLA
-
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [della.json](https://via.micah.vip/czm/definitions/della/7u/keymaps/via/della.json) | 键盘定义文件（7U） | 2026-09-22 | 2.5 KB |
-| [keyboard.json（7U）](https://via.micah.vip/czm/definitions/della/7u/keyboard.json) | 键盘定义文件（7U） | 2026-09-22 | 8.6 KB |
-| [readme.md](https://via.micah.vip/czm/definitions/della/7u/readme.md) | 说明文档 | 2026-09-22 | 314 B |
-| [della625.json](https://via.micah.vip/czm/definitions/della/625u/keymaps/via/della625.json) | 键盘定义文件（6.25U） | 2026-09-22 | 2.6 KB |
-| [keyboard.json（6.25U）](https://via.micah.vip/czm/definitions/della/625u/keyboard.json) | 键盘定义文件（6.25U） | 2026-09-22 | 8.6 KB |
-
-### GAMER
-
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [e08_gamer_v1.json](https://via.micah.vip/czm/definitions/gamer/e08_gamer_v1.json) | 键盘定义文件 | 2026-09-22 | 4.5 KB |
-| [e09_gamer_ds.json](https://via.micah.vip/czm/definitions/gamer/e09_gamer_ds.json) | 键盘定义文件 | 2026-09-22 | 976 B |
-| [gamev3.json](https://via.micah.vip/czm/definitions/gamer/gamev3.json) | 键盘定义文件 | 2026-09-22 | 4.7 KB |
-
-### MMD / KM 系列
-
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [a79_km17.json](https://via.micah.vip/czm/definitions/mmd/a79_km17.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
-| [a88_km21.json](https://via.micah.vip/czm/definitions/mmd/a88_km21.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
-| [b89_mmd_KM21pro.json](https://via.micah.vip/czm/definitions/mmd/b89_mmd_KM21pro.json) | 键盘定义文件 | 2026-09-22 | 4.4 KB |
-| [b99_mmd_KM21pro.json](https://via.micah.vip/czm/definitions/mmd/b99_mmd_KM21pro.json) | 键盘定义文件 | 2026-09-22 | 4.4 KB |
-| [JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json](https://via.micah.vip/czm/definitions/mmd/JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json) | 键盘定义文件（KM16 Pro 三模） | 2026-09-22 | 4.8 KB |
-| [JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json](https://via.micah.vip/czm/definitions/mmd/JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json) | 键盘定义文件（KM16 单模 RGB） | 2026-09-22 | 5.4 KB |
-
-### OW Lab
-
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [ow_60_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_60_via_12.json) | VIA 键位定义 | 2026-09-22 | 14.8 KB |
-| [ow_vento_wkl_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_vento_wkl_via_12.json) | VIA 键位定义（WKL） | 2026-09-22 | 18.3 KB |
-
-### JoJo
-
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [jojo_m98_plus_via_12.json](https://via.micah.vip/czm/definitions/jojo/jojo_m98_plus_via_12.json) | VIA 键位定义 | 2026-09-22 | 15.7 KB |
-
-### PTG
-
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [ptg64a.json](https://via.micah.vip/czm/definitions/ptg/ptg64a.json) | 键盘定义文件 | 2026-09-22 | 5.1 KB |
-
-## 通用与素材
-
-未归类型号、图纸与图片素材。
-
-### 其它 / 通用
-
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [a28_gushen.json](https://via.micah.vip/czm/definitions/a28_gushen.json) | 键盘定义文件 | 2026-09-22 | 697 B |
-| [b43_huben.json](https://via.micah.vip/czm/definitions/b43_huben.json) | 键盘定义文件 | 2026-09-22 | 4.0 KB |
-| [b98_onlyrgb.json](https://via.micah.vip/czm/definitions/others/b98_onlyrgb.json) | 键盘定义文件 | 2026-09-22 | 3.7 KB |
-| [e89_ding1.json](https://via.micah.vip/czm/definitions/others/e89_ding1.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
-
-### 图纸与素材
-
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [TL定位板_EC_625Uand7U.dxf](https://docs.micah.vip/files/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf) | 定位板 / 结构图纸 | 2026-09-21 | 6.7 MB |
-| [菜籽猫注册logo4.png](https://docs.micah.vip/files/%E8%8F%9C%E7%B1%BD%E7%8C%AB%E6%B3%A8%E5%86%8Clogo4.png) | 图片 | 2026-09-15 | 21.0 KB |
-
 ## 更新记录
 
 | 版本 | 日期 | 变更 |
 | --- | --- | --- |
+| 1.3 | 2026-10-01 | 按左侧菜单重排一级分类（PCB / 有线键盘 / EC 系列 / DZ系列无线蓝牙 / WCH三模 / Swagkeys） |
 | 1.2 | 2026-10-01 | 按大类重新分组（数字小键盘 / 主键盘 / 静电容 / 合作品牌与定制 / 通用与素材） |
 | 1.1 | 2026-10-01 | 按产品重新分类，改为二级标题分组 |
 | 1.0 | 2026-09-22 | 首次整理，汇总文件清单 |
