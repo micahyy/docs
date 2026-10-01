@@ -5,7 +5,7 @@ outline: [2, 3]
 
 # 下载中心
 
-固件、VIA 键位定义、图纸与文档汇总，共 **66** 个文件，合计 **8.7 MB**。按左侧菜单的分类划分，大类下再按型号分组。
+固件、VIA 键位定义、图纸与文档汇总，共 **65** 个文件，合计 **8.7 MB**。按左侧菜单的分类划分，大类下再按型号分组。
 
 ## 下载前请读
 
@@ -16,16 +16,9 @@ outline: [2, 3]
 5. 文件名含型号信息（如 `a14_ds17_R2_via.json` 对应 DS17），找不到请先确认键盘版本。
 6. 缺少文件或链接失效，请在 QQ 群 **677654482** 反馈。
 
-## PCB
+## PCB 设计（单独销售 PCB 板）
 
-G80-3000、Ow_vento 8K、DS34、USB_EN 控制器等 PCB 设计，以及结构图纸与未单列的定制型号。
-
-### DS34 v2 / v2 Light（b23 / c23）
-
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [c23_ds34_v2.0.json](https://via.micah.vip/czm/definitions/c23_ds34_v2.0.json) | 键盘定义文件 | 2026-09-22 | 4.7 KB |
-| [e34_ds34_v1.json](https://via.micah.vip/czm/definitions/e34_ds34_v1.json) | 键盘定义文件 | 2026-09-22 | 7.6 KB |
+这一类是**只卖 PCB 板**的设计，**不含外壳**，需自行搭配结构件：G80-3000、Ow_vento 8K、USB_EN 控制器等。结构图纸与未单列的定制型号也归在这里。
 
 ### DS40
 
@@ -105,9 +98,9 @@ G80-3000、Ow_vento 8K、DS34、USB_EN 控制器等 PCB 设计，以及结构图
 | [TL定位板_EC_625Uand7U.dxf](https://docs.micah.vip/files/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf) | 定位板 / 结构图纸 | 2026-09-21 | 6.7 MB |
 | [菜籽猫注册logo4.png](https://docs.micah.vip/files/%E8%8F%9C%E7%B1%BD%E7%8C%AB%E6%B3%A8%E5%86%8Clogo4.png) | 图片 | 2026-09-15 | 21.0 KB |
 
-## 有线键盘
+## 成品键盘（有线）
 
-DS / GH60 等有线键盘的 VIA 键位定义。
+这一类是**配好外壳整套销售**的有线键盘（到手即用，无需另配结构件）：DS / GH60 等型号的 VIA 键位定义。
 
 ### DS17 数字小键盘
 
@@ -141,6 +134,12 @@ DS / GH60 等有线键盘的 VIA 键位定义。
 | [a25_ds22R3_via.json](https://via.micah.vip/czm/definitions/ds22/a25_ds22R3_via.json) | VIA 键位定义 | 2026-09-22 | 4.2 KB |
 | [a34_ds22R4_via.json](https://via.micah.vip/czm/definitions/ds22/a34_ds22R4_via.json) | VIA 键位定义 | 2026-09-22 | 4.2 KB |
 | [e23f23_ds22R2_via.json](https://via.micah.vip/czm/definitions/ds22/e23f23_ds22R2_via.json) | VIA 键位定义 | 2026-09-22 | 4.2 KB |
+
+### DS34
+
+| 文件 | 说明 | 更新日期 | 大小 |
+| --- | --- | --- | --- |
+| [e34_ds34_v1.json](https://via.micah.vip/czm/definitions/e34_ds34_v1.json) | 键盘定义文件 | 2026-09-22 | 7.6 KB |
 
 ### GAMER
 
@@ -215,6 +214,7 @@ Swagkeys 合作型号的键盘定义与 VIA 键位定义。
 
 | 版本 | 日期 | 变更 |
 | --- | --- | --- |
+| 1.5 | 2026-10-01 | 区分销售形态：PCB 类为「单独销售 PCB 板」，有线键盘类改为「成品键盘（有线）」；DS34 移入成品键盘，移除 DS34 v2 Light 定义 |
 | 1.4 | 2026-10-01 | 补充 OW Vento 80-8K 固件、键盘定义与轴下垫图纸（服务器直链） |
 | 1.3 | 2026-10-01 | 按左侧菜单重排一级分类（PCB / 有线键盘 / EC 系列 / DZ系列无线蓝牙 / WCH三模 / Swagkeys） |
 | 1.2 | 2026-10-01 | 按大类重新分组（数字小键盘 / 主键盘 / 静电容 / 合作品牌与定制 / 通用与素材） |

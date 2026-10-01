@@ -5,7 +5,7 @@ outline: [2, 3]
 
 # Download Center
 
-Firmware, VIA keymap definitions, drawings and documents - **66** files, **8.7 MB** in total. Listed by the categories used in the sidebar, then by model.
+Firmware, VIA keymap definitions, drawings and documents - **65** files, **8.7 MB** in total. Listed by the categories used in the sidebar, then by model.
 
 ## Before you download
 
@@ -16,16 +16,9 @@ Firmware, VIA keymap definitions, drawings and documents - **66** files, **8.7 M
 5. File names carry the model (e.g. `a14_ds17_R2_via.json` belongs to the DS17); if you can't find yours, double-check the keyboard version first.
 6. If a file is missing or a link is dead, please report it in QQ group **677654482**.
 
-## PCB
+## PCB Designs (PCB Board Only)
 
-PCB designs such as G80-3000, Ow_vento 8K, DS34 and the USB_EN controller, plus structural drawings and custom models that have no section of their own.
-
-### DS34 v2 / v2 Light (b23 / c23)
-
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [c23_ds34_v2.0.json](https://via.micah.vip/czm/definitions/c23_ds34_v2.0.json) | Keyboard definition | 2026-09-22 | 4.7 KB |
-| [e34_ds34_v1.json](https://via.micah.vip/czm/definitions/e34_ds34_v1.json) | Keyboard definition | 2026-09-22 | 7.6 KB |
+This section covers designs sold as a **bare PCB board only** - **no case included**, you supply the structural parts yourself: G80-3000, Ow_vento 8K, USB_EN controller and similar. Structural drawings and custom models without a section of their own are listed here too.
 
 ### DS40
 
@@ -105,9 +98,9 @@ PCB designs such as G80-3000, Ow_vento 8K, DS34 and the USB_EN controller, plus 
 | [TL定位板_EC_625Uand7U.dxf](https://docs.micah.vip/files/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf) | Plate / structural drawing | 2026-09-21 | 6.7 MB |
 | [菜籽猫注册logo4.png](https://docs.micah.vip/files/%E8%8F%9C%E7%B1%BD%E7%8C%AB%E6%B3%A8%E5%86%8Clogo4.png) | Image | 2026-09-15 | 21.0 KB |
 
-## Wired Keyboards
+## Wired Keyboards (Prebuilt with Case)
 
-VIA keymap definitions for DS / GH60 and other wired keyboards.
+This section covers keyboards sold as a **complete unit with a case** - ready to use, no separate structural parts needed: VIA keymap definitions for DS / GH60 and other wired models.
 
 ### DS17 Numpad
 
@@ -141,6 +134,12 @@ VIA keymap definitions for DS / GH60 and other wired keyboards.
 | [a25_ds22R3_via.json](https://via.micah.vip/czm/definitions/ds22/a25_ds22R3_via.json) | VIA keymap definition | 2026-09-22 | 4.2 KB |
 | [a34_ds22R4_via.json](https://via.micah.vip/czm/definitions/ds22/a34_ds22R4_via.json) | VIA keymap definition | 2026-09-22 | 4.2 KB |
 | [e23f23_ds22R2_via.json](https://via.micah.vip/czm/definitions/ds22/e23f23_ds22R2_via.json) | VIA keymap definition | 2026-09-22 | 4.2 KB |
+
+### DS34
+
+| File | Description | Updated | Size |
+| --- | --- | --- | --- |
+| [e34_ds34_v1.json](https://via.micah.vip/czm/definitions/e34_ds34_v1.json) | Keyboard definition | 2026-09-22 | 7.6 KB |
 
 ### GAMER
 
@@ -215,6 +214,7 @@ Keyboard and VIA keymap definitions for Swagkeys collaboration models.
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.5 | 2026-10-01 | Clarified what is sold: PCB section is "PCB Board Only", wired section renamed to "Prebuilt with Case"; DS34 moved to wired, DS34 v2 Light definition removed |
 | 1.4 | 2026-10-01 | Added OW Vento 80-8K firmware, keyboard definition and switch-pad drawing (direct links) |
 | 1.3 | 2026-10-01 | Regrouped to match the sidebar categories (PCB / wired keyboards / EC series / DZ wireless / WCH tri-mode / Swagkeys) |
 | 1.2 | 2026-10-01 | Regrouped into top-level categories (numpads / main keyboards / electrostatic-capacitive / partner brands / general) |
