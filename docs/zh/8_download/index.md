@@ -5,7 +5,7 @@ outline: [2, 3]
 
 # 下载中心
 
-固件、VIA 键位定义、图纸与文档汇总，共 **63** 个文件，合计 **8.3 MB**。按左侧菜单的分类划分，大类下再按型号分组。
+固件、VIA 键位定义、图纸与文档汇总，共 **66** 个文件，合计 **8.7 MB**。按左侧菜单的分类划分，大类下再按型号分组。
 
 ## 下载前请读
 
@@ -52,6 +52,9 @@ G80-3000、Ow_vento 8K、DS34、USB_EN 控制器等 PCB 设计，以及结构图
 | --- | --- | --- | --- |
 | [ow_60_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_60_via_12.json) | VIA 键位定义 | 2026-09-22 | 14.8 KB |
 | [ow_vento_wkl_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_vento_wkl_via_12.json) | VIA 键位定义（WKL） | 2026-09-22 | 18.3 KB |
+| [Vento80-8K.json](https://docs.micah.vip/files/OW/Vento80-8K.json) | 键盘定义文件 | 2026-10-01 | 18.8 KB |
+| [tab_ow_vento_wkl_wkl_v1.0.0_20241107.uf2](https://docs.micah.vip/files/OW/tab_ow_vento_wkl_wkl_v1.0.0_20241107.uf2) | 固件（WKL） | 2026-10-01 | 124.5 KB |
+| [Vento80-8K轴下垫.dwg](https://docs.micah.vip/files/OW/Vento80-8K%E8%BD%B4%E4%B8%8B%E5%9E%AB.dwg) | 轴下垫图纸 | 2026-10-01 | 295.2 KB |
 
 ### DELLA
 
@@ -212,6 +215,7 @@ Swagkeys 合作型号的键盘定义与 VIA 键位定义。
 
 | 版本 | 日期 | 变更 |
 | --- | --- | --- |
+| 1.4 | 2026-10-01 | 补充 OW Vento 80-8K 固件、键盘定义与轴下垫图纸（服务器直链） |
 | 1.3 | 2026-10-01 | 按左侧菜单重排一级分类（PCB / 有线键盘 / EC 系列 / DZ系列无线蓝牙 / WCH三模 / Swagkeys） |
 | 1.2 | 2026-10-01 | 按大类重新分组（数字小键盘 / 主键盘 / 静电容 / 合作品牌与定制 / 通用与素材） |
 | 1.1 | 2026-10-01 | 按产品重新分类，改为二级标题分组 |

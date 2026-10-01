@@ -5,7 +5,7 @@ outline: [2, 3]
 
 # Download Center
 
-Firmware, VIA keymap definitions, drawings and documents - **63** files, **8.3 MB** in total. Listed by the categories used in the sidebar, then by model.
+Firmware, VIA keymap definitions, drawings and documents - **66** files, **8.7 MB** in total. Listed by the categories used in the sidebar, then by model.
 
 ## Before you download
 
@@ -52,6 +52,9 @@ PCB designs such as G80-3000, Ow_vento 8K, DS34 and the USB_EN controller, plus 
 | --- | --- | --- | --- |
 | [ow_60_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_60_via_12.json) | VIA keymap definition | 2026-09-22 | 14.8 KB |
 | [ow_vento_wkl_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_vento_wkl_via_12.json) | VIA keymap definition (WKL) | 2026-09-22 | 18.3 KB |
+| [Vento80-8K.json](https://docs.micah.vip/files/OW/Vento80-8K.json) | Keyboard definition | 2026-10-01 | 18.8 KB |
+| [tab_ow_vento_wkl_wkl_v1.0.0_20241107.uf2](https://docs.micah.vip/files/OW/tab_ow_vento_wkl_wkl_v1.0.0_20241107.uf2) | Firmware (WKL) | 2026-10-01 | 124.5 KB |
+| [Vento80-8K轴下垫.dwg](https://docs.micah.vip/files/OW/Vento80-8K%E8%BD%B4%E4%B8%8B%E5%9E%AB.dwg) | Switch-pad drawing | 2026-10-01 | 295.2 KB |
 
 ### DELLA
 
@@ -212,6 +215,7 @@ Keyboard and VIA keymap definitions for Swagkeys collaboration models.
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.4 | 2026-10-01 | Added OW Vento 80-8K firmware, keyboard definition and switch-pad drawing (direct links) |
 | 1.3 | 2026-10-01 | Regrouped to match the sidebar categories (PCB / wired keyboards / EC series / DZ wireless / WCH tri-mode / Swagkeys) |
 | 1.2 | 2026-10-01 | Regrouped into top-level categories (numpads / main keyboards / electrostatic-capacitive / partner brands / general) |
 | 1.1 | 2026-10-01 | Regrouped by product with level-2 headings; DZ87 firmware synced to czm_dz87_tri_260924.uf2 |
