@@ -26,7 +26,6 @@
 
 - [DS21 四旋钮（b70_ds21_encoder）](/zh/1_PCB/b70_ds21_encoder) — 17 键 + 4 旋钮，QMK + VIA 开源 PCB。
 - [DS34 v2（b23_ds34_v2）](/zh/1_PCB/b23_ds34_v2) — 34 键 + 1 旋钮数字小键盘，QMK + VIA 开源 PCB。
-- [DS34 v2 Light（c23_ds34_v2_light）](/zh/1_PCB/c23_ds34_v2_light) — DS34 v2 同硬件，多一层 Ctrl+F1~F12。
 - [USB_EN 桌面控制器（b43_huben）](/zh/1_PCB/b43_huben) — 5 键 + 1 旋钮桌面小控制器。
 - [左手游戏键盘（08gamerst）](/zh/1_PCB/08gamerst) — 35 键左手游戏小键盘，可选 USB HUB 版本。
 

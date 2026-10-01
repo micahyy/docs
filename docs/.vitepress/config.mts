@@ -162,20 +162,19 @@ export default defineConfig({
 
         sidebar: [
           {
-            text: 'PCB 设计',
+            text: 'PCB 设计（单独销售 PCB 板）',
             collapsed: false,
             items: [
               { text: 'G80-3000',    link: '/zh/1_PCB/g80_3000' },
               { text: 'Ow_vento 8K', link: '/zh/1_PCB/Ow_vento_8K' },
               { text: 'DS21 四旋钮（b70）', link: '/zh/1_PCB/b70_ds21_encoder' },
               { text: 'DS34 v2（b23）',     link: '/zh/1_PCB/b23_ds34_v2' },
-              { text: 'DS34 v2 Light（c23）', link: '/zh/1_PCB/c23_ds34_v2_light' },
               { text: 'USB_EN 控制器（b43）', link: '/zh/1_PCB/b43_huben' },
               { text: '左手游戏键盘（08gamerst）', link: '/zh/1_PCB/08gamerst' }
             ]
           },
           {
-            text: '有线键盘',
+            text: '成品键盘（有线）',
             collapsed: false,
             items: [
               { text: 'DS17',     link: '/zh/2_wired/DS17' },
@@ -193,7 +192,7 @@ export default defineConfig({
             ]
           },
           {
-            text: 'DZ 系列',
+            text: 'DZ 系列无线蓝牙',
             collapsed: false,
             items: [
               { text: 'DZ17', link: '/zh/3_DZ/DZ17' },
@@ -201,7 +200,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '多模键盘',
+            text: 'WCH三模',
             collapsed: false,
             items: [
               { text: 'DM17',            link: '/zh/4_Tri-mode/4.1_dm17' },
@@ -311,20 +310,19 @@ export default defineConfig({
         // omitted so it never 404s.
         sidebar: [
           {
-            text: 'PCB designs',
+            text: 'PCB Designs (Board Only)',
             collapsed: false,
             items: [
               { text: 'G80-3000', link: '/en/1_PCB/g80_3000' },
               { text: 'Ow_vento 8K', link: '/en/1_PCB/Ow_vento_8K' },
               { text: 'DS21 4-Knob (b70)', link: '/en/1_PCB/b70_ds21_encoder' },
               { text: 'DS34 v2 (b23)', link: '/en/1_PCB/b23_ds34_v2' },
-              { text: 'DS34 v2 Light (c23)', link: '/en/1_PCB/c23_ds34_v2_light' },
               { text: 'USB_EN Controller (b43)', link: '/en/1_PCB/b43_huben' },
               { text: 'Left-Handed Keypad (08gamerst)', link: '/en/1_PCB/08gamerst' }
             ]
           },
           {
-            text: 'Wired keyboards',
+            text: 'Wired Keyboards (Prebuilt)',
             collapsed: false,
             items: [
               { text: 'DS17', link: '/en/2_wired/DS17' },
@@ -342,7 +340,7 @@ export default defineConfig({
             ]
           },
           {
-            text: 'DZ Series (Wireless)',
+            text: 'DZ Series (Wireless / Bluetooth)',
             collapsed: false,
             items: [
               { text: 'DZ17', link: '/en/3_DZ/DZ17' },
@@ -350,7 +348,7 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Tri-mode keyboards',
+            text: 'WCH Tri-mode',
             collapsed: false,
             items: [
               { text: 'DM17', link: '/en/4_Tri-mode/4.1_dm17' },
