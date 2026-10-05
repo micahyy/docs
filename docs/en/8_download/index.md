@@ -5,7 +5,7 @@ outline: [2, 3]
 
 # Download Center
 
-Firmware, VIA keymap definitions, drawings and documents - **65** files, **8.7 MB** in total. Listed by the categories used in the sidebar, then by model.
+Firmware, VIA keymap definitions, drawings and documents - **64** files, **8.7 MB** in total. Listed by the categories used in the sidebar, then by model.
 
 ## Before you download
 
@@ -19,12 +19,6 @@ Firmware, VIA keymap definitions, drawings and documents - **65** files, **8.7 M
 ## PCB Designs (PCB Board Only)
 
 This section covers designs sold as a **bare PCB board only** - **no case included**, you supply the structural parts yourself: G80-3000, Ow_vento 8K, USB_EN controller and similar. Structural drawings and custom models without a section of their own are listed here too.
-
-### DS40
-
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [a40_ds40.json](https://via.micah.vip/czm/definitions/a40_ds40.json) | Keyboard definition | 2026-09-22 | 4.5 KB |
 
 ### 3000 (G80-3000)
 
@@ -76,18 +70,11 @@ This section covers designs sold as a **bare PCB board only** - **no case includ
 | --- | --- | --- | --- |
 | [jojo_m98_plus_via_12.json](https://via.micah.vip/czm/definitions/jojo/jojo_m98_plus_via_12.json) | VIA keymap definition | 2026-09-22 | 15.7 KB |
 
-### PTG
-
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [ptg64a.json](https://via.micah.vip/czm/definitions/ptg/ptg64a.json) | Keyboard definition | 2026-09-22 | 5.1 KB |
-
 ### Others / Generic
 
 | File | Description | Updated | Size |
 | --- | --- | --- | --- |
 | [a28_gushen.json](https://via.micah.vip/czm/definitions/a28_gushen.json) | Keyboard definition | 2026-09-22 | 697 B |
-| [b43_huben.json](https://via.micah.vip/czm/definitions/b43_huben.json) | Keyboard definition | 2026-09-22 | 4.0 KB |
 | [b98_onlyrgb.json](https://via.micah.vip/czm/definitions/others/b98_onlyrgb.json) | Keyboard definition | 2026-09-22 | 3.7 KB |
 | [e89_ding1.json](https://via.micah.vip/czm/definitions/others/e89_ding1.json) | Keyboard definition | 2026-09-22 | 4.1 KB |
 
@@ -98,7 +85,7 @@ This section covers designs sold as a **bare PCB board only** - **no case includ
 | [TL定位板_EC_625Uand7U.dxf](https://docs.micah.vip/files/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf) | Plate / structural drawing | 2026-09-21 | 6.7 MB |
 | [菜籽猫注册logo4.png](https://docs.micah.vip/files/%E8%8F%9C%E7%B1%BD%E7%8C%AB%E6%B3%A8%E5%86%8Clogo4.png) | Image | 2026-09-15 | 21.0 KB |
 
-## Wired Keyboards (Prebuilt with Case)
+## Wired Mechanical Keyboards
 
 This section covers keyboards sold as a **complete unit with a case** - ready to use, no separate structural parts needed: VIA keymap definitions for DS / GH60 and other wired models.
 
@@ -140,6 +127,12 @@ This section covers keyboards sold as a **complete unit with a case** - ready to
 | File | Description | Updated | Size |
 | --- | --- | --- | --- |
 | [e34_ds34_v1.json](https://via.micah.vip/czm/definitions/e34_ds34_v1.json) | Keyboard definition | 2026-09-22 | 7.6 KB |
+
+### DS40
+
+| File | Description | Updated | Size |
+| --- | --- | --- | --- |
+| [a40_ds40.json](https://via.micah.vip/czm/definitions/a40_ds40.json) | Keyboard definition | 2026-09-22 | 4.5 KB |
 
 ### GAMER
 
@@ -214,6 +207,8 @@ Keyboard and VIA keymap definitions for Swagkeys collaboration models.
 
 | Version | Date | Change |
 | --- | --- | --- |
+| 1.7 | 2026-10-05 | Renamed "Wired Keyboards (Prebuilt)" to "Wired Mechanical Keyboards" |
+| 1.6 | 2026-10-05 | DS40 moved to Wired Keyboards (Prebuilt) |
 | 1.5 | 2026-10-01 | Clarified what is sold: PCB section is "PCB Board Only", wired section renamed to "Prebuilt with Case"; DS34 moved to wired, DS34 v2 Light definition removed |
 | 1.4 | 2026-10-01 | Added OW Vento 80-8K firmware, keyboard definition and switch-pad drawing (direct links) |
 | 1.3 | 2026-10-01 | Regrouped to match the sidebar categories (PCB / wired keyboards / EC series / DZ wireless / WCH tri-mode / Swagkeys) |
