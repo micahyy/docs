@@ -64,12 +64,6 @@ This section covers designs sold as a **bare PCB board only** - **no case includ
 | [JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json](https://via.micah.vip/czm/definitions/mmd/JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json) | Keyboard definition (KM16 Pro tri-mode) | 2026-09-22 | 4.8 KB |
 | [JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json](https://via.micah.vip/czm/definitions/mmd/JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json) | Keyboard definition (KM16 single-mode RGB) | 2026-09-22 | 5.4 KB |
 
-### JoJo
-
-| File | Description | Updated | Size |
-| --- | --- | --- | --- |
-| [jojo_m98_plus_via_12.json](https://via.micah.vip/czm/definitions/jojo/jojo_m98_plus_via_12.json) | VIA keymap definition | 2026-09-22 | 15.7 KB |
-
 ### Others / Generic
 
 | File | Description | Updated | Size |
