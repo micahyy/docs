@@ -61,7 +61,7 @@ Bundle contents
 
 | Spec | Value | Notes |
 | ------ | ---------------- | ------ |
-| Layers | 4 | Layers 0鈥? |
+| Layers | 4 | Layers 0–3 |
 | Keys | 87 | |
 | Polling rate | 1 kHz | |
 | Latency | 1 ms | |
