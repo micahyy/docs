@@ -1,6 +1,6 @@
 # USB_EN Desktop Controller (b43_huben)
 
-![USB_EN Controller (b43_huben)](/images/b43_huben.jpg)
+<img src="/images/b43_huben.jpg" alt="USB_EN Controller (b43_huben)" width="360">
 
 5-key + 1-knob desktop controller PCB · USB wired · QMK firmware · VIA
 
