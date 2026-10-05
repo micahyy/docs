@@ -1,5 +1,7 @@
 # USB_EN 桌面小控制器（b43_huben）
 
+![USB_EN 桌面小控制器（b43_huben）](/images/b43_huben.jpg)
+
 5 键 + 1 个旋钮的桌面控制器 PCB · USB 有线单模 · QMK 固件 · VIA 改键
 
 > b43_huben（USB_EN）是一块**桌面小控制器** PCB：主控 STM32F103CBT6（Blue Pill），3 列 × 3 行矩阵，实体只有 5 个媒体键 + 1 个 EC11 旋钮，用来做桌面上的音量 / 播放控制盒。旋钮占用 2 个虚拟键位，**顺 / 逆时针都能在 VIA 里单独改键**。固件为 QMK，开源，支持 VIA 在线实时改键。

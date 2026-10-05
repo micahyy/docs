@@ -1,5 +1,7 @@
 # USB_EN Desktop Controller (b43_huben)
 
+![USB_EN Controller (b43_huben)](/images/b43_huben.jpg)
+
 5-key + 1-knob desktop controller PCB · USB wired · QMK firmware · VIA
 
 > b43_huben (USB_EN) is a small **desktop controller** PCB: STM32F103CBT6 (Blue Pill), 3-column × 3-row matrix, only 5 physical media keys plus one EC11 knob — a tiny desktop box for volume and playback. The knob uses two virtual key positions, so **both directions can be remapped independently in VIA**. QMK firmware, open source, VIA-compatible.
