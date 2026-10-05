@@ -147,7 +147,7 @@ export default defineConfig({
           { text: '首页',     link: '/zh/' },
           { text: 'PCB',      link: '/zh/1_PCB/g80_3000' },
           { text: '有线',     link: '/zh/2_wired/DS17' },
-          { text: '多模',     link: '/zh/4_Tri-mode/4.1_dm17' },
+          { text: '多模',     link: '/zh/4_Tri-mode/4.2_dc22' },
           { text: 'DZ系列',   link: '/zh/3_DZ/DZ17' },
           { text: 'EC系列',   link: '/zh/7_EC/EC87' },
           { text: 'Swagkeys', link: '/zh/5_Swagkeys/Eave' },
@@ -201,7 +201,6 @@ export default defineConfig({
             text: 'WCH三模',
             collapsed: false,
             items: [
-              { text: 'DM17',            link: '/zh/4_Tri-mode/4.1_dm17' },
               { text: 'DC22（开发中）',   link: '/zh/4_Tri-mode/4.2_dc22' }
             ]
           },
@@ -233,7 +232,8 @@ export default defineConfig({
             text: '归档（已停更）',
             collapsed: false,
             items: [
-              { text: 'USB_EN 控制器（b43）', link: '/zh/1_PCB/b43_huben' }
+              { text: 'USB_EN 控制器（b43）', link: '/zh/1_PCB/b43_huben' },
+              { text: 'DM17（双芯片 QMK 方案，方案公司提供，功耗高）', link: '/zh/4_Tri-mode/4.1_dm17' }
             ]
           }
         ]
@@ -264,7 +264,7 @@ export default defineConfig({
           { text: 'Home',      link: '/en/' },
           { text: 'PCB',       link: '/en/1_PCB/g80_3000' },
           { text: 'Wired',     link: '/en/2_wired/DS17' },
-          { text: 'Tri-mode',  link: '/en/4_Tri-mode/4.1_dm17' },
+          { text: 'Tri-mode',  link: '/en/4_Tri-mode/4.2_dc22' },
           { text: 'DZ',        link: '/en/3_DZ/DZ17' },
           { text: 'EC',        link: '/en/7_EC/EC87' },
           { text: 'Swagkeys',  link: '/en/5_Swagkeys/Eave' },
@@ -354,7 +354,6 @@ export default defineConfig({
             text: 'WCH Tri-mode',
             collapsed: false,
             items: [
-              { text: 'DM17', link: '/en/4_Tri-mode/4.1_dm17' },
               { text: 'DC22 (work in progress)', link: '/en/4_Tri-mode/4.2_dc22' }
             ]
           },
@@ -386,7 +385,8 @@ export default defineConfig({
             text: 'Archived (discontinued)',
             collapsed: false,
             items: [
-              { text: 'USB_EN Controller (b43)', link: '/en/1_PCB/b43_huben' }
+              { text: 'USB_EN Controller (b43)', link: '/en/1_PCB/b43_huben' },
+              { text: 'DM17 (dual-chip QMK, vendor-provided, high power draw)', link: '/en/4_Tri-mode/4.1_dm17' }
             ]
           }
         ],
