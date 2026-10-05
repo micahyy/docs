@@ -64,12 +64,6 @@ outline: [2, 3]
 | [JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json](https://via.micah.vip/czm/definitions/mmd/JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json) | 键盘定义文件（KM16 Pro 三模） | 2026-09-22 | 4.8 KB |
 | [JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json](https://via.micah.vip/czm/definitions/mmd/JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json) | 键盘定义文件（KM16 单模 RGB） | 2026-09-22 | 5.4 KB |
 
-### JoJo
-
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [jojo_m98_plus_via_12.json](https://via.micah.vip/czm/definitions/jojo/jojo_m98_plus_via_12.json) | VIA 键位定义 | 2026-09-22 | 15.7 KB |
-
 ### 其它 / 通用
 
 | 文件 | 说明 | 更新日期 | 大小 |
