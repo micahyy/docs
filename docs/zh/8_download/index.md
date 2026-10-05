@@ -76,7 +76,6 @@ outline: [2, 3]
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [TL定位板_EC_625Uand7U.dxf](https://docs.micah.vip/files/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf) | 定位板 / 结构图纸 | 2026-09-21 | 6.7 MB |
 | [菜籽猫注册logo4.png](https://docs.micah.vip/files/%E8%8F%9C%E7%B1%BD%E7%8C%AB%E6%B3%A8%E5%86%8Clogo4.png) | 图片 | 2026-09-15 | 21.0 KB |
 
 ## 有线机械键盘
@@ -158,6 +157,7 @@ outline: [2, 3]
 | [czmao_ec87_via_260922.uf2](https://docs.micah.vip/files/Transition%20Lite/czmao_ec87_via_260922.uf2) | 固件 | 2026-09-22 | 82.5 KB |
 | [czmao_ec87_via.json](https://via.micah.vip/czm/definitions/ec87/czmao_ec87_via.json) | VIA 键位定义 | 2026-09-22 | 8.5 KB |
 | [ec87_via.json](https://docs.micah.vip/files/Transition%20Lite/ec87_via.json) | VIA 键位定义 | 2026-09-22 | 17.3 KB |
+| [TL定位板_EC_625Uand7U.dxf](https://docs.micah.vip/files/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf) | 定位板 / 结构图纸 | 2026-09-21 | 6.7 MB |
 
 ## DZ 系列无线蓝牙
 
