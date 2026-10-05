@@ -44,7 +44,7 @@ Bundle contents
 | Weight | Silicone weight | Silicone weight | Silicone weight | Silicone weight | Silicone weight |
 | Stabilizers | No stabilizers in the switchless bundle; the bundle with switches comes assembled with stabilizers | Same as bundle 1 | Same as bundle 1 | Same as bundle 1 | Same as bundle 1 |
 
-<div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:12px; margin:1em 0;">
+<div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:1em 0;">
   <img src="https://img.micah.vip/i/2026/04/27/69ef0985d29d0.jpg" alt="10019.jpg" style="width:100%; border-radius:6px; display:block;">
   <img src="https://img.micah.vip/i/2026/04/27/69ef09859d2ee.jpg" alt="10018.jpg" style="width:100%; border-radius:6px; display:block;">
   <img src="https://img.micah.vip/i/2026/04/27/69ef0985a3f41.jpg" alt="10035.jpg" style="width:100%; border-radius:6px; display:block;">
