@@ -166,7 +166,8 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'G80-3000',    link: '/zh/1_PCB/g80_3000' },
-              { text: 'Ow_vento 8K', link: '/zh/1_PCB/Ow_vento_8K' }
+              { text: 'Ow_vento 8K', link: '/zh/1_PCB/Ow_vento_8K' },
+              { text: 'GH60 8K',     link: '/zh/2_wired/gh60_8K' }
             ]
           },
           {
@@ -177,7 +178,6 @@ export default defineConfig({
               { text: 'DS21',     link: '/zh/2_wired/ds21' },
               { text: 'DS22',     link: '/zh/2_wired/DS22' },
               { text: 'Gamer', link: '/zh/2_wired/gamer' },
-              { text: 'GH60 8K',  link: '/zh/2_wired/gh60_8K' },
               { text: 'DS21 四旋钮（b70）', link: '/zh/1_PCB/b70_ds21_encoder' },
               { text: 'DS34 v2（b23）',     link: '/zh/1_PCB/b23_ds34_v2' }
             ]
@@ -319,7 +319,8 @@ export default defineConfig({
             collapsed: false,
             items: [
               { text: 'G80-3000', link: '/en/1_PCB/g80_3000' },
-              { text: 'Ow_vento 8K', link: '/en/1_PCB/Ow_vento_8K' }
+              { text: 'Ow_vento 8K', link: '/en/1_PCB/Ow_vento_8K' },
+              { text: 'GH60 8K', link: '/en/2_wired/gh60_8K' }
             ]
           },
           {
@@ -330,7 +331,6 @@ export default defineConfig({
               { text: 'DS21', link: '/en/2_wired/ds21' },
               { text: 'DS22', link: '/en/2_wired/DS22' },
               { text: 'Gamer', link: '/en/2_wired/gamer' },
-              { text: 'GH60 8K', link: '/en/2_wired/gh60_8K' },
               { text: 'DS21 4-Knob (b70)', link: '/en/1_PCB/b70_ds21_encoder' },
               { text: 'DS34 v2 (b23)', link: '/en/1_PCB/b23_ds34_v2' }
             ]
