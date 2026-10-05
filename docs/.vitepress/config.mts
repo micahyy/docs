@@ -176,13 +176,7 @@ export default defineConfig({
               { text: 'DS17',     link: '/zh/2_wired/DS17' },
               { text: 'DS21',     link: '/zh/2_wired/ds21' },
               { text: 'DS22',     link: '/zh/2_wired/DS22' },
-              {
-                text: 'Gamer（左手游戏键盘）',
-                link: '/zh/2_wired/gamer',
-                items: [
-                  { text: '32U4 老版本（08gamerst）', link: '/zh/1_PCB/08gamerst' }
-                ]
-              },
+              { text: 'Gamer', link: '/zh/2_wired/gamer' },
               { text: 'GH60 8K',  link: '/zh/2_wired/gh60_8K' },
               { text: 'DS21 四旋钮（b70）', link: '/zh/1_PCB/b70_ds21_encoder' },
               { text: 'DS34 v2（b23）',     link: '/zh/1_PCB/b23_ds34_v2' }
@@ -335,13 +329,7 @@ export default defineConfig({
               { text: 'DS17', link: '/en/2_wired/DS17' },
               { text: 'DS21', link: '/en/2_wired/ds21' },
               { text: 'DS22', link: '/en/2_wired/DS22' },
-              {
-                text: 'Gamer (Left-Handed Keypad)',
-                link: '/en/2_wired/gamer',
-                items: [
-                  { text: '32U4 older version (08gamerst)', link: '/en/1_PCB/08gamerst' }
-                ]
-              },
+              { text: 'Gamer', link: '/en/2_wired/gamer' },
               { text: 'GH60 8K', link: '/en/2_wired/gh60_8K' },
               { text: 'DS21 4-Knob (b70)', link: '/en/1_PCB/b70_ds21_encoder' },
               { text: 'DS34 v2 (b23)', link: '/en/1_PCB/b23_ds34_v2' }
