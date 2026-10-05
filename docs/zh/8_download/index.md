@@ -5,7 +5,7 @@ outline: [2, 3]
 
 # 下载中心
 
-固件、VIA 键位定义、图纸与文档汇总，共 **65** 个文件，合计 **8.7 MB**。按左侧菜单的分类划分，大类下再按型号分组。
+固件、VIA 键位定义、图纸与文档汇总，共 **64** 个文件，合计 **8.7 MB**。按左侧菜单的分类划分，大类下再按型号分组。
 
 ## 下载前请读
 
@@ -19,12 +19,6 @@ outline: [2, 3]
 ## PCB 设计（单独销售 PCB 板）
 
 这一类是**只卖 PCB 板**的设计，**不含外壳**，需自行搭配结构件：G80-3000、Ow_vento 8K、USB_EN 控制器等。结构图纸与未单列的定制型号也归在这里。
-
-### DS40
-
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [a40_ds40.json](https://via.micah.vip/czm/definitions/a40_ds40.json) | 键盘定义文件 | 2026-09-22 | 4.5 KB |
 
 ### 3000（G80-3000）
 
@@ -76,18 +70,11 @@ outline: [2, 3]
 | --- | --- | --- | --- |
 | [jojo_m98_plus_via_12.json](https://via.micah.vip/czm/definitions/jojo/jojo_m98_plus_via_12.json) | VIA 键位定义 | 2026-09-22 | 15.7 KB |
 
-### PTG
-
-| 文件 | 说明 | 更新日期 | 大小 |
-| --- | --- | --- | --- |
-| [ptg64a.json](https://via.micah.vip/czm/definitions/ptg/ptg64a.json) | 键盘定义文件 | 2026-09-22 | 5.1 KB |
-
 ### 其它 / 通用
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
 | [a28_gushen.json](https://via.micah.vip/czm/definitions/a28_gushen.json) | 键盘定义文件 | 2026-09-22 | 697 B |
-| [b43_huben.json](https://via.micah.vip/czm/definitions/b43_huben.json) | 键盘定义文件 | 2026-09-22 | 4.0 KB |
 | [b98_onlyrgb.json](https://via.micah.vip/czm/definitions/others/b98_onlyrgb.json) | 键盘定义文件 | 2026-09-22 | 3.7 KB |
 | [e89_ding1.json](https://via.micah.vip/czm/definitions/others/e89_ding1.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
 
@@ -98,9 +85,9 @@ outline: [2, 3]
 | [TL定位板_EC_625Uand7U.dxf](https://docs.micah.vip/files/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf) | 定位板 / 结构图纸 | 2026-09-21 | 6.7 MB |
 | [菜籽猫注册logo4.png](https://docs.micah.vip/files/%E8%8F%9C%E7%B1%BD%E7%8C%AB%E6%B3%A8%E5%86%8Clogo4.png) | 图片 | 2026-09-15 | 21.0 KB |
 
-## 成品键盘（有线）
+## 有线机械键盘
 
-这一类是**配好外壳整套销售**的有线键盘（到手即用，无需另配结构件）：DS / GH60 等型号的 VIA 键位定义。
+这一类是**配好外壳整套销售**的有线机械键盘（到手即用，无需另配结构件）：DS / GH60 等型号的 VIA 键位定义。
 
 ### DS17 数字小键盘
 
@@ -140,6 +127,12 @@ outline: [2, 3]
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
 | [e34_ds34_v1.json](https://via.micah.vip/czm/definitions/e34_ds34_v1.json) | 键盘定义文件 | 2026-09-22 | 7.6 KB |
+
+### DS40
+
+| 文件 | 说明 | 更新日期 | 大小 |
+| --- | --- | --- | --- |
+| [a40_ds40.json](https://via.micah.vip/czm/definitions/a40_ds40.json) | 键盘定义文件 | 2026-09-22 | 4.5 KB |
 
 ### GAMER
 
@@ -214,6 +207,8 @@ Swagkeys 合作型号的键盘定义与 VIA 键位定义。
 
 | 版本 | 日期 | 变更 |
 | --- | --- | --- |
+| 1.7 | 2026-10-05 | 「成品键盘（有线）」更名为「有线机械键盘」 |
+| 1.6 | 2026-10-05 | DS40 移入成品键盘（有线） |
 | 1.5 | 2026-10-01 | 区分销售形态：PCB 类为「单独销售 PCB 板」，有线键盘类改为「成品键盘（有线）」；DS34 移入成品键盘，移除 DS34 v2 Light 定义 |
 | 1.4 | 2026-10-01 | 补充 OW Vento 80-8K 固件、键盘定义与轴下垫图纸（服务器直链） |
 | 1.3 | 2026-10-01 | 按左侧菜单重排一级分类（PCB / 有线键盘 / EC 系列 / DZ系列无线蓝牙 / WCH三模 / Swagkeys） |
