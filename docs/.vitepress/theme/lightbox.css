@@ -1,0 +1,25 @@
+.vp-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 4vh 4vw;
+  background: rgba(0, 0, 0, 0.82);
+  cursor: zoom-out;
+}
+
+.vp-lightbox.open {
+  display: flex;
+}
+
+.vp-lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.55);
+  cursor: default;
+}
