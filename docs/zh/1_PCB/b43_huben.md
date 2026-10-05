@@ -1,6 +1,6 @@
 # USB_EN 桌面小控制器（b43_huben）
 
-<img src="/images/b43_huben.jpg" alt="USB_EN 桌面小控制器（b43_huben）" width="360">
+<img src="/images/b43_huben.jpg" alt="USB_EN 桌面小控制器（b43_huben）" width="400">
 
 5 键 + 1 个旋钮的桌面控制器 PCB · USB 有线单模 · QMK 固件 · VIA 改键
 
