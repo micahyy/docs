@@ -30,8 +30,7 @@ onMounted(() => {
 
 ## 1. Purchase link
 
-[<img src="https://img.micah.vip/i/2026/04/27/69eed34e4eb3a.jpg" alt="Main image" width="400">](https://img.micah.vip/i/2026/04/27/69eed34e4eb3a.jpg)
-
+[![Main image](https://img.micah.vip/i/2026/04/27/69eed34e4eb3a.jpg)](https://img.micah.vip/i/2026/04/27/69eed34e4eb3a.jpg)
 [Product link](https://item.taobao.com/item.htm?id=895067791485&mi_id=0000f3-DBmJVkiYbGQecII_vr328p1gtW541Qy35l1cloxY&spm=a21xtw.29178619.0.0&xxc=shop&sku_properties=122216346%3A21959%3B122216808%3A13804297)
 
 Bundle contents
@@ -45,16 +44,13 @@ Bundle contents
 | Weight | Silicone weight | Silicone weight | Silicone weight | Silicone weight | Silicone weight |
 | Stabilizers | No stabilizers in the switchless bundle; the bundle with switches comes assembled with stabilizers | Same as bundle 1 | Same as bundle 1 | Same as bundle 1 | Same as bundle 1 |
 
-[<img src="https://img.micah.vip/i/2026/04/27/69ef0985d29d0.jpg" alt="10019.jpg" width="400">](https://img.micah.vip/i/2026/04/27/69ef0985d29d0.jpg)
-
-[<img src="https://img.micah.vip/i/2026/04/27/69ef09859d2ee.jpg" alt="10018.jpg" width="400">](https://img.micah.vip/i/2026/04/27/69ef09859d2ee.jpg)
-
-[<img src="https://img.micah.vip/i/2026/04/27/69ef0985a3f41.jpg" alt="10035.jpg" width="400">](https://img.micah.vip/i/2026/04/27/69ef0985a3f41.jpg)
-
-[<img src="https://img.micah.vip/i/2026/04/27/69ef0dc8911f2.jpeg" alt="10360.jpeg" width="400">](https://img.micah.vip/i/2026/04/27/69ef0dc8911f2.jpeg)
-
-[<img src="https://img.micah.vip/i/2026/04/27/69ef0dc88929c.jpg" alt="10362.jpg" width="400">](https://img.micah.vip/i/2026/04/27/69ef0dc88929c.jpg)
-
+<div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:12px; margin:1em 0;">
+  <img src="https://img.micah.vip/i/2026/04/27/69ef0985d29d0.jpg" alt="10019.jpg" style="width:100%; border-radius:6px; display:block;">
+  <img src="https://img.micah.vip/i/2026/04/27/69ef09859d2ee.jpg" alt="10018.jpg" style="width:100%; border-radius:6px; display:block;">
+  <img src="https://img.micah.vip/i/2026/04/27/69ef0985a3f41.jpg" alt="10035.jpg" style="width:100%; border-radius:6px; display:block;">
+  <img src="https://img.micah.vip/i/2026/04/27/69ef0dc8911f2.jpeg" alt="10360.jpeg" style="width:100%; border-radius:6px; display:block;">
+  <img src="https://img.micah.vip/i/2026/04/27/69ef0dc88929c.jpg" alt="10362.jpg" style="width:100%; border-radius:6px; display:block;">
+</div>
 [QQ groups]
 
     677654482 CZMao
@@ -65,7 +61,7 @@ Bundle contents
 
 | Spec | Value | Notes |
 | ------ | ---------------- | ------ |
-| Layers | 4 | Layers 0–3 |
+| Layers | 4 | Layers 0鈥? |
 | Keys | 87 | |
 | Polling rate | 1 kHz | |
 | Latency | 1 ms | |
