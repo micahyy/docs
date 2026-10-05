@@ -46,6 +46,8 @@ export default {
       const t = e.target
       if (!t || t.tagName !== 'IMG') return
       if (t.closest('.VPNavBar') || t.closest('.vp-lightbox')) return
+      const a = t.closest('a')
+      if (a) e.preventDefault()
       openLightbox(t.currentSrc || t.src, t.alt)
     })
     document.addEventListener('keydown', (e) => {
