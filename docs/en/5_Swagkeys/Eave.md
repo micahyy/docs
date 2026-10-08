@@ -51,7 +51,7 @@ Bundle contents
 
 | Spec | Value | Notes |
 |:---|:---|:---|
-| Layers | 4 | Layers 0–3 |
+| Layers | 3 | Layers 0 (base) / 1 (FN) / 2 (FN+RALT) |
 | Keys | 65 | |
 | Polling rate | 1 kHz | |
 | Latency | 1 ms | |
@@ -72,9 +72,10 @@ Bundle contents
 
 | Shortcut | Keycode | Function | Notes |
 |-----|-----|-----|-|
-| FN+Alt | MO(2) | Triggers layer-2 keys | |
+| FN | MO(1) | Triggers layer-1 (FN layer) | |
+| FN+RALT | MO(2) | Triggers layer-2 (with the combos below) | |
 | FN+ESC | GRV | ~ | |
-| FN+1 | | F1 | FN+1~= triggers F1~F12 |
+| FN+1~0 / - / = | F1~F12 | | Number row triggers F1~F12 |
 | FN+Z | RGB_TOG | Backlight on / off | |
 | FN+X | RGB_MOD | Cycle lighting effect | |
 | FN+WIN | GU_TOGG | Lock / unlock Win | |
@@ -85,7 +86,7 @@ Bundle contents
 | FN+RIGHT | KC_MNXT | Next track | |
 | FN+RALT+ESC | EE_CLR | Factory reset | |
 | FN+RALT+0 | QK_BOOT | Enter flashing mode | |
-| FN+RALT+CLRL | AG_TOGG | Swap Win and Alt | Mac mode; press FN+Alt+Win position to switch back |
+| FN+RALT+WIN | AG_TOGG | Swap Win and Alt | Mac mode; press again to switch back |
 
 ## 4. JSON file
 

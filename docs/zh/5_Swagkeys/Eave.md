@@ -55,7 +55,7 @@ onMounted(() => {
 
 | 规格 | 参数 | 备注 |
 |:---|:---|:---|
-| 按键层数 | 4 层 |0~3层 |
+| 按键层数 | 3 层 |0 主层 / 1 FN 层 / 2 FN+RALT 层 |
 | 按键数量 | 65 键 | |
 | 回报率 | 1 kHz | |
 | 延迟 | 1 ms | |
@@ -76,12 +76,13 @@ onMounted(() => {
 
 | 快捷键|键值  | 说明|备注|
 |-----|-----|-----|-|
-|FN+Alt|MO(2)|触发层2按键||
-|FN+ESC|GRV|~||
-|FN+1||F1|FN+1~= 触发F1~F12|
+|FN|MO(1)|触发层1（FN 层）||
+|FN+RALT|MO(2)|触发层2（配合下方组合键）||
+|FN+ESC|GRV|~ 键||
+|FN+1~0 / - / =|F1~F12||数字行触发 F1~F12|
 |FN+Z|RGB_TOG|背灯开关||
 |FN+X|RGB_MOD|灯效切换||
-|FN+WIN|GU_TOGG|锁定/解锁win||
+|FN+WIN|GU_TOGG|锁定/解锁 Win||
 |FN+P|MPLY|播放/暂停||
 |FN+UP|KC_VOLU|音量+||
 |FN+DOWN|KC_VOLD|音量－||
@@ -89,7 +90,7 @@ onMounted(() => {
 |FN+RIGHT|KC_MNXT|下一曲||
 |FN+RALT+ESC|EE_CLR|恢复出厂设置||
 |FN+RALT+0|QK_BOOT|进入刷机模式||
-|FN+RALT+CLRL|AG_TOGG|切换win和alt|MAC模式，如果切换回来需要按下FN+ALT+win位置按键|
+|FN+RALT+WIN|AG_TOGG|Win/Alt 互换（MAC 模式），再按一次切回|
 
 
 
