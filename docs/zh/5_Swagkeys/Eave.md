@@ -86,7 +86,7 @@ onMounted(() => {
 |FN+UP|KC_VOLU|音量+||
 |FN+DOWN|KC_VOLD|音量－||
 |FN+LEFT|KC_MPRV|上一曲||
-|FN+DOWN|KC_MNXT|下一曲|||
+|FN+RIGHT|KC_MNXT|下一曲||
 |FN+RALT+ESC|EE_CLR|恢复出厂设置||
 |FN+RALT+0|QK_BOOT|进入刷机模式||
 |FN+RALT+CLRL|AG_TOGG|切换win和alt|MAC模式，如果切换回来需要按下FN+ALT+win位置按键|
