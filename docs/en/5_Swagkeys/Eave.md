@@ -82,7 +82,7 @@ Bundle contents
 | FN+UP | KC_VOLU | Volume + | |
 | FN+DOWN | KC_VOLD | Volume - | |
 | FN+LEFT | KC_MPRV | Previous track | |
-| FN+DOWN | KC_MNXT | Next track | |
+| FN+RIGHT | KC_MNXT | Next track | |
 | FN+RALT+ESC | EE_CLR | Factory reset | |
 | FN+RALT+0 | QK_BOOT | Enter flashing mode | |
 | FN+RALT+CLRL | AG_TOGG | Swap Win and Alt | Mac mode; press FN+Alt+Win position to switch back |
