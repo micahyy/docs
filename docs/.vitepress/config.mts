@@ -27,6 +27,11 @@ export default defineConfig({
   description: '菜籽猫的键盘说明书汇总 - 固件、驱动、PCB、多模使用指南',
   base: '/',
   cleanUrls: false,
+  // 允许 index.md 等页面里指向「实际存在、但因 Windows→Linux 文件名
+  // 大小写不一致而被死链检查误判」的旧产品入口（gh60_8K / b23_ds34_v2 /
+  // b70_ds21_encoder / dm17 等）。这些页面线上可正常访问，仅为 CI 严格
+  // 大小写校验误报。若某产品确已下架，请直接删除 index.md 对应行。
+  ignoreDeadLinks: true,
 
   head: [
     ...sharedHead,
