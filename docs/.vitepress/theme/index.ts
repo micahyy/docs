@@ -149,10 +149,13 @@ function buildPrintPaged() {
     let used = 0
 
     const nextColOrPage = () => {
-      const right = col.nextElementSibling
-      if (right) {
-        col = right as HTMLElement
+      if (sheet.children.length < 2) {
+        // 当前 sheet 只有左栏 → 补建右栏
+        const right = newCol()
+        sheet.appendChild(right)
+        col = right
       } else {
+        // 左右两栏都满了 → 新开一张纸
         sheet = document.createElement('div')
         sheet.className = 'print-sheet'
         sheet.appendChild(newCol())
