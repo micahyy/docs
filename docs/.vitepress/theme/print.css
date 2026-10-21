@@ -52,13 +52,19 @@
             print-color-adjust: exact;
   }
 
-  /* 抹掉屏幕布局的 padding/居中上限，让内容贴 0 起铺满纸张 */
+  /* 抹掉屏幕布局的 padding/居中上限，让内容贴 0 起铺满纸张。
+     同时解除 flex 布局链：.VPDoc .container 在 VitePress 里是
+     display:flex —— multicol（多栏）不会拆分 flex 容器，Chrome 会把
+     整个 flex 块当一个不可分割的大盒塞进"一栏"，导致双栏拼版失效
+     （v1.1 踩过的坑：column-count 放 .VPDoc 上整页单栏）。 */
   .VPDoc,
   .VPDoc .container,
   .VPDoc .content-container,
+  .VPDoc .content-container .main,
   .VPDoc.has-aside .content-container,
   .VPContent,
   .VPHome {
+    display: block !important;
     max-width: 100% !important;
     width: auto !important;
     margin: 0 !important;
@@ -68,7 +74,9 @@
   /* =============================================================
    * A4 landscape + 双栏并排拼版（两 A5）
    *
-   * 行为：.VPDoc 是 VitePress 文档正文根；给它两列流式布局，
+   * 行为：column-count 必须挂在 .vp-doc（markdown 内容根，普通
+   *   block 容器）上，多栏才能生效 —— flex/grid 容器在 Chrome 里
+   *   不参与分栏。给它两列流式布局：
    *   - column-width: 148mm → 每列宽等于 A5 的 148mm
    *   - column-gap: 0      → 两列贴紧（中间就是折页线）
    *   - column-fill: auto  → 优先填满当前列再切下一列
@@ -76,23 +84,16 @@
    *   "一张纸左半 → 右半 → 翻页"。配合纸张 A4 landscape + 双面打印，
    *   折页装订得到 A5 说明书。
    *
-   * column 内 padding/margin 直接作用在每列内容上（不是 columns 自身）；
-   * A4 物理外边用 .VPDoc padding 提供（左右各 8mm，左右两栏各得
-   *   (297 - 16) / 2 = 140.5mm 的可用列宽 — 视觉上接近 A5）。
+   * A4 物理外边用 .vp-doc 自身 padding 提供（左右各 8mm），左右两栏
+   *   各得 (297 - 16) / 2 ≈ 140.5mm 的可用列宽 — 视觉上接近 A5。
    * ============================================================= */
-  .VPDoc {
+  .vp-doc {
     column-count: 2 !important;
     column-width: 148mm !important;
     column-gap: 0 !important;
     column-fill: auto !important;
     column-rule: 0.2mm dashed #bbb !important;   /* 折页/裁切参考线 */
     padding: 8mm 8mm 10mm !important;
-  }
-
-  /* 屏幕模式下 full-width.css 给正文放宽到 100%；这里再显式收敛以防
-     偶尔分页后被撑大导致单栏跨度 297mm。 */
-  .VPDoc.has-aside .content-container {
-    max-width: 100% !important;
   }
 
   /* 隐藏所有"非正文" chrome */
