@@ -1,0 +1,200 @@
+/*! docs.micah.vip 打印样式 v1 (2026-10-21)
+ *
+ * 用途：把任何文档页直接 Cmd+P / Ctrl+P / 浏览器菜单的「打印」/
+ *       「另存为 PDF」出来当"印刷说明书 / 保修卡 / 合格证"。
+ *
+ * 解决的问题：浏览器/默认样式会同时保留
+ *   ① 浏览器页眉/页脚（URL+日期+页码）—— 由 @page 控制（用户需在打印
+ *      对话框勾"无页眉页脚"或勾"Margins: None / Custom"；本页最多给个
+ *      A4 + 小边距的默认）。
+ *   ② VitePress 的导航/侧栏/本页目录/底部翻页/BackToTop —— 全部 hide。
+ *   ③ micah 全站统一顶导（nav.js 注入的 #micah-nav）—— hide。
+ *   ④ Waline 评论 .comments-wrap —— hide（说明书用不到）。
+ *   ⑤ Google AdSense（写在部分 .md 的 <ins class="adsbygoogle">）—— hide。
+ *   ⑥ 图片灯箱 .vp-lightbox —— hide（屏幕才用）。
+ *   ⑦ 链接后被自动追加 `( https://... )` —— 关掉。
+ *   ⑧ 代码块 VitePress 黑底吞一节 —— 改浅灰底。
+ *   ⑨ 表格跨页断开 —— 留整块。
+ *   ⑩ 屏幕右下角打印按钮 .doc-print-btn —— 本身在 print 里自动 hide。
+ *
+ * 适用对象：本主题是 VitePress 默认主题 docs/ 之下的页面；
+ *   docs/public/label/*.html 是单文件 A5 模板（有各自的 @page），
+ *   不走这条样式链。
+ */
+
+@page {
+  size: A4;
+  margin: 14mm 12mm 16mm 12mm;
+}
+
+@media print {
+  html, body,
+  .VPNavBar, .VPLocalNav,
+  .VPContent, .VPHero, .VPFeatures, .VPFooter,
+  .VPDoc, .VPDoc .content-container, .VPDoc.has-aside .content-container {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    padding: 0 !important;
+    margin: 0 !important;
+    /* 把 micah-nav.css 抬到 64px 的 body padding-top 在 print 下抹掉 */
+    -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+  }
+
+  /* 抹掉屏幕布局的 padding/居中上限，让内容贴 0 起铺满纸张 */
+  .VPDoc,
+  .VPDoc .container,
+  .VPDoc .content-container,
+  .VPDoc.has-aside .content-container,
+  .VPContent,
+  .VPHome {
+    max-width: 100% !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 隐藏所有"非正文" chrome */
+  .VPNavBar,
+  .VPLocalNav,
+  .VPSidebar,
+  .aside-container,
+  .VPDoc.aside,
+  .VPBacklinks,
+  .VPFooter,
+  .VPDocFooter,
+  .VPBackToTop,
+  .comments-wrap,
+  ins.adsbygoogle,
+  ins.adsbygoogle-noformat,
+  .adsbygoogle,
+  iframe[src*="googletagmanager"],
+  iframe[src*="doubleclick"],
+  iframe[id*="google_ad"],
+  .vp-lightbox,
+  .doc-print-btn,
+  .vp-edit-link,
+  .vp-page-nav,
+  .VPPager,
+  .vp-doc-pager {
+    display: none !important;
+  }
+
+  /* micah 全站统一顶导（nav.js 注入）。body 类 + 容器都盖 */
+  body.micah-has-nav .VPNav,
+  body.micah-has-nav .VPSidebar,
+  body.micah-has-nav .VPDoc .aside-container { /* 已经 display:none，但保险 */ }
+  #micah-nav,
+  #micah-nav-popover,
+  .micah-nav,
+  header.micah-nav {
+    display: none !important;
+  }
+
+  /* VPHero / 首页：图片背景 + 海报不要，只留标题/描述 */
+  .VPHero .image-container,
+  .VPHero .image-bg,
+  .VPHero .vp-hero-image { display: none !important; }
+  .VPFeatures {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8pt !important;
+  }
+  .VPFeatures .VPFeature {
+    border: 1px solid #ccc !important;
+    padding: 8pt 10pt !important;
+    background: #fff !important;
+  }
+
+  /* 链接不追加 URL */
+  a, a:visited { color: #000 !important; text-decoration: none; }
+  a[href^="http"]::after,
+  a[href^="/"]::after,
+  a[href^="#"]::after,
+  a[href^="."]::after { content: "" !important; }
+  /* 内部锚点目录（右侧 toc）是 # 链接，关掉伪元素已经够了 */
+
+  /* 表格：默认模式容易把 tr 切到两页；强制 */
+  table { page-break-inside: auto; border-collapse: collapse; }
+  thead { display: table-header-group; }
+  tr { page-break-inside: avoid; page-break-after: auto; }
+  th, td {
+    padding: 4pt 6pt !important;
+    font-size: 10pt !important;
+    border: 1px solid #bbb !important;
+  }
+
+  /* heading：避免孤头、避免把后续段扔到下一页 */
+  h1, h2, h3, h4, h5 {
+    page-break-after: avoid;
+    page-break-before: auto;
+    color: #000 !important;
+  }
+  h1 { font-size: 18pt; margin: 0 0 12pt; }
+  h2 { font-size: 14pt; margin: 14pt 0 6pt; }
+  h3 { font-size: 12pt; margin: 10pt 0 4pt; }
+  h4 { font-size: 11pt; margin: 8pt 0 4pt; }
+  p, li { orphans: 3; widows: 3; }
+
+  /* 代码块：浅底代替深底，避免一节全黑 */
+  pre, code, pre code {
+    background: #f4f4f6 !important;
+    color: #1a1a1a !important;
+    border: 1px solid #ddd !important;
+    page-break-inside: avoid;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 9.5pt !important;
+    -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+  }
+  pre { padding: 6pt 8pt !important; }
+  code { padding: 0 3pt !important; }
+  /* 行号 (lineNumbers 默认开) 屏打印意义不大 */
+  .VPDoc .line-numbers,
+  pre[class*="language-"] .line-number,
+  pre[class*="language-"][class*="line-numbers"] {
+    display: none !important;
+  }
+
+  /* 图片：能打就打，超宽就缩 */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+
+  /* 顶部 SSR 注入的 lang.js / branding.css 是什么都无所谓，print 下不显示 */
+}
+
+/* ============================================================
+ * 屏幕模式：右下角悬浮 "打印此页 / 另存为 PDF（A4）" 按钮
+ * ============================================================ */
+.doc-print-btn {
+  position: fixed;
+  right: 18px;
+  bottom: 22px;
+  z-index: 9000;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 14px 9px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  background: #ffffff;
+  color: #1f2328;
+  font: 13px/1 system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.doc-print-btn:hover { opacity: 1; transform: translateY(-1px); }
+.doc-print-btn:active { transform: translateY(0); }
+.doc-print-btn svg { width: 16px; height: 16px; display: block; }
+@media print { .doc-print-btn { display: none !important; } }
