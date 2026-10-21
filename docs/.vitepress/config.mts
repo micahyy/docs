@@ -21,7 +21,15 @@ const sharedLogo = {
   dark:  '/images/logo.png'
 }
 
-export default defineConfig({
+// Print-site mode toggle.
+// VitePress ignores --config in this version, so the print build is selected
+// by its dedicated outDir instead: when the build writes to dist-print, this
+// same content is emitted as a chrome-free, print-ready site served under
+// /docs/ on tools.micah.vip (no nav links, no sidebar, no right TOC).
+// The main site (docs.micah.vip) is completely unaffected.
+const isPrint = process.argv.some((a) => String(a).includes('dist-print'))
+
+const config: any = {
   lang: 'zh-CN',
   title: '菜籽猫文档',
   description: '菜籽猫的键盘说明书汇总 - 固件、驱动、PCB、多模使用指南',
@@ -421,4 +429,17 @@ export default defineConfig({
     lineNumbers: true,
     anchor: {}
   }
-})
+}
+
+if (isPrint) {
+  config.base = '/docs/'
+  config.title = '菜籽猫文档（打印版）'
+  config.themeConfig.aside = false
+  for (const locale of Object.values(config.locales)) {
+    locale.themeConfig.nav = []
+    locale.themeConfig.sidebar = false
+    locale.themeConfig.aside = false
+  }
+}
+
+export default defineConfig(config)
