@@ -112,7 +112,8 @@ export default defineConfig({
     '6_guide/6.1_VIA':            '/zh/6_guide/6.1_VIA',
     '6_guide/6.2_QA':             '/zh/6_guide/6.2_QA',
     '6_guide/qmk_keycode':        '/zh/6_guide/qmk_keycode',
-    '7_EC/EC87':                  '/zh/7_EC/EC87'
+    '7_EC/EC87':                  '/zh/7_EC/EC87',
+    '7_EC/EC65':                  '/zh/7_EC/EC65'
   },
 
   locales: {
@@ -150,6 +151,7 @@ export default defineConfig({
           { text: '多模',     link: '/zh/4_Tri-mode/4.2_dc22' },
           { text: 'DZ系列',   link: '/zh/3_DZ/DZ17' },
           { text: 'EC系列',   link: '/zh/7_EC/EC87' },
+          { text: 'EC65 静电容', link: '/zh/7_EC/EC65' },
           { text: 'Swagkeys', link: '/zh/5_Swagkeys/Eave' },
           { text: '使用指南', link: '/zh/6_guide/6.1_VIA' },
           { text: '下载中心', link: '/zh/8_download/' }
@@ -186,7 +188,8 @@ export default defineConfig({
             text: 'EC 系列（静电容）',
             collapsed: false,
             items: [
-              { text: 'EC87 静电容', link: '/zh/7_EC/EC87' }
+              { text: 'EC87 静电容', link: '/zh/7_EC/EC87' },
+              { text: 'EC65 静电容', link: '/zh/7_EC/EC65' }
             ]
           },
           {
@@ -267,6 +270,7 @@ export default defineConfig({
           { text: 'Tri-mode',  link: '/en/4_Tri-mode/4.2_dc22' },
           { text: 'DZ',        link: '/en/3_DZ/DZ17' },
           { text: 'EC',        link: '/en/7_EC/EC87' },
+          { text: 'EC65',      link: '/en/7_EC/EC65' },
           { text: 'Swagkeys',  link: '/en/5_Swagkeys/Eave' },
           { text: 'Guides',    link: '/en/6_guide/6.1_VIA' },
           { text: 'Downloads', link: '/en/8_download/' }
@@ -339,7 +343,8 @@ export default defineConfig({
             text: 'EC Series (Electrostatic Capacitive)',
             collapsed: false,
             items: [
-              { text: 'EC87', link: '/en/7_EC/EC87' }
+              { text: 'EC87', link: '/en/7_EC/EC87' },
+              { text: 'EC65', link: '/en/7_EC/EC65' }
             ]
           },
           {
