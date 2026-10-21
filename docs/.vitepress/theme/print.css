@@ -198,12 +198,27 @@
     display: none !important;
   }
 
-  /* 图片：能打就打，超宽就缩 */
+  /* 图片：打印时限制大小。A5 栏内容宽约 140mm，inline width:100% 的图
+     会占满整栏（v1.1 之前 DS17 那张 480px 大图占掉一整栏），按
+     max-width 75% + max-height 75mm 双限：4:3 图 → 约 100×75mm，
+     16:9 图 → 约 105×59mm，几张图能同栏共存，不再独占一页。 */
   img {
-    max-width: 100% !important;
+    max-width: 75% !important;
+    max-height: 75mm !important;
     height: auto !important;
     page-break-inside: avoid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
+
+  /* 视频嵌入（B 站 iframe）打印出来是个空框，连 wrapper 一起藏 */
+  .vp-doc iframe { display: none !important; }
+  .vp-doc div:has(> iframe) { display: none !important; }
+
+  /* 顶导摘除后 body 可能残留 padding-top（nav.js inline !important），
+     JS 会清 inline，这里兜底 + 提示正文贴顶 */
+  body { padding-top: 0 !important; }
 
   /* 顶部 SSR 注入的 lang.js / branding.css 是什么都无所谓，print 下不显示 */
 }

@@ -73,6 +73,43 @@ function injectPrintButton() {
   document.body.appendChild(btn)
 }
 
+// —— micah 全站顶导的打印摘除 ——
+// nav.js 用「内联 !important」注入顶导（style="display:block!important;..."）。
+// CSS 级联规则：内联 !important > 样式表 !important，所以 print.css 里的
+// display:none!important 压不住它。唯一可靠的办法：打印前把节点从 DOM 里
+// remove()，打印后（afterprint）原样插回去。Ctrl+P / 菜单打印同样走
+// beforeprint，所以不管从哪儿触发打印都生效。
+let micahNavDetached: Array<{ el: Element; parent: Node; next: Node | null }> = []
+let micahNavHadBodyClass = false
+let micahNavSavedBodyPadding = ''
+
+function detachMicahNavForPrint() {
+  micahNavDetached = []
+  micahNavHadBodyClass = document.body.classList.contains('micah-has-nav')
+  // nav.js 给 body 打的 padding-top:64px（给顶导腾位置）也一并摘掉
+  micahNavSavedBodyPadding = document.body.style.getPropertyValue('padding-top')
+  document.querySelectorAll('#micah-nav-inner').forEach((nav) => {
+    // 优先摘外层 fixed 容器（无 id 的 div），否则摘内层 nav 自己
+    const outer = nav.parentElement
+    const target = outer && outer !== document.body ? outer : nav
+    if (target.parentNode) {
+      micahNavDetached.push({ el: target, parent: target.parentNode, next: target.nextSibling })
+      target.remove()
+    }
+  })
+  document.body.classList.remove('micah-has-nav')
+  document.body.style.removeProperty('padding-top')
+}
+
+function reattachMicahNavAfterPrint() {
+  micahNavDetached.reverse().forEach(({ el, parent, next }) => {
+    if (parent && el && !el.parentNode) parent.insertBefore(el, next)
+  })
+  micahNavDetached = []
+  if (micahNavHadBodyClass) document.body.classList.add('micah-has-nav')
+  if (micahNavSavedBodyPadding) document.body.style.setProperty('padding-top', micahNavSavedBodyPadding)
+}
+
 export default {
   extends: DefaultTheme,
   Layout() {
@@ -96,5 +133,7 @@ export default {
       if (e.key === 'Escape') closeLightbox()
     })
     injectPrintButton()
+    window.addEventListener('beforeprint', detachMicahNavForPrint)
+    window.addEventListener('afterprint', reattachMicahNavAfterPrint)
   }
 }
