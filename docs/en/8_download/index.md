@@ -158,6 +158,7 @@ Electrostatic-capacitive keyboards - flashing firmware does not clear calibratio
 | [czmao_ec87_via.json](https://via.micah.vip/czm/definitions/ec87/czmao_ec87_via.json) | VIA keymap definition | 2026-09-22 | 8.5 KB |
 | [ec87_via.json](https://docs.micah.vip/files/Transition%20Lite/ec87_via.json) | VIA keymap definition | 2026-09-22 | 17.3 KB |
 | [TL定位板_EC_625Uand7U.dxf](https://docs.micah.vip/files/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf) | Plate / structural drawing | 2026-09-21 | 6.7 MB |
+| [EC TL87 Plate ISO 7U.dxf](https://docs.micah.vip/files/Transition%20Lite/EC%20TL87%20Plate%20ISO%207U.dxf) | EC TL87 plate (ISO / 7U) | 2026-10-21 | 392.5 KB |
 
 ## DZ Series (Wireless / Bluetooth)
 
