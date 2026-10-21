@@ -73,9 +73,13 @@
     padding: 0 !important;
   }
 
-  /* 顶导让位的 padding-top:64px（micah-nav.css / VitePress 布局层）
-     残留在 #app/.Layout/body 上会把第一张拼版 sheet 推到 210.9mm，
-     压线溢出 0.9mm 产生一张空白页 —— 全部清零。 */
+  /* 顶导让位的 64px 残留（micah-nav.css / VitePress 布局层）：实测
+     .Layout 下一个 h=0 的裸 <span> 带 margin-top:64px，把第一张拼版
+     sheet 推到 210.9mm，压线溢出 0.9mm 产生一张空白页。
+     print 下 Layout 里只留 VPContent，其余全隐藏。 */
+  .Layout > :not(.VPContent) {
+    display: none !important;
+  }
   html, body, #app, .Layout {
     padding-top: 0 !important;
     margin-top: 0 !important;
