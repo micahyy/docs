@@ -110,6 +110,152 @@ function reattachMicahNavAfterPrint() {
   if (micahNavSavedBodyPadding) document.body.style.setProperty('padding-top', micahNavSavedBodyPadding)
 }
 
+// —— 手动双栏拼版（A4 横放 = 左右两个 A5）——
+// CSS multicol（column-count:2）会被 .vp-doc 里的顶层块级 div 破坏：
+// custom-block（QQ 框）、视频 wrapper、图片 grid 这些 div 一旦出现，
+// Chrome 就不拆分 flex/多层块，整栏退化成单栏（实测 bisect 定位）。
+// 所以打印前用 JS 把 .vp-doc 的顶层子元素逐个测量，装进左右两个
+// A5 栏（.print-sheet），打印后拆除。beforeprint 是同步事件，
+// 全程同步 DOM 操作。
+const PRINT_COL_H = 194      // mm：A4 高 210 − 上下页边 8×2
+const MM = 96 / 25.4         // CSS px per mm
+
+let printPagedEl: HTMLElement | null = null
+
+function buildPrintPaged() {
+  if (printPagedEl) return
+  const doc = document.querySelector('.vp-doc') as HTMLElement | null
+  if (!doc || !doc.children.length) return
+
+  const wrap = document.createElement('div')
+  wrap.className = 'print-paged'
+
+  // 隐形容器：与打印栏同宽、同排版，用来测每个元素的实际高度
+  const measure = document.createElement('div')
+  measure.className = 'print-measure'
+  document.body.appendChild(measure)
+
+  try {
+    const newCol = () => {
+      const c = document.createElement('div')
+      c.className = 'print-col'
+      return c
+    }
+    let sheet = document.createElement('div')
+    sheet.className = 'print-sheet'
+    sheet.appendChild(newCol())
+    wrap.appendChild(sheet)
+    let col = sheet.firstElementChild as HTMLElement
+    let used = 0
+
+    const nextColOrPage = () => {
+      const right = col.nextElementSibling
+      if (right) {
+        col = right as HTMLElement
+      } else {
+        sheet = document.createElement('div')
+        sheet.className = 'print-sheet'
+        sheet.appendChild(newCol())
+        wrap.appendChild(sheet)
+        col = sheet.firstElementChild as HTMLElement
+      }
+      used = 0
+    }
+
+    for (const el of Array.from(doc.children)) {
+      if (!(el instanceof HTMLElement)) continue
+      // 评论 / 广告直接跳过
+      if (el.matches('.comments-wrap, ins.adsbygoogle, .adsbygoogle, .vp-lightbox')) continue
+
+      const clone = el.cloneNode(true) as HTMLElement
+      measure.appendChild(clone)
+      const h = measure.scrollHeight / MM
+      measure.removeChild(clone)
+
+      // 标题不落在栏尾（后面至少跟 30mm 内容）
+      const reserve = /^H[1-3]$/.test(el.tagName) ? 30 : 0
+      if (used > 0 && used + h + reserve > PRINT_COL_H) {
+        nextColOrPage()
+      }
+
+      // 超高块：表格按行分片；其余原样放（罕见，接受溢出风险）
+      if (h > PRINT_COL_H && clone.tagName === 'TABLE') {
+        for (const part of splitTallTable(clone as HTMLTableElement, measure)) {
+          measure.appendChild(part)
+          const ph = measure.scrollHeight / MM
+          measure.removeChild(part)
+          if (used > 0 && used + ph > PRINT_COL_H) nextColOrPage()
+          col.appendChild(part)
+          used += ph
+        }
+      } else {
+        col.appendChild(clone)
+        used += h
+      }
+    }
+  } finally {
+    measure.remove()
+  }
+
+  doc.parentNode!.insertBefore(wrap, doc)
+  document.body.classList.add('print-paged-on')
+  printPagedEl = wrap
+}
+
+// 超高表格 → 按 thead + 行高分组拆成多个小表
+function splitTallTable(t: HTMLTableElement, measure: HTMLElement): HTMLElement[] {
+  const thead = t.querySelector('thead')
+  const tbody = t.querySelector('tbody')
+  const rows = Array.from((tbody || t).children).filter((n) => n.tagName === 'TR') as HTMLElement[]
+  if (!rows.length) return [t]
+
+  // 行高探测：单行必须包在 table 里测（裸 tr 不是 renderable）
+  const probe = t.cloneNode(false) as HTMLTableElement
+  if (thead) probe.appendChild(thead.cloneNode(true))
+  const probeBody = document.createElement('tbody')
+  probe.appendChild(probeBody)
+  measure.appendChild(probe)
+
+  const out: HTMLElement[] = []
+  let cur: HTMLElement[] = []
+  let acc = thead ? probe.scrollHeight / MM : 0
+
+  const flush = () => {
+    if (!cur.length) return
+    const nt = t.cloneNode(false) as HTMLTableElement
+    if (thead) nt.appendChild(thead.cloneNode(true))
+    if (tbody) {
+      const nb = tbody.cloneNode(false)
+      cur.forEach((r) => nb.appendChild(r.cloneNode(true)))
+      nt.appendChild(nb)
+    } else {
+      cur.forEach((r) => nt.appendChild(r.cloneNode(true)))
+    }
+    out.push(nt)
+    cur = []
+    acc = thead ? probe.scrollHeight / MM : 0
+  }
+
+  for (const r of rows) {
+    probeBody.innerHTML = ''
+    probeBody.appendChild(r.cloneNode(true))
+    const rh = probe.scrollHeight / MM
+    if (acc + rh > PRINT_COL_H && cur.length) flush()
+    cur.push(r)
+    acc += rh
+  }
+  probeBody.innerHTML = ''
+  measure.removeChild(probe)
+  flush()
+  return out.length ? out : [t]
+}
+
+function teardownPrintPaged() {
+  printPagedEl?.remove()
+  printPagedEl = null
+  document.body.classList.remove('print-paged-on')
+}
+
 export default {
   extends: DefaultTheme,
   Layout() {
@@ -133,7 +279,13 @@ export default {
       if (e.key === 'Escape') closeLightbox()
     })
     injectPrintButton()
-    window.addEventListener('beforeprint', detachMicahNavForPrint)
-    window.addEventListener('afterprint', reattachMicahNavAfterPrint)
+    window.addEventListener('beforeprint', () => {
+      detachMicahNavForPrint()
+      buildPrintPaged()
+    })
+    window.addEventListener('afterprint', () => {
+      teardownPrintPaged()
+      reattachMicahNavAfterPrint()
+    })
   }
 }
