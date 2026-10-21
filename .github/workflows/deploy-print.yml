@@ -1,0 +1,80 @@
+name: Deploy print docs to tools.micah.vip/docs
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+# Builds the print-only VitePress site (no nav/sidebar) and deploys it to
+# /www/wwwroot/tools.micah.vip/docs on the same Aliyun server as docs.micah.vip.
+# The QC certificate + warranty card is appended by the shared theme.
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build print site
+        run: npm run docs:build:print
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+
+      - name: Upload build to staging directory
+        uses: appleboy/scp-action@v1
+        with:
+          host:     ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port:     ${{ secrets.PORT }}
+          key:      ${{ secrets.KEY }}
+          source:   "./docs/.vitepress/dist/*"
+          target:   "/tmp/print_staging"
+          strip_components: 3
+          rm: true
+
+      - name: Sync build to live directory
+        uses: appleboy/ssh-action@v1
+        with:
+          host:     ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          port:     ${{ secrets.PORT }}
+          key:      ${{ secrets.KEY }}
+          script_stop: true
+          script: |
+            set -eu
+            TARGET=/www/wwwroot/tools.micah.vip/docs
+            STAGE=/tmp/print_staging
+
+            mkdir -p "$TARGET"
+
+            test -f "$STAGE/index.html" || { echo "ERROR: staging 缺少 index.html，中止部署"; exit 1; }
+            test -d "$STAGE/assets"     || { echo "ERROR: staging 缺少 assets/，中止部署";     exit 1; }
+
+            cp -a "$STAGE"/. "$TARGET"/
+
+            # 删除新构建中已不存在的文件（真正的镜像）
+            find "$TARGET" -mindepth 1 -type f -printf '%P\n' | while IFS= read -r rel; do
+              if [ ! -e "$STAGE/$rel" ]; then
+                rm -f "$TARGET/$rel" || echo "WARN: 无法删除 $rel"
+              fi
+            done
+
+            find "$TARGET" -mindepth 1 -depth -type d -empty -printf '%P\n' | while IFS= read -r rel; do
+              rmdir "$TARGET/$rel" 2>/dev/null || true
+            done
+
+            test -f "$TARGET/index.html" || { echo "ERROR: 同步后 index.html 缺失"; exit 1; }
+            test -d "$TARGET/assets"     || { echo "ERROR: 同步后 assets/ 缺失";     exit 1; }
+
+            rm -rf "$STAGE"
+            echo "SYNC_OK"
+            ls -1A "$TARGET"
