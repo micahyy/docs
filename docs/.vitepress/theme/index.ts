@@ -86,7 +86,7 @@ let micahNavSavedBodyPadding = ''
 function detachMicahNavForPrint() {
   micahNavDetached = []
   micahNavHadBodyClass = document.body.classList.contains('micah-has-nav')
-  // nav.js 给 body 打的 padding-top:64px（给顶导腾位置）也一并摘掉
+  // nav.js 给 body 打的 padding-top:64px（branding.css 的 body.micah-has-nav）
   micahNavSavedBodyPadding = document.body.style.getPropertyValue('padding-top')
   document.querySelectorAll('#micah-nav-inner').forEach((nav) => {
     // 优先摘外层 fixed 容器（无 id 的 div），否则摘内层 nav 自己
@@ -99,6 +99,10 @@ function detachMicahNavForPrint() {
   })
   document.body.classList.remove('micah-has-nav')
   document.body.style.removeProperty('padding-top')
+  // nav.js 注入的 html:not(.micah-no-nav) > body { padding-top:64px !important }
+  // 优先级 0-1-2，print.css 压不住 —— 但它自己留了开关：html 加
+  // micah-no-nav 即失效。打印时打开这个开关，打印后还原。
+  document.documentElement.classList.add('micah-no-nav')
 }
 
 function reattachMicahNavAfterPrint() {
@@ -108,6 +112,7 @@ function reattachMicahNavAfterPrint() {
   micahNavDetached = []
   if (micahNavHadBodyClass) document.body.classList.add('micah-has-nav')
   if (micahNavSavedBodyPadding) document.body.style.setProperty('padding-top', micahNavSavedBodyPadding)
+  document.documentElement.classList.remove('micah-no-nav')
 }
 
 // —— 手动双栏拼版（A4 横放 = 左右两个 A5）——
