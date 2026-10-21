@@ -2,7 +2,7 @@
 title: 菜籽猫文档
 ---
 
-<meta http-equiv="refresh" content="0;url=/zh/" />
+<meta http-equiv="refresh" content="0;url=zh/" />
 
 # 菜籽猫文档
 
