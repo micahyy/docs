@@ -162,7 +162,23 @@ function buildPrintPaged() {
       used = 0
     }
 
+    // .vp-doc 的直接子元素里如果只有一个无 class/style/id 的裸 div
+    // （某些 VitePress 版本会给 markdown 输出包这么一层），整个页面内容
+    // 都藏在里面 —— 不摊平的话它是一个几千 px 的超高块，multicol 和
+    // 手动分栏都会失效。摊平无样式的纯容器等价于原渲染。
+    const items: HTMLElement[] = []
+    const pushItem = (el: Element) => {
+      if (el instanceof HTMLElement) items.push(el)
+    }
     for (const el of Array.from(doc.children)) {
+      if (el.tagName === 'DIV' && !el.className && !el.id && !el.getAttribute('style')) {
+        Array.from(el.children).forEach(pushItem)
+      } else {
+        pushItem(el)
+      }
+    }
+
+    for (const el of items) {
       if (!(el instanceof HTMLElement)) continue
       // 评论 / 广告直接跳过
       if (el.matches('.comments-wrap, ins.adsbygoogle, .adsbygoogle, .vp-lightbox')) continue
