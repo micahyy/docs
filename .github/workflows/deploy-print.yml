@@ -36,7 +36,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port:     ${{ secrets.PORT }}
           key:      ${{ secrets.KEY }}
-          source:   "./docs/.vitepress/dist/*"
+          source:   "./docs/.vitepress/dist-print/*"
           target:   "/tmp/print_staging"
           strip_components: 3
           rm: true

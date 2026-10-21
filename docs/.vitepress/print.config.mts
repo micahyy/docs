@@ -9,6 +9,9 @@ import base from './config.mts'
 export default defineConfig({
   ...base,
   base: '/docs/',
+  // Isolated outDir so the print build never collides with the main-site
+  // build (which uses .vitepress/dist) when both workflows run in parallel.
+  outDir: '.vitepress/dist-print',
   themeConfig: {
     ...base.themeConfig,
     aside: false,
