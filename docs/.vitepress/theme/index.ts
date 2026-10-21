@@ -34,14 +34,13 @@ function openLightbox(src, alt) {
 
 // 「打印此页 / 另存为 PDF」按钮：屏幕模式右下角悬浮，点击调 window.print()。
 // 样式走 ./print.css 里的 .doc-print-btn；@media print 已自带 display:none。
-// 用 SPA 安全策略（已有则不重复挂）。首页（route.path==='/'）也允许打 —
-// 用户可能把首页当产品目录封面。
+// v1.1: 改为 A4 横向双 A5 拼版；按钮文案对应提示纸张与双面。
 function injectPrintButton() {
   if (document.querySelector('.doc-print-btn')) return
   const btn = document.createElement('button')
   btn.className = 'doc-print-btn'
   btn.type = 'button'
-  btn.title = '打印此页 / 另存为 PDF（A4）'
+  btn.title = '打印此页 — 纸张 A4 横放 + 双面（每张正反各两页 A5 拼版）'
   btn.setAttribute('aria-label', 'print')
   btn.innerHTML =
     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
@@ -49,7 +48,28 @@ function injectPrintButton() {
     '<path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>' +
     '<rect x="6" y="14" width="12" height="8"></rect>' +
     '</svg><span>打印 / PDF</span>'
-  btn.addEventListener('click', () => window.print())
+  btn.addEventListener('click', () => {
+    // 状态条提示用户怎么打（idempotent，多次点击也只挂一条）
+    if (!document.getElementById('doc-print-hint')) {
+      const tip = document.createElement('div')
+      tip.id = 'doc-print-hint'
+      tip.className = 'doc-print-hint'
+      tip.innerHTML =
+        '<strong>打印设置提示</strong>' +
+        '<button type="button" aria-label="close">×</button>' +
+        '<ol>' +
+        '<li>纸张：<b>A4</b></li>' +
+        '<li>方向：<b>横向</b>（每页两个 A5 并排）</li>' +
+        '<li>边距：<b>无 / 默认</b></li>' +
+        '<li>双面：<b>短边翻</b>（打小册子）</li>' +
+        '</ol>'
+      document.body.appendChild(tip)
+      tip.querySelector('button')!.addEventListener('click', () => tip.remove())
+      // 12 秒后自动消失
+      setTimeout(() => tip.remove(), 12000)
+    }
+    window.print()
+  })
   document.body.appendChild(btn)
 }
 

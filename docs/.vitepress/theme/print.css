@@ -1,14 +1,19 @@
-/*! docs.micah.vip 打印样式 v1 (2026-10-21)
+/*! docs.micah.vip 打印样式 v1.1 (2026-10-21)
  *
  * 用途：把任何文档页直接 Cmd+P / Ctrl+P / 浏览器菜单的「打印」/
  *       「另存为 PDF」出来当"印刷说明书 / 保修卡 / 合格证"。
  *
+ * 拼版：v1.1 改成 A4 横向 (297×210mm)，左右各放一个 A5 (148×210mm)，
+ *       通过 column-count:2 + column-width:148mm 让浏览器自动按
+ *       [左-右] 顺序填满一页的两栏后翻页，即"两个 A5 并排"。
+ *       打印对话框纸张选 "A4"，勾"双面"，可折页装订成 A5 小册子。
+ *
  * 解决的问题：浏览器/默认样式会同时保留
- *   ① 浏览器页眉/页脚（URL+日期+页码）—— 由 @page 控制（用户需在打印
- *      对话框勾"无页眉页脚"或勾"Margins: None / Custom"；本页最多给个
- *      A4 + 小边距的默认）。
+ *   ① 浏览器页眉/页脚（URL+日期+页码）—— @page margin:0 让 Chrome
+ *      不画它们，不用再去打印对话框取消勾选（仍建议取消，最稳）。
  *   ② VitePress 的导航/侧栏/本页目录/底部翻页/BackToTop —— 全部 hide。
- *   ③ micah 全站统一顶导（nav.js 注入的 #micah-nav）—— hide。
+ *   ③ micah 全站统一顶导（nav.js 注入的 <nav id="micah-nav-inner">）
+ *      —— 用 :has() 选择外层 fixed div + 内层 nav 双重 hide。
  *   ④ Waline 评论 .comments-wrap —— hide（说明书用不到）。
  *   ⑤ Google AdSense（写在部分 .md 的 <ins class="adsbygoogle">）—— hide。
  *   ⑥ 图片灯箱 .vp-lightbox —— hide（屏幕才用）。
@@ -23,8 +28,8 @@
  */
 
 @page {
-  size: A4;
-  margin: 14mm 12mm 16mm 12mm;
+  size: A4 landscape;             /* 297mm × 210mm 横放 — 正好放下两个 A5 */
+  margin: 0;                       /* Chrome 在 margin:0 时不画页眉/页脚 */
 }
 
 @media print {
@@ -60,6 +65,36 @@
     padding: 0 !important;
   }
 
+  /* =============================================================
+   * A4 landscape + 双栏并排拼版（两 A5）
+   *
+   * 行为：.VPDoc 是 VitePress 文档正文根；给它两列流式布局，
+   *   - column-width: 148mm → 每列宽等于 A5 的 148mm
+   *   - column-gap: 0      → 两列贴紧（中间就是折页线）
+   *   - column-fill: auto  → 优先填满当前列再切下一列
+   *   Chrome 会按"列高 == A4 长边 = 210mm"自动切页，即
+   *   "一张纸左半 → 右半 → 翻页"。配合纸张 A4 landscape + 双面打印，
+   *   折页装订得到 A5 说明书。
+   *
+   * column 内 padding/margin 直接作用在每列内容上（不是 columns 自身）；
+   * A4 物理外边用 .VPDoc padding 提供（左右各 8mm，左右两栏各得
+   *   (297 - 16) / 2 = 140.5mm 的可用列宽 — 视觉上接近 A5）。
+   * ============================================================= */
+  .VPDoc {
+    column-count: 2 !important;
+    column-width: 148mm !important;
+    column-gap: 0 !important;
+    column-fill: auto !important;
+    column-rule: 0.2mm dashed #bbb !important;   /* 折页/裁切参考线 */
+    padding: 8mm 8mm 10mm !important;
+  }
+
+  /* 屏幕模式下 full-width.css 给正文放宽到 100%；这里再显式收敛以防
+     偶尔分页后被撑大导致单栏跨度 297mm。 */
+  .VPDoc.has-aside .content-container {
+    max-width: 100% !important;
+  }
+
   /* 隐藏所有"非正文" chrome */
   .VPNavBar,
   .VPLocalNav,
@@ -86,11 +121,12 @@
     display: none !important;
   }
 
-  /* micah 全站统一顶导（nav.js 注入）。body 类 + 容器都盖 */
-  body.micah-has-nav .VPNav,
-  body.micah-has-nav .VPSidebar,
-  body.micah-has-nav .VPDoc .aside-container { /* 已经 display:none，但保险 */ }
+  /* micah 全站统一顶导（nav.js 注入的 <div style="position:fixed!...">
+     包着 <nav id="micah-nav-inner">）。Chrome / Edge / Safari / Firefox
+     现行版都支持 :has()，可直接选外层 fixed 容器整组移除。 */
+  body > div:has(> #micah-nav-inner),
   #micah-nav,
+  #micah-nav-inner,
   #micah-nav-popover,
   .micah-nav,
   header.micah-nav {
@@ -173,7 +209,7 @@
 }
 
 /* ============================================================
- * 屏幕模式：右下角悬浮 "打印此页 / 另存为 PDF（A4）" 按钮
+ * 屏幕模式：右下角悬浮 "打印此页 / 另存为 PDF（A4 横放 / 双 A5）" 按钮
  * ============================================================ */
 .doc-print-btn {
   position: fixed;
@@ -198,3 +234,46 @@
 .doc-print-btn:active { transform: translateY(0); }
 .doc-print-btn svg { width: 16px; height: 16px; display: block; }
 @media print { .doc-print-btn { display: none !important; } }
+
+/* ============================================================
+ * 屏幕模式：点打印按钮后弹的"打印设置提示"气泡
+ * ============================================================ */
+.doc-print-hint {
+  position: fixed;
+  right: 18px;
+  bottom: 74px;
+  z-index: 9001;
+  width: 280px;
+  padding: 14px 16px 12px;
+  border-radius: 12px;
+  background: #1f2328;
+  color: #f6f8fa;
+  font: 13px/1.55 system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  animation: doc-print-hint-in 0.18s ease-out;
+}
+.doc-print-hint strong { font-size: 13px; margin-right: 6px; }
+.doc-print-hint button {
+  float: right;
+  background: transparent;
+  border: 0;
+  color: #aaa;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0 2px;
+  cursor: pointer;
+}
+.doc-print-hint button:hover { color: #fff; }
+.doc-print-hint ol {
+  margin: 6px 0 0;
+  padding-left: 1.2em;
+  font-size: 12px;
+  color: #d0d7de;
+}
+.doc-print-hint ol li { margin: 2px 0; }
+.doc-print-hint b { color: #fff; }
+@keyframes doc-print-hint-in {
+  from { transform: translateY(8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@media print { .doc-print-hint { display: none !important; } }
