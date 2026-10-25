@@ -30,7 +30,7 @@ onMounted(() => {
 
 ## 1.购买链接
 
-[![主图.jpg](https://img.micah.vip/i/2026/04/27/69eed34e4eb3a.jpg)](https://img.micah.vip/i/2026/04/27/69eed34e4eb3a.jpg)
+[![主图.jpg](/img/2026/04/27/69eed34e4eb3a.jpg)](/img/2026/04/27/69eed34e4eb3a.jpg)
 [商品购买链接](https://item.taobao.com/item.htm?id=895067791485&mi_id=0000f3-DBmJVkiYbGQecII_vr328p1gtW541Qy35l1cloxY&spm=a21xtw.29178619.0.0&xxc=shop&sku_properties=122216346%3A21959%3B122216808%3A13804297)
 
 套餐说明
@@ -45,11 +45,11 @@ onMounted(() => {
 | 卫星轴  | 无轴套餐无卫星轴<br>含轴套餐组装好带卫星轴 | 无轴套餐无卫星轴<br>含轴套餐组装好带卫星轴 | 无轴套餐无卫星轴<br>含轴套餐组装好带卫星轴 | 无轴套餐无卫星轴<br>含轴套餐组装好带卫星轴 | 无轴套餐无卫星轴<br>含轴套餐组装好带卫星轴 |
 
 <div style="display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:1em 0;">
-  <img src="https://img.micah.vip/i/2026/04/27/69ef0985d29d0.jpg" alt="10019.jpg" style="width:100%; border-radius:6px; display:block;">
-  <img src="https://img.micah.vip/i/2026/04/27/69ef09859d2ee.jpg" alt="10018.jpg" style="width:100%; border-radius:6px; display:block;">
-  <img src="https://img.micah.vip/i/2026/04/27/69ef0985a3f41.jpg" alt="10035.jpg" style="width:100%; border-radius:6px; display:block;">
-  <img src="https://img.micah.vip/i/2026/04/27/69ef0dc8911f2.jpeg" alt="10360.jpeg" style="width:100%; border-radius:6px; display:block;">
-  <img src="https://img.micah.vip/i/2026/04/27/69ef0dc88929c.jpg" alt="10362.jpg" style="width:100%; border-radius:6px; display:block;">
+  <img src="/img/2026/04/27/69ef0985d29d0.jpg" alt="10019.jpg" style="width:100%; border-radius:6px; display:block;">
+  <img src="/img/2026/04/27/69ef09859d2ee.jpg" alt="10018.jpg" style="width:100%; border-radius:6px; display:block;">
+  <img src="/img/2026/04/27/69ef0985a3f41.jpg" alt="10035.jpg" style="width:100%; border-radius:6px; display:block;">
+  <img src="/img/2026/04/27/69ef0dc8911f2.jpeg" alt="10360.jpeg" style="width:100%; border-radius:6px; display:block;">
+  <img src="/img/2026/04/27/69ef0dc88929c.jpg" alt="10362.jpg" style="width:100%; border-radius:6px; display:block;">
 </div>
 [QQ交流群]
 
