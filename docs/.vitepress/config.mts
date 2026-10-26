@@ -182,7 +182,7 @@ const config: any = {
             items: [
               { text: 'G80-3000',    link: '/zh/1_PCB/g80_3000' },
               { text: 'Ow_vento 8K', link: '/zh/1_PCB/Ow_vento_8K' },
-              { text: 'GH60 8K',     link: '/zh/2_wired/gh60_8K' }
+              { text: 'Rush60',     link: '/zh/2_wired/gh60_8K' }
             ]
           },
           {
@@ -337,7 +337,7 @@ const config: any = {
             items: [
               { text: 'G80-3000', link: '/en/1_PCB/g80_3000' },
               { text: 'Ow_vento 8K', link: '/en/1_PCB/Ow_vento_8K' },
-              { text: 'GH60 8K', link: '/en/2_wired/gh60_8K' }
+              { text: 'Rush60', link: '/en/2_wired/gh60_8K' }
             ]
           },
           {
