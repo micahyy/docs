@@ -11,7 +11,7 @@
 - [DS17 有线数字小键盘](/zh/2_wired/DS17) — 8K 回报率有线数字小键盘。
 - [DS22 有线数字小键盘](/zh/2_wired/DS22) — 22 键有线数字小键盘。
 - [Gamer](/zh/2_wired/gamer) — 34 键游戏小键盘。
-- [GH60 8K](/zh/1_PCB/gh60_8K) — 8K 回报率有线键盘。
+- [Rush60](/zh/1_PCB/gh60_8K) — 8K 回报率有线键盘。
 - [DS34 v2（b23_ds34_v2）](/zh/2_wired/b23_ds34_v2) — 34 键 + 1 旋钮数字小键盘。
 - [DS21 四旋钮（b70_ds21_encoder）](/zh/2_wired/b70_ds21_encoder) — 17 键 + 4 旋钮数字小键盘。
 - [DZ17 双模数字小键盘](/zh/3_DZ/DZ17) — 17 键 USB + 蓝牙 5.0 双模，ZMK 固件。
