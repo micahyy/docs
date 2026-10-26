@@ -17,7 +17,7 @@ CZMao (czmao) is an open-source community focused on custom mechanical keyboards
 - [DS17](/en/2_wired/DS17) — Wired numeric keypad with an 8 kHz polling rate.
 - [DS22](/en/2_wired/DS22) — 22-key wired numeric keypad.
 - [Gamer](/en/2_wired/gamer) — 34-key gaming keypad.
-- [GH60 8K](/en/1_PCB/gh60_8K) — Wired keyboard with an 8 kHz polling rate.
+- [Rush60](/en/1_PCB/gh60_8K) — Wired keyboard with an 8 kHz polling rate.
 - [DS34 v2 (b23_ds34_v2)](/en/2_wired/b23_ds34_v2) — 34-key + 1-knob numpad.
 - [DS21 4-Knob (b70_ds21_encoder)](/en/2_wired/b70_ds21_encoder) — 17 keys + 4 knobs.
 - [DZ17](/en/3_DZ/DZ17) — 17-key dual-mode numpad (USB wired + Bluetooth 5.0), ZMK firmware.
