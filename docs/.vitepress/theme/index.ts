@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import Comments from './Comments.vue'
 import QcWarranty from './components/QcWarranty.vue'
+import DownloadCenter from './components/DownloadCenter.vue'
 import { h } from 'vue'
 import { useRoute } from 'vitepress'
 import './download.css'
@@ -286,6 +287,9 @@ const MANUAL_PREFIXES = ['1_PCB', '2_wired', '3_DZ', '4_Tri-mode', '5_Swagkeys',
 
 export default {
   extends: DefaultTheme,
+  enhanceApp({ app }) {
+    app.component('DownloadCenter', DownloadCenter)
+  },
   Layout: () => {
     const route = useRoute()
     const isManual = MANUAL_PREFIXES.some((p) => route.path.includes('/' + p + '/'))
