@@ -38,16 +38,16 @@ jobs:
           tar -czf - -C docs/.vitepress/dist . \
             | sshpass -p "${{ secrets.PASSWORD }}" ssh \
                 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
-                -p "${{ secrets.PORT }}" "${{ secrets.USERNAME }}@${{ secrets.HOST }}" \
+                -p "22" "${{ secrets.USERNAME }}@8.159.143.134" \
                 "tar -xzf - -C /www/wwwroot/docs.micah.vip"
           echo "PIPE_OK"
 
       - name: Remove stale files not in the new build
         uses: appleboy/ssh-action@v1
         with:
-          host:     ${{ secrets.HOST }}
+          host:     8.159.143.134
           username: ${{ secrets.USERNAME }}
-          port:     ${{ secrets.PORT }}
+          port:     22
           password: ${{ secrets.PASSWORD }}
           script_stop: true
           script: |
