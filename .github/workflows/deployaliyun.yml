@@ -1,4 +1,4 @@
-﻿name: Deploy to docs.micah.vip
+name: Deploy to docs.micah.vip
 
 on:
   push:
@@ -12,15 +12,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # ---- Node (VitePress) ----
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
-      # 用 npm ci 而不是 npm install：锁文件与 package.json 不一致时会立即失败，
-      # 而不是静默装出一套与锁定版本不同的依赖（此前 waline 的依赖就是被这样漏掉的）。
       - name: Install dependencies
         run: npm ci
 
@@ -29,29 +26,23 @@ jobs:
         env:
           NODE_OPTIONS: --max-old-space-size=4096
 
-      # 说明：外链 target="_blank" 已改为在 docs/.vitepress/config.mts 的 markdown-it
-      # 渲染阶段处理，不再需要在此用 perl 正则改写构建好的 HTML。
+      # Pack the whole build into ONE tarball. Single-file scp is far more
+      # reliable than uploading thousands of small files (password auth used
+      # to drop files / leave a stale staging dir).
+      - name: Pack build into tarball
+        run: tar -czf site.tgz -C docs/.vitepress/dist .
 
-      # ---- 1) 先上传到临时目录，不碰线上 ----
-      # SCP 只覆盖同名文件、不删除多余文件。此前每调整一次目录命名
-      # （2.有线单模 → 2_有线单模 → 2_wired …）旧目录都会永久残留，
-      # 累积了 4 代共 30 个无用条目。这里改为「先传临时目录、校验后再原子替换」。
-      - name: Upload build to staging directory
+      - name: Upload tarball to server
         uses: appleboy/scp-action@v1
         with:
           host:     ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           port:     ${{ secrets.PORT }}
           password: ${{ secrets.PASSWORD }}
-          source:   "./docs/.vitepress/dist/*"
-          target:   "/tmp/docs_staging"
-          strip_components: 3
-          # 先清空临时目录，避免上一次的残留被带进来
-          rm: true
+          source:   "site.tgz"
+          target:   "/tmp"
 
-      # ---- 2) 校验产物，再同步线上目录 ----
-      # .well-known（SSL 证书验证）与 .user.ini（宝塔面板配置）必须保留。
-      - name: Sync build to live directory
+      - name: Extract and sync to live directory
         uses: appleboy/ssh-action@v1
         with:
           host:     ${{ secrets.HOST }}
@@ -62,49 +53,36 @@ jobs:
           script: |
             set -eu
             TARGET=/www/wwwroot/docs.micah.vip
-            STAGE=/tmp/docs_staging
-
-            # 校验：临时目录必须是完整构建产物，否则中止，线上不受影响
-            test -f "$STAGE/index.html" || { echo "ERROR: staging 缺少 index.html，中止部署"; exit 1; }
-            test -d "$STAGE/assets"     || { echo "ERROR: staging 缺少 assets/，中止部署";     exit 1; }
-
-            # 1) 先覆盖拷入，再删除多余文件。
-            #    顺序是刻意的：先拷后删，站点全程不会出现空目录。
-            #    2026-09-11 曾用「先清空、再拷入」，而 .user.ini 被宝塔设为 immutable
-            #    （lsattr 显示 ----i----），rm -rf 删不掉它 → 返回非 0 → set -e 中止在
-            #    「目录已清空、新文件还没拷进来」的中间状态，站点直接 404。
-            cp -a "$STAGE"/. "$TARGET"/
-
-            # 2) 删除新构建中已不存在的文件（scp 只覆盖、不删除，这一步才是真正的镜像）
-            #    失败只记警告，不停机：此时新构建已经在位，残留几个文件远比站点挂掉轻。
+            SRC=/tmp/site_extract
+            rm -rf "$SRC"
+            mkdir -p "$SRC"
+            tar -xzf /tmp/site.tgz -C "$SRC"
+            test -f "$SRC/index.html" || { echo "ERROR: tarball missing index.html"; exit 1; }
+            test -d "$SRC/assets"     || { echo "ERROR: tarball missing assets/";     exit 1; }
+            # remove files present on live but absent from the new build
+            # (keep .user.ini and .well-known managed outside the build)
             find "$TARGET" -mindepth 1 -type f -printf '%P\n' | while IFS= read -r rel; do
               case "$rel" in .user.ini|.well-known/*) continue;; esac
-              if [ ! -e "$STAGE/$rel" ]; then
-                rm -f "$TARGET/$rel" || echo "WARN: 无法删除 $rel"
-              fi
+              if [ ! -e "$SRC/$rel" ]; then rm -f "$TARGET/$rel" || true; fi
             done
-
-            # 3) 清掉因此变空的目录
+            # copy the fresh build over
+            cp -a "$SRC"/. "$TARGET"/
+            # drop now-empty directories
             find "$TARGET" -mindepth 1 -depth -type d -empty -printf '%P\n' | while IFS= read -r rel; do
               case "$rel" in .well-known|.well-known/*) continue;; esac
               rmdir "$TARGET/$rel" 2>/dev/null || true
             done
-
-            # 4) 同步之后必须可访问，否则报错
-            test -f "$TARGET/index.html" || { echo "ERROR: 同步后 index.html 缺失"; exit 1; }
-            test -d "$TARGET/assets"     || { echo "ERROR: 同步后 assets/ 缺失";     exit 1; }
-
-            rm -rf "$STAGE"
+            test -f "$TARGET/index.html" || { echo "ERROR: sync lost index.html"; exit 1; }
+            test -d "$TARGET/assets"     || { echo "ERROR: sync lost assets/";     exit 1; }
+            rm -rf "$SRC" /tmp/site.tgz
             echo "SYNC_OK"
             ls -1A "$TARGET"
 
-      # ---- 3) 线上验证 ----
       - name: Verify live site
         run: |
           set -eu
           for path in / /index.html /label/ /hashmap.json /images/logo.png /404.html; do
-            # -L 跟随重定向：根路径有时会 302 到 /zh 或 index.html，属正常
             code=$(curl -sL -o /dev/null -w '%{http_code}' -m 20 "https://docs.micah.vip$path")
             echo "$path -> $code"
-            if [ "$code" != "200" ]; then echo "ERROR: $path 返回 $code"; exit 1; fi
+            if [ "$code" != "200" ]; then echo "ERROR: $path returned $code"; exit 1; fi
           done
