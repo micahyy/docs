@@ -24,7 +24,7 @@ function slug(t: string): string {
       <ol v-else-if="b.kind === 'ol'">
         <li v-for="(it, i) in b.items" :key="i" v-html="it"></li>
       </ol>
-      <div v-else-if="b.kind === 'table'" class="dl-table">
+      <div v-else-if="b.kind === 'table'" class="dl-table" :class="'cols-' + b.cols.length">
         <div class="dl-row dl-head">
           <span
             v-for="(c, ci) in b.cols"
@@ -61,12 +61,12 @@ function slug(t: string): string {
   overflow: hidden;
 }
 .dl-row {
-  display: flex;
+  display: grid;
   gap: 12px;
   padding: 6px 10px;
   border-bottom: 1px solid var(--vp-c-divider, #e2e2e3);
   align-items: baseline;
-  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
 .dl-row:last-child {
   border-bottom: none;
@@ -77,26 +77,34 @@ function slug(t: string): string {
 }
 .dl-c {
   min-width: 0;
-  word-break: break-all;
+  overflow-wrap: anywhere;
 }
-.dl-c0 {
-  flex: 1 1 200px;
+/* 4 列下载表：文件 | 说明 | 更新日期 | 大小 */
+.dl-table.cols-4 .dl-row {
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 2.3fr) 108px 70px;
 }
-.dl-c1 {
-  flex: 2 1 200px;
-}
-.dl-c2 {
-  flex: 0 0 100px;
+.dl-table.cols-4 .dl-c:nth-child(3) {
   text-align: center;
 }
-.dl-c3 {
-  flex: 0 0 70px;
+.dl-table.cols-4 .dl-c:nth-child(4) {
   text-align: right;
 }
-@media (max-width: 600px) {
-  .dl-c2,
-  .dl-c3 {
-    flex-basis: auto;
+/* 3 列更新记录：版本 | 日期 | 变更（变更列占满剩余宽度） */
+.dl-table.cols-3 .dl-row {
+  grid-template-columns: 64px 112px minmax(0, 1fr);
+}
+.dl-table.cols-3 .dl-c:nth-child(1) {
+  text-align: center;
+}
+@media (max-width: 640px) {
+  .dl-table {
+    overflow-x: auto;
+  }
+  .dl-row {
+    min-width: 540px;
+  }
+  .dl-table.cols-3 .dl-row {
+    min-width: 460px;
   }
 }
 </style>
