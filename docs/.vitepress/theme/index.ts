@@ -1,9 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import Comments from './Comments.vue'
-import QcWarranty from './components/QcWarranty.vue'
 import DownloadCenter from './components/DownloadCenter.vue'
 import { h } from 'vue'
-import { useRoute } from 'vitepress'
 import './download.css'
 import './full-width.css'
 import './lang-switch.css'
@@ -283,20 +281,15 @@ function teardownPrintPaged() {
   document.body.classList.remove('print-paged-on')
 }
 
-const MANUAL_PREFIXES = ['1_PCB', '2_wired', '3_DZ', '4_Tri-mode', '5_Swagkeys', '7_EC']
-
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
     app.component('DownloadCenter', DownloadCenter)
   },
   Layout: () => {
-    const route = useRoute()
-    const isManual = MANUAL_PREFIXES.some((p) => route.path.includes('/' + p + '/'))
     return h(DefaultTheme.Layout, null, {
-      // Comments render at the bottom of every doc page; the QC certificate +
-      // warranty card is appended only on product-manual pages.
-      'doc-after': () => (isManual ? [h(Comments), h(QcWarranty)] : h(Comments)),
+      // Comments render at the bottom of every doc page.
+      'doc-after': () => h(Comments),
     })
   },
   setup() {
