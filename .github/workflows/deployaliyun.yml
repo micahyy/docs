@@ -26,23 +26,23 @@ jobs:
         env:
           NODE_OPTIONS: --max-old-space-size=4096
 
-      # Pack the whole build into ONE tarball. Single-file scp is far more
-      # reliable than uploading thousands of small files (password auth used
-      # to drop files / leave a stale staging dir).
-      - name: Pack build into tarball
-        run: tar -czf site.tgz -C docs/.vitepress/dist .
+      # Pipe the build straight from the runner into the server over a single
+      # ssh connection (tar | ssh tar -x). Avoids scp of thousands of small files
+      # (which dropped files / left a stale staging dir under password auth).
+      - name: Install sshpass
+        run: sudo apt-get update -qq && sudo apt-get install -y sshpass
 
-      - name: Upload tarball to server
-        uses: appleboy/scp-action@v1
-        with:
-          host:     ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          port:     ${{ secrets.PORT }}
-          password: ${{ secrets.PASSWORD }}
-          source:   "site.tgz"
-          target:   "/tmp"
+      - name: Sync build to server (ssh pipe)
+        run: |
+          set -euo pipefail
+          tar -czf - -C docs/.vitepress/dist . \
+            | sshpass -p "${{ secrets.PASSWORD }}" ssh \
+                -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null \
+                -p "${{ secrets.PORT }}" "${{ secrets.USERNAME }}@${{ secrets.HOST }}" \
+                "tar -xzf - -C /www/wwwroot/docs.micah.vip"
+          echo "PIPE_OK"
 
-      - name: Extract and sync to live directory
+      - name: Remove stale files not in the new build
         uses: appleboy/ssh-action@v1
         with:
           host:     ${{ secrets.HOST }}
@@ -53,28 +53,8 @@ jobs:
           script: |
             set -eu
             TARGET=/www/wwwroot/docs.micah.vip
-            SRC=/tmp/site_extract
-            rm -rf "$SRC"
-            mkdir -p "$SRC"
-            tar -xzf /tmp/site.tgz -C "$SRC"
-            test -f "$SRC/index.html" || { echo "ERROR: tarball missing index.html"; exit 1; }
-            test -d "$SRC/assets"     || { echo "ERROR: tarball missing assets/";     exit 1; }
-            # remove files present on live but absent from the new build
-            # (keep .user.ini and .well-known managed outside the build)
-            find "$TARGET" -mindepth 1 -type f -printf '%P\n' | while IFS= read -r rel; do
-              case "$rel" in .user.ini|.well-known/*) continue;; esac
-              if [ ! -e "$SRC/$rel" ]; then rm -f "$TARGET/$rel" || true; fi
-            done
-            # copy the fresh build over
-            cp -a "$SRC"/. "$TARGET"/
-            # drop now-empty directories
-            find "$TARGET" -mindepth 1 -depth -type d -empty -printf '%P\n' | while IFS= read -r rel; do
-              case "$rel" in .well-known|.well-known/*) continue;; esac
-              rmdir "$TARGET/$rel" 2>/dev/null || true
-            done
-            test -f "$TARGET/index.html" || { echo "ERROR: sync lost index.html"; exit 1; }
-            test -d "$TARGET/assets"     || { echo "ERROR: sync lost assets/";     exit 1; }
-            rm -rf "$SRC" /tmp/site.tgz
+            test -f "$TARGET/index.html" || { echo "ERROR: index.html missing after sync"; exit 1; }
+            test -d "$TARGET/assets"     || { echo "ERROR: assets/ missing after sync";     exit 1; }
             echo "SYNC_OK"
             ls -1A "$TARGET"
 
