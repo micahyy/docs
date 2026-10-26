@@ -24,22 +24,22 @@ outline: [2, 3]
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [a36_3000.json](https://via.micah.vip/czm/definitions/a36_3000.json) | 键盘定义文件 | 2026-09-22 | 6.0 KB |
+| [a36_3000.json](https://micahyy.github.io/czm/definitions/czmao/a36_3000.json) | 键盘定义文件 | 2026-09-22 | 6.0 KB |
 
 ### 108 配列
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [a38_108.json](https://via.micah.vip/czm/definitions/a38_108.json) | 键盘定义文件 | 2026-09-22 | 6.1 KB |
-| [e38_108.json](https://via.micah.vip/czm/definitions/e38_108.json) | 键盘定义文件 | 2026-09-22 | 6.1 KB |
+| [a38_108.json](https://micahyy.github.io/czm/definitions/czmao/a38_108.json) | 键盘定义文件 | 2026-09-22 | 6.1 KB |
+| [e38_108.json](https://micahyy.github.io/czm/definitions/czmao/e38_108.json) | 键盘定义文件 | 2026-09-22 | 6.1 KB |
 
 ### OW Lab
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [ow_60_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_60_via_12.json) | VIA 键位定义 | 2026-09-22 | 14.8 KB |
-| [ow_vento_wkl_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_vento_wkl_via_12.json) | VIA 键位定义（WKL） | 2026-09-22 | 18.3 KB |
-| [Vento80-8K.json](https://docs.micah.vip/files/OW/Vento80-8K.json) | 键盘定义文件 | 2026-10-01 | 18.8 KB |
+| [ow_60_via_12.json](https://micahyy.github.io/czm/definitions/ow_lab/ow_60_via_12.json) | VIA 键位定义 | 2026-09-22 | 14.8 KB |
+| [ow_vento_wkl_via_12.json](https://micahyy.github.io/czm/definitions/ow_lab/ow_vento_wkl_via_12.json) | VIA 键位定义（WKL） | 2026-09-22 | 18.3 KB |
+| [Vento80-8K.json](https://micahyy.github.io/czm/definitions/ow_lab/Vento80-8K.json) | 键盘定义文件 | 2026-10-01 | 18.8 KB |
 | [tab_ow_vento_wkl_wkl_v1.0.0_20241107.uf2](https://docs.micah.vip/downloads/firmware/OW/tab_ow_vento_wkl_wkl_v1.0.0_20241107.uf2) | 固件（WKL） | 2026-10-01 | 124.5 KB |
 | [Vento80-8K轴下垫.dwg](https://docs.micah.vip/downloads/OW/Vento80-8K%E8%BD%B4%E4%B8%8B%E5%9E%AB.dwg) | 轴下垫图纸 | 2026-10-01 | 295.2 KB |
 
@@ -47,30 +47,30 @@ outline: [2, 3]
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [della.json](https://via.micah.vip/czm/definitions/della/7u/keymaps/via/della.json) | 键盘定义文件（7U） | 2026-09-22 | 2.5 KB |
-| [keyboard.json（7U）](https://via.micah.vip/czm/definitions/della/7u/keyboard.json) | 键盘定义文件（7U） | 2026-09-22 | 8.6 KB |
-| [readme.md](https://via.micah.vip/czm/definitions/della/7u/readme.md) | 说明文档 | 2026-09-22 | 314 B |
-| [della625.json](https://via.micah.vip/czm/definitions/della/625u/keymaps/via/della625.json) | 键盘定义文件（6.25U） | 2026-09-22 | 2.6 KB |
-| [keyboard.json（6.25U）](https://via.micah.vip/czm/definitions/della/625u/keyboard.json) | 键盘定义文件（6.25U） | 2026-09-22 | 8.6 KB |
+| [della.json](https://micahyy.github.io/czm/definitions/della/7u/keyboard.json) | 键盘定义文件（7U） | 2026-09-22 | 2.5 KB |
+| [keyboard.json（7U）](https://micahyy.github.io/czm/definitions/della/7u/keyboard.json) | 键盘定义文件（7U） | 2026-09-22 | 8.6 KB |
+| [readme.md](https://micahyy.github.io/czm/definitions/della/7u/readme.md) | 说明文档 | 2026-09-22 | 314 B |
+| [della625.json](https://micahyy.github.io/czm/definitions/della/625u/keymaps/via/della625.json) | 键盘定义文件（6.25U） | 2026-09-22 | 2.6 KB |
+| [keyboard.json（6.25U）](https://micahyy.github.io/czm/definitions/della/625u/keyboard.json) | 键盘定义文件（6.25U） | 2026-09-22 | 8.6 KB |
 
 ### MMD / KM 系列
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [a79_km17.json](https://via.micah.vip/czm/definitions/mmd/a79_km17.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
-| [a88_km21.json](https://via.micah.vip/czm/definitions/mmd/a88_km21.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
-| [b89_mmd_KM21pro.json](https://via.micah.vip/czm/definitions/mmd/b89_mmd_KM21pro.json) | 键盘定义文件 | 2026-09-22 | 4.4 KB |
-| [b99_mmd_KM21pro.json](https://via.micah.vip/czm/definitions/mmd/b99_mmd_KM21pro.json) | 键盘定义文件 | 2026-09-22 | 4.4 KB |
-| [JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json](https://via.micah.vip/czm/definitions/mmd/JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json) | 键盘定义文件（KM16 Pro 三模） | 2026-09-22 | 4.8 KB |
-| [JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json](https://via.micah.vip/czm/definitions/mmd/JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json) | 键盘定义文件（KM16 单模 RGB） | 2026-09-22 | 5.4 KB |
+| [a79_km17.json](https://micahyy.github.io/czm/definitions/mmd/a79_km17.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
+| [a88_km21.json](https://micahyy.github.io/czm/definitions/mmd/a88_km21.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
+| [b99_mmd_KM21pro.json](https://micahyy.github.io/czm/definitions/mmd/b99_mmd_KM21pro.json) | 键盘定义文件 | 2026-09-22 | 4.4 KB |
+| [b99_mmd_KM21pro.json](https://micahyy.github.io/czm/definitions/mmd/b99_mmd_KM21pro.json) | 键盘定义文件 | 2026-09-22 | 4.4 KB |
+| [JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json](https://micahyy.github.io/czm/definitions/mmd/JOSN-IT32CTB0_WoAo_QMK_KM16Pro_ThreeModeKeyboard_V0101_20250424.json) | 键盘定义文件（KM16 Pro 三模） | 2026-09-22 | 4.8 KB |
+| [JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json](https://micahyy.github.io/czm/definitions/mmd/JSON-IT32CTB0_KM16_QMK_RGB_SingleModeKeyboard_V0103_20250311.json) | 键盘定义文件（KM16 单模 RGB） | 2026-09-22 | 5.4 KB |
 
 ### 其它 / 通用
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [a28_gushen.json](https://via.micah.vip/czm/definitions/a28_gushen.json) | 键盘定义文件 | 2026-09-22 | 697 B |
-| [b98_onlyrgb.json](https://via.micah.vip/czm/definitions/others/b98_onlyrgb.json) | 键盘定义文件 | 2026-09-22 | 3.7 KB |
-| [e89_ding1.json](https://via.micah.vip/czm/definitions/others/e89_ding1.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
+| [a28_gushen.json](https://micahyy.github.io/czm/definitions/czmao/a28_gushen.json) | 键盘定义文件 | 2026-09-22 | 697 B |
+| [b98_onlyrgb.json](https://micahyy.github.io/czm/definitions/others/b98_onlyrgb.json) | 键盘定义文件 | 2026-09-22 | 3.7 KB |
+| [e89_ding1.json](https://micahyy.github.io/czm/definitions/others/e89_ding1.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
 
 ### 图纸与素材
 
@@ -86,65 +86,64 @@ outline: [2, 3]
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [a14_ds17_R2_via.json](https://via.micah.vip/czm/definitions/ds17/a14_ds17_R2_via.json) | VIA 键位定义 | 2026-09-22 | 5.5 KB |
-| [a15_ds17r3_lefthand_via .json](https://via.micah.vip/czm/definitions/ds17/a15_ds17r3_lefthand_via%20.json) | VIA 键位定义（左手版） | 2026-09-22 | 4.1 KB |
-| [a17a18_ds17r3_via .json](https://via.micah.vip/czm/definitions/ds17/a17a18_ds17r3_via%20.json) | VIA 键位定义 | 2026-09-22 | 4.1 KB |
+| [a14_ds17_R2_via.json](https://micahyy.github.io/czm/definitions/czmao/ds17/a14_ds17_R2_via.json) | VIA 键位定义 | 2026-09-22 | 5.5 KB |
+| [a15_ds17r3_lefthand_via .json](https://micahyy.github.io/czm/definitions/czmao/ds17/a15_ds17r3_lefthand_via%20.json) | VIA 键位定义（左手版） | 2026-09-22 | 4.1 KB |
+| [a17a18_ds17r3_via .json](https://micahyy.github.io/czm/definitions/czmao/ds17/a17a18_ds17r3_via%20.json) | VIA 键位定义 | 2026-09-22 | 4.1 KB |
 
 ### DS19
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [b71_ds21_19.json](https://via.micah.vip/czm/definitions/ds19/b71_ds21_19.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
-| [e03_ds19r2_via.json](https://via.micah.vip/czm/definitions/ds19/e03_ds19r2_via.json) | VIA 键位定义 | 2026-09-22 | 7.0 KB |
+| [b71_ds21_19.json](https://micahyy.github.io/czm/definitions/czmao/ds19/b71_ds21_19.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
+| [e03_ds19r2_via.json](https://micahyy.github.io/czm/definitions/czmao/ds19/e03_ds19r2_via.json) | VIA 键位定义 | 2026-09-22 | 7.0 KB |
 
 ### DS21
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [a07_ds21_encoder.json](https://via.micah.vip/czm/definitions/a07_ds21_encoder.json) | 键盘定义文件（带旋钮） | 2026-09-22 | 4.4 KB |
-| [a22_ds21r1.json](https://via.micah.vip/czm/definitions/a22_ds21r1.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
-| [b70_ds21_encoder.json](https://via.micah.vip/czm/definitions/b70_ds21_encoder.json) | 键盘定义文件（带旋钮） | 2026-09-22 | 4.4 KB |
-| [b72_ds21.json](https://via.micah.vip/czm/definitions/b72_ds21.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
-| [b89_ds21_encoder.json](https://via.micah.vip/czm/definitions/b89_ds21_encoder.json) | 键盘定义文件（带旋钮） | 2026-09-22 | 4.4 KB |
+| [a07_ds21_encoder.json](https://micahyy.github.io/czm/definitions/czmao/ds21/a07_ds21_encoder.json) | 键盘定义文件（带旋钮） | 2026-09-22 | 4.4 KB |
+| [a22_ds21r1.json](https://micahyy.github.io/czm/definitions/czmao/ds21/a22_ds21r1.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
+| [b70_ds21_encoder.json](https://micahyy.github.io/czm/definitions/czmao/ds21/b70_ds21_encoder.json) | 键盘定义文件（带旋钮） | 2026-09-22 | 4.4 KB |
+| [b72_ds21.json](https://micahyy.github.io/czm/definitions/czmao/ds21/b72_ds21.json) | 键盘定义文件 | 2026-09-22 | 4.1 KB |
+| [b89_ds21_encoder.json](https://micahyy.github.io/czm/definitions/czmao/ds21/b89_ds21_encoder.json) | 键盘定义文件（带旋钮） | 2026-09-22 | 4.4 KB |
 
 ### DS22
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [a25_ds22R3_via.json](https://via.micah.vip/czm/definitions/ds22/a25_ds22R3_via.json) | VIA 键位定义 | 2026-09-22 | 4.2 KB |
-| [a34_ds22R4_via.json](https://via.micah.vip/czm/definitions/ds22/a34_ds22R4_via.json) | VIA 键位定义 | 2026-09-22 | 4.2 KB |
-| [e23f23_ds22R2_via.json](https://via.micah.vip/czm/definitions/ds22/e23f23_ds22R2_via.json) | VIA 键位定义 | 2026-09-22 | 4.2 KB |
+| [a25_ds22R3_via.json](https://micahyy.github.io/czm/definitions/czmao/ds22/a25_ds22R3_via.json) | VIA 键位定义 | 2026-09-22 | 4.2 KB |
+| [a34_ds22R4_via.json](https://micahyy.github.io/czm/definitions/czmao/ds22/a34_ds22R4_via.json) | VIA 键位定义 | 2026-09-22 | 4.2 KB |
+| [e23f23_ds22R2_via.json](https://micahyy.github.io/czm/definitions/czmao/ds22/e23f23_ds22R2_via.json) | VIA 键位定义 | 2026-09-22 | 4.2 KB |
 
 ### DS34
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [e34_ds34_v1.json](https://via.micah.vip/czm/definitions/e34_ds34_v1.json) | 键盘定义文件 | 2026-09-22 | 7.6 KB |
+| [e34_ds34_v1.json](https://micahyy.github.io/czm/definitions/czmao/ds34/e34_ds34_v1.json) | 键盘定义文件 | 2026-09-22 | 7.6 KB |
 
 ### DS40
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [a40_ds40.json](https://via.micah.vip/czm/definitions/a40_ds40.json) | 键盘定义文件 | 2026-09-22 | 4.5 KB |
+| [a40_ds40.json](https://micahyy.github.io/czm/definitions/czmao/a40_ds40.json) | 键盘定义文件 | 2026-09-22 | 4.5 KB |
 
 ### GAMER
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [e08_gamer_v1.json](https://via.micah.vip/czm/definitions/gamer/e08_gamer_v1.json) | 键盘定义文件 | 2026-09-22 | 4.5 KB |
-| [e09_gamer_ds.json](https://via.micah.vip/czm/definitions/gamer/e09_gamer_ds.json) | 键盘定义文件 | 2026-09-22 | 976 B |
-| [gamev3.json](https://via.micah.vip/czm/definitions/gamer/gamev3.json) | 键盘定义文件 | 2026-09-22 | 4.7 KB |
+| [e08_gamer_v1.json](https://micahyy.github.io/czm/definitions/czmao/gamer/e08_gamer_v1.json) | 键盘定义文件 | 2026-09-22 | 4.5 KB |
+| [e09_gamer_ds.json](https://micahyy.github.io/czm/definitions/czmao/gamer/e09_gamer_ds.json) | 键盘定义文件 | 2026-09-22 | 976 B |
+| [gamev3.json](https://micahyy.github.io/czm/definitions/czmao/gamer/gamev3.json) | 键盘定义文件 | 2026-09-22 | 4.7 KB |
 
 ### GH60 8K / 60% 系列
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [a24_60_multy.json](https://via.micah.vip/czm/definitions/mao_gh60/a24_60_multy.json) | 键盘定义文件（多配列） | 2026-09-22 | 2.6 KB |
-| [a27_mq64.json](https://via.micah.vip/czm/definitions/mao_gh60/a27_mq64.json) | 键盘定义文件 | 2026-09-22 | 1.5 KB |
-| [a35_left64_rgb.json](https://via.micah.vip/czm/definitions/mao_gh60/a35_left64_rgb.json) | 键盘定义文件 | 2026-09-22 | 5.1 KB |
-| [a41_ds60.json](https://via.micah.vip/czm/definitions/mao_gh60/a41_ds60.json) | 键盘定义文件 | 2026-09-22 | 5.1 KB |
-| [a44_ds60_251022.json](https://via.micah.vip/czm/definitions/mao_gh60/a44_ds60_251022.json) | 键盘定义文件 | 2026-09-22 | 5.1 KB |
-| [a60_ds60_ansi.json](https://via.micah.vip/czm/definitions/mao_gh60/a60_ds60_ansi.json) | 键盘定义文件（ANSI） | 2026-09-22 | 5.1 KB |
+| [a24_60_multy.json](https://micahyy.github.io/czm/definitions/czmao/mao_gh60/a24_60_multy.json) | 键盘定义文件（多配列） | 2026-09-22 | 2.6 KB |
+| [a35_left64_rgb.json](https://micahyy.github.io/czm/definitions/czmao/mao_gh60/a35_left64_rgb.json) | 键盘定义文件 | 2026-09-22 | 5.1 KB |
+| [a41_ds60.json](https://micahyy.github.io/czm/definitions/czmao/mao_gh60/a41_ds60.json) | 键盘定义文件 | 2026-09-22 | 5.1 KB |
+| [a44_ds60_251022.json](https://micahyy.github.io/czm/definitions/czmao/mao_gh60/a44_ds60_251022.json) | 键盘定义文件 | 2026-09-22 | 5.1 KB |
+| [a60_ds60_ansi.json](https://micahyy.github.io/czm/definitions/czmao/mao_gh60/a60_ds60_ansi.json) | 键盘定义文件（ANSI） | 2026-09-22 | 5.1 KB |
 
 ## EC 系列
 
@@ -188,14 +187,14 @@ Swagkeys 合作型号的键盘定义与 VIA 键位定义。
 
 | 文件 | 说明 | 更新日期 | 大小 |
 | --- | --- | --- | --- |
-| [a26_Swagkeys_TL_Solder_Muti.json](https://via.micah.vip/czm/definitions/swagkeys/a26_Swagkeys_TL_Solder_Muti.json) | 键盘定义文件（Transition Lite 焊接版多配列） | 2026-09-22 | 6.6 KB |
-| [a42_della.json](https://via.micah.vip/czm/definitions/swagkeys/a42_della.json) | 键盘定义文件 | 2026-09-22 | 2.4 KB |
-| [applo87h_weld_via_3.0.json](https://via.micah.vip/czm/definitions/swagkeys/applo87h_weld_via_3.0.json) | VIA 键位定义 | 2026-09-22 | 13.1 KB |
-| [eave_65_ec_via_12.json](https://via.micah.vip/czm/definitions/swagkeys/eave_65_ec_via_12.json) | VIA 键位定义（静电容） | 2026-09-22 | 20.4 KB |
-| [swagkeys_eave.json](https://via.micah.vip/czm/definitions/swagkeys/swagkeys_eave.json) | 键盘定义文件 | 2026-09-22 | 2.7 KB |
-| [swagkeys_shelby65_via_12.json](https://via.micah.vip/czm/definitions/swagkeys/swagkeys_shelby65_via_12.json) | VIA 键位定义 | 2026-09-22 | 3.9 KB |
-| [swagkeys_transition_lite8k_via_12.json](https://via.micah.vip/czm/definitions/swagkeys/swagkeys_transition_lite8k_via_12.json) | VIA 键位定义（8K） | 2026-09-22 | 13.0 KB |
-| [swagkeys_transition_lite_1k_via_12.json](https://via.micah.vip/czm/definitions/swagkeys/swagkeys_transition_lite_1k_via_12.json) | VIA 键位定义（1K） | 2026-09-22 | 11.9 KB |
+| [a26_Swagkeys_TL_Solder_Muti.json](https://micahyy.github.io/czm/definitions/swagkeys/a26_Swagkeys_TL_Solder_Muti.json) | 键盘定义文件（Transition Lite 焊接版多配列） | 2026-09-22 | 6.6 KB |
+| [a42_della.json](https://micahyy.github.io/czm/definitions/swagkeys/a42_della.json) | 键盘定义文件 | 2026-09-22 | 2.4 KB |
+| [applo87h_weld_via_3.0.json](https://micahyy.github.io/czm/definitions/swagkeys/applo87h_weld_via_3.0.json) | VIA 键位定义 | 2026-09-22 | 13.1 KB |
+| [eave_65_ec_via_12.json](https://micahyy.github.io/czm/definitions/swagkeys/eave_65_ec_via_12.json) | VIA 键位定义（静电容） | 2026-09-22 | 20.4 KB |
+| [swagkeys_eave.json](https://micahyy.github.io/czm/definitions/swagkeys/swagkeys_eave.json) | 键盘定义文件 | 2026-09-22 | 2.7 KB |
+| [swagkeys_shelby65_via_12.json](https://micahyy.github.io/czm/definitions/swagkeys/swagkeys_shelby65_via_12.json) | VIA 键位定义 | 2026-09-22 | 3.9 KB |
+| [swagkeys_transition_lite8k_via_12.json](https://micahyy.github.io/czm/definitions/swagkeys/swagkeys_transition_lite8k_via_12.json) | VIA 键位定义（8K） | 2026-09-22 | 13.0 KB |
+| [swagkeys_transition_lite_1k_via_12.json](https://micahyy.github.io/czm/definitions/swagkeys/swagkeys_transition_lite_1k_via_12.json) | VIA 键位定义（1K） | 2026-09-22 | 11.9 KB |
 
 ## 更新记录
 
