@@ -1,4 +1,4 @@
----
+﻿---
 title: Download Center
 outline: [2, 3]
 ---
@@ -40,8 +40,8 @@ This section covers designs sold as a **bare PCB board only** - **no case includ
 | [ow_60_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_60_via_12.json) | VIA keymap definition | 2026-09-22 | 14.8 KB |
 | [ow_vento_wkl_via_12.json](https://via.micah.vip/czm/definitions/ow_lab/ow_vento_wkl_via_12.json) | VIA keymap definition (WKL) | 2026-09-22 | 18.3 KB |
 | [Vento80-8K.json](https://docs.micah.vip/files/OW/Vento80-8K.json) | Keyboard definition | 2026-10-01 | 18.8 KB |
-| [tab_ow_vento_wkl_wkl_v1.0.0_20241107.uf2](https://docs.micah.vip/files/OW/tab_ow_vento_wkl_wkl_v1.0.0_20241107.uf2) | Firmware (WKL) | 2026-10-01 | 124.5 KB |
-| [Vento80-8K轴下垫.dwg](https://docs.micah.vip/files/OW/Vento80-8K%E8%BD%B4%E4%B8%8B%E5%9E%AB.dwg) | Switch-pad drawing | 2026-10-01 | 295.2 KB |
+| [tab_ow_vento_wkl_wkl_v1.0.0_20241107.uf2](https://docs.micah.vip/downloads/firmware/OW/tab_ow_vento_wkl_wkl_v1.0.0_20241107.uf2) | Firmware (WKL) | 2026-10-01 | 124.5 KB |
+| [Vento80-8K轴下垫.dwg](https://docs.micah.vip/downloads/OW/Vento80-8K%E8%BD%B4%E4%B8%8B%E5%9E%AB.dwg) | Switch-pad drawing | 2026-10-01 | 295.2 KB |
 
 ### DELLA
 
@@ -154,10 +154,10 @@ Electrostatic-capacitive keyboards - flashing firmware does not clear calibratio
 
 | File | Description | Updated | Size |
 | --- | --- | --- | --- |
-| [czmao_ec87_via_260922.uf2](https://docs.micah.vip/files/Transition%20Lite/czmao_ec87_via_260922.uf2) | Firmware | 2026-09-22 | 82.5 KB |
+| [czmao_ec87_via_260922.uf2](https://docs.micah.vip/downloads/firmware/Transition%20Lite/czmao_ec87_via_260922.uf2) | Firmware | 2026-09-22 | 82.5 KB |
 | [czmao_ec87_via.json](https://micahyy.github.io/czm/definitions/czmao/ec/ec87/czmao_ec87_via.json) | VIA keymap definition | 2026-09-22 | 8.5 KB |
 | [ec87_via.json](https://micahyy.github.io/czm/definitions/czmao/ec/ec87/czmao_ec87_via.json) | VIA keymap definition | 2026-09-22 | 17.3 KB |
-| [TL定位板_EC_625Uand7U.dxf](https://docs.micah.vip/files/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf) | Plate / structural drawing | 2026-09-21 | 6.7 MB |
+| [TL定位板_EC_625Uand7U.dxf](https://docs.micah.vip/downloads/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf) | Plate / structural drawing | 2026-09-21 | 6.7 MB |
 
 ## DZ Series (Wireless / Bluetooth)
 
@@ -167,14 +167,14 @@ DZ series wireless keyboards, including tri-mode versions.
 
 | File | Description | Updated | Size |
 | --- | --- | --- | --- |
-| [czm_dz17_v1.0_260916.uf2](https://docs.micah.vip/files/czm_dz17_v1.0_260916.uf2) | Firmware | 2026-09-16 | 408.0 KB |
-| [dz17_nice_nano_v2.uf2](https://docs.micah.vip/downloads/dz17/dz17_nice_nano_v2.uf2) | Firmware | 2026-09-22 | 408.5 KB |
+| [czm_dz17_v1.0_260916.uf2](https://docs.micah.vip/downloads/firmware/dz17/czm_dz17_v1.0_260916.uf2) | Firmware | 2026-09-16 | 408.0 KB |
+| [dz17_nice_nano_v2.uf2](https://docs.micah.vip/downloads/firmware/dz17/dz17_nice_nano_v2.uf2) | Firmware | 2026-09-22 | 408.5 KB |
 
 ### DZ87
 
 | File | Description | Updated | Size |
 | --- | --- | --- | --- |
-| [czm_dz87_tri_260924.uf2](https://docs.micah.vip/files/zmk/czm_dz87_tri_260924.uf2) | Firmware (tri-mode) | 2026-09-24 | 428.0 KB |
+| [czm_dz87_tri_260924.uf2](https://docs.micah.vip/downloads/firmware/zmk/czm_dz87_tri_260924.uf2) | Firmware (tri-mode) | 2026-09-24 | 428.0 KB |
 
 ## WCH Tri-mode
 
