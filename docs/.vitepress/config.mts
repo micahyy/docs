@@ -182,6 +182,7 @@ const config: any = {
             items: [
               { text: 'G80-3000',    link: '/zh/1_PCB/g80_3000' },
               { text: 'Ow_vento 8K', link: '/zh/1_PCB/Ow_vento_8K' },
+              { text: 'G613-108', link: '/zh/1_PCB/G613-108' },
               { text: 'Rush60',     link: '/zh/2_wired/gh60_8K' }
             ]
           },
