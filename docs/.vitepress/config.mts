@@ -194,6 +194,7 @@ const config: any = {
               { text: 'DS21',     link: '/zh/2_wired/ds21' },
               { text: 'DS22',     link: '/zh/2_wired/DS22' },
               { text: 'Gamer', link: '/zh/2_wired/gamer' },
+              { text: 'CZMAO 3000 (G80-3000)', link: '/zh/2_wired/cherry_g80_3000' },
               { text: 'DS21 四旋钮（b70）', link: '/zh/1_PCB/b70_ds21_encoder' },
               { text: 'DS34 v2（b23）',     link: '/zh/1_PCB/b23_ds34_v2' }
             ]
@@ -349,6 +350,7 @@ const config: any = {
               { text: 'DS21', link: '/en/2_wired/ds21' },
               { text: 'DS22', link: '/en/2_wired/DS22' },
               { text: 'Gamer', link: '/en/2_wired/gamer' },
+              { text: 'CZMAO 3000 (G80-3000)', link: '/en/2_wired/cherry_g80_3000' },
               { text: 'DS21 4-Knob (b70)', link: '/en/1_PCB/b70_ds21_encoder' },
               { text: 'DS34 v2 (b23)', link: '/en/1_PCB/b23_ds34_v2' }
             ]
