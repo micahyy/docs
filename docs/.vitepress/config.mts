@@ -177,7 +177,7 @@ const config: any = {
 
         sidebar: [
           {
-            text: 'PCB 设计（单独销售 PCB 板）',
+            text: '单独PCB',
             collapsed: false,
             items: [
               { text: 'G80-3000',    link: '/zh/1_PCB/g80_3000' },
