@@ -159,7 +159,7 @@ const config: any = {
 
         nav: [
           { text: '首页',     link: '/zh/' },
-          { text: 'PCB',      link: '/zh/1_PCB/g80_3000' },
+          { text: 'PCB',      link: '/zh/1_PCB/Ow_vento_8K' },
           { text: '有线',     link: '/zh/2_wired/DS17' },
           { text: '多模',     link: '/zh/4_Tri-mode/4.2_dc22' },
           { text: 'DZ系列',   link: '/zh/3_DZ/DZ17' },
@@ -180,7 +180,6 @@ const config: any = {
             text: 'PCB 设计（单独销售 PCB 板）',
             collapsed: false,
             items: [
-              { text: 'G80-3000',    link: '/zh/1_PCB/g80_3000' },
               { text: 'Ow_vento 8K', link: '/zh/1_PCB/Ow_vento_8K' },
               { text: 'G613-108', link: '/zh/1_PCB/G613-108' },
               { text: 'Rush60',     link: '/zh/2_wired/gh60_8K' }
@@ -280,7 +279,7 @@ const config: any = {
 
         nav: [
           { text: 'Home',      link: '/en/' },
-          { text: 'PCB',       link: '/en/1_PCB/g80_3000' },
+          { text: 'PCB',       link: '/en/1_PCB/Ow_vento_8K' },
           { text: 'Wired',     link: '/en/2_wired/DS17' },
           { text: 'Tri-mode',  link: '/en/4_Tri-mode/4.2_dc22' },
           { text: 'DZ',        link: '/en/3_DZ/DZ17' },
@@ -337,7 +336,6 @@ const config: any = {
             text: 'PCB Designs (Board Only)',
             collapsed: false,
             items: [
-              { text: 'G80-3000', link: '/en/1_PCB/g80_3000' },
               { text: 'Ow_vento 8K', link: '/en/1_PCB/Ow_vento_8K' },
               { text: 'Rush60', link: '/en/2_wired/gh60_8K' }
             ]

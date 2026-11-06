@@ -8,7 +8,7 @@ updated: 2026-11-04
 
 108-key full-size mechanical keyboard · USB wired Type-C · QMK + VIA remapping · WS2812 RGB
 
-> The CZMAO 3000 is a full-size (108-key, with numpad) replica of the classic Cherry G80-3000. It uses an STM32F103 controller, on-board WS2812 RGB (per-key / underglow) driven by RGB Matrix, and runs QMK firmware with VIA remapping. This page is the manual for the assembled keyboard; the PCB modding notes live at [G80-3000 mod PCB](/en/1_PCB/g80_3000).
+> The CZMAO 3000 is a full-size (108-key, with numpad) replica of the classic Cherry G80-3000. It uses an STM32F103 controller, on-board WS2812 RGB (per-key / underglow) driven by RGB Matrix, and runs QMK firmware with VIA remapping. This is the single manual for this model (it replaces the former "G80-3000 conversion PCB" page).
 
 ## 1. Overview
 
