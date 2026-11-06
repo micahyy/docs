@@ -159,7 +159,7 @@ const config: any = {
 
         nav: [
           { text: '首页',     link: '/zh/' },
-          { text: 'PCB',      link: '/zh/1_PCB/Ow_vento_8K' },
+          { text: 'PCB',      link: '/zh/1_PCB/g80_3000' },
           { text: '有线',     link: '/zh/2_wired/DS17' },
           { text: '多模',     link: '/zh/4_Tri-mode/4.2_dc22' },
           { text: 'DZ系列',   link: '/zh/3_DZ/DZ17' },
@@ -180,6 +180,7 @@ const config: any = {
             text: 'PCB 设计（单独销售 PCB 板）',
             collapsed: false,
             items: [
+              { text: 'G80-3000',    link: '/zh/1_PCB/g80_3000' },
               { text: 'Ow_vento 8K', link: '/zh/1_PCB/Ow_vento_8K' },
               { text: 'G613-108', link: '/zh/1_PCB/G613-108' },
               { text: 'Rush60',     link: '/zh/2_wired/gh60_8K' }
@@ -193,7 +194,6 @@ const config: any = {
               { text: 'DS21',     link: '/zh/2_wired/ds21' },
               { text: 'DS22',     link: '/zh/2_wired/DS22' },
               { text: 'Gamer', link: '/zh/2_wired/gamer' },
-              { text: 'CZMAO 3000 (G80-3000)', link: '/zh/2_wired/cherry_g80_3000' },
               { text: 'DS21 四旋钮（b70）', link: '/zh/1_PCB/b70_ds21_encoder' },
               { text: 'DS34 v2（b23）',     link: '/zh/1_PCB/b23_ds34_v2' }
             ]
@@ -279,7 +279,7 @@ const config: any = {
 
         nav: [
           { text: 'Home',      link: '/en/' },
-          { text: 'PCB',       link: '/en/1_PCB/Ow_vento_8K' },
+          { text: 'PCB',       link: '/en/1_PCB/g80_3000' },
           { text: 'Wired',     link: '/en/2_wired/DS17' },
           { text: 'Tri-mode',  link: '/en/4_Tri-mode/4.2_dc22' },
           { text: 'DZ',        link: '/en/3_DZ/DZ17' },
@@ -336,6 +336,7 @@ const config: any = {
             text: 'PCB Designs (Board Only)',
             collapsed: false,
             items: [
+              { text: 'G80-3000', link: '/en/1_PCB/g80_3000' },
               { text: 'Ow_vento 8K', link: '/en/1_PCB/Ow_vento_8K' },
               { text: 'Rush60', link: '/en/2_wired/gh60_8K' }
             ]
@@ -348,7 +349,6 @@ const config: any = {
               { text: 'DS21', link: '/en/2_wired/ds21' },
               { text: 'DS22', link: '/en/2_wired/DS22' },
               { text: 'Gamer', link: '/en/2_wired/gamer' },
-              { text: 'CZMAO 3000 (G80-3000)', link: '/en/2_wired/cherry_g80_3000' },
               { text: 'DS21 4-Knob (b70)', link: '/en/1_PCB/b70_ds21_encoder' },
               { text: 'DS34 v2 (b23)', link: '/en/1_PCB/b23_ds34_v2' }
             ]
