@@ -106,7 +106,7 @@
     <tr>
       <td class="czm-layout">21键</td>
       <td class="czm-empty">—</td>
-      <td class="czm-product">DS21 四旋钮<br><a class="czm-pill" href="/zh/1_PCB/b70_ds21_encoder">说明书</a></td>
+      <td class="czm-product czm-status-clear">DS21 四旋钮<br><a class="czm-pill" href="/zh/1_PCB/b70_ds21_encoder">说明书</a> <a class="czm-pill czm-pill-buy czm-pill-taobao" href="https://item.taobao.com/item.htm?ft=t&amp;id=913166788743" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-clear">清仓</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
