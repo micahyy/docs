@@ -93,14 +93,14 @@
     <tr class="czm-group">
       <td rowspan="3" class="czm-axis">20%</td>
       <td class="czm-layout">17 键</td>
+      <td class="czm-product">DS17Lite<br><span class="czm-tag">待开发</span></td>
+      <td class="czm-product"><a href="https://shop.micah.vip/#/kit/KIT-8ML8ACSR" target="_blank" rel="noopener">DS17</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
+      <td class="czm-product"><a href="https://item.taobao.com/item.htm?ft=t&amp;id=1086940184127" target="_blank" rel="noopener">DZ17</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
     </tr>
     <tr>
       <td class="czm-layout">21 键</td>
@@ -118,8 +118,8 @@
       <td class="czm-product">DS22Lite<br><span class="czm-tag czm-tag-wip">开发中</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
-      <td class="czm-product">DC22<br><span class="czm-tag czm-tag-wip">开发中</span></td>
       <td class="czm-empty">—</td>
+      <td class="czm-product">DC22<br><span class="czm-tag czm-tag-wip">开发中</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
@@ -219,7 +219,7 @@
     <tr class="czm-group">
       <td rowspan="2" class="czm-axis">双模系列</td>
       <td class="czm-product"><a href="/zh/3_DZ/DZ17">DZ17</a></td>
-      <td class="czm-desc">17 键 USB + 蓝牙 5.0 双模，ZMK 固件</td>
+      <td class="czm-desc">17 键 USB + 蓝牙 5.0 双模，ZMK 固件 · <a href="https://item.taobao.com/item.htm?ft=t&amp;id=1086940184127">淘宝在售</a></td>
     </tr>
     <tr>
       <td class="czm-product"><a href="/zh/3_DZ/DZ87">DZ87</a></td>
