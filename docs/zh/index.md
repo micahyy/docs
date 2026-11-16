@@ -106,7 +106,7 @@
     </tr>
     <tr>
       <td class="czm-layout">22 键</td>
-      <td class="czm-product">DS22Lite</td>
+      <td class="czm-product">DS22Lite<br><span class="czm-tag">开发中</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
