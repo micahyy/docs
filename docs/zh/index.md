@@ -19,6 +19,7 @@
       <th>方案五</th>
       <th>方案六</th>
       <th>方案七</th>
+      <th>方案八</th>
     </tr>
   </thead>
   <tbody>
@@ -32,6 +33,7 @@
       <td>CH582M</td>
       <td>CH585M</td>
       <td>CH585M</td>
+      <td>NRF52840</td>
     </tr>
     <tr class="czm-spec">
       <td>定位</td>
@@ -42,6 +44,7 @@
       <td>入门三模</td>
       <td>电竞8K</td>
       <td>电竞8K</td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr class="czm-spec">
       <td>源码</td>
@@ -52,6 +55,7 @@
       <td>AI自研</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
+      <td>ZMK</td>
     </tr>
     <tr class="czm-spec">
       <td>模式</td>
@@ -62,6 +66,7 @@
       <td>无线三模</td>
       <td>无线三模</td>
       <td>无线三模</td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr class="czm-spec">
       <td>轴体</td>
@@ -72,6 +77,7 @@
       <td>机械轴</td>
       <td>机械轴</td>
       <td>磁轴</td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr class="czm-spec">
       <td>代码开源</td>
@@ -82,12 +88,14 @@
       <td>否</td>
       <td>否</td>
       <td>否</td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr class="czm-group">
       <td rowspan="3" class="czm-axis">20%</td>
       <td class="czm-layout">17 键</td>
-      <td class="czm-product">DS17Lite<br><span class="czm-tag">待开发</span></td>
-      <td class="czm-product"><a href="https://shop.micah.vip/#/kit/KIT-8ML8ACSR" target="_blank" rel="noopener">DS17</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
@@ -103,14 +111,16 @@
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr>
       <td class="czm-layout">22 键</td>
       <td class="czm-product">DS22Lite<br><span class="czm-tag czm-tag-wip">开发中</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
       <td class="czm-product">DC22<br><span class="czm-tag czm-tag-wip">开发中</span></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
     </tr>
@@ -124,11 +134,13 @@
       <td class="czm-empty">—</td>
       <td class="czm-product">Gamer</td>
       <td class="czm-product">HE_Gamer<br><span class="czm-tag czm-tag-wip">开发中</span></td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr>
       <td class="czm-layout">DS34</td>
       <td class="czm-empty">—</td>
       <td class="czm-product">DS34</td>
+      <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
@@ -141,13 +153,15 @@
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
-      <td class="czm-product"><a href="https://item.taobao.com/item.htm?ft=t&amp;id=1093120959484" target="_blank" rel="noopener">RUSH60</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
+      <td class="czm-product"><a href="https://item.taobao.com/item.htm?ft=t&amp;id=1093120959484" target="_blank" rel="noopener">RUSH60_8K</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
+      <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
     </tr>
     <tr>
       <td class="czm-layout">左移64</td>
+      <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
