@@ -116,7 +116,7 @@
     </tr>
     <tr>
       <td class="czm-layout">22键</td>
-      <td class="czm-product czm-status-dev">DS22 / DS22Lite<br><a class="czm-pill" href="/zh/2_wired/DS22">说明书</a><br><span class="czm-tag czm-tag-wip">开发中</span></td>
+      <td class="czm-product czm-status-dev">DS22<br><a class="czm-pill" href="/zh/2_wired/DS22">说明书</a><br>DS22Lite<br><span class="czm-tag czm-tag-wip">开发中</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
