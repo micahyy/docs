@@ -163,7 +163,7 @@
     <tr>
       <td class="czm-layout">SW EAVE</td>
       <td class="czm-empty">—</td>
-      <td class="czm-product">EAVE<br><a class="czm-pill" href="/zh/5_Swagkeys/Eave">说明书</a></td>
+      <td class="czm-product czm-status-off">EAVE<br><a class="czm-pill" href="/zh/5_Swagkeys/Eave">说明书</a><br><span class="czm-tag czm-tag-off">停售</span></td>
       <td class="czm-product">EC65<br><a class="czm-pill" href="/zh/7_EC/EC65">说明书</a></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
@@ -197,7 +197,7 @@
     <tr>
       <td class="czm-layout">Transition 87</td>
       <td class="czm-empty">—</td>
-      <td class="czm-product">SW Transition Lite 87<br><a class="czm-pill" href="/zh/5_Swagkeys/TransitionLite87">说明书</a></td>
+      <td class="czm-product czm-status-off">SW Transition Lite 87<br><a class="czm-pill" href="/zh/5_Swagkeys/TransitionLite87">说明书</a><br><span class="czm-tag czm-tag-off">停售</span></td>
       <td class="czm-product">EC87<br><a class="czm-pill" href="/zh/7_EC/EC87">说明书</a></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>

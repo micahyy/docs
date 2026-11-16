@@ -238,3 +238,18 @@ html.dark .vp-doc .czm-matrix .czm-tag.czm-tag-wip {
 /* 单元格状态底色：在售浅绿、开发中/待开发浅黄 */
 .vp-doc .czm-matrix td.czm-product.czm-status-sale { background: var(--vp-c-green-soft); }
 .vp-doc .czm-matrix td.czm-product.czm-status-dev { background: var(--vp-c-yellow-soft); }
+
+/* "停售"标签：红色 */
+.vp-doc .czm-matrix .czm-tag.czm-tag-off {
+  color: #dc2626;
+  background: rgba(220, 38, 38, 0.12);
+}
+
+html.dark .vp-doc .czm-matrix .czm-tag.czm-tag-off {
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.16);
+}
+
+/* 停售格底色：浅红 */
+.vp-doc .czm-matrix td.czm-product.czm-status-off { background: rgba(220, 38, 38, 0.08); }
+html.dark .vp-doc .czm-matrix td.czm-product.czm-status-off { background: rgba(248, 113, 113, 0.10); }
