@@ -170,7 +170,6 @@
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
     </tr>
     <tr>
       <td colspan="8" class="czm-product"><a href="/zh/5_Swagkeys/Eave">EAVE</a></td>
@@ -192,7 +191,6 @@
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-product"><a href="/zh/7_EC/EC87">EC87</a></td>
-      <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
