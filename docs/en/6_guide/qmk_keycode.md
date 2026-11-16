@@ -1,4 +1,4 @@
-﻿# QMK Keycodes
+# QMK Keycodes
 
 Commonly used keycodes for VIA remapping.
 

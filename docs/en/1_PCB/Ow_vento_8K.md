@@ -1,4 +1,4 @@
-﻿# Ow_Vento_8K_PCB
+# Ow_Vento_8K_PCB
 
 ## Downloads
 

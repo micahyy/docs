@@ -1,4 +1,4 @@
-Swagkeys EAVE
+# Swagkeys EAVE
 
 <!-- Google 广告 -->
 <ins class="adsbygoogle"
@@ -40,7 +40,7 @@ onMounted(() => {
 |定位板|PC定位板|PC定位板|
 |静音包|3件套|3件套|
 |配重|硅胶配重|硅胶配重|
-|卫星轴|无轴套餐无卫星轴<br>含轴套餐组装好带卫星轴|无轴套餐无卫星轴<br>含轴套餐组装好带卫星轴|无轴套餐无卫星轴<br>含轴套餐组装好带卫星轴|无轴套餐无卫星轴<br>含轴套餐组装好带卫星轴|无轴套餐无卫星轴<br>含轴套餐组装好带卫星轴|
+|卫星轴|无轴套餐无卫星轴<br>含轴套餐组装好带卫星轴|无轴套餐无卫星轴<br>含轴套餐组装好带卫星轴|
 
 
 
@@ -90,7 +90,7 @@ onMounted(() => {
 |FN+RIGHT|KC_MNXT|下一曲||
 |FN+RALT+ESC|EE_CLR|恢复出厂设置||
 |FN+RALT+0|QK_BOOT|进入刷机模式||
-|FN+RALT+WIN|AG_TOGG|Win/Alt 互换（MAC 模式），再按一次切回|
+|FN+RALT+WIN|AG_TOGG|Win/Alt 互换（MAC 模式），再按一次切回||
 
 
 
@@ -125,5 +125,5 @@ onMounted(() => {
 |螺丝|M2*4|2|个|固定小板螺丝|
 |PCB|热插拔6.25U|1|片|1.2mm厚度，2026年5月后更换为1.6mm|
 |定位板|PC定位板|1|片|支持PCB卫星轴|
-|外壳|PC/ABS|1|套|
+|外壳|PC/ABS|1|套||
 |硅胶粒||1|套|gasket硅胶粒|
