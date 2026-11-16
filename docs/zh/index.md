@@ -319,7 +319,7 @@
       <td></td>
     </tr>
     <tr>
-      <td class="czm-axis">60%</td>
+      <td rowspan="3" class="czm-axis">60%</td>
       <td class="czm-layout">标准60</td>
       <td></td>
       <td></td>
@@ -329,6 +329,20 @@
       <td></td>
       <td></td>
       <td></td>
+    </tr>
+    <tr>
+      <td rowspan="2" class="czm-layout">65键</td>
+      <td></td>
+      <td></td>
+      <td class="czm-product"><a href="/zh/7_EC/EC65">EC65</a></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="8" class="czm-product"><a href="/zh/5_Swagkeys/Eave">EAVE</a></td>
     </tr>
     <tr>
       <td rowspan="2" class="czm-axis">80%</td>
@@ -347,23 +361,7 @@
       <td colspan="8" class="czm-product"><a href="/zh/5_Swagkeys/TransitionLite87">SW Transition Lite 87</a></td>
     </tr>
     <tr>
-      <td class="czm-axis">65%</td>
-      <td class="czm-layout">标准65</td>
-      <td></td>
-      <td></td>
-      <td class="czm-product"><a href="/zh/7_EC/EC65">EC65</a></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td rowspan="2" class="czm-axis">待定</td>
-      <td class="czm-layout">EAVE</td>
-      <td colspan="8" class="czm-product"><a href="/zh/5_Swagkeys/Eave">EAVE</a></td>
-    </tr>
-    <tr>
+      <td class="czm-axis">待定</td>
       <td class="czm-layout">—</td>
       <td colspan="8" class="czm-product"><a href="/zh/8_download/">下载中心</a></td>
     </tr>
