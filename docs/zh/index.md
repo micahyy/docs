@@ -198,7 +198,7 @@
       <td class="czm-layout">Transition 87</td>
       <td class="czm-empty">—</td>
       <td class="czm-product czm-status-off">SW Transition Lite 87<br><a class="czm-pill" href="/zh/5_Swagkeys/TransitionLite87">说明书</a><br><span class="czm-tag czm-tag-off">停售</span></td>
-      <td class="czm-product">EC87<br><a class="czm-pill" href="/zh/7_EC/EC87">说明书</a></td>
+      <td class="czm-product">EC87_TL<br><a class="czm-pill" href="/zh/7_EC/EC87">说明书</a> <a class="czm-pill czm-pill-buy czm-pill-taobao" href="https://item.taobao.com/item.htm?ft=t&amp;id=1092120748142" target="_blank" rel="noopener">淘宝</a></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
