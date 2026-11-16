@@ -152,7 +152,7 @@
       <td rowspan="3" class="czm-axis">60%</td>
       <td class="czm-layout">标准60</td>
       <td class="czm-na">IO数量限制<br>不开发</td>
-      <td class="czm-empty">—</td>
+      <td class="czm-product czm-status-sale">GH60焊接多配列<br><a class="czm-pill czm-pill-buy czm-pill-taobao" href="https://item.taobao.com/item.htm?ft=t&amp;id=918505214240" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-product czm-status-sale">RUSH60_8K<br><a class="czm-pill" href="/zh/2_wired/gh60_8K">说明书</a> <a class="czm-pill czm-pill-buy czm-pill-taobao" href="https://item.taobao.com/item.htm?ft=t&amp;id=1093120959484" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
       <td class="czm-empty">—</td>
