@@ -171,7 +171,9 @@ const config: any = {
         ],
 
         editLink: {
-          pattern: 'https://github.com/micahyy/docs/edit/main/docs/zh/:path',
+          // :path 已含 locale 前缀（zh/...），不能再拼一层 zh/，否则生成
+          // docs/zh/zh/xxx.md 这样的 404 链接。
+          pattern: 'https://github.com/micahyy/docs/edit/main/docs/:path',
           text: '在 GitHub 上编辑此页'
         },
 
@@ -317,7 +319,8 @@ const config: any = {
         },
 
         editLink: {
-          pattern: 'https://github.com/micahyy/docs/edit/main/docs/en/:path',
+          // 同 zh：:path 已含 en/ 前缀。
+          pattern: 'https://github.com/micahyy/docs/edit/main/docs/:path',
           text: 'Edit this page on GitHub'
         },
 
