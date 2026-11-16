@@ -124,6 +124,26 @@
   white-space: nowrap;
 }
 
+/* “在售”标签：主色底，和灰底的“待开发/开发中”区分开 */
+.vp-doc .czm-matrix .czm-tag.czm-tag-sale {
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft, rgba(52, 81, 178, 0.14));
+}
+
+/* 产品名带链接：保留下划线提示可点，但压细压淡，不破坏表格观感 */
+.vp-doc .czm-matrix td.czm-product a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed color-mix(in srgb, var(--vp-c-brand-1) 45%, transparent);
+  transition: border-color 0.2s;
+}
+
+.vp-doc .czm-matrix td.czm-product a:hover {
+  border-bottom-color: var(--vp-c-brand-1);
+  border-bottom-style: solid;
+}
+
 /* 空位：压到几乎看不见，不抢注意力 */
 .vp-doc .czm-matrix td.czm-empty {
   color: var(--vp-c-text-3);
