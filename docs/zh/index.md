@@ -170,7 +170,6 @@
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
     </tr>
     <tr>
       <td colspan="8" class="czm-product">
@@ -194,7 +193,6 @@
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-product">EC87<br><a class="czm-pill" href="/zh/7_EC/EC87">说明书</a></td>
-      <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
