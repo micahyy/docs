@@ -253,3 +253,6 @@ html.dark .vp-doc .czm-matrix .czm-tag.czm-tag-off {
 /* 停售格底色：浅红 */
 .vp-doc .czm-matrix td.czm-product.czm-status-off { background: rgba(220, 38, 38, 0.08); }
 html.dark .vp-doc .czm-matrix td.czm-product.czm-status-off { background: rgba(248, 113, 113, 0.10); }
+
+/* 待开发格底色：中性浅灰（与开发中的浅黄区分） */
+.vp-doc .czm-matrix td.czm-product.czm-status-todo { background: color-mix(in srgb, var(--vp-c-text-1) 6%, var(--vp-c-bg)); }

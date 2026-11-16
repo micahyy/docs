@@ -94,7 +94,7 @@
     <tr>
       <td rowspan="3" class="czm-axis">20%</td>
       <td class="czm-layout">17键</td>
-      <td class="czm-product czm-status-dev">DS17Lite<br><span class="czm-tag">待开发</span></td>
+      <td class="czm-product czm-status-todo">DS17Lite<br><span class="czm-tag">待开发</span></td>
       <td class="czm-product czm-status-sale">DS17<br><a class="czm-pill" href="/zh/2_wired/DS17">说明书</a> <a class="czm-pill czm-pill-buy czm-pill-mall" href="https://shop.micah.vip/#/kit/KIT-8ML8ACSR" target="_blank" rel="noopener">商城</a> <a class="czm-pill czm-pill-buy czm-pill-taobao" href="https://item.taobao.com/item.htm?ft=t&amp;id=819874589305" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
@@ -131,7 +131,7 @@
       <td class="czm-empty">—</td>
       <td class="czm-product">gamer<br><a class="czm-pill" href="/zh/2_wired/gamer">说明书</a></td>
       <td class="czm-empty">—</td>
-      <td class="czm-product czm-status-dev">RUSH_Gamer<br><span class="czm-tag">待开发</span></td>
+      <td class="czm-product czm-status-todo">RUSH_Gamer<br><span class="czm-tag">待开发</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-product">Gamer</td>
       <td class="czm-product czm-status-dev">HE_Gamer<br><span class="czm-tag czm-tag-wip">开发中</span></td>
