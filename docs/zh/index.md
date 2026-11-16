@@ -110,7 +110,7 @@
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
-      <td class="czm-product">DC22</td>
+      <td class="czm-product">DC22<br><span class="czm-tag">开发中</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
     </tr>
