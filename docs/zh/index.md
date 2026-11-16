@@ -188,7 +188,7 @@
     <tr class="czm-group">
       <td rowspan="4" class="czm-axis">20%</td>
       <td class="czm-product"><a href="/zh/2_wired/DS17">DS17</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
-      <td class="czm-desc">17 键 · 8K 回报率</td>
+      <td class="czm-desc">17 键 · 8K 回报率 · <a href="https://shop.micah.vip/#/kit/KIT-8ML8ACSR">商城在售</a></td>
     </tr>
     <tr>
       <td class="czm-product"><a href="/zh/1_PCB/b70_ds21_encoder">DS21 四旋钮</a></td>
