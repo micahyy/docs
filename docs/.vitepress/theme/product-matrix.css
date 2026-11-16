@@ -214,3 +214,23 @@ html.dark .vp-doc .czm-matrix .czm-tag.czm-tag-wip {
 .vp-doc .czm-matrix td.czm-product a.czm-pill.czm-pill-buy:hover {
   opacity: 0.85;
 }
+.vp-doc .czm-matrix td.czm-product a.czm-pill.czm-pill-taobao {
+  background: #ff5000;
+  border-color: #ff5000;
+  color: #fff;
+}
+.vp-doc .czm-matrix td.czm-product a.czm-pill.czm-pill-taobao:hover {
+  background: #e64800;
+  border-color: #e64800;
+  opacity: 1;
+}
+.vp-doc .czm-matrix td.czm-product a.czm-pill.czm-pill-mall {
+  background: #17181a;
+  border-color: #17181a;
+  color: #fff;
+}
+.vp-doc .czm-matrix td.czm-product a.czm-pill.czm-pill-mall:hover {
+  background: #333438;
+  border-color: #333438;
+  opacity: 1;
+}

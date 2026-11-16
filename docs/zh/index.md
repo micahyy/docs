@@ -95,13 +95,13 @@
       <td rowspan="3" class="czm-axis">20%</td>
       <td class="czm-layout">17键</td>
       <td class="czm-product">DS17Lite<br><span class="czm-tag">待开发</span></td>
-      <td class="czm-product">DS17<br><a class="czm-pill" href="/zh/2_wired/DS17">说明书</a> <a class="czm-pill czm-pill-buy" href="https://shop.micah.vip/#/kit/KIT-8ML8ACSR" target="_blank" rel="noopener">商城</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
+      <td class="czm-product">DS17<br><a class="czm-pill" href="/zh/2_wired/DS17">说明书</a> <a class="czm-pill czm-pill-buy czm-pill-mall" href="https://shop.micah.vip/#/kit/KIT-8ML8ACSR" target="_blank" rel="noopener">商城</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-product">DM17<br><a class="czm-pill" href="/zh/4_Tri-mode/4.1_dm17">说明书</a></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
-      <td class="czm-product">DZ17<br><a class="czm-pill" href="/zh/3_DZ/DZ17">说明书</a> <a class="czm-pill czm-pill-buy" href="https://item.taobao.com/item.htm?ft=t&amp;id=1086940184127" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
+      <td class="czm-product">DZ17<br><a class="czm-pill" href="/zh/3_DZ/DZ17">说明书</a> <a class="czm-pill czm-pill-buy czm-pill-taobao" href="https://item.taobao.com/item.htm?ft=t&amp;id=1086940184127" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
     </tr>
     <tr>
       <td class="czm-layout">21键</td>
@@ -154,7 +154,7 @@
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
-      <td class="czm-product">RUSH60_8K<br><a class="czm-pill" href="/zh/2_wired/gh60_8K">说明书</a> <a class="czm-pill czm-pill-buy" href="https://item.taobao.com/item.htm?ft=t&amp;id=1093120959484" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
+      <td class="czm-product">RUSH60_8K<br><a class="czm-pill" href="/zh/2_wired/gh60_8K">说明书</a> <a class="czm-pill czm-pill-buy czm-pill-taobao" href="https://item.taobao.com/item.htm?ft=t&amp;id=1093120959484" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
@@ -197,7 +197,7 @@
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
-      <td class="czm-product">DZ87<br><a class="czm-pill" href="/zh/3_DZ/DZ87">说明书</a> <a class="czm-pill czm-pill-buy" href="https://item.taobao.com/item.htm?ft=t&amp;id=962342017714" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
+      <td class="czm-product">DZ87<br><a class="czm-pill" href="/zh/3_DZ/DZ87">说明书</a> <a class="czm-pill czm-pill-buy czm-pill-taobao" href="https://item.taobao.com/item.htm?ft=t&amp;id=962342017714" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
     </tr>
     <tr>
       <td class="czm-layout">Transition 87</td>
