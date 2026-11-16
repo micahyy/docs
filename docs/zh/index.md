@@ -117,7 +117,7 @@
     <tr>
       <td class="czm-layout">22键</td>
       <td class="czm-product czm-status-dev">DS22Lite<br><span class="czm-tag czm-tag-wip">开发中</span></td>
-      <td class="czm-product czm-status-dev">DS22<br><a class="czm-pill" href="/zh/2_wired/DS22">说明书</a><br><span class="czm-tag czm-tag-wip">开发中</span></td>
+      <td class="czm-product czm-status-sale">DS22<br><a class="czm-pill" href="/zh/2_wired/DS22">说明书</a> <a class="czm-pill czm-pill-buy czm-pill-taobao" href="https://item.taobao.com/item.htm?ft=t&amp;id=786180422801" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-product czm-status-dev">DC22<br><a class="czm-pill" href="/zh/4_Tri-mode/4.2_dc22">说明书</a><br><span class="czm-tag czm-tag-wip">开发中</span></td>
