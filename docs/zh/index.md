@@ -106,11 +106,11 @@
     </tr>
     <tr>
       <td class="czm-layout">22 键</td>
-      <td class="czm-product">DS22Lite<br><span class="czm-tag">开发中</span></td>
+      <td class="czm-product">DS22Lite<br><span class="czm-tag czm-tag-wip">开发中</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
-      <td class="czm-product">DC22<br><span class="czm-tag">开发中</span></td>
+      <td class="czm-product">DC22<br><span class="czm-tag czm-tag-wip">开发中</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
     </tr>
@@ -123,7 +123,7 @@
       <td class="czm-product">RUSH_Gamer<br><span class="czm-tag">待开发</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-product">Gamer</td>
-      <td class="czm-product">HE_Gamer<br><span class="czm-tag">开发中</span></td>
+      <td class="czm-product">HE_Gamer<br><span class="czm-tag czm-tag-wip">开发中</span></td>
     </tr>
     <tr>
       <td class="czm-layout">DS34</td>
