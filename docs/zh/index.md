@@ -331,7 +331,7 @@
       <td></td>
     </tr>
     <tr>
-      <td class="czm-axis">80%</td>
+      <td rowspan="2" class="czm-axis">80%</td>
       <td class="czm-layout">TKL</td>
       <td></td>
       <td></td>
@@ -341,6 +341,10 @@
       <td></td>
       <td></td>
       <td class="czm-product"><a href="/zh/3_DZ/DZ87">DZ87</a></td>
+    </tr>
+    <tr>
+      <td class="czm-layout">Transition 87</td>
+      <td colspan="8" class="czm-product"><a href="/zh/5_Swagkeys/TransitionLite87">SW Transition Lite 87</a></td>
     </tr>
     <tr>
       <td class="czm-axis">65%</td>
@@ -355,11 +359,7 @@
       <td></td>
     </tr>
     <tr>
-      <td rowspan="3" class="czm-axis">待定</td>
-      <td class="czm-layout">Transition 87</td>
-      <td colspan="8" class="czm-product"><a href="/zh/5_Swagkeys/TransitionLite87">SW Transition Lite 87</a></td>
-    </tr>
-    <tr>
+      <td rowspan="2" class="czm-axis">待定</td>
       <td class="czm-layout">EAVE</td>
       <td colspan="8" class="czm-product"><a href="/zh/5_Swagkeys/Eave">EAVE</a></td>
     </tr>
