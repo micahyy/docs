@@ -161,6 +161,16 @@ html.dark .vp-doc .czm-matrix .czm-tag.czm-tag-wip {
   opacity: 0.45;
 }
 
+/* 说明书表格的“说明”列：左对齐、允许换行，和矩阵表的窄居中格子区分 */
+.vp-doc .czm-matrix td.czm-desc {
+  text-align: left;
+  white-space: normal;
+  color: var(--vp-c-text-2);
+  min-width: 220px;
+}
+
+/* 说明列里的外链保持 VitePress 默认可点样式即可，不额外加虚线 */
+
 /* 配列分组之间加一道粗分隔（20% / 40% / 60% 的起始行） */
 .vp-doc .czm-matrix tr.czm-group td {
   border-top: 2px solid var(--vp-c-divider);

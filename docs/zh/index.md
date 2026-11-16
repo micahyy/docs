@@ -165,42 +165,86 @@
 
 ### 说明书
 
-**20% 配列**
-
-- [DS17 有线数字小键盘](/zh/2_wired/DS17) — 17 键 · 8K 回报率（在售）
-- [DS21 四旋钮（b70_ds21_encoder）](/zh/1_PCB/b70_ds21_encoder) — 21 键（17 键 + 4 旋钮）
-- [DS22 有线数字小键盘](/zh/2_wired/DS22) — 22 键
-- [DC22 三模](/zh/4_Tri-mode/4.2_dc22) — 22 键无线三模（开发中）
-
-**40% 配列**
-
-- [Gamer](/zh/2_wired/gamer) — 34 键游戏小键盘
-- [DS34 v2（b23_ds34_v2）](/zh/1_PCB/b23_ds34_v2) — 34 键 + 1 旋钮数字小键盘
-
-**60% 配列**
-
-- [Rush60（8K 回报率）](/zh/2_wired/gh60_8K) — 60% 有线键盘 · [淘宝在售](https://item.taobao.com/item.htm?ft=t&id=1093120959484)
-
-**双模系列**
-
-- [DZ17 双模数字小键盘](/zh/3_DZ/DZ17) — 17 键 USB + 蓝牙 5.0 双模，ZMK 固件
-- [DZ87 双模机械键盘](/zh/3_DZ/DZ87) — 87 键（TKL）USB + 蓝牙 5.0 双模，ZMK 固件
-
-**静电容系列**
-
-- [EC87 静电容键盘](/zh/7_EC/EC87) — 87 键（TKL）静电容，支持网页触底校准
-- [EC65 静电容键盘](/zh/7_EC/EC65) — 65%（5×16）静电容，支持网页触底校准
-
-**Swagkeys 合作款**
-
-- [EAVE](/zh/5_Swagkeys/Eave) — Swagkeys 合作款
-- [SW Transition Lite 87](/zh/5_Swagkeys/TransitionLite87) — Swagkeys 87 键
-
-**其他**
-
-- [DM17 三模（已放弃）](/zh/4_Tri-mode/4.1_dm17) — QMK 三模方案，测试后放弃
-- [下载中心](/zh/8_download/) — 固件、键位定义、图纸、文档
-
+<div class="czm-matrix-wrap">
+<table class="czm-matrix czm-docs">
+  <thead>
+    <tr>
+      <th>配列 / 系列</th>
+      <th>产品</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="czm-group">
+      <td rowspan="4" class="czm-axis">20%</td>
+      <td class="czm-product"><a href="/zh/2_wired/DS17">DS17</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
+      <td class="czm-desc">17 键 · 8K 回报率</td>
+    </tr>
+    <tr>
+      <td class="czm-product"><a href="/zh/1_PCB/b70_ds21_encoder">DS21 四旋钮</a></td>
+      <td class="czm-desc">21 键（17 键 + 4 旋钮）</td>
+    </tr>
+    <tr>
+      <td class="czm-product"><a href="/zh/2_wired/DS22">DS22</a></td>
+      <td class="czm-desc">22 键 · 有线</td>
+    </tr>
+    <tr>
+      <td class="czm-product"><a href="/zh/4_Tri-mode/4.2_dc22">DC22</a><br><span class="czm-tag czm-tag-wip">开发中</span></td>
+      <td class="czm-desc">22 键无线三模</td>
+    </tr>
+    <tr class="czm-group">
+      <td rowspan="2" class="czm-axis">40%</td>
+      <td class="czm-product"><a href="/zh/2_wired/gamer">Gamer</a></td>
+      <td class="czm-desc">34 键游戏小键盘</td>
+    </tr>
+    <tr>
+      <td class="czm-product"><a href="/zh/1_PCB/b23_ds34_v2">DS34 v2</a></td>
+      <td class="czm-desc">34 键 + 1 旋钮数字小键盘</td>
+    </tr>
+    <tr class="czm-group">
+      <td class="czm-axis">60%</td>
+      <td class="czm-product"><a href="/zh/2_wired/gh60_8K">Rush60</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
+      <td class="czm-desc">60% 有线键盘 · <a href="https://item.taobao.com/item.htm?ft=t&amp;id=1093120959484">淘宝在售</a></td>
+    </tr>
+    <tr class="czm-group">
+      <td rowspan="2" class="czm-axis">双模系列</td>
+      <td class="czm-product"><a href="/zh/3_DZ/DZ17">DZ17</a></td>
+      <td class="czm-desc">17 键 USB + 蓝牙 5.0 双模，ZMK 固件</td>
+    </tr>
+    <tr>
+      <td class="czm-product"><a href="/zh/3_DZ/DZ87">DZ87</a></td>
+      <td class="czm-desc">87 键（TKL）USB + 蓝牙 5.0 双模，ZMK 固件</td>
+    </tr>
+    <tr class="czm-group">
+      <td rowspan="2" class="czm-axis">静电容系列</td>
+      <td class="czm-product"><a href="/zh/7_EC/EC87">EC87</a></td>
+      <td class="czm-desc">87 键（TKL）静电容，支持网页触底校准</td>
+    </tr>
+    <tr>
+      <td class="czm-product"><a href="/zh/7_EC/EC65">EC65</a></td>
+      <td class="czm-desc">65%（5×16）静电容，支持网页触底校准</td>
+    </tr>
+    <tr class="czm-group">
+      <td rowspan="2" class="czm-axis">合作款</td>
+      <td class="czm-product"><a href="/zh/5_Swagkeys/Eave">EAVE</a></td>
+      <td class="czm-desc">Swagkeys 合作款</td>
+    </tr>
+    <tr>
+      <td class="czm-product"><a href="/zh/5_Swagkeys/TransitionLite87">SW Transition Lite 87</a></td>
+      <td class="czm-desc">Swagkeys 87 键</td>
+    </tr>
+    <tr class="czm-group">
+      <td rowspan="2" class="czm-axis">其他</td>
+      <td class="czm-product"><a href="/zh/4_Tri-mode/4.1_dm17">DM17</a></td>
+      <td class="czm-desc">QMK 三模方案，测试后放弃</td>
+    </tr>
+    <tr>
+      <td class="czm-product"><a href="/zh/8_download/">下载中心</a></td>
+      <td class="czm-desc">固件、键位定义、图纸、文档</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 ### 在线工具
 
 - [VIA 在线改键](https://via.micah.vip/) — 国内服务器，实时改键。
