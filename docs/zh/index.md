@@ -203,7 +203,7 @@
     </tr>
     <tr class="czm-group">
       <td class="czm-axis">60%</td>
-      <td class="czm-product"><a href="/zh/2_wired/gh60_8K">Rush60</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
+      <td class="czm-product"><a href="/zh/2_wired/gh60_8K">RUSH60_8K</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
       <td class="czm-desc">60% 有线键盘 · <a href="https://item.taobao.com/item.htm?ft=t&amp;id=1093120959484">淘宝在售</a></td>
     </tr>
     <tr class="czm-group">
