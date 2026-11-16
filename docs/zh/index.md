@@ -175,10 +175,6 @@
 </div>
 
 
-## 开始使用
-
-### 说明书
-
 <div class="czm-matrix-wrap">
 <table class="czm-matrix czm-docs">
   <thead>
@@ -259,7 +255,12 @@
   </tbody>
 </table>
 </div>
-### 在线工具
+
+
+
+## 开始使用
+
+## 在线工具
 
 - [VIA 在线改键](https://via.micah.vip/) — 国内服务器，实时改键。
 - [VIA (GitHub)](https://micahyy.github.io/) — 海外服务器。
