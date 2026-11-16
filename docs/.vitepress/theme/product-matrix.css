@@ -256,3 +256,12 @@ html.dark .vp-doc .czm-matrix td.czm-product.czm-status-off { background: rgba(2
 
 /* 待开发格底色：中性浅灰（与开发中的浅黄区分） */
 .vp-doc .czm-matrix td.czm-product.czm-status-todo { background: color-mix(in srgb, var(--vp-c-text-1) 6%, var(--vp-c-bg)); }
+
+/* 方案不可用说明格（如 CH552T IO数量限制） */
+.vp-doc .czm-matrix td.czm-na {
+  color: var(--vp-c-text-3);
+  font-size: 12px;
+  line-height: 1.6;
+  text-align: center;
+  vertical-align: middle;
+}

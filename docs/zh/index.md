@@ -128,7 +128,7 @@
     <tr>
       <td rowspan="2" class="czm-axis">40%</td>
       <td class="czm-layout">gamer</td>
-      <td class="czm-empty">—</td>
+      <td class="czm-na">IO数量限制<br>不开发</td>
       <td class="czm-product">gamer<br><a class="czm-pill" href="/zh/2_wired/gamer">说明书</a></td>
       <td class="czm-empty">—</td>
       <td class="czm-product czm-status-todo">RUSH_Gamer<br><span class="czm-tag">待开发</span></td>
@@ -139,7 +139,7 @@
     </tr>
     <tr>
       <td class="czm-layout">DS34</td>
-      <td class="czm-empty">—</td>
+      <td class="czm-na">IO数量限制<br>不开发</td>
       <td class="czm-product">DS34 v2<br><a class="czm-pill" href="/zh/1_PCB/b23_ds34_v2">说明书</a></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
@@ -151,7 +151,7 @@
     <tr>
       <td rowspan="3" class="czm-axis">60%</td>
       <td class="czm-layout">标准60</td>
-      <td class="czm-empty">—</td>
+      <td class="czm-na">IO数量限制<br>不开发</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-product czm-status-sale">RUSH60_8K<br><a class="czm-pill" href="/zh/2_wired/gh60_8K">说明书</a> <a class="czm-pill czm-pill-buy czm-pill-taobao" href="https://item.taobao.com/item.htm?ft=t&amp;id=1093120959484" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
@@ -162,7 +162,7 @@
     </tr>
     <tr>
       <td class="czm-layout">SW EAVE</td>
-      <td class="czm-empty">—</td>
+      <td class="czm-na">IO数量限制<br>不开发</td>
       <td class="czm-product czm-status-off">EAVE<br><a class="czm-pill" href="/zh/5_Swagkeys/Eave">说明书</a><br><span class="czm-tag czm-tag-off">停售</span></td>
       <td class="czm-product czm-status-sale">EC65<br><a class="czm-pill" href="/zh/7_EC/EC65">说明书</a> <a class="czm-pill czm-pill-buy czm-pill-taobao" href="https://item.taobao.com/item.htm?ft=t&amp;id=1094389098322" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
       <td class="czm-empty">—</td>
@@ -173,7 +173,7 @@
     </tr>
     <tr>
       <td class="czm-layout">左移64</td>
-      <td class="czm-empty">—</td>
+      <td class="czm-na">IO数量限制<br>不开发</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
@@ -185,7 +185,7 @@
     <tr>
       <td rowspan="2" class="czm-axis">80%</td>
       <td class="czm-layout">TKL</td>
-      <td class="czm-empty">—</td>
+      <td class="czm-na">IO数量限制<br>不开发</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
@@ -196,7 +196,7 @@
     </tr>
     <tr>
       <td class="czm-layout">Transition 87</td>
-      <td class="czm-empty">—</td>
+      <td class="czm-na">IO数量限制<br>不开发</td>
       <td class="czm-product czm-status-off">SW Transition Lite 87<br><a class="czm-pill" href="/zh/5_Swagkeys/TransitionLite87">说明书</a><br><span class="czm-tag czm-tag-off">停售</span></td>
       <td class="czm-product czm-status-sale">EC87_TL<br><a class="czm-pill" href="/zh/7_EC/EC87">说明书</a> <a class="czm-pill czm-pill-buy czm-pill-mall" href="https://shop.micah.vip/#/kit/EC87-KIT" target="_blank" rel="noopener">商城</a> <a class="czm-pill czm-pill-buy czm-pill-taobao" href="https://item.taobao.com/item.htm?ft=t&amp;id=1092120748142" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
       <td class="czm-empty">—</td>
