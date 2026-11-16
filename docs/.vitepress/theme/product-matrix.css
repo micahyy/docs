@@ -234,3 +234,7 @@ html.dark .vp-doc .czm-matrix .czm-tag.czm-tag-wip {
   border-color: #333438;
   opacity: 1;
 }
+
+/* 单元格状态底色：在售浅绿、开发中/待开发浅黄 */
+.vp-doc .czm-matrix td.czm-product.czm-status-sale { background: var(--vp-c-green-soft); }
+.vp-doc .czm-matrix td.czm-product.czm-status-dev { background: var(--vp-c-yellow-soft); }
