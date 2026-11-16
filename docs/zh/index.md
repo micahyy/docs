@@ -120,7 +120,7 @@
       <td class="czm-empty">—</td>
       <td class="czm-product">gamer</td>
       <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
+      <td class="czm-product">RUSH_Gamer<br><span class="czm-tag">待开发</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-product">Gamer</td>
       <td class="czm-product">GamerHe</td>

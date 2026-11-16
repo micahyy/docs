@@ -110,6 +110,20 @@
   background: color-mix(in srgb, var(--vp-c-brand-1) 10%, var(--vp-c-bg));
 }
 
+/* 产品格里的状态小标签（如“待开发”） */
+.vp-doc .czm-matrix .czm-tag {
+  display: inline-block;
+  margin-top: 3px;
+  padding: 0 6px;
+  font-size: 10.5px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: var(--vp-c-text-3);
+  background: var(--vp-c-default-soft);
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
 /* 空位：压到几乎看不见，不抢注意力 */
 .vp-doc .czm-matrix td.czm-empty {
   color: var(--vp-c-text-3);
