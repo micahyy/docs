@@ -17,14 +17,14 @@ CZMao (czmao) is an open-source community focused on custom mechanical keyboards
 - [DS17](/en/2_wired/DS17) — Wired numeric keypad with an 8 kHz polling rate.
 - [DS22](/en/2_wired/DS22) — 22-key wired numeric keypad.
 - [Gamer](/en/2_wired/gamer) — 34-key gaming keypad.
-- [Rush60](/en/1_PCB/gh60_8K) — Wired keyboard with an 8 kHz polling rate.
-- [DS34 v2 (b23_ds34_v2)](/en/2_wired/b23_ds34_v2) — 34-key + 1-knob numpad.
-- [DS21 4-Knob (b70_ds21_encoder)](/en/2_wired/b70_ds21_encoder) — 17 keys + 4 knobs.
+- [Rush60](/en/2_wired/gh60_8K) — Wired keyboard with an 8 kHz polling rate.
+- [DS34 v2 (b23_ds34_v2)](/en/1_PCB/b23_ds34_v2) — 34-key + 1-knob numpad.
+- [DS21 4-Knob (b70_ds21_encoder)](/en/1_PCB/b70_ds21_encoder) — 17 keys + 4 knobs.
 - [DZ17](/en/3_DZ/DZ17) — 17-key dual-mode numpad (USB wired + Bluetooth 5.0), ZMK firmware.
 - [DZ87](/en/3_DZ/DZ87) — 87-key (TKL) dual-mode mechanical keyboard (USB wired + Bluetooth 5.0), ZMK firmware.
 - [EC87](/en/7_EC/EC87) — 87-key (TKL) electrostatic-capacitive keyboard with web-based actuation calibration.
 - [EC65](/en/7_EC/EC65) — 65% (5×16) electrostatic-capacitive keyboard with web-based actuation calibration.
-- [DM17 (abandoned)](/en/9_abandoned/dm17) — QMK tri-mode design, abandoned after testing.
+- [DM17 (abandoned)](/en/4_Tri-mode/4.1_dm17) — QMK tri-mode design, abandoned after testing.
 - [DC22](/en/4_Tri-mode/4.2_dc22) — 22-key tri-mode numeric keypad (work in progress).
 - [EAVE](/en/5_Swagkeys/Eave) — Collaboration model with Swagkeys.
 - [SW Transition Lite 87](/en/5_Swagkeys/TransitionLite87) — 87-key Swagkeys keyboard.
