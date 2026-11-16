@@ -88,7 +88,7 @@
       <td>否</td>
       <td>否</td>
       <td>否</td>
-      <td class="czm-empty">—</td>
+      <td>是</td>
     </tr>
     <tr class="czm-group">
       <td rowspan="3" class="czm-axis">20%</td>
