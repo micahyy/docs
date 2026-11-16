@@ -44,7 +44,7 @@
       <td>入门三模</td>
       <td>电竞8K</td>
       <td>电竞8K</td>
-      <td class="czm-empty">—</td>
+      <td>低功耗开源蓝牙双模</td>
     </tr>
     <tr class="czm-spec">
       <td>源码</td>
