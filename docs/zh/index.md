@@ -77,6 +77,7 @@
       <td>机械轴</td>
       <td>机械轴</td>
       <td>机械轴</td>
+      <td>磁轴</td>
       <td>机械轴</td>
     </tr>
     <tr class="czm-spec">
