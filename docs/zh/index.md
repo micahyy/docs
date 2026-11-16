@@ -149,7 +149,7 @@
       <td class="czm-empty">—</td>
     </tr>
     <tr>
-      <td rowspan="4" class="czm-axis">60%</td>
+      <td rowspan="3" class="czm-axis">60%</td>
       <td class="czm-layout">标准60</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
@@ -161,9 +161,9 @@
       <td class="czm-empty">—</td>
     </tr>
     <tr>
-      <td rowspan="2" class="czm-layout">65键</td>
+      <td class="czm-layout">65键</td>
       <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
+      <td class="czm-product">EAVE<br><a class="czm-pill" href="/zh/5_Swagkeys/Eave">说明书</a></td>
       <td class="czm-product">EC65<br><a class="czm-pill" href="/zh/7_EC/EC65">说明书</a></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
@@ -171,16 +171,7 @@
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
     </tr>
-    <tr>
-      <td class="czm-empty">—</td>
-      <td class="czm-product">EAVE<br><a class="czm-pill" href="/zh/5_Swagkeys/Eave">说明书</a></td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-    </tr>
+
     <tr>
       <td class="czm-layout">左移64</td>
       <td class="czm-empty">—</td>
