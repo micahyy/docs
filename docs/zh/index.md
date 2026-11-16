@@ -4,6 +4,151 @@
 
 菜籽猫（czmao）是一个专注于客制化机械键盘的开源社区，涵盖 PCB 设计、固件开发、驱动工具与键盘说明书。所有 PCB 源文件、固件、JSON 等均开源托管于 GitHub 和 Gitee，免费下载，请勿商用。
 
+## 产品矩阵
+
+<table>
+  <thead>
+    <tr>
+      <th>配列</th>
+      <th>布局</th>
+      <th>方案一</th>
+      <th>方案二</th>
+      <th>方案三</th>
+      <th>方案四</th>
+      <th>方案五</th>
+      <th>方案六</th>
+      <th>方案七</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="6">方案参数</td>
+      <td>芯片</td>
+      <td>CH552T</td>
+      <td>APM32F103CBT6</td>
+      <td>APM32F103CBT6</td>
+      <td>AT32F405RCT7-7</td>
+      <td>CH582M</td>
+      <td>CH585M</td>
+      <td>CH585M</td>
+    </tr>
+    <tr>
+      <td>定位</td>
+      <td>极致性价比</td>
+      <td>满血QMK</td>
+      <td>静电容</td>
+      <td>电竞8K</td>
+      <td>入门三模</td>
+      <td>电竞8K</td>
+      <td>电竞8K</td>
+    </tr>
+    <tr>
+      <td>源码</td>
+      <td>AI自研</td>
+      <td>QMK</td>
+      <td>AI自研</td>
+      <td>QMK</td>
+      <td>AI自研</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>模式</td>
+      <td>有线单模</td>
+      <td>有线单模</td>
+      <td>有线单模</td>
+      <td>有线单模</td>
+      <td>无线三模</td>
+      <td>无线三模</td>
+      <td>无线三模</td>
+    </tr>
+    <tr>
+      <td>轴体</td>
+      <td>机械轴</td>
+      <td>机械轴</td>
+      <td>静电容</td>
+      <td>机械轴</td>
+      <td>机械轴</td>
+      <td>机械轴</td>
+      <td>磁轴</td>
+    </tr>
+    <tr>
+      <td>代码开源</td>
+      <td>是</td>
+      <td>是</td>
+      <td>否</td>
+      <td>否</td>
+      <td>否</td>
+      <td>否</td>
+      <td>否</td>
+    </tr>
+    <tr>
+      <td rowspan="3">20%</td>
+      <td>17 键</td>
+      <td>DS17Lite</td>
+      <td>DS17</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>21 键</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>22 键</td>
+      <td>DS22Lite</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>DC22</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>40%</td>
+      <td>34 键</td>
+      <td>DS34</td>
+      <td>gamer</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>Gamer</td>
+      <td>GamerHe</td>
+    </tr>
+    <tr>
+      <td rowspan="2">60%</td>
+      <td>标准 60</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>RUSH60</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td>7U</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+      <td>左移64</td>
+      <td>—</td>
+      <td>—</td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+
+
 ## 开始使用
 
 ### 说明书
