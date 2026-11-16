@@ -164,7 +164,7 @@
       <td class="czm-layout">SW EAVE</td>
       <td class="czm-empty">—</td>
       <td class="czm-product czm-status-off">EAVE<br><a class="czm-pill" href="/zh/5_Swagkeys/Eave">说明书</a><br><span class="czm-tag czm-tag-off">停售</span></td>
-      <td class="czm-product">EC65<br><a class="czm-pill" href="/zh/7_EC/EC65">说明书</a></td>
+      <td class="czm-product czm-status-sale">EC65<br><a class="czm-pill" href="/zh/7_EC/EC65">说明书</a> <a class="czm-pill czm-pill-buy czm-pill-taobao" href="https://item.taobao.com/item.htm?ft=t&amp;id=1094389098322" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
