@@ -6,176 +6,6 @@
 
 ## 产品矩阵
 
-<div class="czm-matrix-wrap">
-<table class="czm-matrix">
-  <thead>
-    <tr>
-      <th>配列</th>
-      <th>布局</th>
-      <th>方案一</th>
-      <th>方案二</th>
-      <th>方案三</th>
-      <th>方案四</th>
-      <th>方案五</th>
-      <th>方案六</th>
-      <th>方案七</th>
-      <th>方案八</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class="czm-spec">
-      <td rowspan="6" class="czm-axis czm-axis-spec">方案参数</td>
-      <td>芯片</td>
-      <td>CH552T</td>
-      <td>APM32F103CBT6</td>
-      <td>APM32F103CBT6</td>
-      <td>AT32F405RCT7-7</td>
-      <td>CH582M</td>
-      <td>CH585M</td>
-      <td>CH585M</td>
-      <td>NRF52840</td>
-    </tr>
-    <tr class="czm-spec">
-      <td>定位</td>
-      <td>极致性价比</td>
-      <td>满血QMK</td>
-      <td>静电容</td>
-      <td>电竞8K</td>
-      <td>入门三模</td>
-      <td>电竞8K</td>
-      <td>电竞8K</td>
-      <td>低功耗开源蓝牙双模</td>
-    </tr>
-    <tr class="czm-spec">
-      <td>源码</td>
-      <td>AI自研</td>
-      <td>QMK</td>
-      <td>AI自研</td>
-      <td>QMK</td>
-      <td>AI自研</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td>ZMK</td>
-    </tr>
-    <tr class="czm-spec">
-      <td>模式</td>
-      <td>有线单模</td>
-      <td>有线单模</td>
-      <td>有线单模</td>
-      <td>有线单模</td>
-      <td>无线三模</td>
-      <td>无线三模</td>
-      <td>无线三模</td>
-      <td class="czm-empty">—</td>
-    </tr>
-    <tr class="czm-spec">
-      <td>轴体</td>
-      <td>机械轴</td>
-      <td>机械轴</td>
-      <td>静电容</td>
-      <td>机械轴</td>
-      <td>机械轴</td>
-      <td>机械轴</td>
-      <td>磁轴</td>
-      <td class="czm-empty">—</td>
-    </tr>
-    <tr class="czm-spec">
-      <td>代码开源</td>
-      <td>是</td>
-      <td>是</td>
-      <td>否</td>
-      <td>否</td>
-      <td>否</td>
-      <td>否</td>
-      <td>否</td>
-      <td>是</td>
-    </tr>
-    <tr class="czm-group">
-      <td rowspan="3" class="czm-axis">20%</td>
-      <td class="czm-layout">17 键</td>
-      <td class="czm-product">DS17Lite<br><span class="czm-tag">待开发</span></td>
-      <td class="czm-product"><a href="https://shop.micah.vip/#/kit/KIT-8ML8ACSR" target="_blank" rel="noopener">DS17</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-product"><a href="https://item.taobao.com/item.htm?ft=t&amp;id=1086940184127" target="_blank" rel="noopener">DZ17</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
-    </tr>
-    <tr>
-      <td class="czm-layout">21 键</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-    </tr>
-    <tr>
-      <td class="czm-layout">22 键</td>
-      <td class="czm-product">DS22Lite<br><span class="czm-tag czm-tag-wip">开发中</span></td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-product">DC22<br><span class="czm-tag czm-tag-wip">开发中</span></td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-    </tr>
-    <tr class="czm-group">
-      <td rowspan="2" class="czm-axis">40%</td>
-      <td class="czm-layout">gamer</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-product">gamer</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-product">RUSH_Gamer<br><span class="czm-tag">待开发</span></td>
-      <td class="czm-empty">—</td>
-      <td class="czm-product">Gamer</td>
-      <td class="czm-product">HE_Gamer<br><span class="czm-tag czm-tag-wip">开发中</span></td>
-      <td class="czm-empty">—</td>
-    </tr>
-    <tr>
-      <td class="czm-layout">DS34</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-product">DS34</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-    </tr>
-    <tr class="czm-group">
-      <td rowspan="2" class="czm-axis">60%</td>
-      <td class="czm-layout">标准 60</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-product"><a href="https://item.taobao.com/item.htm?ft=t&amp;id=1093120959484" target="_blank" rel="noopener">RUSH60_8K</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-    </tr>
-    <tr>
-      <td class="czm-layout">左移64</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-      <td class="czm-empty">—</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-### 说明书
 
 <div class="czm-matrix-wrap">
 <table class="czm-matrix">
@@ -264,96 +94,109 @@
     <tr>
       <td rowspan="3" class="czm-axis">20%</td>
       <td class="czm-layout">17键</td>
-      <td></td>
-      <td class="czm-product"><a href="/zh/2_wired/DS17">DS17</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
-      <td></td>
-      <td></td>
+      <td class="czm-product">DS17Lite<br><span class="czm-tag">待开发</span></td>
+      <td class="czm-product"><a href="https://shop.micah.vip/#/kit/KIT-8ML8ACSR" target="_blank" rel="noopener">DS17</a><br><a href="/zh/2_wired/DS17">说明书</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
       <td class="czm-product"><a href="/zh/4_Tri-mode/4.1_dm17">DM17</a></td>
-      <td></td>
-      <td></td>
-      <td class="czm-product"><a href="/zh/3_DZ/DZ17">DZ17</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-product"><a href="https://item.taobao.com/item.htm?ft=t&amp;id=1086940184127" target="_blank" rel="noopener">DZ17</a><br><a href="/zh/3_DZ/DZ17">说明书</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
     </tr>
     <tr>
       <td class="czm-layout">21键</td>
-      <td></td>
+      <td class="czm-empty">—</td>
       <td class="czm-product"><a href="/zh/1_PCB/b70_ds21_encoder">DS21 四旋钮</a></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr>
       <td class="czm-layout">22键</td>
-      <td class="czm-product"><a href="/zh/2_wired/DS22">DS22</a></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td class="czm-product"><a href="/zh/4_Tri-mode/4.2_dc22">DC22</a></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td class="czm-product"><a href="/zh/2_wired/DS22">DS22 / DS22Lite</a><br><span class="czm-tag czm-tag-wip">开发中</span></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-product"><a href="/zh/4_Tri-mode/4.2_dc22">DC22</a><br><span class="czm-tag czm-tag-wip">开发中</span></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr>
       <td rowspan="2" class="czm-axis">40%</td>
       <td class="czm-layout">gamer</td>
-      <td></td>
-      <td class="czm-product"><a href="/zh/2_wired/gamer">Gamer</a></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-product"><a href="/zh/2_wired/gamer">gamer</a></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-product">RUSH_Gamer<br><span class="czm-tag">待开发</span></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-product">Gamer</td>
+      <td class="czm-product">HE_Gamer<br><span class="czm-tag czm-tag-wip">开发中</span></td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr>
       <td class="czm-layout">DS34</td>
-      <td></td>
+      <td class="czm-empty">—</td>
       <td class="czm-product"><a href="/zh/1_PCB/b23_ds34_v2">DS34 v2</a></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr>
-      <td rowspan="3" class="czm-axis">60%</td>
+      <td rowspan="4" class="czm-axis">60%</td>
       <td class="czm-layout">标准60</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td class="czm-product"><a href="/zh/2_wired/gh60_8K">RUSH60_8K</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-product"><a href="https://item.taobao.com/item.htm?ft=t&amp;id=1093120959484" target="_blank" rel="noopener">RUSH60_8K</a><br><a href="/zh/2_wired/gh60_8K">说明书</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr>
       <td rowspan="2" class="czm-layout">65键</td>
-      <td></td>
-      <td></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
       <td class="czm-product"><a href="/zh/7_EC/EC65">EC65</a></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr>
       <td colspan="8" class="czm-product"><a href="/zh/5_Swagkeys/Eave">EAVE</a></td>
     </tr>
     <tr>
+      <td class="czm-layout">左移64</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+    </tr>
+    <tr>
       <td rowspan="2" class="czm-axis">80%</td>
       <td class="czm-layout">TKL</td>
-      <td></td>
-      <td></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
       <td class="czm-product"><a href="/zh/7_EC/EC87">EC87</a></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
       <td class="czm-product"><a href="https://item.taobao.com/item.htm?ft=t&amp;id=962342017714" target="_blank" rel="noopener">DZ87</a><br><a href="/zh/3_DZ/DZ87">说明书</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
     </tr>
     <tr>
