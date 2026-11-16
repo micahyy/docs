@@ -186,3 +186,31 @@ html.dark .vp-doc .czm-matrix .czm-tag.czm-tag-wip {
     padding: 7px 9px;
   }
 }
+
+/* 产品格胶囊链接 */
+.vp-doc .czm-matrix td.czm-product a.czm-pill {
+  display: inline-block;
+  padding: 1px 10px;
+  margin: 3px 4px 1px 0;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.7;
+  border: 1px solid var(--vp-c-brand-1);
+  border-bottom: 1px solid var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+  background: transparent;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+.vp-doc .czm-matrix td.czm-product a.czm-pill:hover {
+  background: var(--vp-c-brand-1);
+  color: var(--vp-c-bg);
+}
+.vp-doc .czm-matrix td.czm-product a.czm-pill.czm-pill-buy {
+  background: var(--vp-c-brand-1);
+  color: #fff;
+}
+.vp-doc .czm-matrix td.czm-product a.czm-pill.czm-pill-buy:hover {
+  opacity: 0.85;
+}
