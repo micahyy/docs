@@ -116,8 +116,8 @@
     </tr>
     <tr>
       <td class="czm-layout">22键</td>
-      <td class="czm-na">IO数量限制<br>不开发</td>
-      <td class="czm-product czm-status-dev">DS22<br><a class="czm-pill" href="/zh/2_wired/DS22">说明书</a><br>DS22Lite<br><span class="czm-tag czm-tag-wip">开发中</span></td>
+      <td class="czm-product czm-status-dev">DS22Lite<br><span class="czm-tag czm-tag-wip">开发中</span></td>
+      <td class="czm-product czm-status-dev">DS22<br><a class="czm-pill" href="/zh/2_wired/DS22">说明书</a><br><span class="czm-tag czm-tag-wip">开发中</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-product czm-status-dev">DC22<br><a class="czm-pill" href="/zh/4_Tri-mode/4.2_dc22">说明书</a><br><span class="czm-tag czm-tag-wip">开发中</span></td>
