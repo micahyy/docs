@@ -141,7 +141,7 @@
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
-      <td class="czm-product">RUSH60</td>
+      <td class="czm-product"><a href="https://item.taobao.com/item.htm?ft=t&amp;id=1093120959484" target="_blank" rel="noopener">RUSH60</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
@@ -179,7 +179,7 @@
 
 **60% 配列**
 
-- [Rush60（8K 回报率）](/zh/2_wired/gh60_8K) — 60% 有线键盘
+- [Rush60（8K 回报率）](/zh/2_wired/gh60_8K) — 60% 有线键盘 · [淘宝在售](https://item.taobao.com/item.htm?ft=t&id=1093120959484)
 
 **双模系列**
 
