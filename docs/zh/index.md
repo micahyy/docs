@@ -174,7 +174,7 @@
     <tr>
       <td class="czm-layout">左移64</td>
       <td class="czm-na">IO数量限制<br>不开发</td>
-      <td class="czm-empty">—</td>
+      <td class="czm-product czm-status-sale">热插拔RGB<br><a class="czm-pill czm-pill-buy czm-pill-taobao" href="https://item.taobao.com/item.htm?ft=t&amp;id=950215073316" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
