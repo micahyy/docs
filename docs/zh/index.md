@@ -6,7 +6,8 @@
 
 ## 产品矩阵
 
-<table>
+<div class="czm-matrix-wrap">
+<table class="czm-matrix">
   <thead>
     <tr>
       <th>配列</th>
@@ -21,8 +22,8 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td rowspan="6">方案参数</td>
+    <tr class="czm-spec">
+      <td rowspan="6" class="czm-axis czm-axis-spec">方案参数</td>
       <td>芯片</td>
       <td>CH552T</td>
       <td>APM32F103CBT6</td>
@@ -32,7 +33,7 @@
       <td>CH585M</td>
       <td>CH585M</td>
     </tr>
-    <tr>
+    <tr class="czm-spec">
       <td>定位</td>
       <td>极致性价比</td>
       <td>满血QMK</td>
@@ -42,17 +43,17 @@
       <td>电竞8K</td>
       <td>电竞8K</td>
     </tr>
-    <tr>
+    <tr class="czm-spec">
       <td>源码</td>
       <td>AI自研</td>
       <td>QMK</td>
       <td>AI自研</td>
       <td>QMK</td>
       <td>AI自研</td>
-      <td>—</td>
-      <td>—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
     </tr>
-    <tr>
+    <tr class="czm-spec">
       <td>模式</td>
       <td>有线单模</td>
       <td>有线单模</td>
@@ -62,7 +63,7 @@
       <td>无线三模</td>
       <td>无线三模</td>
     </tr>
-    <tr>
+    <tr class="czm-spec">
       <td>轴体</td>
       <td>机械轴</td>
       <td>机械轴</td>
@@ -72,7 +73,7 @@
       <td>机械轴</td>
       <td>磁轴</td>
     </tr>
-    <tr>
+    <tr class="czm-spec">
       <td>代码开源</td>
       <td>是</td>
       <td>是</td>
@@ -82,71 +83,72 @@
       <td>否</td>
       <td>否</td>
     </tr>
-    <tr>
-      <td rowspan="3">20%</td>
-      <td>17 键</td>
-      <td>DS17Lite</td>
-      <td>DS17</td>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
+    <tr class="czm-group">
+      <td rowspan="3" class="czm-axis">20%</td>
+      <td class="czm-layout">17 键</td>
+      <td class="czm-product">DS17Lite</td>
+      <td class="czm-product">DS17</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr>
-      <td>21 键</td>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
+      <td class="czm-layout">21 键</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr>
-      <td>22 键</td>
-      <td>DS22Lite</td>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-      <td>DC22</td>
-      <td>—</td>
-      <td>—</td>
+      <td class="czm-layout">22 键</td>
+      <td class="czm-product">DS22Lite</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-product">DC22</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+    </tr>
+    <tr class="czm-group">
+      <td rowspan="1" class="czm-axis">40%</td>
+      <td class="czm-layout">34 键</td>
+      <td class="czm-product">DS34</td>
+      <td class="czm-product">gamer</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-product">Gamer</td>
+      <td class="czm-product">GamerHe</td>
+    </tr>
+    <tr class="czm-group">
+      <td rowspan="2" class="czm-axis">60%</td>
+      <td class="czm-layout">标准 60</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-product">RUSH60</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr>
-      <td>40%</td>
-      <td>34 键</td>
-      <td>DS34</td>
-      <td>gamer</td>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-      <td>Gamer</td>
-      <td>GamerHe</td>
-    </tr>
-    <tr>
-      <td rowspan="2">60%</td>
-      <td>标准 60</td>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-      <td>RUSH60</td>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-    </tr>
-    <tr>
-      <td>7U</td>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
-      <td>左移64</td>
-      <td>—</td>
-      <td>—</td>
-      <td>—</td>
+      <td class="czm-layout">7U</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-product">左移64</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
     </tr>
   </tbody>
 </table>
+</div>
 
 
 ## 开始使用

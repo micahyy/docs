@@ -1,0 +1,133 @@
+/*! 首页产品矩阵表格样式 v1 (2026-11-16)
+ *
+ * 目标：9 列密集矩阵在亮色/暗色下都清晰、可横向滚动、分组一眼可辨。
+ * 全部使用 VitePress 语义色变量，不写死颜色，跟随主题自动切换。
+ */
+
+/* 外层：圆角卡片 + 横向滚动（窄屏 9 列不会撑破正文） */
+.czm-matrix-wrap {
+  margin: 28px 0 32px;
+  overflow-x: auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  background: var(--vp-c-bg);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 12px 28px -18px rgba(0, 0, 0, 0.3);
+}
+
+/* VitePress 默认给 .vp-doc table 设了 display:block 自己滚，这里改回真表格，
+ * 滚动交给外层 wrap，否则圆角和边框会跟着内容跑。 */
+.vp-doc .czm-matrix {
+  display: table;
+  width: 100%;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* 压掉 VitePress 默认表格的斑马纹（tr:nth-child(2n)）和 tr 上边框，
+ * 否则空单元格会透出条纹色、边框也会和 td 的 border 叠成双线。 */
+.vp-doc .czm-matrix tr {
+  background: transparent;
+  border-top: 0;
+}
+
+.vp-doc .czm-matrix td {
+  background: var(--vp-c-bg);
+}
+
+.vp-doc .czm-matrix th,
+.vp-doc .czm-matrix td {
+  padding: 9px 12px;
+  border: 0;
+  border-right: 1px solid var(--vp-c-divider);
+  border-bottom: 1px solid var(--vp-c-divider);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.vp-doc .czm-matrix th:last-child,
+.vp-doc .czm-matrix td:last-child {
+  border-right: 0;
+}
+
+.vp-doc .czm-matrix tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* 表头 */
+.vp-doc .czm-matrix thead th {
+  padding: 11px 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  border-bottom: 2px solid var(--vp-c-brand-1);
+}
+
+/* 配列列（第一列，rowspan 分组）：整列加深，一眼看出分组边界 */
+.vp-doc .czm-matrix td.czm-axis {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg-alt);
+  border-right: 2px solid var(--vp-c-divider);
+}
+
+/* “方案参数”竖排标签，省横向空间也当视觉分隔 */
+.vp-doc .czm-matrix td.czm-axis-spec {
+  writing-mode: vertical-rl;
+  letter-spacing: 0.28em;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--vp-c-text-3);
+  background: var(--vp-c-bg-soft);
+}
+
+/* 布局列（第二列的产品行）：左对齐，弱化 */
+.vp-doc .czm-matrix td.czm-layout {
+  text-align: left;
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg-soft);
+}
+
+/* 方案参数区（芯片/定位/源码/模式/轴体/代码开源） */
+.vp-doc .czm-matrix tr.czm-spec td {
+  font-size: 12.5px;
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg-soft);
+}
+
+/* 有产品的格子：主色 + 淡底，扫一眼就能数出每个方案有几款 */
+.vp-doc .czm-matrix td.czm-product {
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  background: color-mix(in srgb, var(--vp-c-brand-1) 10%, var(--vp-c-bg));
+}
+
+/* 空位：压到几乎看不见，不抢注意力 */
+.vp-doc .czm-matrix td.czm-empty {
+  color: var(--vp-c-text-3);
+  opacity: 0.45;
+}
+
+/* 配列分组之间加一道粗分隔（20% / 40% / 60% 的起始行） */
+.vp-doc .czm-matrix tr.czm-group td {
+  border-top: 2px solid var(--vp-c-divider);
+}
+
+/* 窄屏收紧 */
+@media (max-width: 640px) {
+  .vp-doc .czm-matrix {
+    font-size: 12px;
+  }
+  .vp-doc .czm-matrix th,
+  .vp-doc .czm-matrix td {
+    padding: 7px 9px;
+  }
+}

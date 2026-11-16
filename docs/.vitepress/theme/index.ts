@@ -6,6 +6,7 @@ import './download.css'
 import './full-width.css'
 import './lang-switch.css'
 import './micah-nav.css'
+import './product-matrix.css'
 import './lightbox.css'
 import './print.css'
 
