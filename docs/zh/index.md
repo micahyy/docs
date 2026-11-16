@@ -115,15 +115,25 @@
       <td class="czm-empty">—</td>
     </tr>
     <tr class="czm-group">
-      <td class="czm-axis">40%</td>
-      <td class="czm-layout">34 键</td>
+      <td rowspan="2" class="czm-axis">40%</td>
+      <td class="czm-layout">gamer</td>
       <td class="czm-empty">—</td>
-      <td class="czm-product">DS34<br>gamer</td>
+      <td class="czm-product">gamer</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
       <td class="czm-product">Gamer</td>
       <td class="czm-product">GamerHe</td>
+    </tr>
+    <tr>
+      <td class="czm-layout">DS34</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-product">DS34</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
+      <td class="czm-empty">—</td>
     </tr>
     <tr class="czm-group">
       <td rowspan="2" class="czm-axis">60%</td>
