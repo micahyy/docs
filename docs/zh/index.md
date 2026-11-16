@@ -86,7 +86,7 @@
     <tr class="czm-group">
       <td rowspan="3" class="czm-axis">20%</td>
       <td class="czm-layout">17 键</td>
-      <td class="czm-product">DS17Lite</td>
+      <td class="czm-product">DS17Lite<br><span class="czm-tag">待开发</span></td>
       <td class="czm-product"><a href="https://shop.micah.vip/#/kit/KIT-8ML8ACSR" target="_blank" rel="noopener">DS17</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
       <td class="czm-empty">—</td>
       <td class="czm-empty">—</td>
