@@ -354,7 +354,7 @@
       <td></td>
       <td></td>
       <td></td>
-      <td class="czm-product"><a href="/zh/3_DZ/DZ87">DZ87</a></td>
+      <td class="czm-product"><a href="https://item.taobao.com/item.htm?ft=t&amp;id=962342017714" target="_blank" rel="noopener">DZ87</a><br><a href="/zh/3_DZ/DZ87">说明书</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
     </tr>
     <tr>
       <td class="czm-layout">Transition 87</td>
