@@ -8,11 +8,13 @@ jobs:
     steps:
       - name: Install sshpass
         run: sudo apt-get update -qq && sudo apt-get install -y sshpass
-      - name: Inspect /files tree, cron and manifest script
+      - name: Inspect drawings frontend
         run: |
           sshpass -p "${{ secrets.PASSWORD }}" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "${{ secrets.USERNAME }}@8.159.143.134" 'bash -s' <<'REMOTE'
-          echo "=== 0_manual_files 目录 ==="
-          ls -la /www/wwwroot/0_manual_files/ | head -40
-          echo "=== _gen_manifest.php 全文 ==="
-          cat /www/wwwroot/0_manual_files/_gen_manifest.php
+          echo "=== curFolder 初始化与视图切换 ==="
+          grep -n "curFolder\|__all__\|viewMode\|全部" /www/wwwroot/t.techood.cn/drawings/index.php
+          echo "=== 165-200行(侧栏区域) ==="
+          sed -n '165,200p' /www/wwwroot/t.techood.cn/drawings/index.php
+          echo "=== 320-400行(渲染逻辑) ==="
+          sed -n '320,400p' /www/wwwroot/t.techood.cn/drawings/index.php
           REMOTE
