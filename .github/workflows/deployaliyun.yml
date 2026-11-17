@@ -58,6 +58,20 @@ jobs:
             echo "SYNC_OK"
             ls -1A "$TARGET"
 
+      - name: Deploy manifest generator script
+        uses: appleboy/ssh-action@v1
+        with:
+          host:     8.159.143.134
+          username: ${{ secrets.USERNAME }}
+          port:     22
+          password: ${{ secrets.PASSWORD }}
+          script_stop: true
+          script: |
+            cp /www/wwwroot/0_manual_files/_gen_manifest.php /www/wwwroot/0_manual_files/_gen_manifest.php.bak-20261117
+            echo '' | base64 -d > /www/wwwroot/0_manual_files/_gen_manifest.php
+            php -l /www/wwwroot/0_manual_files/_gen_manifest.php
+            php /www/wwwroot/0_manual_files/_gen_manifest.php
+
       - name: Verify live site
         run: |
           set -eu
