@@ -281,13 +281,30 @@ html.dark .vp-doc .czm-matrix .czm-tag.czm-tag-clear {
 .vp-doc .czm-matrix td.czm-product.czm-status-clear { background: rgba(234, 88, 12, 0.08); }
 html.dark .vp-doc .czm-matrix td.czm-product.czm-status-clear { background: rgba(251, 146, 60, 0.10); }
 
-/* 套餐演示表：包含项打勾，绿色加粗醒目（与在售标签同色系） */
-.vp-doc .czm-matrix td.czm-check {
-  color: #16a34a;
+/* 套餐演示表：包含项打勾，绿底深绿字醒目 */
+.vp-doc .czm-matrix tr.czm-spec td.czm-check {
+  color: #15803d;
+  background: #dcfce7;
   font-weight: 700;
   font-size: 1.25em;
 }
 
-html.dark .vp-doc .czm-matrix td.czm-check {
+html.dark .vp-doc .czm-matrix tr.czm-spec td.czm-check {
   color: #4ade80;
+  background: #14532d;
+}
+
+/* 套餐演示表：不含项打叉，红底红字（区别于首页矩阵共用 czm-empty） */
+.vp-doc .czm-matrix tr.czm-spec td.czm-cross {
+  color: #dc2626;
+  opacity: 1;
+  background: #fee2e2;
+  font-weight: 700;
+  font-size: 1.25em;
+}
+
+html.dark .vp-doc .czm-matrix tr.czm-spec td.czm-cross {
+  color: #f87171;
+  opacity: 1;
+  background: #7f1d1d;
 }
