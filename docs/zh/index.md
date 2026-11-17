@@ -217,7 +217,7 @@
     </tr>
     <tr>
       <td class="czm-axis">100%</td>
-      <td class="czm-layout">108键</td>
+      <td class="czm-layout">G80-3000</td>
       <td class="czm-na">IO数量限制<br>不开发</td>
       <td class="czm-product czm-status-sale">G80-3000 焊接多配列<br><a class="czm-pill" href="/zh/1_PCB/g80_3000">说明书</a> <a class="czm-pill czm-pill-buy czm-pill-taobao" href="https://item.taobao.com/item.htm?ft=t&amp;id=958654895575" target="_blank" rel="noopener">淘宝</a><br><span class="czm-tag czm-tag-sale">在售</span></td>
       <td class="czm-empty">—</td>
