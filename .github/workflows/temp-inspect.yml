@@ -8,13 +8,13 @@ jobs:
     steps:
       - name: Install sshpass
         run: sudo apt-get update -qq && sudo apt-get install -y sshpass
-      - name: Inspect drawings frontend
+      - name: Inspect nginx files mapping
         run: |
           sshpass -p "${{ secrets.PASSWORD }}" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "${{ secrets.USERNAME }}@8.159.143.134" 'bash -s' <<'REMOTE'
-          echo "=== curFolder 初始化与视图切换 ==="
-          grep -n "curFolder\|__all__\|viewMode\|全部" /www/wwwroot/t.techood.cn/drawings/index.php
-          echo "=== 165-200行(侧栏区域) ==="
-          sed -n '165,200p' /www/wwwroot/t.techood.cn/drawings/index.php
-          echo "=== 320-400行(渲染逻辑) ==="
-          sed -n '320,400p' /www/wwwroot/t.techood.cn/drawings/index.php
+          echo "=== nginx files 相关规则 ==="
+          grep -n -A4 "files" /www/server/panel/vhost/nginx/docs.micah.vip.conf 2>/dev/null | head -40
+          echo "=== files 目录是否软链 ==="
+          ls -la /www/wwwroot/docs.micah.vip/files/
+          echo "=== 0_manual_files 是否被其他 vhost 引用 ==="
+          grep -rn "0_manual_files" /www/server/panel/vhost/nginx/*.conf 2>/dev/null | head -10
           REMOTE
