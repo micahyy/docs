@@ -11,14 +11,8 @@ jobs:
       - name: Inspect /files tree, cron and manifest script
         run: |
           sshpass -p "${{ secrets.PASSWORD }}" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "${{ secrets.USERNAME }}@8.159.143.134" 'bash -s' <<'REMOTE'
-          echo "=== /files 目录树 ==="
-          find /www/wwwroot/docs.micah.vip/files -maxdepth 2 -type d 2>/dev/null
-          echo "=== /files 文件总数 ==="
-          find /www/wwwroot/docs.micah.vip/files -type f 2>/dev/null | wc -l
-          echo "=== /files 全部文件(前150) ==="
-          find /www/wwwroot/docs.micah.vip/files -type f -printf "%p\n" 2>/dev/null | head -150
-          echo "=== root cron ==="
-          crontab -l 2>/dev/null | grep -v "^#" | grep -v "^$"
-          echo "=== manifest 相关脚本 ==="
-          grep -rl "manifest" /root /opt /usr/local/bin /www/wwwroot/docs.micah.vip --include="*.sh" --include="*.py" --include="*.php" 2>/dev/null | grep -v "\.d/" | head -10
+          echo "=== 0_manual_files 目录 ==="
+          ls -la /www/wwwroot/0_manual_files/ | head -40
+          echo "=== _gen_manifest.php 全文 ==="
+          cat /www/wwwroot/0_manual_files/_gen_manifest.php
           REMOTE
