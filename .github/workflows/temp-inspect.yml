@@ -8,13 +8,19 @@ jobs:
     steps:
       - name: Install sshpass
         run: sudo apt-get update -qq && sudo apt-get install -y sshpass
-      - name: Inspect nginx files mapping
+      - name: Deploy new manifest script
         run: |
           sshpass -p "${{ secrets.PASSWORD }}" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "${{ secrets.USERNAME }}@8.159.143.134" 'bash -s' <<'REMOTE'
-          echo "=== nginx files 相关规则 ==="
-          grep -n -A4 "files" /www/server/panel/vhost/nginx/docs.micah.vip.conf 2>/dev/null | head -40
-          echo "=== files 目录是否软链 ==="
-          ls -la /www/wwwroot/docs.micah.vip/files/
-          echo "=== 0_manual_files 是否被其他 vhost 引用 ==="
-          grep -rn "0_manual_files" /www/server/panel/vhost/nginx/*.conf 2>/dev/null | head -10
+          cp /www/wwwroot/0_manual_files/_gen_manifest.php /www/wwwroot/0_manual_files/_gen_manifest.php.bak-20261117
+          echo 'PD9waHAKLy8g5omr5o+P5pyN5Yqh5Zmo5LiK5Y+v5YWs5byA6K6/6Zeu55qE5YWo6YOo5paH5Lu255Sf5oiQIG1hbmlmZXN0Lmpzb27vvIjkvpsgd29yay5taWNhaC52aXDjgIzlm77nurjntKDmnZDlupPjgI3or7vlj5bvvIkKLy8g6IyD5Zu077yaZG9jcy5taWNhaC52aXAg5pW05Liq56uZ54K555uu5b2V77yIZG93bmxvYWRzLyDlm7rku7Yr5Zu+57q444CBaW1hZ2VzL2ltZy8g5paH5qGj5Zu+54mH44CBbGFiZWwvIOetie+8iQovLyAgICAgICsgMF9tYW51YWxfZmlsZXMg57Sg5p2Q5bqT77yI57uPIG5naW54IC9maWxlcy8g5pq06Zyy77yJCi8vIOeUsSBjcm9uIOavj+WIhumSn+aJp+ihjOS4gOasoe+8jOS/neaMgea4heWNleacgOaWsO+8m0NMSSDov5DooYzvvIzkuI3kvp3otZYgbmdpbnggUEhQ44CCCiRyb290cyA9IFsKICBbJy93d3cvd3d3cm9vdC9kb2NzLm1pY2FoLnZpcCcsICdodHRwczovL2RvY3MubWljYWgudmlwLyddLAogIFsnL3d3dy93d3dyb290LzBfbWFudWFsX2ZpbGVzJywgJ2h0dHBzOi8vZG9jcy5taWNhaC52aXAvZmlsZXMvJ10sCl07CiRza2lwTmFtZXMgPSBbJ19nZW5fbWFuaWZlc3QucGhwJywgJ21hbmlmZXN0Lmpzb24nLCAnaGFzaG1hcC5qc29uJywgJ3NpdGVtYXAueG1sJywgJ3JvYm90cy50eHQnXTsKJHNraXBEaXJzICA9IFsnYXNzZXRzJywgJ2ZpbGVzJywgJy53ZWxsLWtub3duJ107IC8vIGZpbGVzLyDniannkIbnm67lvZXooqsgbmdpbnggYWxpYXMg5YiwIDBfbWFudWFsX2ZpbGVz77yM6Lez6L+H6YG/5YWN6YeN5aSNCiRza2lwRXh0ICAgPSBbJ2h0bWwnLCAneG1sJ107ICAgICAgICAgICAgICAgICAgICAvLyDnq5nngrnpobXpnaLkuI7nq5nngrnlnLDlm77kuI3ov5vntKDmnZDmuIXljZUKJGZpbGVzID0gW107CiRzZWVuID0gW107CmZvcmVhY2ggKCRyb290cyBhcyBbJGJhc2UsICR1cmxCYXNlXSkgewogICRpdCA9IG5ldyBSZWN1cnNpdmVJdGVyYXRvckl0ZXJhdG9yKAogICAgbmV3IFJlY3Vyc2l2ZURpcmVjdG9yeUl0ZXJhdG9yKCRiYXNlLCBGaWxlc3lzdGVtSXRlcmF0b3I6OlNLSVBfRE9UUyksCiAgICBSZWN1cnNpdmVJdGVyYXRvckl0ZXJhdG9yOjpMRUFWRVNfT05MWQogICk7CiAgZm9yZWFjaCAoJGl0IGFzICRmKSB7CiAgICBpZiAoISRmLT5pc0ZpbGUoKSkgY29udGludWU7CiAgICAkcmVsID0gbHRyaW0oc3RyX3JlcGxhY2UoJGJhc2UsICcnLCAkZi0+Z2V0UGF0aG5hbWUoKSksIERJUkVDVE9SWV9TRVBBUkFUT1IpOwogICAgJHNlZ3MgPSBleHBsb2RlKERJUkVDVE9SWV9TRVBBUkFUT1IsICRyZWwpOwogICAgaWYgKGluX2FycmF5KCRzZWdzWzBdLCAkc2tpcERpcnMsIHRydWUpKSBjb250aW51ZTsKICAgICRmbiA9ICRmLT5nZXRGaWxlbmFtZSgpOwogICAgaWYgKGluX2FycmF5KCRmbiwgJHNraXBOYW1lcywgdHJ1ZSkpIGNvbnRpbnVlOwogICAgaWYgKCRmblswXSA9PT0gJy4nKSBjb250aW51ZTsKICAgICRleHQgPSBzdHJ0b2xvd2VyKCRmLT5nZXRFeHRlbnNpb24oKSA/OiAnZmlsZScpOwogICAgaWYgKGluX2FycmF5KCRleHQsICRza2lwRXh0LCB0cnVlKSkgY29udGludWU7CiAgICAkdXJsID0gJHVybEJhc2UgLiBpbXBsb2RlKCcvJywgYXJyYXlfbWFwKCdyYXd1cmxlbmNvZGUnLCAkc2VncykpOwogICAgaWYgKGlzc2V0KCRzZWVuWyR1cmxdKSkgY29udGludWU7CiAgICAkc2VlblskdXJsXSA9IHRydWU7CiAgICAkZGlyMCA9IGNvdW50KCRzZWdzKSA+IDEgPyAkc2Vnc1swXSA6ICfmoLnnm67lvZUnOwogICAgJGZpbGVzW10gPSBbCiAgICAgICdwYXRoJyAgPT4gJHJlbCwKICAgICAgJ25hbWUnICA9PiAkZm4sCiAgICAgICdkaXInICAgPT4gJGRpcjAsCiAgICAgICdleHQnICAgPT4gJGV4dCwKICAgICAgJ3NpemUnICA9PiAkZi0+Z2V0U2l6ZSgpLAogICAgICAnbXRpbWUnID0+ICRmLT5nZXRNVGltZSgpLAogICAgICAndXJsJyAgID0+ICR1cmwsCiAgICBdOwogIH0KfQp1c29ydCgkZmlsZXMsIGZ1bmN0aW9uICgkYSwgJGIpIHsgcmV0dXJuIFskYVsnZGlyJ10sICRhWyduYW1lJ11dIDw9PiBbJGJbJ2RpciddLCAkYlsnbmFtZSddXTsgfSk7CiRvdXQgPSBbJ2dlbmVyYXRlZCcgPT4gZGF0ZSgnWS1tLWQgSDppOnMnKSwgJ2NvdW50JyA9PiBjb3VudCgkZmlsZXMpLCAnZmlsZXMnID0+ICRmaWxlc107CmZpbGVfcHV0X2NvbnRlbnRzKCcvd3d3L3d3d3Jvb3QvMF9tYW51YWxfZmlsZXMvbWFuaWZlc3QuanNvbicsIGpzb25fZW5jb2RlKCRvdXQsIEpTT05fVU5FU0NBUEVEX1VOSUNPREUgfCBKU09OX1VORVNDQVBFRF9TTEFTSEVTIHwgSlNPTl9QUkVUVFlfUFJJTlQpKTsKZWNobyBjb3VudCgkZmlsZXMpIC4gIiBmaWxlcyAtPiBtYW5pZmVzdC5qc29uXG4iOwo=' | base64 -d > /www/wwwroot/0_manual_files/_gen_manifest.php
+          php -l /www/wwwroot/0_manual_files/_gen_manifest.php
+          php /www/wwwroot/0_manual_files/_gen_manifest.php
+          echo "=== 目录分布 ==="
+          python3 -c "
+import json
+d=json.load(open('/www/wwwroot/0_manual_files/manifest.json'))
+from collections import Counter
+print('总数:', d['count'])
+c=Counter(f['dir'] for f in d['files'])
+[print(' ', k, v) for k,v in sorted(c.items())]"
           REMOTE
