@@ -1,0 +1,73 @@
+name: Temp - deploy manifest script
+on:
+  push:
+    paths:
+      - ".github/workflows/temp-deploy-manifest.yml"
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install sshpass
+        run: sudo apt-get update -qq && sudo apt-get install -y sshpass
+      - name: Deploy new manifest script and regenerate
+        run: |
+          sshpass -p "${{ secrets.PASSWORD }}" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null "${{ secrets.USERNAME }}@8.159.143.134" 'bash -s' <<'REMOTE'
+          cp /www/wwwroot/0_manual_files/_gen_manifest.php /www/wwwroot/0_manual_files/_gen_manifest.php.bak-20261117
+          cat > /www/wwwroot/0_manual_files/_gen_manifest.php <<'PHPEOF'
+<?php
+$roots = [
+  ['/www/wwwroot/docs.micah.vip', 'https://docs.micah.vip/'],
+  ['/www/wwwroot/0_manual_files', 'https://docs.micah.vip/files/'],
+];
+$skipNames = ['_gen_manifest.php', 'manifest.json', 'hashmap.json', 'sitemap.xml', 'robots.txt'];
+$skipDirs  = ['assets', 'files', '.well-known'];
+$skipExt   = ['html', 'xml'];
+$files = [];
+$seen = [];
+foreach ($roots as [$base, $urlBase]) {
+  $it = new RecursiveIteratorIterator(
+    new RecursiveDirectoryIterator($base, FilesystemIterator::SKIP_DOTS),
+    RecursiveIteratorIterator::LEAVES_ONLY
+  );
+  foreach ($it as $f) {
+    if (!$f->isFile()) continue;
+    $rel = ltrim(str_replace($base, '', $f->getPathname()), DIRECTORY_SEPARATOR);
+    $segs = explode(DIRECTORY_SEPARATOR, $rel);
+    if (in_array($segs[0], $skipDirs, true)) continue;
+    $fn = $f->getFilename();
+    if (in_array($fn, $skipNames, true)) continue;
+    if ($fn[0] === '.') continue;
+    $ext = strtolower($f->getExtension() ?: 'file');
+    if (in_array($ext, $skipExt, true)) continue;
+    $url = $urlBase . implode('/', array_map('rawurlencode', $segs));
+    if (isset($seen[$url])) continue;
+    $seen[$url] = true;
+    $dir0 = count($segs) > 1 ? $segs[0] : '根目录';
+    $files[] = [
+      'path'  => $rel,
+      'name'  => $fn,
+      'dir'   => $dir0,
+      'ext'   => $ext,
+      'size'  => $f->getSize(),
+      'mtime' => $f->getMTime(),
+      'url'   => $url,
+    ];
+  }
+}
+usort($files, function ($a, $b) { return [$a['dir'], $a['name']] <=> [$b['dir'], $b['name']]; });
+$out = ['generated' => date('Y-m-d H:i:s'), 'count' => count($files), 'files' => $files];
+file_put_contents('/www/wwwroot/0_manual_files/manifest.json', json_encode($out, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
+echo count($files) . " files -> manifest.json\n";
+PHPEOF
+          php -l /www/wwwroot/0_manual_files/_gen_manifest.php && php /www/wwwroot/0_manual_files/_gen_manifest.php
+          echo "=== 目录分布 ==="
+          python3 -c "
+import json
+d=json.load(open('/www/wwwroot/0_manual_files/manifest.json'))
+from collections import Counter
+print('总数:', d['count'])
+c=Counter(f['dir'] for f in d['files'])
+[print(' ', k, v) for k,v in sorted(c.items())]"
+          REMOTE
