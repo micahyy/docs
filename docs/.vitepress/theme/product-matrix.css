@@ -188,7 +188,7 @@ html.dark .vp-doc .czm-matrix .czm-tag.czm-tag-wip {
 }
 
 /* 产品格胶囊链接 */
-.vp-doc .czm-matrix td.czm-product a.czm-pill {
+.vp-doc .czm-matrix a.czm-pill {
   display: inline-block;
   padding: 1px 10px;
   margin: 3px 4px 1px 0;
@@ -203,33 +203,33 @@ html.dark .vp-doc .czm-matrix .czm-tag.czm-tag-wip {
   text-decoration: none;
   transition: background-color 0.2s, color 0.2s;
 }
-.vp-doc .czm-matrix td.czm-product a.czm-pill:hover {
+.vp-doc .czm-matrix a.czm-pill:hover {
   background: var(--vp-c-brand-1);
   color: var(--vp-c-bg);
 }
-.vp-doc .czm-matrix td.czm-product a.czm-pill.czm-pill-buy {
+.vp-doc .czm-matrix a.czm-pill.czm-pill-buy {
   background: var(--vp-c-brand-1);
   color: #fff;
 }
-.vp-doc .czm-matrix td.czm-product a.czm-pill.czm-pill-buy:hover {
+.vp-doc .czm-matrix a.czm-pill.czm-pill-buy:hover {
   opacity: 0.85;
 }
-.vp-doc .czm-matrix td.czm-product a.czm-pill.czm-pill-taobao {
+.vp-doc .czm-matrix a.czm-pill.czm-pill-taobao {
   background: #ff5000;
   border-color: #ff5000;
   color: #fff;
 }
-.vp-doc .czm-matrix td.czm-product a.czm-pill.czm-pill-taobao:hover {
+.vp-doc .czm-matrix a.czm-pill.czm-pill-taobao:hover {
   background: #e64800;
   border-color: #e64800;
   opacity: 1;
 }
-.vp-doc .czm-matrix td.czm-product a.czm-pill.czm-pill-mall {
+.vp-doc .czm-matrix a.czm-pill.czm-pill-mall {
   background: #17181a;
   border-color: #17181a;
   color: #fff;
 }
-.vp-doc .czm-matrix td.czm-product a.czm-pill.czm-pill-mall:hover {
+.vp-doc .czm-matrix a.czm-pill.czm-pill-mall:hover {
   background: #333438;
   border-color: #333438;
   opacity: 1;
