@@ -72,6 +72,34 @@ jobs:
             php -l /www/wwwroot/0_manual_files/_gen_manifest.php
             php /www/wwwroot/0_manual_files/_gen_manifest.php
 
+      - name: Inspect remote (fm api recon)
+        if: always()
+        uses: appleboy/ssh-action@v1
+        with:
+          host: 8.159.143.134
+          username: ${{ secrets.USERNAME }}
+          port: 22
+          password: ${{ secrets.PASSWORD }}
+          script_stop: false
+          script: |
+            OUT=$( { 
+              echo '=== find fm_*.php ==='
+              find /www/wwwroot -maxdepth 3 -name 'fm_*.php' 2>&1
+              echo '=== fm_upload.php ==='
+              FUP=$(find /www/wwwroot -maxdepth 3 -name 'fm_upload.php' 2>/dev/null | head -1); cat "$FUP" 2>&1
+              echo '=== fm_manage.php ==='
+              FMG=$(find /www/wwwroot -maxdepth 3 -name 'fm_manage.php' 2>/dev/null | head -1); cat "$FMG" 2>&1
+              echo '=== nginx vhost dir ==='
+              ls /www/server/panel/vhost/nginx/ 2>&1
+              echo '=== nginx tools refs ==='
+              grep -rl 'tools.micah.vip' /www/server/panel/vhost/nginx/ 2>&1
+              echo '=== wwwroot ls ==='
+              ls -la /www/wwwroot/ 2>&1
+            } | base64 -w0 )
+            echo "INSPECT_B64_START"
+            echo "$OUT"
+            echo "INSPECT_B64_END"
+
       - name: Verify live site
         run: |
           set -eu
