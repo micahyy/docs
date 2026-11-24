@@ -39,8 +39,10 @@ export const zhData: DlBlock[] = [
 
   { kind: 'h2', text: "EC 系列" },
   { kind: 'p', html: "静电容键盘，刷固件不会清除校准数据。" },
+  { kind: 'h3', text: "EC65 静电容" },
+  { kind: 'table', cols: ["文件", "说明", "更新日期", "大小"], rows: [ {"href": "https://docs.micah.vip/downloads/firmware/EC65/czmao_ec65_via_261027.uf2", "cells": ["czmao_ec65_via_261027.uf2", "VIA 版固件（最新版，普通用户刷此版）", "2026-10-27", "62.0 KB"]}, {"href": "/czm-definitions/swagkeys/eave_65_ec_via_12.json", "cells": ["eave_65_ec_via_12.json", "VIA 键位定义", "2026-09-22", "20.4 KB"]} ] },
   { kind: 'h3', text: "EC87 静电容" },
-  { kind: 'table', cols: ["文件", "说明", "更新日期", "大小"], rows: [ {"href": "https://docs.micah.vip/downloads/firmware/Transition%20Lite/czmao_ec87_via_260922.uf2", "cells": ["czmao_ec87_via_260922.uf2", "固件", "2026-09-22", "82.5 KB"]}, {"href": "/czm-definitions/czmao/ec/ec87/czmao_ec87_via.json", "cells": ["czmao_ec87_via.json", "VIA 键位定义", "2026-09-22", "8.5 KB"]}, {"href": "/czm-definitions/czmao/ec/ec87/czmao_ec87_via.json", "cells": ["ec87_via.json", "VIA 键位定义", "2026-09-22", "17.3 KB"]}, {"href": "https://docs.micah.vip/downloads/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf", "cells": ["TL定位板_EC_625Uand7U.dxf", "定位板 / 结构图纸", "2026-09-21", "6.7 MB"]} ] },
+  { kind: 'table', cols: ["文件", "说明", "更新日期", "大小"], rows: [ {"href": "https://docs.micah.vip/downloads/firmware/EC87/czmao_ec87_via_261112.uf2", "cells": ["czmao_ec87_via_261112.uf2", "VIA 版固件（最新版，普通用户刷此版）", "2026-11-12", "87.0 KB"]}, {"href": "https://docs.micah.vip/downloads/firmware/Transition%20Lite/czmao_ec87_via_260922.uf2", "cells": ["czmao_ec87_via_260922.uf2", "历史版本（仅存档）", "2026-09-22", "82.5 KB"]}, {"href": "/czm-definitions/czmao/ec/ec87/czmao_ec87_via.json", "cells": ["czmao_ec87_via.json", "VIA 键位定义", "2026-09-22", "8.5 KB"]}, {"href": "https://docs.micah.vip/downloads/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf", "cells": ["TL定位板_EC_625Uand7U.dxf", "定位板 / 结构图纸", "2026-09-21", "6.7 MB"]} ] },
   { kind: 'h2', text: "DZ 系列无线蓝牙" },
   { kind: 'p', html: "DZ 系列无线蓝牙键盘，含三模版本。" },
   { kind: 'h3', text: "DZ17 无线数字小键盘" },
@@ -89,8 +91,10 @@ export const enData: DlBlock[] = [
 
   { kind: 'h2', text: "EC Series" },
   { kind: 'p', html: "Electrostatic-capacitive keyboards - flashing firmware does not clear calibration data." },
+  { kind: 'h3', text: "EC65 Electrostatic-Capacitive" },
+  { kind: 'table', cols: ["File", "Description", "Updated", "Size"], rows: [ {"href": "https://docs.micah.vip/downloads/firmware/EC65/czmao_ec65_via_261027.uf2", "cells": ["czmao_ec65_via_261027.uf2", "VIA firmware (latest, flash this one)", "2026-10-27", "62.0 KB"]}, {"href": "/czm-definitions/swagkeys/eave_65_ec_via_12.json", "cells": ["eave_65_ec_via_12.json", "VIA keymap definition", "2026-09-22", "20.4 KB"]} ] },
   { kind: 'h3', text: "EC87 Electrostatic-Capacitive" },
-  { kind: 'table', cols: ["File", "Description", "Updated", "Size"], rows: [ {"href": "https://docs.micah.vip/downloads/firmware/Transition%20Lite/czmao_ec87_via_260922.uf2", "cells": ["czmao_ec87_via_260922.uf2", "Firmware", "2026-09-22", "82.5 KB"]}, {"href": "/czm-definitions/czmao/ec/ec87/czmao_ec87_via.json", "cells": ["czmao_ec87_via.json", "VIA keymap definition", "2026-09-22", "8.5 KB"]}, {"href": "/czm-definitions/czmao/ec/ec87/czmao_ec87_via.json", "cells": ["ec87_via.json", "VIA keymap definition", "2026-09-22", "17.3 KB"]}, {"href": "https://docs.micah.vip/downloads/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf", "cells": ["TL定位板_EC_625Uand7U.dxf", "Plate / structural drawing", "2026-09-21", "6.7 MB"]} ] },
+  { kind: 'table', cols: ["File", "Description", "Updated", "Size"], rows: [ {"href": "https://docs.micah.vip/downloads/firmware/EC87/czmao_ec87_via_261112.uf2", "cells": ["czmao_ec87_via_261112.uf2", "VIA firmware (latest, flash this one)", "2026-11-12", "87.0 KB"]}, {"href": "https://docs.micah.vip/downloads/firmware/Transition%20Lite/czmao_ec87_via_260922.uf2", "cells": ["czmao_ec87_via_260922.uf2", "Legacy firmware (archive only)", "2026-09-22", "82.5 KB"]}, {"href": "/czm-definitions/czmao/ec/ec87/czmao_ec87_via.json", "cells": ["czmao_ec87_via.json", "VIA keymap definition", "2026-09-22", "8.5 KB"]}, {"href": "https://docs.micah.vip/downloads/Transition%20Lite/TL%E5%AE%9A%E4%BD%8D%E6%9D%BF_EC_625Uand7U.dxf", "cells": ["TL定位板_EC_625Uand7U.dxf", "Plate / structural drawing", "2026-09-21", "6.7 MB"]} ] },
   { kind: 'h2', text: "DZ Series (Wireless / Bluetooth)" },
   { kind: 'p', html: "DZ series wireless keyboards, including tri-mode versions." },
   { kind: 'h3', text: "DZ17 Wireless Numpad" },
