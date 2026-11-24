@@ -41,7 +41,7 @@ function slug(t: string): string {
             class="dl-c"
             :class="'dl-c' + ci"
           >
-            <a v-if="ci === 0 && r.href" :href="r.href">{{ c }}</a>
+            <a v-if="ci === 0 && r.href" :href="r.href" download>{{ c }}</a>
             <template v-else>{{ c }}</template>
           </span>
         </div>
